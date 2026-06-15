@@ -99,7 +99,7 @@
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 html{scroll-behavior:smooth;}
 body{background:var(--ink);color:var(--bone);font-family:var(--serif);font-size:18px;line-height:1.6;overflow-x:hidden;}
-body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");pointer-events:none;z-index:9999;opacity:0.4;}
+body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");pointer-events:none;z-index:-1;opacity:0.4;}
 
 /* HEADER */
 header{position:fixed;top:0;left:0;right:0;z-index:100;padding:18px 32px;display:flex;justify-content:space-between;align-items:center;background:rgba(10,10,10,0.97);border-bottom:1.5px solid rgba(240,235,226,0.25);backdrop-filter:blur(8px);}
@@ -155,7 +155,7 @@ header{position:fixed;top:0;left:0;right:0;z-index:100;padding:18px 32px;display
 .stars{color:var(--gold);font-size:13px;letter-spacing:2px;}
 .stars-label{font-family:var(--mono);font-size:10px;letter-spacing:0.1em;color:var(--bone-dim);}
 .card-name{font-family:var(--display);font-size:clamp(24px,3.5vw,34px);letter-spacing:0.04em;color:var(--white);margin-bottom:6px;line-height:1.1;}
-.card-name a{color:var(--white);text-decoration:none;transition:color 0.2s;position:relative;z-index:10000;}
+.card-name a{color:var(--white);text-decoration:none;transition:color 0.2s;}
 .card-name a:hover{color:var(--gold);}
 
 .card-location{font-family:var(--mono);font-size:11px;letter-spacing:0.08em;color:var(--bone-dim);margin-bottom:14px;}
