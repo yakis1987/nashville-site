@@ -152,6 +152,14 @@ footer{border-top:1px solid rgba(240,235,226,0.06);padding:28px 24px;text-align:
 
 @keyframes fadeUp{from{opacity:0;transform:translateY(16px);}to{opacity:1;transform:translateY(0);}}
 </style>
+<!-- GA4 Nashville -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FSYC7C1CT2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-FSYC7C1CT2');
+</script>
 </head>
 <body>
 
@@ -166,7 +174,7 @@ footer{border-top:1px solid rgba(240,235,226,0.06);padding:28px 24px;text-align:
       <text x="44" y="31" font-family="Bebas Neue,sans-serif" font-size="12" fill="#f0ebe2" letter-spacing="2.5">BEST TATTOO</text>
     </svg>
   </div>
-  <a href="mailto:natasharacheltattoos@gmail.com" class="header-btn">📞 Call Now</a>
+  <a href="mailto:natasharacheltattoos@gmail.com" class="header-btn" onclick="gtag('event','conversion_click',{event_category:'email',event_label:'natasha_email_header'})">✉ Book a Session</a>
 </header>
 
 <div class="hero">
@@ -182,8 +190,8 @@ footer{border-top:1px solid rgba(240,235,226,0.06);padding:28px 24px;text-align:
       <div class="hero-meta-item"><span class="dot">🗓</span>By Appointment · Custom Work Only</div>
     </div>
     <div class="hero-btns">
-      <a href="mailto:natasharacheltattoos@gmail.com?subject=Book a Tattoo Session" class="btn-primary">✉ Book a Session</a>
-      <a href="mailto:natasharacheltattoos@gmail.com?subject=Tattoo Inquiry" class="btn-secondary">💬 Send a Message</a>
+      <a href="mailto:natasharacheltattoos@gmail.com?subject=Book a Tattoo Session" class="btn-primary" onclick="gtag('event','conversion_click',{event_category:'email',event_label:'natasha_email_hero'})">✉ Book a Session</a>
+      <a href="#" class="btn-secondary" ontouchstart="" onclick="gtag('event','conversion_click',{event_category:'book',event_label:'natasha_book_hero'});openContactModal();return false;">💬 Send a Message</a>
     </div>
   </div>
   <div class="hero-right">
@@ -239,8 +247,8 @@ footer{border-top:1px solid rgba(240,235,226,0.06);padding:28px 24px;text-align:
   <div class="gallery-cta">
     <div class="gallery-cta-text"><strong>READY TO BOOK?</strong></div>
     <div class="gallery-cta-btns">
-      <a href="mailto:natasharacheltattoos@gmail.com?subject=Book a Tattoo Session" class="btn-primary">✉ Book a Session</a>
-      <a href="mailto:natasharacheltattoos@gmail.com?subject=Tattoo Inquiry" class="btn-secondary">💬 Send a Message</a>
+      <a href="mailto:natasharacheltattoos@gmail.com?subject=Book a Tattoo Session" class="btn-primary" onclick="gtag('event','conversion_click',{event_category:'email',event_label:'natasha_email_gallery'})">✉ Book a Session</a>
+      <a href="#" class="btn-secondary" ontouchstart="" onclick="gtag('event','conversion_click',{event_category:'book',event_label:'natasha_book_gallery'});openContactModal();return false;">💬 Send a Message</a>
     </div>
   </div>
 </div>
@@ -327,8 +335,8 @@ footer{border-top:1px solid rgba(240,235,226,0.06);padding:28px 24px;text-align:
     <h2 class="cta-title">READY TO BOOK?</h2>
     <p class="cta-sub">Custom work only · Every piece designed from scratch · Price agreed upfront</p>
     <div class="cta-btns">
-      <a href="mailto:natasharacheltattoos@gmail.com?subject=Book a Tattoo Session" class="btn-primary">✉ Book a Session</a>
-      <a href="mailto:natasharacheltattoos@gmail.com?subject=Tattoo Inquiry" class="btn-secondary">💬 Send a Message</a>
+      <a href="mailto:natasharacheltattoos@gmail.com?subject=Book a Tattoo Session" class="btn-primary" onclick="gtag('event','conversion_click',{event_category:'email',event_label:'natasha_email_bottom'})">✉ Book a Session</a>
+      <a href="#" class="btn-secondary" ontouchstart="" onclick="gtag('event','conversion_click',{event_category:'book',event_label:'natasha_book_bottom'});openContactModal();return false;">💬 Send a Message</a>
     </div>
   </div>
 </div>
@@ -336,8 +344,8 @@ footer{border-top:1px solid rgba(240,235,226,0.06);padding:28px 24px;text-align:
 <div class="sticky-cta">
   <p class="sticky-text">Natasha Rachel · Nashville, TN</p>
   <div class="sticky-btns">
-    <a href="mailto:natasharacheltattoos@gmail.com?subject=Book a Tattoo Session">✉ Book a Session</a>
-    <a href="mailto:natasharacheltattoos@gmail.com?subject=Tattoo Inquiry">💬 Message</a>
+    <a href="mailto:natasharacheltattoos@gmail.com?subject=Book a Tattoo Session" onclick="gtag('event','conversion_click',{event_category:'email',event_label:'natasha_email_sticky'})">✉ Book a Session</a>
+    <a href="#" ontouchstart="" onclick="gtag('event','conversion_click',{event_category:'book',event_label:'natasha_book_sticky'});openContactModal();return false;">💬 Message</a>
   </div>
 </div>
 
@@ -392,6 +400,79 @@ document.addEventListener('keydown', function(e) {
   if (e.key === 'ArrowLeft') shiftLightbox(-1);
   if (e.key === 'ArrowRight') shiftLightbox(1);
 });
+</script>
+
+<!-- Contact Modal -->
+<div id="contact-modal" style="display:none;position:fixed;inset:0;z-index:999;background:rgba(0,0,0,0.75);backdrop-filter:blur(4px);align-items:center;justify-content:center;padding:20px;">
+  <div style="background:#111;border:1px solid rgba(201,168,76,0.25);border-radius:16px;max-width:480px;width:100%;padding:32px 24px;position:relative;">
+    <button onclick="closeContactModal()" style="position:absolute;top:14px;right:16px;background:none;border:none;color:#888;font-size:20px;cursor:pointer;line-height:1;">✕</button>
+    <p style="font-family:var(--mono);font-size:10px;letter-spacing:0.15em;color:var(--gold);text-transform:uppercase;margin:0 0 8px;">Book Your Tattoo</p>
+    <h3 style="font-family:var(--display);font-size:clamp(22px,4vw,30px);color:var(--bone);margin:0 0 24px;letter-spacing:0.03em;">GET IN TOUCH</h3>
+    <form id="contact-form" onsubmit="submitContactForm(event)">
+      <div style="margin-bottom:14px;">
+        <label style="display:block;font-family:var(--mono);font-size:10px;letter-spacing:0.1em;color:var(--bone-dim);margin-bottom:6px;text-transform:uppercase;">Your Name *</label>
+        <input type="text" name="name" required style="width:100%;background:rgba(240,235,226,0.06);border:1px solid rgba(240,235,226,0.15);border-radius:8px;padding:11px 14px;color:var(--bone);font-family:var(--mono);font-size:13px;box-sizing:border-box;">
+      </div>
+      <div style="margin-bottom:14px;">
+        <label style="display:block;font-family:var(--mono);font-size:10px;letter-spacing:0.1em;color:var(--bone-dim);margin-bottom:6px;text-transform:uppercase;">Email *</label>
+        <input type="email" name="email" required style="width:100%;background:rgba(240,235,226,0.06);border:1px solid rgba(240,235,226,0.15);border-radius:8px;padding:11px 14px;color:var(--bone);font-family:var(--mono);font-size:13px;box-sizing:border-box;">
+      </div>
+      <div style="margin-bottom:14px;">
+        <label style="display:block;font-family:var(--mono);font-size:10px;letter-spacing:0.1em;color:var(--bone-dim);margin-bottom:6px;text-transform:uppercase;">Phone</label>
+        <input type="tel" name="phone" style="width:100%;background:rgba(240,235,226,0.06);border:1px solid rgba(240,235,226,0.15);border-radius:8px;padding:11px 14px;color:var(--bone);font-family:var(--mono);font-size:13px;box-sizing:border-box;">
+      </div>
+      <div style="margin-bottom:14px;">
+        <label style="display:block;font-family:var(--mono);font-size:10px;letter-spacing:0.1em;color:var(--bone-dim);margin-bottom:6px;text-transform:uppercase;">Tell us about your tattoo idea</label>
+        <textarea name="message" rows="3" style="width:100%;background:rgba(240,235,226,0.06);border:1px solid rgba(240,235,226,0.15);border-radius:8px;padding:11px 14px;color:var(--bone);font-family:var(--mono);font-size:13px;box-sizing:border-box;resize:vertical;"></textarea>
+      </div>
+      <input type="hidden" name="source" value="Natasha Rachel Nashville">
+      <button type="submit" id="contact-submit-btn" style="width:100%;background:var(--gold);color:var(--ink);font-family:var(--mono);font-size:12px;font-weight:600;letter-spacing:0.08em;border:none;border-radius:10px;padding:14px;cursor:pointer;text-transform:uppercase;">Send Message</button>
+      <p id="contact-success" style="display:none;text-align:center;color:var(--gold);font-family:var(--mono);font-size:12px;margin-top:16px;letter-spacing:0.08em;">✓ Message sent! We'll be in touch soon.</p>
+      <p id="contact-error" style="display:none;text-align:center;color:#e05;font-family:var(--mono);font-size:12px;margin-top:16px;">Something went wrong. Please try again.</p>
+    </form>
+  </div>
+</div>
+
+<script>
+function openContactModal() {
+  const m = document.getElementById('contact-modal');
+  m.style.display = 'flex';
+  document.body.style.overflow = 'hidden';
+}
+function closeContactModal() {
+  document.getElementById('contact-modal').style.display = 'none';
+  document.body.style.overflow = '';
+}
+document.getElementById('contact-modal').addEventListener('click', function(e) {
+  if (e.target === this) closeContactModal();
+});
+async function submitContactForm(e) {
+  e.preventDefault();
+  const btn = document.getElementById('contact-submit-btn');
+  btn.textContent = 'Sending...';
+  btn.disabled = true;
+  const formData = new FormData(e.target);
+  try {
+    const res = await fetch('https://formspree.io/f/maqzqejk', {
+      method: 'POST',
+      body: formData,
+      headers: { Accept: 'application/json' }
+    });
+    if (res.ok) {
+      document.getElementById('contact-success').style.display = 'block';
+      document.getElementById('contact-error').style.display = 'none';
+      btn.style.display = 'none';
+      e.target.reset();
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'conversion_click', { event_category: 'form', event_label: 'natasha_form_submit' });
+      }
+    } else { throw new Error('failed'); }
+  } catch {
+    document.getElementById('contact-error').style.display = 'block';
+    btn.textContent = 'Send Message';
+    btn.disabled = false;
+  }
+}
 </script>
 </body>
 </html>
