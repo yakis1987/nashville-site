@@ -6,6 +6,7 @@
 <title>Darlin' Cait - Nashville Tattoo Artist - American Traditional &amp; Black and Grey</title>
 <meta content="Darlin' Cait is a Nashville tattoo artist at Kustom Thrills specializing in American Traditional color work and refined black and grey. Book your appointment today." name="description"/>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"TattooParlor","name":"Darlin' Cait Tattoo","address":{"@type":"PostalAddress","streetAddress":"1603 Riverside Drive","addressLocality":"Nashville","addressRegion":"TN","postalCode":"37216","addressCountry":"US"},"aggregateRating":{"@type":"AggregateRating","ratingValue":"5.0","reviewCount":"38"},"telephone":"+16157396241"}</script>
+<link rel="preload" as="image" href="darlincait/hero.webp" fetchpriority="high" type="image/webp">
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400;500&family=Bebas+Neue&display=swap" media="print" onload="this.media='all'" rel="stylesheet"/>
@@ -44,7 +45,7 @@ header{position:fixed;top:0;left:0;right:0;z-index:100;padding:10px 14px;display
 .hero-right{position:relative;z-index:2;display:grid;grid-template-rows:1fr 1fr;height:100svh;gap:3px;}
 @media(max-width:768px){.hero-right{grid-template-rows:unset;grid-template-columns:1fr 1fr;height:260px;gap:3px;}}
 .hero-img-wrap{overflow:hidden;position:relative;background:#161410;display:flex;align-items:center;justify-content:center;}
-.hero-img-wrap img{width:100%;height:100%;object-fit:cover;transition:transform 0.6s ease;display:block;}
+.hero-img-wrap img{width:100%;height:100%;object-fit:cover;object-position:center top;transition:transform 0.6s ease;display:block;}
 .hero-img-wrap:hover img{transform:scale(1.04);}
 .hero-img-wrap::after{content:"";position:absolute;inset:0;background:linear-gradient(to right,rgba(10,10,10,0.3) 0%,transparent 40%);pointer-events:none;}
 @media(max-width:768px){.hero-img-wrap::after{background:linear-gradient(to bottom,transparent 60%,rgba(10,10,10,0.4) 100%);}}
@@ -145,7 +146,7 @@ hr.divider{border:none;border-top:1px solid rgba(240,235,226,0.06);margin:0 24px
 .cta-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;}
 @media(max-width:480px){.cta-btns{flex-direction:column;}.cta-btns a{text-align:center;justify-content:center;}}
 .sticky-cta{display:none;position:fixed;bottom:0;left:0;right:0;background:rgba(10,10,10,0.97);border-top:1px solid rgba(240,235,226,0.08);padding:12px 20px 16px;z-index:200;backdrop-filter:blur(10px);}
-.sticky-text{font-family:var(--mono);font-size:10px;letter-spacing:0.15em;color:var(--bone-dim);margin-bottom:8px;text-align:center;text-transform:uppercase;}
+.sticky-text{font-family:var(--mono);font-size:10px;letter-spacing:0.15em;color:#f97316;margin-bottom:8px;text-align:center;text-transform:uppercase;}
 .sticky-btns{display:flex;gap:10px;max-width:420px;margin:0 auto;}
 .sticky-btns a{flex:1;display:flex;align-items:center;justify-content:center;padding:13px 10px;font-family:var(--mono);font-size:13px;letter-spacing:0.08em;text-decoration:none;font-weight:500;border-radius:10px;white-space:nowrap;}
 .sticky-btns a:first-child{background:var(--gold);color:var(--ink);}
@@ -155,20 +156,9 @@ footer{border-top:1px solid rgba(240,235,226,0.06);padding:28px 24px;text-align:
 .footer-copy{font-family:var(--mono);font-size:10px;letter-spacing:0.12em;color:var(--bone-dim);opacity:0.35;}
 @keyframes fadeUp{from{opacity:0;transform:translateY(16px);}to{opacity:1;transform:translateY(0);}}
 </style>
-<!-- GA4 Nashville -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-FSYC7C1CT2"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-FSYC7C1CT2');
-</script>
-<script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "x93umdg88y");
 </script>
 </head>
 <body>
@@ -213,12 +203,10 @@ footer{border-top:1px solid rgba(240,235,226,0.06);padding:28px 24px;text-align:
   </div>
   <div class="hero-right">
     <div class="hero-img-wrap">
-      <!-- <img src="darlincait/hero-1.webp" alt="American Traditional color tattoo by Darlin Cait Nashville" width="900" height="900" fetchpriority="high" decoding="sync"> -->
-      <div class="hero-placeholder">TRADITIONAL<br>COLOR WORK</div>
+      <img src="darlincait/gallery-1.webp" alt="All-seeing eye traditional color tattoo by Darlin Cait Nashville" loading="eager" fetchpriority="high" style="object-position:center center;">
     </div>
     <div class="hero-img-wrap">
-      <!-- <img src="darlincait/hero-2.webp" alt="Black and grey tattoo by Darlin Cait Nashville" width="900" height="900" fetchpriority="high" decoding="sync"> -->
-      <div class="hero-placeholder">BLACK AND<br>GREY</div>
+      <img src="darlincait/gallery-8.webp" alt="Letter envelope memorial tattoo by Darlin Cait Nashville" loading="eager" fetchpriority="high" style="object-position:center center;">
     </div>
   </div>
 </div>
@@ -251,54 +239,45 @@ footer{border-top:1px solid rgba(240,235,226,0.06);padding:28px 24px;text-align:
   </div>
   <div class="gallery-grid" id="gallery-cait">
     <div class="gal-item" onclick="openLightbox(0)">
-      <!-- <img src="darlincait/gallery-01.webp" alt="American Traditional rose tattoo by Darlin Cait Nashville" width="500" height="500" fetchpriority="high" decoding="async"> -->
-      <div class="gal-placeholder">TRAD<br>COLOR</div>
+      <img src="darlincait/gallery-1.webp" alt="All-seeing eye traditional color tattoo by Darlin Cait Nashville" loading="lazy">
     </div>
     <div class="gal-item" onclick="openLightbox(1)">
-      <!-- <img src="darlincait/gallery-02.webp" alt="Eagle traditional tattoo by Darlin Cait Nashville" width="500" height="500" decoding="async"> -->
-      <div class="gal-placeholder">EAGLE<br>TRAD</div>
+      <img src="darlincait/gallery-4.webp" alt="Sweet tea traditional color tattoo by Darlin Cait Nashville" loading="lazy">
     </div>
     <div class="gal-item" onclick="openLightbox(2)">
-      <!-- <img src="darlincait/gallery-03.webp" alt="Black and grey portrait tattoo by Darlin Cait" width="500" height="500" loading="lazy" decoding="async"> -->
-      <div class="gal-placeholder">B+G<br>WORK</div>
+      <img src="darlincait/gallery-5.webp" alt="Cowboy portrait traditional color tattoo by Darlin Cait Nashville" loading="lazy">
     </div>
     <div class="gal-item" onclick="openLightbox(3)">
-      <!-- <img src="darlincait/gallery-04.webp" alt="Panther traditional color tattoo by Darlin Cait" width="500" height="500" loading="lazy" decoding="async"> -->
-      <div class="gal-placeholder">PANTHER<br>TRAD</div>
+      <img src="darlincait/gallery-10.webp" alt="Heart and dagger sternum tattoo by Darlin Cait Nashville" loading="lazy">
     </div>
     <div class="gal-item" onclick="openLightbox(4)">
-      <!-- <img src="darlincait/gallery-05.webp" alt="Floral traditional tattoo by Darlin Cait Nashville" width="500" height="500" loading="lazy" decoding="async"> -->
-      <div class="gal-placeholder">FLORAL<br>TRAD</div>
+      <img src="darlincait/gallery-7.webp" alt="Eagle full back piece traditional tattoo by Darlin Cait Nashville" loading="lazy">
     </div>
     <div class="gal-item" onclick="openLightbox(5)">
-      <!-- <img src="darlincait/gallery-06.webp" alt="Snake traditional tattoo by Darlin Cait Nashville" width="500" height="500" loading="lazy" decoding="async"> -->
-      <div class="gal-placeholder">SNAKE<br>TRAD</div>
-    </div>
-    <div class="gal-item" onclick="openLightbox(6)">
-      <!-- <img src="darlincait/gallery-07.webp" alt="Skull traditional color tattoo by Darlin Cait" width="500" height="500" loading="lazy" decoding="async"> -->
-      <div class="gal-placeholder">SKULL<br>COLOR</div>
-    </div>
-    <div class="gal-item" onclick="openLightbox(7)">
-      <!-- <img src="darlincait/gallery-08.webp" alt="Black and grey realism tattoo by Darlin Cait Nashville" width="500" height="500" loading="lazy" decoding="async"> -->
-      <div class="gal-placeholder">B+G<br>REALISM</div>
+      <img src="darlincait/gallery-11.webp" alt="Honky Tonk Queen full back piece tattoo by Darlin Cait Nashville" loading="lazy">
     </div>
   </div>
   <div class="gallery-extra" id="gallery-cait-extra">
+    <div class="gal-item" onclick="openLightbox(6)">
+      <img src="darlincait/gallery-2.webp" alt="Floral honeycomb black and grey tattoo by Darlin Cait Nashville" loading="lazy">
+    </div>
+    <div class="gal-item" onclick="openLightbox(7)">
+      <img src="darlincait/gallery-3.webp" alt="Knife girl traditional color tattoo by Darlin Cait Nashville" loading="lazy">
+    </div>
     <div class="gal-item" onclick="openLightbox(8)">
-      <!-- <img src="darlincait/gallery-09.webp" alt="Dagger heart traditional tattoo by Darlin Cait" width="500" height="500" loading="lazy" decoding="async"> -->
-      <div class="gal-placeholder">DAGGER<br>HEART</div>
+      <img src="darlincait/gallery-6.webp" alt="Cowboy boots traditional color tattoo by Darlin Cait Nashville" loading="lazy">
     </div>
     <div class="gal-item" onclick="openLightbox(9)">
-      <!-- <img src="darlincait/gallery-10.webp" alt="Flash traditional tattoo by Darlin Cait Nashville" width="500" height="500" loading="lazy" decoding="async"> -->
-      <div class="gal-placeholder">FLASH<br>TRAD</div>
+      <img src="darlincait/gallery-9.webp" alt="Dachshund portrait traditional color tattoo by Darlin Cait Nashville" loading="lazy">
     </div>
     <div class="gal-item" onclick="openLightbox(10)">
-      <!-- <img src="darlincait/gallery-11.webp" alt="Bold traditional color tattoo by Darlin Cait" width="500" height="500" loading="lazy" decoding="async"> -->
-      <div class="gal-placeholder">BOLD<br>COLOR</div>
+      <img src="darlincait/gallery-12.webp" alt="Nutcracker traditional color tattoo by Darlin Cait Nashville" loading="lazy">
     </div>
     <div class="gal-item" onclick="openLightbox(11)">
-      <!-- <img src="darlincait/gallery-12.webp" alt="Black and grey sleeve detail by Darlin Cait Nashville" width="500" height="500" loading="lazy" decoding="async"> -->
-      <div class="gal-placeholder">SLEEVE<br>DETAIL</div>
+      <img src="darlincait/gallery-13.webp" alt="Shark black and grey tattoo by Darlin Cait Nashville" loading="lazy">
+    </div>
+    <div class="gal-item" onclick="openLightbox(12)">
+      <img src="darlincait/gallery-14.webp" alt="Smoking woman black and grey tattoo by Darlin Cait Nashville" loading="lazy">
     </div>
   </div>
   <button class="show-more-btn" id="btn-cait" onclick="toggleGallery()">&#9660; View more photos</button>
@@ -463,7 +442,7 @@ footer{border-top:1px solid rgba(240,235,226,0.06);padding:28px 24px;text-align:
 
 <!-- STICKY CTA (mobile only) -->
 <div class="sticky-cta">
-  <p class="sticky-text">Book Your Tattoo · East Nashville, TN</p>
+  <p class="sticky-text">Book Your Tattoo · Nashville, TN</p>
   <div class="sticky-btns">
     <a href="tel:6157396241" onclick="gtag('event','conversion_click',{event_category:'call',event_label:'cait_call_sticky'})">📞 Call Us</a>
     <a href="#" ontouchstart="" onclick="gtag('event','conversion_click',{event_category:'book',event_label:'cait_book_sticky'});openContactModal();return false;">💬 Book Now</a>
@@ -558,6 +537,25 @@ function openContactModal(){const m=document.getElementById('contact-modal');m.s
 function closeContactModal(){document.getElementById('contact-modal').style.display='none';document.body.style.overflow='';}
 document.getElementById('contact-modal').addEventListener('click',function(e){if(e.target===this)closeContactModal();});
 async function submitContactForm(e){e.preventDefault();const btn=document.getElementById('contact-submit-btn');btn.textContent='Sending...';btn.disabled=true;const formData=new FormData(e.target);try{const res=await fetch('https://formspree.io/f/mzdqygkn',{method:'POST',body:formData,headers:{Accept:'application/json'}});if(res.ok){document.getElementById('contact-success').style.display='block';document.getElementById('contact-error').style.display='none';btn.style.display='none';e.target.reset();if(typeof gtag!=='undefined'){gtag('event','conversion_click',{event_category:'form',event_label:'cait_form_submit'});}}else{throw new Error('failed');}}catch{document.getElementById('contact-error').style.display='block';btn.textContent='Send Message';btn.disabled=false;}}
+</script>
+
+<!-- Analytics deferred for performance -->
+<script>
+  window.addEventListener('load', function() {
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=G-FSYC7C1CT2';
+    document.head.appendChild(s);
+    s.onload = function() {
+      gtag('js', new Date());
+      gtag('config', 'G-FSYC7C1CT2');
+    };
+    (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "x93umdg88y");
+  });
 </script>
 </body>
 </html>
