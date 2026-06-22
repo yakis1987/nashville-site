@@ -48,7 +48,7 @@ html{scroll-behavior:smooth;}
   }
 }
 
-body{background:var(--ink);color:var(--bone);font-family:var(--serif);font-size:18px;line-height:1.6;overflow-x:hidden;padding-bottom:120px;}
+body{background:var(--ink);color:var(--bone);font-family:var(--serif);font-size:18px;line-height:1.6;overflow-x:clip;padding-bottom:120px;}
 body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");pointer-events:none;z-index:-1;opacity:0.4;}
 
 /* HEADER */
@@ -393,7 +393,7 @@ function closeMenu(){
 </div>
 
 <!-- GUIDES BY CATEGORY -->
-<div class="section-narrow" id="guides">
+<div class="section-narrow" id="guides" style="margin-left:auto;margin-right:auto;display:block;">
   <p class="section-label">All Guides</p>
   <h2 class="section-title">BROWSE BY <em>category</em></h2>
   <p class="section-intro">Over 40 guides written by working artists. Find exactly what you need before you book.</p>
@@ -630,7 +630,7 @@ function closeMenu(){
 
 
 <!-- FAQ -->
-<div class="section-narrow" id="faq">
+<div class="section-narrow" id="faq" style="margin-left:auto;margin-right:auto;display:block;">
   <p class="section-label">FAQ</p>
   <h2 class="section-title">COMMON <em>questions</em></h2>
 
