@@ -164,7 +164,7 @@ header{position:fixed;top:0;left:0;right:0;z-index:100;padding:18px 32px;display
 .tag.walkin{background:rgba(201,168,76,0.1);border-color:rgba(201,168,76,0.35);color:var(--gold);}
 .why-section{margin-top:4px;}
 .why-label{font-family:var(--mono);font-size:9px;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);opacity:0.7;margin-bottom:5px;}
-.why-text{font-size:16px;font-weight:300;color:var(--bone-dim);line-height:1.75;}
+.why-text{font-size:14px;font-weight:300;color:var(--bone-dim);line-height:1.6;}
 .card-cta{display:flex;flex-direction:row;gap:10px;padding:16px 24px 20px;border-top:1px solid rgba(240,235,226,0.06);min-width:unset;border-left:none;padding-left:24px;}
 .card-cta-row{display:flex;flex-direction:row;gap:10px;width:100%;}
 .cta-phone{display:flex;align-items:center;justify-content:center;background:var(--gold);color:var(--ink);text-align:center;font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:0.08em;text-decoration:none;padding:14px 12px;border-radius:8px;transition:all 0.25s ease;white-space:nowrap;}
@@ -183,8 +183,8 @@ header{position:fixed;top:0;left:0;right:0;z-index:100;padding:18px 32px;display
 @media(min-width:900px){.guide-grid{grid-template-columns:repeat(3,1fr);}}
 .guide-card{background:var(--ink-soft);border:1px solid rgba(201,168,76,0.18);border-radius:12px;padding:28px 24px;transition:border-color 0.3s;}
 .guide-card:hover{border-color:rgba(201,168,76,0.45);}
-.guide-icon{font-size:28px;margin-bottom:16px;display:block;}
-.guide-title{font-family:var(--display);font-size:22px;letter-spacing:0.05em;color:var(--white);margin-bottom:12px;}
+.guide-icon{display:none;}
+.guide-title{font-family:var(--display);font-size:22px;letter-spacing:0.05em;color:var(--white);margin-bottom:10px;display:flex;align-items:center;gap:10px;}
 .guide-text{font-size:14px;font-weight:300;color:var(--bone-dim);line-height:1.7;}
 
 /* ABOUT */
@@ -444,6 +444,19 @@ footer{border-top:1px solid rgba(240,235,226,0.06);padding:40px 32px;text-align:
     height:220px;
   }
 }
+
+@media(max-width:768px){
+  /* Sticky - shorter text handled in HTML */
+  
+  /* Credential desc bigger */
+  .credential-desc{font-size:16px;line-height:1.8;}
+  
+  /* Guide text bigger */
+  .guide-text{font-size:16px;line-height:1.8;}
+  
+  /* Why text bigger */
+  .why-text{font-size:16px;line-height:1.75;}
+}
 </style>
 <!-- GA4 Nashville -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-FSYC7C1CT2"></script>
@@ -538,7 +551,7 @@ footer{border-top:1px solid rgba(240,235,226,0.06);padding:40px 32px;text-align:
             <div class="card-tags"><span class="tag walkin">By Appointment</span><span class="tag">American Traditional</span><span class="tag">Color</span><span class="tag">Black &amp; Grey</span></div>
             <div class="why-section">
               <p class="why-label">Why we picked her</p>
-              <p class="why-text">Bold, clean American Traditional with a Nashville soul. Darlin' Cait brings rare technical precision to color and black and grey alike · and her full back pieces are some of the best work in the city.</p>
+              <p class="why-text">Bold American Traditional with a Nashville soul. Rare precision in color and black and grey · her full back pieces are among the best in the city.</p>
             </div>
             <div class="top-rated-badge">
               <span class="badge-icon">🏆</span>
@@ -797,23 +810,19 @@ footer{border-top:1px solid rgba(240,235,226,0.06);padding:40px 32px;text-align:
   <h2 class="section-title">GETTING TATTOOED <em>in Nashville</em></h2>
   <div class="guide-grid">
     <div class="guide-card">
-      <span class="guide-icon">🎸</span>
-      <h3 class="guide-title">NASHVILLE'S SCENE</h3>
+      <h3 class="guide-title"><span style="font-size:22px;">🎸</span> NASHVILLE'S SCENE</h3>
       <p class="guide-text">Nashville's tattoo talent has grown alongside the city itself. From the honky-tonk strip to East Nashville's art communities, you'll find artists with formal fine arts backgrounds and deep craft knowledge working across every style.</p>
     </div>
     <div class="guide-card">
-      <span class="guide-icon">📅</span>
-      <h3 class="guide-title">BOOK AHEAD</h3>
+      <h3 class="guide-title"><span style="font-size:22px;">📅</span> BOOK AHEAD</h3>
       <p class="guide-text">The best artists in Nashville book out weeks in advance. If you're planning a trip, reach out at least 2-4 weeks before arrival. Most artists offer free consultations to discuss your idea before committing to a deposit.</p>
     </div>
     <div class="guide-card">
-      <span class="guide-icon">💡</span>
-      <h3 class="guide-title">WHAT TO EXPECT</h3>
+      <h3 class="guide-title"><span style="font-size:22px;">💡</span> WHAT TO EXPECT</h3>
       <p class="guide-text">Most custom work requires a deposit of $50-$100. Simple flash can often be done same-day at shops that accept walk-ins. Prices are generally quoted in person after discussing the design, placement, and complexity.</p>
     </div>
     <div class="guide-card">
-      <span class="guide-icon">🌿</span>
-      <h3 class="guide-title">AFTERCARE</h3>
+      <h3 class="guide-title"><span style="font-size:22px;">🌿</span> AFTERCARE</h3>
       <p class="guide-text">Nashville summers are hot and humid · both can affect healing. Keep fresh tattoos out of direct sun, avoid pools and natural water for 2-3 weeks, and follow your artist's specific aftercare instructions closely.</p>
     </div>
     <div class="guide-card">
@@ -831,7 +840,7 @@ footer{border-top:1px solid rgba(240,235,226,0.06);padding:40px 32px;text-align:
 
 <!-- STICKY MOBILE CTA -->
 <div class="sticky-cta">
-  <p class="sticky-cta-text">Ready to get tattooed? We'll match you with the right artist.</p>
+  <p class="sticky-cta-text">Find your Nashville artist</p>
   <div class="sticky-cta-btns">
     <a href="#" onclick="gtag('event','conversion_click',{event_category:'book',event_label:'index_find_artist'});openContactModal();return false;">Find My Artist</a>
   </div>
