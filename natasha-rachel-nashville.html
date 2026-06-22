@@ -151,6 +151,66 @@ footer{border-top:1px solid rgba(240,235,226,0.06);padding:28px 24px;text-align:
 @media(max-width:768px){.hero-img-bg{width:70%;}}
 
 @keyframes fadeUp{from{opacity:0;transform:translateY(16px);}to{opacity:1;transform:translateY(0);}}
+
+/* ============================================
+   DESKTOP ENHANCEMENTS (min-width: 769px)
+   ============================================ */
+@media(min-width:769px){
+
+  /* HEADER - clean logo + hamburger */
+  header{padding:18px 48px;}
+
+  /* HERO - more breathing room */
+  .hero{padding-top:80px;}
+  .hero-left{padding:72px 56px 72px 64px;}
+  .hero-name{font-size:clamp(56px,6.5vw,104px);}
+  .hero-tagline{font-size:clamp(18px,1.8vw,24px);max-width:480px;}
+  .hero-btns{gap:14px;}
+
+  /* SECTIONS - wider on desktop */
+  .section,
+  .artist-gallery-section,
+  .gallery-section{
+    padding:64px 64px;
+    max-width:1160px;
+  }
+
+  /* GALLERY - 5 cols on desktop */
+  .gallery-grid{
+    grid-template-columns:repeat(5,1fr);
+    gap:8px;
+  }
+  .gallery-extra.visible{
+    grid-template-columns:repeat(5,1fr);
+    gap:8px;
+  }
+
+  /* INFO STRIP - 3 cols */
+  .info-strip{
+    grid-template-columns:repeat(3,1fr);
+  }
+
+  /* RATING BAR */
+  .rating-bar{padding:18px 64px;}
+}
+
+/* LARGE DESKTOP (min-width: 1200px) */
+@media(min-width:1200px){
+  .hero-left{padding:80px 64px 80px 80px;}
+  .section,
+  .artist-gallery-section,
+  .gallery-section{
+    padding:72px 80px;
+    max-width:1280px;
+  }
+  .gallery-grid{
+    grid-template-columns:repeat(6,1fr);
+  }
+  .gallery-extra.visible{
+    grid-template-columns:repeat(6,1fr);
+  }
+}
+
 </style>
 <!-- GA4 Nashville -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-FSYC7C1CT2"></script>
@@ -171,18 +231,37 @@ footer{border-top:1px solid rgba(240,235,226,0.06);padding:28px 24px;text-align:
 <body>
 
 <header>
-  <a href="tel:natasharacheltattoos@gmail.com" class="header-back"><span>Nashville, TN</span></a>
-  <div class="header-logo">
-    <svg viewBox="0 0 200 36" xmlns="http://www.w3.org/2000/svg">
-      <rect x="0" y="1" width="34" height="34" fill="#c9a84c" rx="3"/>
-      <text x="17" y="25" text-anchor="middle" font-family="Bebas Neue,sans-serif" font-size="19" fill="#0a0a0a" letter-spacing="-0.5">NBT</text>
-      <text x="44" y="14" font-family="Bebas Neue,sans-serif" font-size="12" fill="#f0ebe2" letter-spacing="2.5">NASHVILLE</text>
-      <line x1="44" y1="18" x2="196" y2="18" stroke="#c9a84c" stroke-width="0.5" opacity="0.4"/>
-      <text x="44" y="31" font-family="Bebas Neue,sans-serif" font-size="12" fill="#f0ebe2" letter-spacing="2.5">BEST TATTOO</text>
+  <a href="https://nashvillebesttattoo.com" class="header-logo-link" style="display:flex;align-items:center;text-decoration:none;">
+    <svg viewBox="0 0 260 52" xmlns="http://www.w3.org/2000/svg" height="44" width="auto">
+      <rect x="0" y="2" width="48" height="48" fill="#c9a84c" rx="3"/>
+      <text x="24" y="37" text-anchor="middle" font-family="'Bebas Neue', sans-serif" font-size="26" fill="#0a0a0a" letter-spacing="-0.5">NBT</text>
+      <text x="62" y="22" font-family="'Bebas Neue', sans-serif" font-size="18" fill="#f0ebe2" letter-spacing="3">NASHVILLE</text>
+      <line x1="62" y1="27" x2="258" y2="27" stroke="#c9a84c" stroke-width="0.5" opacity="0.4"/>
+      <text x="62" y="43" font-family="'Bebas Neue', sans-serif" font-size="18" fill="#f0ebe2" letter-spacing="3">BEST TATTOO</text>
     </svg>
-  </div>
-  <a href="#" class="header-btn" ontouchstart="" onclick="gtag('event','conversion_click',{event_category:'book',event_label:'natasha_book_header'});openContactModal();return false;">✦ Book a Session</a>
+  </a>
+  <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu" style="background:none;border:none;cursor:pointer;padding:8px;display:flex;flex-direction:column;gap:5px;margin-left:auto;">
+    <span style="display:block;width:24px;height:2px;background:#f0ebe2;border-radius:2px;transition:all 0.3s;"></span>
+    <span style="display:block;width:24px;height:2px;background:#f0ebe2;border-radius:2px;transition:all 0.3s;"></span>
+    <span style="display:block;width:24px;height:2px;background:#f0ebe2;border-radius:2px;transition:all 0.3s;"></span>
+  </button>
 </header>
+<div id="mobileMenu" style="display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(10,10,10,0.98);z-index:90;flex-direction:column;align-items:center;justify-content:center;gap:16px;padding:20px;">
+  <button onclick="closeMenu();openContactModal();" style="width:100%;max-width:320px;padding:16px 24px;font-family:var(--mono, 'DM Mono',monospace);font-size:13px;letter-spacing:0.1em;text-align:center;border-radius:10px;cursor:pointer;background:#c9a84c;color:#0a0a0a;border:none;">Find My Artist</button>
+  <a href="https://nashvillebesttattoo.com" style="width:100%;max-width:320px;padding:16px 24px;font-family:var(--mono, 'DM Mono',monospace);font-size:13px;letter-spacing:0.1em;text-align:center;border-radius:10px;background:transparent;color:#f0ebe2;border:1px solid rgba(240,235,226,0.2);text-decoration:none;display:block;">Back to Nashville Best Tattoo</a>
+</div>
+<script>
+function toggleMenu(){
+  var m=document.getElementById('mobileMenu');
+  var h=document.getElementById('hamburger');
+  var open=m.style.display==='flex';
+  m.style.display=open?'none':'flex';
+  h.setAttribute('aria-expanded',open?'false':'true');
+}
+function closeMenu(){
+  document.getElementById('mobileMenu').style.display='none';
+}
+</script>
 
 <div class="hero">
   <div class="hero-bg"></div>
@@ -190,7 +269,7 @@ footer{border-top:1px solid rgba(240,235,226,0.06);padding:28px 24px;text-align:
   <div class="hero-left">
     <div class="hero-breadcrumb">Nashville, TN</div>
     <h1 class="hero-name">NATASHA<br>RACHEL</h1>
-    <p class="hero-tagline">Female fine line artist — color, botanical and whimsical</p>
+    <p class="hero-tagline">Female fine line artist · color, botanical and whimsical</p>
     <div class="hero-meta">
       <div class="hero-meta-item"><span class="dot">📍</span>Nashville, Tennessee</div>
       <div class="hero-meta-item"><span class="dot">⭐</span>Color Fine Line · Botanical · Mandalas · Whimsical</div>
@@ -273,7 +352,7 @@ footer{border-top:1px solid rgba(240,235,226,0.06);padding:28px 24px;text-align:
     <div class="why-label">Why We Listed Her</div>
     <p class="why-text">"Natasha Rachel occupies a distinct space in Nashville tattooing. Her color fine line work has a delicacy and precision that is rare at any level, and her custom-only approach means every client leaves with something that will never exist twice. That kind of commitment is worth seeking out."</p>
     <div class="why-points">
-      <div class="why-point">Every tattoo is designed from scratch for the individual client. Even flash is a one-off — once done, it will not be repeated.</div>
+      <div class="why-point">Every tattoo is designed from scratch for the individual client. Even flash is a one-off · once done, it will not be repeated.</div>
       <div class="why-point">Her background in photography and years managing London tattoo shops gave her an eye for composition that shows in every piece she makes.</div>
       <div class="why-point">Pricing by piece rather than by the hour means clients know exactly what they're paying before the appointment. No surprises.</div>
       <div class="why-point">A free touch-up within 3 months is included, provided aftercare advice was followed. That kind of guarantee reflects real confidence in the work.</div>
@@ -288,7 +367,7 @@ footer{border-top:1px solid rgba(240,235,226,0.06);padding:28px 24px;text-align:
   <div class="artist-single">
     <div class="artist-name">NATASHA RACHEL</div>
     <div class="artist-specialty">Color Fine Line · Botanical · Mandalas · Whimsical · Freehand</div>
-    <p class="artist-bio">Natasha Rachel is a female fine line tattoo artist based in Nashville, originally from England. Working full time in the industry since 2017, her path into tattooing was shaped by a background in photography and years managing tattoo shops in London. She draws inspiration from architecture, patterns, and the people who sit in her chair — every consultation becomes the starting point for something new. She works exclusively on custom pieces, designed from scratch for every client, priced by piece so there are never surprises.</p>
+    <p class="artist-bio">Natasha Rachel is a female fine line tattoo artist based in Nashville, originally from England. Working full time in the industry since 2017, her path into tattooing was shaped by a background in photography and years managing tattoo shops in London. She draws inspiration from architecture, patterns, and the people who sit in her chair · every consultation becomes the starting point for something new. She works exclusively on custom pieces, designed from scratch for every client, priced by piece so there are never surprises.</p>
     <div class="artist-locations-tag">Nashville, TN · Originally from England · Since 2017</div>
   </div>
 </div>
@@ -480,5 +559,6 @@ async function submitContactForm(e) {
   }
 }
 </script>
+</main>
 </body>
 </html>

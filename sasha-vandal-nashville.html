@@ -158,6 +158,66 @@ footer{border-top:1px solid rgba(240,235,226,0.06);padding:28px 24px;text-align:
 @media(max-width:768px){.hero-img-bg{width:70%;}}
 
 @keyframes fadeUp{from{opacity:0;transform:translateY(16px);}to{opacity:1;transform:translateY(0);}}
+
+/* ============================================
+   DESKTOP ENHANCEMENTS (min-width: 769px)
+   ============================================ */
+@media(min-width:769px){
+
+  /* HEADER - clean logo + hamburger */
+  header{padding:18px 48px;}
+
+  /* HERO - more breathing room */
+  .hero{padding-top:80px;}
+  .hero-left{padding:72px 56px 72px 64px;}
+  .hero-name{font-size:clamp(56px,6.5vw,104px);}
+  .hero-tagline{font-size:clamp(18px,1.8vw,24px);max-width:480px;}
+  .hero-btns{gap:14px;}
+
+  /* SECTIONS - wider on desktop */
+  .section,
+  .artist-gallery-section,
+  .gallery-section{
+    padding:64px 64px;
+    max-width:1160px;
+  }
+
+  /* GALLERY - 5 cols on desktop */
+  .gallery-grid{
+    grid-template-columns:repeat(5,1fr);
+    gap:8px;
+  }
+  .gallery-extra.visible{
+    grid-template-columns:repeat(5,1fr);
+    gap:8px;
+  }
+
+  /* INFO STRIP - 3 cols */
+  .info-strip{
+    grid-template-columns:repeat(3,1fr);
+  }
+
+  /* RATING BAR */
+  .rating-bar{padding:18px 64px;}
+}
+
+/* LARGE DESKTOP (min-width: 1200px) */
+@media(min-width:1200px){
+  .hero-left{padding:80px 64px 80px 80px;}
+  .section,
+  .artist-gallery-section,
+  .gallery-section{
+    padding:72px 80px;
+    max-width:1280px;
+  }
+  .gallery-grid{
+    grid-template-columns:repeat(6,1fr);
+  }
+  .gallery-extra.visible{
+    grid-template-columns:repeat(6,1fr);
+  }
+}
+
 </style>
 <!-- GA4 Nashville -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-FSYC7C1CT2"></script>
@@ -177,25 +237,44 @@ footer{border-top:1px solid rgba(240,235,226,0.06);padding:28px 24px;text-align:
 </head>
 <body>
 <header>
-<a class="header-back" href="tel:6155436650"><span>Nashville, TN</span></a>
-<div class="header-logo">
-<svg viewbox="0 0 200 36" xmlns="http://www.w3.org/2000/svg">
-<rect fill="#c9a84c" height="34" rx="3" width="34" x="0" y="1"></rect>
-<text fill="#0a0a0a" font-family="Bebas Neue,sans-serif" font-size="19" letter-spacing="-0.5" text-anchor="middle" x="17" y="25">NBT</text>
-<text fill="#f0ebe2" font-family="Bebas Neue,sans-serif" font-size="12" letter-spacing="2.5" x="44" y="14">NASHVILLE</text>
-<line opacity="0.4" stroke="#c9a84c" stroke-width="0.5" x1="44" x2="196" y1="18" y2="18"></line>
-<text fill="#f0ebe2" font-family="Bebas Neue,sans-serif" font-size="12" letter-spacing="2.5" x="44" y="31">BEST TATTOO</text>
-</svg>
-</div>
-<a class="header-btn" href="tel:6155436650" onclick="gtag('event','conversion_click',{event_category:'call',event_label:'sasha_call_header'})">📞 Call Now</a>
+  <a href="https://nashvillebesttattoo.com" class="header-logo-link" style="display:flex;align-items:center;text-decoration:none;">
+    <svg viewBox="0 0 260 52" xmlns="http://www.w3.org/2000/svg" height="44" width="auto">
+      <rect x="0" y="2" width="48" height="48" fill="#c9a84c" rx="3"/>
+      <text x="24" y="37" text-anchor="middle" font-family="'Bebas Neue', sans-serif" font-size="26" fill="#0a0a0a" letter-spacing="-0.5">NBT</text>
+      <text x="62" y="22" font-family="'Bebas Neue', sans-serif" font-size="18" fill="#f0ebe2" letter-spacing="3">NASHVILLE</text>
+      <line x1="62" y1="27" x2="258" y2="27" stroke="#c9a84c" stroke-width="0.5" opacity="0.4"/>
+      <text x="62" y="43" font-family="'Bebas Neue', sans-serif" font-size="18" fill="#f0ebe2" letter-spacing="3">BEST TATTOO</text>
+    </svg>
+  </a>
+  <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu" style="background:none;border:none;cursor:pointer;padding:8px;display:flex;flex-direction:column;gap:5px;margin-left:auto;">
+    <span style="display:block;width:24px;height:2px;background:#f0ebe2;border-radius:2px;transition:all 0.3s;"></span>
+    <span style="display:block;width:24px;height:2px;background:#f0ebe2;border-radius:2px;transition:all 0.3s;"></span>
+    <span style="display:block;width:24px;height:2px;background:#f0ebe2;border-radius:2px;transition:all 0.3s;"></span>
+  </button>
 </header>
+<div id="mobileMenu" style="display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(10,10,10,0.98);z-index:90;flex-direction:column;align-items:center;justify-content:center;gap:16px;padding:20px;">
+  <button onclick="closeMenu();openContactModal();" style="width:100%;max-width:320px;padding:16px 24px;font-family:var(--mono, 'DM Mono',monospace);font-size:13px;letter-spacing:0.1em;text-align:center;border-radius:10px;cursor:pointer;background:#c9a84c;color:#0a0a0a;border:none;">Find My Artist</button>
+  <a href="https://nashvillebesttattoo.com" style="width:100%;max-width:320px;padding:16px 24px;font-family:var(--mono, 'DM Mono',monospace);font-size:13px;letter-spacing:0.1em;text-align:center;border-radius:10px;background:transparent;color:#f0ebe2;border:1px solid rgba(240,235,226,0.2);text-decoration:none;display:block;">Back to Nashville Best Tattoo</a>
+</div>
+<script>
+function toggleMenu(){
+  var m=document.getElementById('mobileMenu');
+  var h=document.getElementById('hamburger');
+  var open=m.style.display==='flex';
+  m.style.display=open?'none':'flex';
+  h.setAttribute('aria-expanded',open?'false':'true');
+}
+function closeMenu(){
+  document.getElementById('mobileMenu').style.display='none';
+}
+</script>
 <div class="hero">
 <div class="hero-bg"></div>
 <div class="hero-img-bg"><img alt="Sasha Vandal tattoo Nashville" decoding="sync" fetchpriority="high" height="800" src="sashavandal/sashavandal/hero-bg.webp" width="449"/></div>
 <div class="hero-left">
 <div class="hero-breadcrumb">Nashville, TN</div>
 <h1 class="hero-name">SASHA<br/>VANDAL</h1>
-<p class="hero-tagline">Bold American Traditional with unconventional color — Nashville's own</p>
+<p class="hero-tagline">Bold American Traditional with unconventional color · Nashville's own</p>
 <div class="hero-meta">
 <div class="hero-meta-item"><span class="dot">📍</span>Nashville, Tennessee</div>
 <div class="hero-meta-item"><span class="dot">⭐</span>American Traditional · Color · Black &amp; Grey</div>
@@ -273,7 +352,7 @@ footer{border-top:1px solid rgba(240,235,226,0.06);padding:28px 24px;text-align:
 <div class="why-label">Why We Listed Him</div>
 <p class="why-text">"Some artists play it safe with Traditional. Sasha Vandal does not. His color choices are unexpected, his compositions are confident, and the work has a graphic energy that stops you mid-scroll. This is Nashville tattooing at a high level."</p>
 <div class="why-points">
-<div class="why-point">His American Traditional work goes beyond the expected — the color combinations are unconventional in a way that makes each piece feel completely fresh while staying true to the style's roots.</div>
+<div class="why-point">His American Traditional work goes beyond the expected · the color combinations are unconventional in a way that makes each piece feel completely fresh while staying true to the style's roots.</div>
 <div class="why-point">Sasha is a Nashville native whose work reflects the city's creative depth. That background gives his tattooing a cultural authenticity that is difficult to manufacture.</div>
 <div class="why-point">Clients consistently describe the experience as fun and pressure-free, which is rare at this level of craft. High quality and a relaxed atmosphere in the same room.</div>
 <div class="why-point">His range across color and black and grey means clients with very different visions all find the right fit with him.</div>
@@ -287,7 +366,7 @@ footer{border-top:1px solid rgba(240,235,226,0.06);padding:28px 24px;text-align:
 <div class="artist-single">
 <div class="artist-name">SASHA VANDAL</div>
 <div class="artist-specialty">American Traditional · Bold Color · Black &amp; Grey · Custom</div>
-<p class="artist-bio">Sasha Vandal is a Nashville tattoo artist with a style that is immediately his own. His work lives at the intersection of American Traditional and something harder to define — bold outlines, unexpected color palettes, and a compositional instinct shaped by years spent in Nashville's art and music scenes. Every tattoo he makes carries that influence: graphic, confident, and built to age well. Whether you come in with a clear vision or just a rough direction, Sasha brings genuine creative investment to the process and makes sure you leave with something you're proud to wear for life.</p>
+<p class="artist-bio">Sasha Vandal is a Nashville tattoo artist with a style that is immediately his own. His work lives at the intersection of American Traditional and something harder to define · bold outlines, unexpected color palettes, and a compositional instinct shaped by years spent in Nashville's art and music scenes. Every tattoo he makes carries that influence: graphic, confident, and built to age well. Whether you come in with a clear vision or just a rough direction, Sasha brings genuine creative investment to the process and makes sure you leave with something you're proud to wear for life.</p>
 <div class="artist-locations-tag">Nashville, TN · Native</div>
 </div>
 </div>
@@ -449,5 +528,6 @@ function closeContactModal(){document.getElementById('contact-modal').style.disp
 document.getElementById('contact-modal').addEventListener('click',function(e){if(e.target===this)closeContactModal();});
 async function submitContactForm(e){e.preventDefault();const btn=document.getElementById('contact-submit-btn');btn.textContent='Sending...';btn.disabled=true;const formData=new FormData(e.target);try{const res=await fetch('https://formspree.io/f/maqzqejk',{method:'POST',body:formData,headers:{Accept:'application/json'}});if(res.ok){document.getElementById('contact-success').style.display='block';document.getElementById('contact-error').style.display='none';btn.style.display='none';e.target.reset();if(typeof gtag!=='undefined'){gtag('event','conversion_click',{event_category:'form',event_label:'sasha_form_submit'});}}else{throw new Error('failed');}}catch{document.getElementById('contact-error').style.display='block';btn.textContent='Send Message';btn.disabled=false;}}
 </script>
+</main>
 </body>
 </html>

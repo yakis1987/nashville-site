@@ -291,6 +291,151 @@ footer{border-top:1px solid rgba(240,235,226,0.06);padding:40px 32px;text-align:
   .about-cta-btns{flex-direction:column;}
   .about-cta-btns .btn-primary,.about-cta-btns .btn-secondary{width:100%;justify-content:center;text-align:center;}
 }
+
+/* ==========================================
+   DESKTOP ENHANCEMENTS (min-width: 769px)
+   ========================================== */
+@media(min-width:769px){
+
+  /* HERO - Two column layout */
+  .hero{
+    padding:120px 64px 80px;
+    justify-content:center;
+    min-height:100svh;
+  }
+  .hero-content{
+    position:relative;
+    z-index:2;
+    max-width:560px;
+  }
+  .hero-title{
+    font-size:clamp(64px,7vw,96px);
+    max-width:560px;
+  }
+  .hero-title em{
+    font-size:0.55em;
+  }
+  .hero-sub{
+    font-size:18px;
+    max-width:480px;
+  }
+  .hero-img{
+    width:52%;
+  }
+
+  /* SECTION - wider on desktop */
+  .section{
+    padding:96px 64px;
+    max-width:1200px;
+  }
+
+  /* CARD - full width, better layout */
+  .card-grid{
+    gap:28px;
+  }
+  .studio-card{
+    max-width:100%;
+  }
+  .card-body{
+    padding:32px 32px 32px 28px;
+    gap:0;
+    align-items:stretch;
+  }
+  .card-left{
+    flex:1;
+    padding-right:28px;
+  }
+
+  /* PHOTO STRIP - 2 cols, taller on desktop */
+  .card-photo-strip{
+    grid-template-columns:1fr 1fr;
+    height:220px;
+    margin-bottom:20px;
+    border-radius:10px;
+  }
+  .card-photo-strip img{
+    height:220px;
+  }
+
+  /* CTA column - cleaner integration */
+  .card-cta{
+    min-width:180px;
+    padding-left:28px;
+    border-left:1px solid rgba(240,235,226,0.08);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    gap:10px;
+  }
+  .cta-phone{
+    padding:15px 16px;
+    font-size:12px;
+    border-radius:10px;
+  }
+  .cta-msg{
+    padding:14px 16px;
+    font-size:12px;
+    border-radius:10px;
+  }
+
+  /* Card name bigger on desktop */
+  .card-name{
+    font-size:clamp(32px,3vw,44px);
+    margin-bottom:8px;
+  }
+
+  /* Why text more readable */
+  .why-text{
+    font-size:15px;
+    line-height:1.7;
+    max-width:520px;
+  }
+
+  /* View profile link */
+  .card-link-row{
+    margin-top:20px;
+  }
+  .cta-visit{
+    font-size:12px;
+    letter-spacing:0.12em;
+  }
+
+  /* Trust bar - single row */
+  .trust-bar{
+    padding:22px 64px;
+    gap:0 48px;
+    flex-wrap:nowrap;
+    justify-content:center;
+  }
+
+  /* About section */
+  .about-inner{
+    max-width:800px;
+    margin:0 auto;
+  }
+}
+
+/* LARGE DESKTOP (min-width: 1200px) */
+@media(min-width:1200px){
+  .hero{
+    padding:120px 80px 80px;
+  }
+  .hero-title{
+    font-size:clamp(80px,6.5vw,108px);
+  }
+  .section{
+    padding:100px 80px;
+  }
+  .card-body{
+    padding:36px 36px 36px 32px;
+  }
+  .card-photo-strip{
+    height:220px;
+  }
+  .card-photo-strip img{
+    height:220px;
+  }
+}
 </style>
 <!-- GA4 Nashville -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-FSYC7C1CT2"></script>
@@ -385,7 +530,7 @@ footer{border-top:1px solid rgba(240,235,226,0.06);padding:40px 32px;text-align:
             <div class="card-tags"><span class="tag walkin">By Appointment</span><span class="tag">American Traditional</span><span class="tag">Color</span><span class="tag">Black &amp; Grey</span></div>
             <div class="why-section">
               <p class="why-label">Why we picked her</p>
-              <p class="why-text">Bold, clean American Traditional with a Nashville soul. Darlin' Cait brings rare technical precision to color and black and grey alike — and her full back pieces are some of the best work in the city.</p>
+              <p class="why-text">Bold, clean American Traditional with a Nashville soul. Darlin' Cait brings rare technical precision to color and black and grey alike · and her full back pieces are some of the best work in the city.</p>
             </div>
             <div class="top-rated-badge">
               <span class="badge-icon">🏆</span>
@@ -625,7 +770,7 @@ footer{border-top:1px solid rgba(240,235,226,0.06);padding:40px 32px;text-align:
       </div>
     </div>
     <div class="about-quote-block">
-      <p style="font-family:var(--serif);font-style:italic;font-size:clamp(18px,2.5vw,24px);font-weight:300;color:var(--bone);line-height:1.7;">"Nashville's tattoo scene has grown significantly over the past decade. The city now has artists working at a genuinely world-class level across multiple styles. The challenge isn't finding a tattoo shop — it's finding the right artist for what you actually want."</p>
+      <p style="font-family:var(--serif);font-style:italic;font-size:clamp(18px,2.5vw,24px);font-weight:300;color:var(--bone);line-height:1.7;">"Nashville's tattoo scene has grown significantly over the past decade. The city now has artists working at a genuinely world-class level across multiple styles. The challenge isn't finding a tattoo shop · it's finding the right artist for what you actually want."</p>
       <p class="about-byline">✦ Nashville Best Tattoo · 2026</p>
     </div>
   </div>
@@ -661,17 +806,17 @@ footer{border-top:1px solid rgba(240,235,226,0.06);padding:40px 32px;text-align:
     <div class="guide-card">
       <span class="guide-icon">🌿</span>
       <h3 class="guide-title">AFTERCARE</h3>
-      <p class="guide-text">Nashville summers are hot and humid — both can affect healing. Keep fresh tattoos out of direct sun, avoid pools and natural water for 2-3 weeks, and follow your artist's specific aftercare instructions closely.</p>
+      <p class="guide-text">Nashville summers are hot and humid · both can affect healing. Keep fresh tattoos out of direct sun, avoid pools and natural water for 2-3 weeks, and follow your artist's specific aftercare instructions closely.</p>
     </div>
     <div class="guide-card">
       <span class="guide-icon">✦</span>
       <h3 class="guide-title">CHOOSING AN ARTIST</h3>
-      <p class="guide-text">Match the artist to the style you want. A fine line specialist and a traditional artist require completely different skills. Review portfolios carefully and look for healed work — not just fresh tattoos under studio lighting.</p>
+      <p class="guide-text">Match the artist to the style you want. A fine line specialist and a traditional artist require completely different skills. Review portfolios carefully and look for healed work · not just fresh tattoos under studio lighting.</p>
     </div>
     <div class="guide-card">
       <span class="guide-icon">💳</span>
       <h3 class="guide-title">FINANCING</h3>
-      <p class="guide-text">Several Nashville artists now offer financing through Affirm or Klarna — meaning you can get world-class work without paying everything upfront. Ask when booking if financing is important to you.</p>
+      <p class="guide-text">Several Nashville artists now offer financing through Affirm or Klarna · meaning you can get world-class work without paying everything upfront. Ask when booking if financing is important to you.</p>
     </div>
   </div>
 </div>
@@ -723,7 +868,7 @@ footer{border-top:1px solid rgba(240,235,226,0.06);padding:40px 32px;text-align:
   <div class="modal-box">
     <button class="modal-close" onclick="closeContactModal()">✕</button>
     <h3 class="modal-title">FIND MY ARTIST</h3>
-    <p class="modal-sub">Leave your details — we'll match you with the right Nashville artist.</p>
+    <p class="modal-sub">Leave your details · we'll match you with the right Nashville artist.</p>
     <form class="lead-form" id="contactForm" action="https://formspree.io/f/maqzqejk" method="POST" onsubmit="handleContactSubmit(event)">
       <input class="lead-input" type="text" name="name" placeholder="Your name" required>
       <input class="lead-input" type="tel" name="phone" placeholder="Your phone number">
