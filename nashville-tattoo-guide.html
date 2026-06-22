@@ -27,6 +27,27 @@
 :root{--ink:#0a0a0a;--ink-soft:#141414;--ink-mid:#1e1e1e;--bone:#f0ebe2;--bone-dim:#c9c0b0;--gold:#c9a84c;--gold-light:#e8c96a;--white:#fafafa;--serif:'Cormorant Garamond',Georgia,serif;--mono:'DM Mono',monospace;--display:'Bebas Neue',sans-serif;}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 html{scroll-behavior:smooth;}
+
+/* SECTION-NARROW - centered, responsive */
+.section-narrow{
+  padding:80px 32px;
+  max-width:1100px;
+  margin:0 auto;
+  width:100%;
+  box-sizing:border-box;
+}
+@media(min-width:769px){
+  .section-narrow{
+    padding:80px 64px;
+    max-width:1200px;
+  }
+}
+@media(max-width:768px){
+  .section-narrow{
+    padding:60px 20px;
+  }
+}
+
 body{background:var(--ink);color:var(--bone);font-family:var(--serif);font-size:18px;line-height:1.6;overflow-x:hidden;padding-bottom:120px;}
 body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");pointer-events:none;z-index:-1;opacity:0.4;}
 
@@ -82,12 +103,12 @@ header{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 24px;display
 
 /* SECTIONS */
 .section{padding:80px 32px;max-width:1100px;margin:0 auto;}
-.section-narrow{padding:80px 32px;max-width:760px;margin:0 auto;}
+
 .section-label{font-family:var(--mono);font-size:10px;letter-spacing:0.3em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;display:flex;align-items:center;gap:14px;}
 .section-label::after{content:'';flex:1;height:1px;background:rgba(201,168,76,0.2);}
 .section-title{font-family:var(--display);font-size:clamp(36px,5vw,60px);color:var(--white);line-height:1;margin-bottom:16px;}
 .section-title em{font-family:var(--serif);font-style:italic;color:var(--gold-light);font-size:0.7em;}
-.section-intro{font-size:16px;font-weight:300;color:var(--bone-dim);line-height:1.8;max-width:680px;margin-bottom:32px;}
+.section-intro{font-size:18px;font-weight:300;color:var(--bone-dim);line-height:1.9;max-width:720px;margin-bottom:36px;}
 
 /* FIND CARDS */
 .find-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;}
@@ -104,7 +125,7 @@ header{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 24px;display
 .cat-block-header{display:flex;align-items:baseline;gap:16px;margin-bottom:16px;}
 .cat-block-title{font-family:var(--display);font-size:28px;color:var(--white);}
 .cat-block-count{font-family:var(--mono);font-size:10px;letter-spacing:0.15em;color:var(--gold);opacity:0.7;}
-.cat-block-text{font-size:15px;font-weight:300;color:var(--bone-dim);line-height:1.8;margin-bottom:20px;max-width:640px;}
+.cat-block-text{font-size:17px;font-weight:300;color:var(--bone-dim);line-height:1.9;margin-bottom:20px;max-width:700px;}
 .cat-links{display:flex;flex-wrap:wrap;gap:8px;}
 .cat-link{font-family:var(--mono);font-size:10px;letter-spacing:0.1em;padding:7px 14px;border:1px solid rgba(201,168,76,0.2);border-radius:20px;color:var(--bone-dim);text-decoration:none;transition:all 0.2s;}
 .cat-link:hover{border-color:rgba(201,168,76,0.55);color:var(--gold);}
@@ -177,7 +198,7 @@ footer{padding:40px 32px;text-align:center;border-top:1px solid rgba(240,235,226
 @media(max-width:768px){
   .sticky-cta{display:block;}
   .hero-ornament{display:none;}
-  .section,.section-narrow{padding:60px 20px;}
+  .section,
   .expert-inner{padding:28px 20px;}
   .find-grid,.artist-mini-grid{grid-template-columns:1fr;}
   .final-cta{padding:60px 20px;}
@@ -247,12 +268,7 @@ footer{padding:40px 32px;text-align:center;border-top:1px solid rgba(240,235,226
 
 /* HUB PAGE DESKTOP */
 @media(min-width:769px){
-  .section-narrow{
-    padding:80px 64px;
-    max-width:1100px;
-    margin:0 auto;
-    width:100%;
-  }
+  
   .cat-links{
     justify-content:flex-start;
   }
@@ -264,15 +280,10 @@ footer{padding:40px 32px;text-align:center;border-top:1px solid rgba(240,235,226
   }
 }
 @media(min-width:1200px){
-  .section-narrow{
-    padding:80px 80px;
-    max-width:1200px;
-    margin:0 auto;
-    width:100%;
-  }
+  
 }
 
-.section-narrow{margin-left:auto !important;margin-right:auto !important;}
+
 </style>
 </head>
 <body>
