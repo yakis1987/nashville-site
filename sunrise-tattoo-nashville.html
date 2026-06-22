@@ -198,50 +198,6 @@ footer{border-top:1px solid rgba(240,235,226,0.06);padding:28px 24px;text-align:
 .gallery-cta-btns{display:flex;gap:10px;flex-wrap:wrap;}
 @media(max-width:500px){.gallery-cta{flex-direction:column;text-align:center;}.gallery-cta-btns{width:100%;}.gallery-cta-btns a{flex:1;justify-content:center;}}
 
-
-/* GALLERY + CTA UNIFORM FIX */
-
-/* Gallery - 4 cols on all pages, consistent */
-.gallery-grid,
-.gallery-extra.visible{
-  grid-template-columns:repeat(4,1fr) !important;
-  gap:6px !important;
-}
-
-/* Desktop - 5 cols */
-@media(min-width:769px){
-  .gallery-grid,
-  .gallery-extra.visible{
-    grid-template-columns:repeat(5,1fr) !important;
-    gap:8px !important;
-  }
-}
-
-/* Large desktop - 6 cols */
-@media(min-width:1200px){
-  .gallery-grid,
-  .gallery-extra.visible{
-    grid-template-columns:repeat(6,1fr) !important;
-  }
-}
-
-/* READY TO BOOK - centered */
-.gallery-cta{
-  flex-direction:column !important;
-  align-items:center !important;
-  justify-content:center !important;
-  text-align:center !important;
-  padding:24px 32px !important;
-  gap:16px !important;
-}
-.gallery-cta-btns{
-  justify-content:center !important;
-  gap:12px !important;
-}
-.gallery-cta-text strong{
-  font-size:clamp(20px,2vw,28px) !important;
-  letter-spacing:0.06em !important;
-}
 </style>
 <!-- GA4 Nashville -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-FSYC7C1CT2"></script>
