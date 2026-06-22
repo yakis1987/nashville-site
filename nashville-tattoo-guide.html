@@ -34,6 +34,19 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
 header{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 24px;display:flex;justify-content:space-between;align-items:center;background:rgba(10,10,10,0.97);border-bottom:1px solid rgba(240,235,226,0.08);backdrop-filter:blur(12px);}
 .logo{display:flex;align-items:center;text-decoration:none;}
 .logo svg{height:44px;width:auto;}
+/* HAMBURGER */
+.hamburger{background:none;border:none;cursor:pointer;padding:8px;display:flex;flex-direction:column;gap:5px;margin-left:auto;}
+.hamburger span{display:block;width:24px;height:2px;background:var(--bone);border-radius:2px;transition:all 0.3s;}
+.hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+.hamburger.open span:nth-child(2){opacity:0;}
+.hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+.mobile-menu{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(10,10,10,0.98);z-index:90;flex-direction:column;align-items:center;justify-content:center;gap:16px;padding:20px;}
+.mobile-menu.open{display:flex;}
+.mobile-menu-item{width:100%;max-width:320px;padding:16px 24px;font-family:var(--mono);font-size:13px;letter-spacing:0.1em;text-align:center;border-radius:10px;cursor:pointer;text-decoration:none;display:block;}
+.mobile-menu-item.primary{background:var(--gold);color:var(--ink);border:none;}
+.mobile-menu-item.secondary{background:transparent;color:var(--bone);border:1px solid rgba(240,235,226,0.2);}
+.hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:0.18;z-index:0;}
+
 
 /* HERO */
 .hero{min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;padding:100px 32px 64px;position:relative;overflow:hidden;}
@@ -171,23 +184,6 @@ footer{padding:40px 32px;text-align:center;border-top:1px solid rgba(240,235,226
   .final-cta-btns{flex-direction:column;align-items:center;}
   header{padding:14px 20px;}
 }
-
-/* HAMBURGER */
-.hamburger{background:none;border:none;cursor:pointer;padding:8px;display:flex;flex-direction:column;gap:5px;margin-left:auto;}
-.hamburger span{display:block;width:24px;height:2px;background:var(--bone);border-radius:2px;transition:all 0.3s;}
-.hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
-.hamburger.open span:nth-child(2){opacity:0;}
-.hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
-
-/* MOBILE MENU */
-.mobile-menu{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(10,10,10,0.98);z-index:90;flex-direction:column;align-items:center;justify-content:center;gap:16px;padding:20px;}
-.mobile-menu.open{display:flex;}
-.mobile-menu-item{width:100%;max-width:320px;padding:16px 24px;font-family:var(--mono);font-size:13px;letter-spacing:0.1em;text-align:center;border-radius:10px;cursor:pointer;text-decoration:none;display:block;}
-.mobile-menu-item.primary{background:var(--gold);color:var(--ink);border:none;}
-.mobile-menu-item.secondary{background:transparent;color:var(--bone);border:1px solid rgba(240,235,226,0.2);}
-
-/* HERO IMAGE */
-.hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:0.18;z-index:0;}
 </style>
 </head>
 <body>
@@ -285,7 +281,7 @@ footer{padding:40px 32px;text-align:center;border-top:1px solid rgba(240,235,226
   <div class="cat-block">
     <div class="cat-block-header">
       <div class="cat-block-title">Style Guides</div>
-      <div class="cat-block-count">21 guides</div>
+      <div class="cat-block-count">31 guides</div>
     </div>
     <p class="cat-block-text">Nashville has one of the strongest American Traditional scenes in the South, but the city's tattoo culture runs much deeper. From hyper-detailed realism to delicate fine line botanical work, you will find artists working at a genuinely world-class level across every style. These guides break down what each style actually looks like, how it ages, and which Nashville artists do it best. If you are unsure which style suits you, start with <a href="tattoo-color-vs-blackgrey-nashville.html" class="il">color vs black and grey</a> or <a href="how-to-find-tattoo-artist-nashville.html" class="il">how to find the right artist</a>.</p>
     <div class="cat-links">
@@ -310,13 +306,24 @@ footer{padding:40px 32px;text-align:center;border-top:1px solid rgba(240,235,226
       <a href="watercolor-tattoo-nashville.html" class="cat-link">Watercolor</a>
       <a href="custom-tattoo-nashville.html" class="cat-link">Custom</a>
       <a href="tattoo-culture-south.html" class="cat-link">Tattoo Culture South</a>
+    
+      <a href="trash-polka-tattoo-nashville.html" class="cat-link">Trash Polka</a>
+      <a href="tribal-tattoo-nashville.html" class="cat-link">Tribal</a>
+      <a href="chicano-tattoo-nashville.html" class="cat-link">Chicano</a>
+      <a href="abstract-tattoo-nashville.html" class="cat-link">Abstract</a>
+      <a href="stained-glass-tattoo-nashville.html" class="cat-link">Stained Glass</a>
+      <a href="maori-tattoo-nashville.html" class="cat-link">Maori / Ta Moko</a>
+      <a href="borneo-tattoo-nashville.html" class="cat-link">Borneo / Iban</a>
+      <a href="kalinga-tattoo-nashville.html" class="cat-link">Kalinga Batok</a>
+      <a href="tibetan-tattoo-nashville.html" class="cat-link">Tibetan Buddhist</a>
+      <a href="indian-tribal-tattoo-nashville.html" class="cat-link">Indian Tribal / Godna</a>
     </div>
   </div>
 
   <div class="cat-block">
     <div class="cat-block-header">
       <div class="cat-block-title">Placement Guides</div>
-      <div class="cat-block-count">21 guides</div>
+      <div class="cat-block-count">25 guides</div>
     </div>
     <p class="cat-block-text">Where you put a tattoo matters as much as what you put there. Placement affects how the design fits your body, how visible it is at work, and how well it ages over time. High-movement areas like the spine or collarbone require a different approach than the forearm or thigh. These guides cover pain levels, healing considerations, and design advice specific to each placement. Start with the <a href="tattoo-placement-guide-nashville.html" class="il">full placement guide</a> if you are still deciding, or jump straight to the area you have in mind.</p>
     <div class="cat-links">
@@ -338,13 +345,18 @@ footer{padding:40px 32px;text-align:center;border-top:1px solid rgba(240,235,226
       <a href="hand-tattoo-nashville.html" class="cat-link">Hand</a>
       <a href="rib-tattoo-nashville.html" class="cat-link">Rib</a>
       <a href="small-tattoo-nashville.html" class="cat-link">Small Tattoos</a>
+    
+      <a href="shoulder-tattoo-nashville.html" class="cat-link">Shoulder</a>
+      <a href="upper-arm-tattoo-nashville.html" class="cat-link">Upper Arm</a>
+      <a href="hip-tattoo-nashville.html" class="cat-link">Hip</a>
+      <a href="full-back-tattoo-nashville.html" class="cat-link">Full Back</a>
     </div>
   </div>
 
   <div class="cat-block">
     <div class="cat-block-header">
       <div class="cat-block-title">Before You Book</div>
-      <div class="cat-block-count">21 guides</div>
+      <div class="cat-block-count">36 guides</div>
     </div>
     <p class="cat-block-text">Most people spend more time picking a restaurant than they do preparing for a tattoo. That is a mistake. The consultation, the deposit, the questions you ask, and the reference images you bring all shape the final result. These guides cover everything that happens before you sit in the chair, from understanding deposits and pricing to managing first-timer anxiety. If this is your first tattoo, read <a href="first-tattoo-guide-nashville.html" class="il">the first tattoo guide</a> before anything else. If you are returning for another piece, <a href="tattoo-booking-process-nashville.html" class="il">the booking process guide</a> will save you time.</p>
     <div class="cat-links">
@@ -375,13 +387,21 @@ footer{padding:40px 32px;text-align:center;border-top:1px solid rgba(240,235,226
       <a href="tattoo-open-sunday-nashville.html" class="cat-link">Open Sunday</a>
       <a href="cover-up-tattoo-nashville.html" class="cat-link">Cover-Up Tattoos</a>
       <a href="scar-cover-up-tattoo-nashville.html" class="cat-link">Scar Cover-Up</a>
+    
+      <a href="tattoo-numbing-cream-nashville.html" class="cat-link">Numbing Cream</a>
+      <a href="what-to-wear-tattoo-nashville.html" class="cat-link">What to Wear</a>
+      <a href="tattoo-artist-red-flags-nashville.html" class="cat-link">Artist Red Flags</a>
+      <a href="tattoo-budget-nashville.html" class="cat-link">Budget Planning</a>
+      <a href="tattoo-touch-up-policy-nashville.html" class="cat-link">Touch-Up Policies</a>
+      <a href="tattoo-etiquette-nashville.html" class="cat-link">Client Etiquette</a>
+      <a href="about-nashville-best-tattoo.html" class="cat-link">Our Standards</a>
     </div>
   </div>
 
   <div class="cat-block">
     <div class="cat-block-header">
       <div class="cat-block-title">Aftercare</div>
-      <div class="cat-block-count">6 guides</div>
+      <div class="cat-block-count">10 guides</div>
     </div>
     <p class="cat-block-text">A tattoo is only as good as how you take care of it. Poor aftercare is the number one reason tattoos fade early, lose detail, or require touch-ups. The healing process takes about four weeks and each stage requires something different from you. Nashville summers are particularly hard on fresh tattoos because of the heat and humidity, so sun protection and moisture management are more important here than in most cities. These guides walk you through every stage of healing and what to avoid.</p>
     <div class="cat-links">
@@ -391,13 +411,18 @@ footer{padding:40px 32px;text-align:center;border-top:1px solid rgba(240,235,226
       <a href="tattoo-sun-exposure-nashville.html" class="cat-link">Sun Exposure</a>
       <a href="tattoo-skin-type-nashville.html" class="cat-link">Skin Types</a>
       <a href="tattoo-color-vs-blackgrey-nashville.html" class="cat-link">Color vs Black and Grey</a>
+    
+      <a href="tattoo-peeling-nashville.html" class="cat-link">Peeling</a>
+      <a href="tattoo-itching-nashville.html" class="cat-link">Itching</a>
+      <a href="tattoo-swimming-nashville.html" class="cat-link">Swimming</a>
+      <a href="tattoo-fading-nashville.html" class="cat-link">Fading</a>
     </div>
   </div>
 
   <div class="cat-block">
     <div class="cat-block-header">
       <div class="cat-block-title">Nashville Occasions</div>
-      <div class="cat-block-count">10 guides</div>
+      <div class="cat-block-count">18 guides</div>
     </div>
     <p class="cat-block-text">Nashville draws millions of visitors every year, and a lot of them want to leave with more than just a memory. Getting tattooed in a city you are visiting is a different experience than booking at your home shop. You have less time, you may not know the artists, and you are probably in town for something specific like a bachelorette weekend or a concert. These guides are written for people who are visiting Nashville and want to get tattooed without making a mistake they will regret on the flight home.</p>
     <div class="cat-links">
@@ -413,13 +438,22 @@ footer{padding:40px 32px;text-align:center;border-top:1px solid rgba(240,235,226
       <a href="nashville-bar-crawl-tattoo.html" class="cat-link">Bar Crawl</a>
       <a href="nashville-wedding-tattoo.html" class="cat-link">Wedding Tattoos</a>
       <a href="nashville-music-row-tattoo.html" class="cat-link">Music Row</a>
+    
+      <a href="nashville-birthday-tattoo.html" class="cat-link">Birthday Tattoo</a>
+      <a href="nashville-girls-trip-tattoo.html" class="cat-link">Girls Trip Tattoo</a>
+      <a href="nashville-spring-break-tattoo.html" class="cat-link">Spring Break</a>
+      <a href="nashville-spring-break-first-tattoo.html" class="cat-link">Spring Break First Tattoo</a>
+      <a href="nashville-spring-break-group-tattoo.html" class="cat-link">Spring Break Group</a>
+      <a href="nashville-new-year-tattoo.html" class="cat-link">New Year Tattoo</a>
+      <a href="tattoo-country-music-festival-nashville.html" class="cat-link">Country Music Festival</a>
+      <a href="souvenir-tattoo-nashville.html" class="cat-link">Souvenir Tattoo</a>
     </div>
   </div>
 
   <div class="cat-block">
     <div class="cat-block-header">
       <div class="cat-block-title">Neighborhoods</div>
-      <div class="cat-block-count">10 guides</div>
+      <div class="cat-block-count">11 guides</div>
     </div>
     <p class="cat-block-text">Nashville's tattoo scene is not concentrated in one area. East Nashville has a strong independent artist community. Downtown and The Gulch attract walk-in tourists and flash collectors. Germantown and 12 South have some of the city's more serious appointment-only artists. Where you go depends on what you are looking for. These neighborhood guides break down what you will find in each area, who works there, and what to expect when you walk in.</p>
     <div class="cat-links">
@@ -433,6 +467,8 @@ footer{padding:40px 32px;text-align:center;border-top:1px solid rgba(240,235,226
       <a href="tattoo-shops-berry-hill-nashville.html" class="cat-link">Berry Hill</a>
       <a href="tattoo-shops-hillsboro-village-nashville.html" class="cat-link">Hillsboro Village</a>
       <a href="tattoo-shops-nations-nashville.html" class="cat-link">The Nations</a>
+    
+      <a href="tattoo-shops-downtown-nashville.html" class="cat-link">Downtown Nashville</a>
     </div>
   </div>
 
@@ -441,7 +477,7 @@ footer{padding:40px 32px;text-align:center;border-top:1px solid rgba(240,235,226
   <div class="cat-block">
     <div class="cat-block-header">
       <div class="cat-block-title">Motifs and Ideas</div>
-      <div class="cat-block-count">10 guides</div>
+      <div class="cat-block-count">37 guides</div>
     </div>
     <p class="cat-block-text">Sometimes you know what you want to put on your body before you know what style you want it in. A snake tattoo can be traditional, neo-traditional, blackwork, or illustrative depending on the artist. A rose can be hyper-realistic or a bold two-inch flash piece. These guides explore specific motifs and subjects, with Nashville-specific context on which artists do them best and what to consider before committing to the design.</p>
     <div class="cat-links">
@@ -455,6 +491,20 @@ footer{padding:40px 32px;text-align:center;border-top:1px solid rgba(240,235,226
       <a href="couples-tattoo-nashville.html" class="cat-link">Couples</a>
       <a href="tattoo-ideas-women-nashville.html" class="cat-link">Ideas for Women</a>
       <a href="tattoo-ideas-men-nashville.html" class="cat-link">Ideas for Men</a>
+    
+      <a href="butterfly-tattoo-nashville.html" class="cat-link">Butterfly</a>
+      <a href="lion-tattoo-nashville.html" class="cat-link">Lion and Lioness</a>
+      <a href="skull-tattoo-nashville.html" class="cat-link">Skull</a>
+      <a href="compass-tattoo-nashville.html" class="cat-link">Compass</a>
+      <a href="anchor-tattoo-nashville.html" class="cat-link">Anchor</a>
+      <a href="mandala-tattoo-nashville.html" class="cat-link">Mandala</a>
+      <a href="handwriting-tattoo-nashville.html" class="cat-link">Handwriting Transfer</a>
+      <a href="quote-tattoo-nashville.html" class="cat-link">Quote Tattoo</a>
+      <a href="bracelet-tattoo-nashville.html" class="cat-link">Bracelet Tattoo</a>
+      <a href="cartoon-character-tattoo-nashville.html" class="cat-link">Cartoon Characters</a>
+      <a href="pet-portrait-tattoo-nashville.html" class="cat-link">Pet Portrait</a>
+      <a href="mother-child-tattoo-nashville.html" class="cat-link">Mother and Child</a>
+      <a href="calligraphy-tattoo-nashville.html" class="cat-link">Calligraphy Styles</a>
     </div>
   </div>
 
@@ -625,7 +675,6 @@ footer{padding:40px 32px;text-align:center;border-top:1px solid rgba(240,235,226
     </div>
   </div>
 </div>
-
 
 <script>
 function toggleMenu(){
