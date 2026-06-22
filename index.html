@@ -165,8 +165,8 @@ header{position:fixed;top:0;left:0;right:0;z-index:100;padding:18px 32px;display
 .why-section{margin-top:4px;}
 .why-label{font-family:var(--mono);font-size:9px;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);opacity:0.7;margin-bottom:5px;}
 .why-text{font-size:14px;font-weight:300;color:var(--bone-dim);line-height:1.6;}
-.card-cta{display:flex;flex-direction:column;justify-content:center;gap:8px;padding-left:24px;min-width:160px;border-left:1px solid rgba(240,235,226,0.06);}
-.card-cta-row{display:flex;flex-direction:column;gap:8px;}
+.card-cta{display:flex;flex-direction:row;gap:10px;padding:16px 24px 20px;border-top:1px solid rgba(240,235,226,0.06);min-width:unset;border-left:none;padding-left:24px;}
+.card-cta-row{display:flex;flex-direction:row;gap:10px;width:100%;}
 .cta-phone{display:flex;align-items:center;justify-content:center;background:var(--gold);color:var(--ink);text-align:center;font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:0.08em;text-decoration:none;padding:14px 12px;border-radius:8px;transition:all 0.25s ease;white-space:nowrap;}
 .cta-phone:hover{background:var(--gold-light);}
 .cta-msg{display:flex;align-items:center;justify-content:center;border:1px solid rgba(201,168,76,0.3);color:var(--bone);text-align:center;font-family:var(--mono);font-size:12px;letter-spacing:0.08em;text-decoration:none;padding:13px 12px;border-radius:8px;transition:all 0.25s ease;background:transparent;white-space:nowrap;}
@@ -202,7 +202,7 @@ header{position:fixed;top:0;left:0;right:0;z-index:100;padding:18px 32px;display
 .about-cta-btns{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;}
 
 /* COLLAB BAR */
-.collab-bar{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:16px 24px;border-top:1px solid rgba(201,168,76,0.12);flex-wrap:wrap;}
+.collab-bar{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;padding:28px 24px;border-top:1px solid rgba(201,168,76,0.12);text-align:center;}
 .collab-text{font-family:var(--mono);font-size:11px;letter-spacing:0.12em;color:var(--bone-dim);}
 .collab-btn{font-family:var(--mono);font-size:11px;letter-spacing:0.12em;color:var(--gold);background:transparent;border:1px solid rgba(201,168,76,0.3);border-radius:8px;padding:8px 16px;cursor:pointer;text-decoration:none;transition:all 0.2s;white-space:nowrap;}
 .collab-btn:hover{border-color:var(--gold);background:rgba(201,168,76,0.06);}
@@ -337,13 +337,13 @@ footer{border-top:1px solid rgba(240,235,226,0.06);padding:40px 32px;text-align:
     max-width:100%;
   }
   .card-body{
-    padding:32px 32px 32px 28px;
+    padding:28px 28px 0 28px;
     gap:0;
-    align-items:stretch;
+    flex-direction:column;
   }
   .card-left{
     flex:1;
-    padding-right:28px;
+    padding-right:0;
   }
 
   /* PHOTO STRIP - 2 cols, taller on desktop */
@@ -357,23 +357,31 @@ footer{border-top:1px solid rgba(240,235,226,0.06);padding:40px 32px;text-align:
     height:220px;
   }
 
-  /* CTA column - cleaner integration */
+  /* CTA row - inside card at bottom */
   .card-cta{
-    min-width:180px;
-    padding-left:28px;
-    border-left:1px solid rgba(240,235,226,0.08);
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    gap:10px;
+    flex-direction:row;
+    padding:16px 28px 22px;
+    border-top:1px solid rgba(240,235,226,0.06);
+    border-left:none;
+    min-width:unset;
+    gap:12px;
+  }
+  .card-cta-row{
+    flex-direction:row;
+    width:100%;
+  }
+  .card-cta-row .cta-phone,
+  .card-cta-row .cta-msg{
+    flex:1;
+    max-width:200px;
   }
   .cta-phone{
-    padding:15px 16px;
+    padding:14px 20px;
     font-size:12px;
     border-radius:10px;
   }
   .cta-msg{
-    padding:14px 16px;
+    padding:13px 20px;
     font-size:12px;
     border-radius:10px;
   }

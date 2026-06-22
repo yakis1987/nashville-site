@@ -184,12 +184,95 @@ footer{padding:40px 32px;text-align:center;border-top:1px solid rgba(240,235,226
   .final-cta-btns{flex-direction:column;align-items:center;}
   header{padding:14px 20px;}
 }
+
+/* ============================================
+   DESKTOP ENHANCEMENTS (min-width: 769px)
+   ============================================ */
+@media(min-width:769px){
+
+  /* HEADER - clean logo + hamburger */
+  header{padding:18px 48px;}
+
+  /* HERO - more breathing room */
+  .hero{padding-top:80px;}
+  .hero-left{padding:72px 56px 72px 64px;}
+  .hero-name{font-size:clamp(56px,6.5vw,104px);}
+  .hero-tagline{font-size:clamp(18px,1.8vw,24px);max-width:480px;}
+  .hero-btns{gap:14px;}
+
+  /* SECTIONS - wider on desktop */
+  .section,
+  .artist-gallery-section,
+  .gallery-section{
+    padding:64px 64px;
+    max-width:1160px;
+  }
+
+  /* GALLERY - 5 cols on desktop */
+  .gallery-grid{
+    grid-template-columns:repeat(5,1fr);
+    gap:8px;
+  }
+  .gallery-extra.visible{
+    grid-template-columns:repeat(5,1fr);
+    gap:8px;
+  }
+
+  /* INFO STRIP - 3 cols */
+  .info-strip{
+    grid-template-columns:repeat(3,1fr);
+  }
+
+  /* RATING BAR */
+  .rating-bar{padding:18px 64px;}
+}
+
+/* LARGE DESKTOP (min-width: 1200px) */
+@media(min-width:1200px){
+  .hero-left{padding:80px 64px 80px 80px;}
+  .section,
+  .artist-gallery-section,
+  .gallery-section{
+    padding:72px 80px;
+    max-width:1280px;
+  }
+  .gallery-grid{
+    grid-template-columns:repeat(6,1fr);
+  }
+  .gallery-extra.visible{
+    grid-template-columns:repeat(6,1fr);
+  }
+}
+
+
+/* HUB PAGE DESKTOP */
+@media(min-width:769px){
+  .section-narrow{
+    padding:80px 64px;
+    max-width:1100px;
+  }
+  .cat-links{
+    justify-content:flex-start;
+  }
+  .cat-block{
+    padding:52px 0;
+  }
+  .cat-block-title{
+    font-size:32px;
+  }
+}
+@media(min-width:1200px){
+  .section-narrow{
+    padding:80px 80px;
+    max-width:1200px;
+  }
+}
 </style>
 </head>
 <body>
 
 <header>
-  <a href="https://nashvillebesttattoo.com" class="logo">
+  <a href="https://nashvillebesttattoo.com" class="header-logo-link" style="display:flex;align-items:center;text-decoration:none;">
     <svg viewBox="0 0 260 52" xmlns="http://www.w3.org/2000/svg" height="44" width="auto">
       <rect x="0" y="2" width="48" height="48" fill="#c9a84c" rx="3"/>
       <text x="24" y="37" text-anchor="middle" font-family="'Bebas Neue', sans-serif" font-size="26" fill="#0a0a0a" letter-spacing="-0.5">NBT</text>
@@ -198,8 +281,28 @@ footer{padding:40px 32px;text-align:center;border-top:1px solid rgba(240,235,226
       <text x="62" y="43" font-family="'Bebas Neue', sans-serif" font-size="18" fill="#f0ebe2" letter-spacing="3">BEST TATTOO</text>
     </svg>
   </a>
-  <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu"><span></span><span></span><span></span></button>
+  <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu" style="background:none;border:none;cursor:pointer;padding:8px;display:flex;flex-direction:column;gap:5px;margin-left:auto;">
+    <span style="display:block;width:24px;height:2px;background:#f0ebe2;border-radius:2px;transition:all 0.3s;"></span>
+    <span style="display:block;width:24px;height:2px;background:#f0ebe2;border-radius:2px;transition:all 0.3s;"></span>
+    <span style="display:block;width:24px;height:2px;background:#f0ebe2;border-radius:2px;transition:all 0.3s;"></span>
+  </button>
 </header>
+<div id="mobileMenu" style="display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(10,10,10,0.98);z-index:90;flex-direction:column;align-items:center;justify-content:center;gap:16px;padding:20px;">
+  <button onclick="closeMenu();openContactModal();" style="width:100%;max-width:320px;padding:16px 24px;font-family:var(--mono, 'DM Mono',monospace);font-size:13px;letter-spacing:0.1em;text-align:center;border-radius:10px;cursor:pointer;background:#c9a84c;color:#0a0a0a;border:none;">Find My Artist</button>
+  <a href="https://nashvillebesttattoo.com" style="width:100%;max-width:320px;padding:16px 24px;font-family:var(--mono, 'DM Mono',monospace);font-size:13px;letter-spacing:0.1em;text-align:center;border-radius:10px;background:transparent;color:#f0ebe2;border:1px solid rgba(240,235,226,0.2);text-decoration:none;display:block;">Back to Nashville Best Tattoo</a>
+</div>
+<script>
+function toggleMenu(){
+  var m=document.getElementById('mobileMenu');
+  var h=document.getElementById('hamburger');
+  var open=m.style.display==='flex';
+  m.style.display=open?'none':'flex';
+  h.setAttribute('aria-expanded',open?'false':'true');
+}
+function closeMenu(){
+  document.getElementById('mobileMenu').style.display='none';
+}
+</script>
 <div class="mobile-menu" id="mobileMenu">
   <button class="mobile-menu-item primary" onclick="closeMenu();openContactModal();">Find My Artist</button>
   <button class="mobile-menu-item secondary" onclick="closeMenu();document.querySelector('.newsletter-section')?.scrollIntoView({behavior:'smooth'});">Subscribe to Newsletter</button>
@@ -708,5 +811,6 @@ window.addEventListener('load',function(){
   (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","x93umdg88y");
 });
 </script>
+</main>
 </body>
 </html>
