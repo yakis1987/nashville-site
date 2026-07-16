@@ -64,6 +64,7 @@ header{position:fixed;top:0;left:0;right:0;z-index:100;padding:10px 14px;display
 .info-item{padding:12px 20px;display:flex;align-items:center;gap:10px;border-bottom:1px solid rgba(240,235,226,0.06);border-right:1px solid rgba(240,235,226,0.06);}
 .info-item:nth-child(2n){border-right:none;}
 .info-item:nth-last-child(-n+2){border-bottom:none;}
+.info-strip-section{padding-top:28px;padding-bottom:28px;}
 .info-icon{font-size:16px;}
 .info-label{font-family:var(--mono);font-size:9px;letter-spacing:0.25em;color:var(--gold);text-transform:uppercase;margin-bottom:3px;}
 .info-value{font-size:15px;font-weight:300;color:var(--bone);line-height:1.5;}
@@ -170,6 +171,46 @@ footer{border-top:1px solid rgba(240,235,226,0.06);padding:28px 24px;text-align:
 .amm-btn.back{background:transparent;color:var(--bone-dim);border:none;font-size:11px;}
 .amm-close{position:absolute;top:20px;right:20px;background:none;border:none;color:var(--bone);font-size:24px;cursor:pointer;padding:8px;}
 
+/* DESKTOP SIDEBAR LAYOUT · inert below 1100px, mobile/tablet completely unaffected */
+.desktop-sidebar{display:none;}
+@media(min-width:1100px){
+  .desktop-grid{display:grid;grid-template-columns:1fr 340px;gap:56px;align-items:start;max-width:1320px;margin:0 auto;padding:0 32px;}
+  .desktop-main{min-width:0;}
+  .desktop-main .section,.desktop-main .artist-gallery-section{max-width:none;margin:0;padding-left:0;padding-right:0;}
+  .desktop-sidebar{display:block;position:sticky;top:96px;}
+  .dsb-inner{background:var(--ink-card);border:1px solid rgba(201,168,76,0.22);border-radius:16px;padding:28px;display:flex;flex-direction:column;gap:18px;}
+  .dsb-name{font-family:var(--display);font-size:30px;letter-spacing:0.04em;color:var(--bone);line-height:1;}
+  .dsb-tags{display:flex;flex-wrap:wrap;gap:6px;}
+  .dsb-tag{font-family:var(--mono);font-size:9px;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(201,168,76,0.3);border-radius:20px;padding:5px 10px;white-space:nowrap;}
+  .dsb-rating{display:flex;align-items:center;gap:10px;padding-bottom:16px;border-bottom:1px solid rgba(240,235,226,0.08);}
+  .dsb-stars{color:var(--gold);font-size:14px;letter-spacing:2px;}
+  .dsb-rating-text{font-family:var(--mono);font-size:11px;letter-spacing:0.08em;color:var(--bone-dim);}
+  .dsb-facts{display:flex;flex-direction:column;gap:12px;}
+  .dsb-fact{display:flex;gap:12px;align-items:flex-start;}
+  .dsb-fact-icon{font-size:14px;color:var(--gold);flex-shrink:0;margin-top:2px;}
+  .dsb-fact-label{font-family:var(--mono);font-size:9px;letter-spacing:0.2em;color:var(--gold);text-transform:uppercase;margin-bottom:3px;}
+  .dsb-fact-value{font-size:14px;color:var(--bone-dim);font-weight:300;line-height:1.5;}
+  .dsb-thumbs{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;}
+  .dsb-thumb{aspect-ratio:1;border-radius:8px;overflow:hidden;display:block;border:1px solid rgba(201,168,76,0.15);}
+  .dsb-thumb img{width:100%;height:100%;object-fit:cover;display:block;filter:brightness(0.88);transition:filter 0.2s;}
+  .dsb-thumb:hover img{filter:brightness(1);}
+  .dsb-btns{display:flex;flex-direction:column;gap:10px;}
+  .dsb-btns a{justify-content:center;}
+
+  /* More breathing room + single-row info-strip to match the rating bar above it */
+  .desktop-main .info-strip-section{padding-top:44px;padding-bottom:0;}
+  .desktop-main .info-strip{grid-template-columns:repeat(3,1fr);border-radius:10px;}
+  .desktop-main .info-strip .info-item{border-bottom:none;justify-content:center;}
+  .desktop-main .info-strip .info-item:nth-child(3n){border-right:none;}
+
+  /* Show 8 images initially as one continuous 2-row grid (6 + first 2 of the "extra" set) */
+  .desktop-main .gallery-flow{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;}
+  .desktop-main .gallery-flow .gallery-grid,
+  .desktop-main .gallery-flow .gallery-extra{display:contents;}
+  .desktop-main .gallery-flow .gallery-extra .gal-item:nth-child(n+3){display:none;}
+  .desktop-main .gallery-flow .gallery-extra.visible .gal-item:nth-child(n+3){display:flex;}
+}
+
 </style>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -236,6 +277,9 @@ footer{border-top:1px solid rgba(240,235,226,0.06);padding:28px 24px;text-align:
   </div>
 </div>
 
+<div class="desktop-grid">
+<div class="desktop-main">
+
 <!-- RATING BAR -->
 <div class="rating-bar">
   <div class="rating-item"><span class="rating-stars">★★★★★</span><span class="rating-text">Top-Rated Nashville Artist</span></div>
@@ -246,7 +290,7 @@ footer{border-top:1px solid rgba(240,235,226,0.06);padding:28px 24px;text-align:
 </div>
 
 <!-- INFO STRIP -->
-<div class="section" style="padding-top:28px;padding-bottom:28px;">
+<div class="section info-strip-section">
   <div class="info-strip">
     <div class="info-item"><span class="info-icon">📍</span><div><div class="info-label">Location</div><div class="info-value">1603 Riverside Dr, Nashville TN</div></div></div>
     <div class="info-item"><span class="info-icon">🗓</span><div><div class="info-label">Consultations</div><div class="info-value">By Appointment</div></div></div>
@@ -262,6 +306,7 @@ footer{border-top:1px solid rgba(240,235,226,0.06);padding:28px 24px;text-align:
     <span class="artist-gallery-name">DARLIN' CAIT</span>
     <span class="artist-gallery-sub">American Traditional · Color · Black and Grey</span>
   </div>
+  <div class="gallery-flow">
   <div class="gallery-grid" id="gallery-cait">
     <div class="gal-item" onclick="openLightbox(0)">
       <img src="darlincait/gallery-1.webp" alt="All-seeing eye traditional color tattoo by Darlin Cait Nashville" loading="lazy">
@@ -305,6 +350,7 @@ footer{border-top:1px solid rgba(240,235,226,0.06);padding:28px 24px;text-align:
       <img src="darlincait/gallery-14.webp" alt="Smoking woman black and grey tattoo by Darlin Cait Nashville" loading="lazy">
     </div>
   </div>
+  </div><!-- /gallery-flow -->
   <button class="show-more-btn" id="btn-cait" onclick="toggleGallery()">&#9660; View more photos</button>
   <div class="gallery-cta">
     <div class="gallery-cta-text"><strong>READY TO BOOK?</strong></div>
@@ -464,6 +510,40 @@ footer{border-top:1px solid rgba(240,235,226,0.06);padding:28px 24px;text-align:
     </div>
   </div>
 </div>
+
+</div><!-- /desktop-main -->
+
+<aside class="desktop-sidebar">
+  <div class="dsb-inner">
+    <div class="dsb-name">DARLIN' CAIT</div>
+    <div class="dsb-tags">
+      <span class="dsb-tag">By Appointment</span>
+      <span class="dsb-tag">American Traditional</span>
+      <span class="dsb-tag">Color</span>
+      <span class="dsb-tag">Black &amp; Grey</span>
+    </div>
+    <div class="dsb-rating">
+      <span class="dsb-stars">★★★★★</span>
+      <span class="dsb-rating-text">5.0 · Google Reviews</span>
+    </div>
+    <div class="dsb-facts">
+      <div class="dsb-fact"><span class="dsb-fact-icon">📍</span><div><div class="dsb-fact-label">Location</div><div class="dsb-fact-value">1603 Riverside Dr · East Nashville</div></div></div>
+      <div class="dsb-fact"><span class="dsb-fact-icon">🗓</span><div><div class="dsb-fact-label">Hours</div><div class="dsb-fact-value">12pm – 7pm Daily · Walk-ins welcome</div></div></div>
+      <div class="dsb-fact"><span class="dsb-fact-icon">✦</span><div><div class="dsb-fact-label">Specialty</div><div class="dsb-fact-value">American Traditional · Bold Color</div></div></div>
+    </div>
+    <div class="dsb-thumbs">
+      <a href="#gallery" class="dsb-thumb"><img src="darlincait/gallery-1.webp" alt="Darlin Cait tattoo work" loading="lazy"></a>
+      <a href="#gallery" class="dsb-thumb"><img src="darlincait/gallery-4.webp" alt="Darlin Cait tattoo work" loading="lazy"></a>
+      <a href="#gallery" class="dsb-thumb"><img src="darlincait/gallery-5.webp" alt="Darlin Cait tattoo work" loading="lazy"></a>
+    </div>
+    <div class="dsb-btns">
+      <a class="btn-primary" href="tel:6157396241" onclick="trackConversion('call','cait_call_sidebar')">📞 Call Now</a>
+      <a class="btn-secondary" href="#" onclick="trackConversion('book','cait_book_sidebar');openContactModal();return false;">💬 Book Now</a>
+    </div>
+  </div>
+</aside>
+
+</div><!-- /desktop-grid -->
 
 <!-- STICKY CTA (mobile only) -->
 <div class="sticky-cta">
