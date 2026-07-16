@@ -225,6 +225,7 @@ footer{border-top:1px solid rgba(240,235,226,0.06);padding:28px 24px;text-align:
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
+  function trackConversion(category,label){gtag('event','conversion_click',{event_category:category,event_label:label});var adsLabels={call:'GFcOCNPhk9EcEPrO-4FE',email:'GFcOCNPhk9EcEPrO-4FE',book:'bv3BCNbhk9EcEPrO-4FE',form:'ScQ1CKzRvsQcEPrO-4FE'};if(adsLabels[category]&&typeof gtag!=='undefined'){gtag('event','conversion',{'send_to':'AW-18257733498/'+adsLabels[category]});}}
 </script>
 </head>
 <body>
@@ -240,13 +241,13 @@ footer{border-top:1px solid rgba(240,235,226,0.06);padding:28px 24px;text-align:
       <text x="44" y="31" font-family="Bebas Neue,sans-serif" font-size="12" fill="#f0ebe2" letter-spacing="2.5">TATTOO</text>
     </svg>
   </div>
-  <a href="tel:7022976079" class="header-btn" onclick="gtag('event','conversion_click',{event_category:'call',event_label:'skindesign_call_header'})">📞 Call Now</a>
+  <a href="tel:7022976079" class="header-btn" onclick="trackConversion('call','skindesign_call_header')">📞 Call Now</a>
 <button class="hamburger" id="artistHamburger" onclick="toggleArtistMenu()" aria-label="Menu"><span></span><span></span><span></span></button>
 </header>
 <div class="artist-mobile-menu" id="artistMobileMenu">
   <button class="amm-close" onclick="closeArtistMenu()">✕</button>
-  <a href="tel:7022976079" class="amm-btn primary" onclick="closeArtistMenu();gtag('event','conversion_click',{event_category:'call',event_label:'skindesign_call_menu'});">📞 Call Now</a>
-  <button class="amm-btn primary" onclick="closeArtistMenu();gtag('event','conversion_click',{event_category:'book',event_label:'skindesign_book_menu'});openContactModal();" style="border:none;">💬 Book Appointment</button>
+  <a href="tel:7022976079" class="amm-btn primary" onclick="closeArtistMenu();trackConversion('call','skindesign_call_menu');">📞 Call Now</a>
+  <button class="amm-btn primary" onclick="closeArtistMenu();trackConversion('book','skindesign_book_menu');openContactModal();" style="border:none;">💬 Book Appointment</button>
   <a href="#skin-design-tattoo-nashville" class="amm-btn secondary" onclick="closeArtistMenu();">👤 About Skin Design Tattoo</a>
   <a href="#gallery" class="amm-btn secondary" onclick="closeArtistMenu();">🖼️ View Gallery</a>
   <a href="https://nashvillebesttattoo.com" class="amm-btn back" onclick="closeArtistMenu();">← All Nashville Artists</a>
@@ -265,8 +266,8 @@ footer{border-top:1px solid rgba(240,235,226,0.06);padding:28px 24px;text-align:
       <div class="hero-meta-item"><span class="dot">🗓</span>Free Consultations Available</div>
     </div>
     <div class="hero-btns">
-      <a href="tel:7022976079" class="btn-primary" onclick="gtag('event','conversion_click',{event_category:'call',event_label:'skindesign_call_hero'})">📞 Call Now</a>
-      <a href="#" class="btn-secondary" ontouchstart="" onclick="gtag('event','conversion_click',{event_category:'book',event_label:'skindesign_book_hero'});openContactModal();return false;">💬 Book Now</a>
+      <a href="tel:7022976079" class="btn-primary" onclick="trackConversion('call','skindesign_call_hero')">📞 Call Now</a>
+      <a href="#" class="btn-secondary" ontouchstart="" onclick="trackConversion('book','skindesign_book_hero');openContactModal();return false;">💬 Book Now</a>
     </div>
   </div>
   <div class="hero-right">
@@ -319,7 +320,7 @@ footer{border-top:1px solid rgba(240,235,226,0.06);padding:28px 24px;text-align:
   <button class="show-more-btn" id="btn-jake" onclick="toggleGallery('jake')">&#9660; View more photos</button>
   <div class="gallery-cta">
     <div class="gallery-cta-text"><strong>READY TO BOOK?</strong></div>
-    <div class="gallery-cta-btns"><a href="tel:7022976079" class="btn-primary" onclick="gtag('event','conversion_click',{event_category:'call',event_label:'skindesign_call_gallery'})">📞 Call Now</a><a href="#" class="btn-secondary" ontouchstart="" onclick="gtag('event','conversion_click',{event_category:'book',event_label:'skindesign_book_gallery'});openContactModal();return false;">💬 Book Now</a></div>
+    <div class="gallery-cta-btns"><a href="tel:7022976079" class="btn-primary" onclick="trackConversion('call','skindesign_call_gallery')">📞 Call Now</a><a href="#" class="btn-secondary" ontouchstart="" onclick="trackConversion('book','skindesign_book_gallery');openContactModal();return false;">💬 Book Now</a></div>
   </div>
 </div>
 
@@ -443,8 +444,8 @@ footer{border-top:1px solid rgba(240,235,226,0.06);padding:28px 24px;text-align:
     <h2 class="cta-title">READY TO BOOK?</h2>
     <p class="cta-sub">Free consultation · Call or text to check availability</p>
     <div class="cta-btns">
-      <a href="tel:7022976079" class="btn-primary" onclick="gtag('event','conversion_click',{event_category:'call',event_label:'skindesign_call_bottom'})">📞 Call Now</a>
-      <a href="#" class="btn-secondary" ontouchstart="" onclick="gtag('event','conversion_click',{event_category:'book',event_label:'skindesign_book_bottom'});openContactModal();return false;">💬 Send a Text</a>
+      <a href="tel:7022976079" class="btn-primary" onclick="trackConversion('call','skindesign_call_bottom')">📞 Call Now</a>
+      <a href="#" class="btn-secondary" ontouchstart="" onclick="trackConversion('book','skindesign_book_bottom');openContactModal();return false;">💬 Send a Text</a>
     </div>
   </div>
 </div>
@@ -453,8 +454,8 @@ footer{border-top:1px solid rgba(240,235,226,0.06);padding:28px 24px;text-align:
 <div class="sticky-cta">
   <p class="sticky-text">Book Your Tattoo · Nashville, TN</p>
   <div class="sticky-btns">
-    <a href="tel:7022976079" onclick="gtag('event','conversion_click',{event_category:'call',event_label:'skindesign_call_sticky'})">📞 Call Us</a>
-    <a href="#" ontouchstart="" onclick="gtag('event','conversion_click',{event_category:'book',event_label:'skindesign_book_sticky'});openContactModal();return false;">💬 Text Us</a>
+    <a href="tel:7022976079" onclick="trackConversion('call','skindesign_call_sticky')">📞 Call Us</a>
+    <a href="#" ontouchstart="" onclick="trackConversion('book','skindesign_book_sticky');openContactModal();return false;">💬 Text Us</a>
   </div>
 </div>
 
@@ -561,7 +562,7 @@ function closeContactModal(){document.getElementById('contact-modal').style.disp
 function toggleArtistMenu(){document.getElementById('artistMobileMenu').classList.toggle('open');}
 function closeArtistMenu(){document.getElementById('artistMobileMenu').classList.remove('open');}
 document.getElementById('contact-modal').addEventListener('click',function(e){if(e.target===this)closeContactModal();});
-async function submitContactForm(e){e.preventDefault();const btn=document.getElementById('contact-submit-btn');btn.textContent='Sending...';btn.disabled=true;const formData=new FormData(e.target);try{const res=await fetch('https://formspree.io/f/maqzqejk',{method:'POST',body:formData,headers:{Accept:'application/json'}});if(res.ok){document.getElementById('contact-success').style.display='block';document.getElementById('contact-error').style.display='none';btn.style.display='none';e.target.reset();if(typeof gtag!=='undefined'){gtag('event','conversion_click',{event_category:'form',event_label:'skindesign_form_submit'});}}else{throw new Error('failed');}}catch{document.getElementById('contact-error').style.display='block';btn.textContent='Send Message';btn.disabled=false;}}
+async function submitContactForm(e){e.preventDefault();const btn=document.getElementById('contact-submit-btn');btn.textContent='Sending...';btn.disabled=true;const formData=new FormData(e.target);try{const res=await fetch('https://formspree.io/f/maqzqejk',{method:'POST',body:formData,headers:{Accept:'application/json'}});if(res.ok){document.getElementById('contact-success').style.display='block';document.getElementById('contact-error').style.display='none';btn.style.display='none';e.target.reset();if(typeof gtag!=='undefined'){trackConversion('form','skindesign_form_submit');}}else{throw new Error('failed');}}catch{document.getElementById('contact-error').style.display='block';btn.textContent='Send Message';btn.disabled=false;}}
 </script>
 <!-- Analytics deferred for performance -->
 <script>
@@ -574,6 +575,7 @@ async function submitContactForm(e){e.preventDefault();const btn=document.getEle
     s.onload = function() {
       gtag('js', new Date());
       gtag('config', 'G-FSYC7C1CT2');
+      gtag('config', 'AW-18257733498');
     };
     // Clarity
     (function(c,l,a,r,i,t,y){

@@ -172,8 +172,10 @@ footer{border-top:1px solid rgba(240,235,226,0.06);padding:28px 24px;text-align:
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
+  function trackConversion(category,label){gtag('event','conversion_click',{event_category:category,event_label:label});var adsLabels={call:'GFcOCNPhk9EcEPrO-4FE',email:'GFcOCNPhk9EcEPrO-4FE',book:'bv3BCNbhk9EcEPrO-4FE',form:'ScQ1CKzRvsQcEPrO-4FE'};if(adsLabels[category]&&typeof gtag!=='undefined'){gtag('event','conversion',{'send_to':'AW-18257733498/'+adsLabels[category]});}}
   gtag('js', new Date());
   gtag('config', 'G-FSYC7C1CT2');
+  gtag('config', 'AW-18257733498');
 </script>
 <script type="text/javascript">
     (function(c,l,a,r,i,t,y){
@@ -196,13 +198,13 @@ footer{border-top:1px solid rgba(240,235,226,0.06);padding:28px 24px;text-align:
       <text x="44" y="31" font-family="Bebas Neue,sans-serif" font-size="12" fill="#f0ebe2" letter-spacing="2.5">BEST TATTOO</text>
     </svg>
   </div>
-  <a href="#" class="header-btn" ontouchstart="" onclick="gtag('event','conversion_click',{event_category:'book',event_label:'natasha_book_header'});openContactModal();return false;">✦ Book a Session</a>
+  <a href="#" class="header-btn" ontouchstart="" onclick="trackConversion('book','natasha_book_header');openContactModal();return false;">✦ Book a Session</a>
 <button class="hamburger" id="artistHamburger" onclick="toggleArtistMenu()" aria-label="Menu"><span></span><span></span><span></span></button>
 </header>
 <div class="artist-mobile-menu" id="artistMobileMenu">
   <button class="amm-close" onclick="closeArtistMenu()">✕</button>
-  <a href="tel:6157396241" class="amm-btn primary" onclick="closeArtistMenu();gtag('event','conversion_click',{event_category:'call',event_label:'natasha_call_menu'});">📞 Call Now</a>
-  <button class="amm-btn primary" onclick="closeArtistMenu();gtag('event','conversion_click',{event_category:'book',event_label:'natasha_book_menu'});openContactModal();" style="border:none;">💬 Book Appointment</button>
+  <a href="tel:6157396241" class="amm-btn primary" onclick="closeArtistMenu();trackConversion('call','natasha_call_menu');">📞 Call Now</a>
+  <button class="amm-btn primary" onclick="closeArtistMenu();trackConversion('book','natasha_book_menu');openContactModal();" style="border:none;">💬 Book Appointment</button>
   <a href="#natasha-rachel-nashville" class="amm-btn secondary" onclick="closeArtistMenu();">👤 About Natasha Rachel</a>
   <a href="#gallery" class="amm-btn secondary" onclick="closeArtistMenu();">🖼️ View Gallery</a>
   <a href="https://nashvillebesttattoo.com" class="amm-btn back" onclick="closeArtistMenu();">← All Nashville Artists</a>
@@ -221,8 +223,8 @@ footer{border-top:1px solid rgba(240,235,226,0.06);padding:28px 24px;text-align:
       <div class="hero-meta-item"><span class="dot">🗓</span>By Appointment · Custom Work Only</div>
     </div>
     <div class="hero-btns">
-      <a href="#" class="btn-primary" ontouchstart="" onclick="gtag('event','conversion_click',{event_category:'book',event_label:'natasha_book_hero'});openContactModal();return false;">✦ Book a Session</a>
-      <a href="mailto:natasharacheltattoos@gmail.com?subject=Tattoo Inquiry" class="btn-secondary" onclick="gtag('event','conversion_click',{event_category:'email',event_label:'natasha_email_hero'})">✉ Send a Message</a>
+      <a href="#" class="btn-primary" ontouchstart="" onclick="trackConversion('book','natasha_book_hero');openContactModal();return false;">✦ Book a Session</a>
+      <a href="mailto:natasharacheltattoos@gmail.com?subject=Tattoo Inquiry" class="btn-secondary" onclick="trackConversion('email','natasha_email_hero')">✉ Send a Message</a>
     </div>
   </div>
   <div class="hero-right">
@@ -277,8 +279,8 @@ footer{border-top:1px solid rgba(240,235,226,0.06);padding:28px 24px;text-align:
   <div class="gallery-cta">
     <div class="gallery-cta-text"><strong>READY TO BOOK?</strong></div>
     <div class="gallery-cta-btns">
-      <a href="#" class="btn-primary" ontouchstart="" onclick="gtag('event','conversion_click',{event_category:'book',event_label:'natasha_book_gallery'});openContactModal();return false;">✦ Book a Session</a>
-      <a href="mailto:natasharacheltattoos@gmail.com?subject=Tattoo Inquiry" class="btn-secondary" onclick="gtag('event','conversion_click',{event_category:'email',event_label:'natasha_email_gallery'})">✉ Send a Message</a>
+      <a href="#" class="btn-primary" ontouchstart="" onclick="trackConversion('book','natasha_book_gallery');openContactModal();return false;">✦ Book a Session</a>
+      <a href="mailto:natasharacheltattoos@gmail.com?subject=Tattoo Inquiry" class="btn-secondary" onclick="trackConversion('email','natasha_email_gallery')">✉ Send a Message</a>
     </div>
   </div>
 </div>
@@ -365,8 +367,8 @@ footer{border-top:1px solid rgba(240,235,226,0.06);padding:28px 24px;text-align:
     <h2 class="cta-title">READY TO BOOK?</h2>
     <p class="cta-sub">Custom work only · Every piece designed from scratch · Price agreed upfront</p>
     <div class="cta-btns">
-      <a href="#" class="btn-primary" ontouchstart="" onclick="gtag('event','conversion_click',{event_category:'book',event_label:'natasha_book_bottom'});openContactModal();return false;">✦ Book a Session</a>
-      <a href="mailto:natasharacheltattoos@gmail.com?subject=Tattoo Inquiry" class="btn-secondary" onclick="gtag('event','conversion_click',{event_category:'email',event_label:'natasha_email_bottom'})">✉ Send a Message</a>
+      <a href="#" class="btn-primary" ontouchstart="" onclick="trackConversion('book','natasha_book_bottom');openContactModal();return false;">✦ Book a Session</a>
+      <a href="mailto:natasharacheltattoos@gmail.com?subject=Tattoo Inquiry" class="btn-secondary" onclick="trackConversion('email','natasha_email_bottom')">✉ Send a Message</a>
     </div>
   </div>
 </div>
@@ -374,8 +376,8 @@ footer{border-top:1px solid rgba(240,235,226,0.06);padding:28px 24px;text-align:
 <div class="sticky-cta">
   <p class="sticky-text">Book Your Tattoo · Nashville, TN</p>
   <div class="sticky-btns">
-    <a href="#" ontouchstart="" onclick="gtag('event','conversion_click',{event_category:'book',event_label:'natasha_book_sticky'});openContactModal();return false;">✦ Book a Session</a>
-    <a href="mailto:natasharacheltattoos@gmail.com?subject=Tattoo Inquiry" onclick="gtag('event','conversion_click',{event_category:'email',event_label:'natasha_email_sticky'})">✉ Message</a>
+    <a href="#" ontouchstart="" onclick="trackConversion('book','natasha_book_sticky');openContactModal();return false;">✦ Book a Session</a>
+    <a href="mailto:natasharacheltattoos@gmail.com?subject=Tattoo Inquiry" onclick="trackConversion('email','natasha_email_sticky')">✉ Message</a>
   </div>
 </div>
 
@@ -496,7 +498,7 @@ async function submitContactForm(e) {
       btn.style.display = 'none';
       e.target.reset();
       if (typeof gtag !== 'undefined') {
-        gtag('event', 'conversion_click', { event_category: 'form', event_label: 'natasha_form_submit' });
+        trackConversion('form','natasha_form_submit');
       }
     } else { throw new Error('failed'); }
   } catch {

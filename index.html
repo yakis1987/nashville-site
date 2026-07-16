@@ -466,8 +466,10 @@ footer{border-top:1px solid rgba(240,235,226,0.06);padding:40px 32px;text-align:
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
+  function trackConversion(category,label){gtag('event','conversion_click',{event_category:category,event_label:label});var adsLabels={call:'GFcOCNPhk9EcEPrO-4FE',email:'GFcOCNPhk9EcEPrO-4FE',book:'bv3BCNbhk9EcEPrO-4FE',form:'ScQ1CKzRvsQcEPrO-4FE'};if(adsLabels[category]&&typeof gtag!=='undefined'){gtag('event','conversion',{'send_to':'AW-18257733498/'+adsLabels[category]});}}
   gtag('js', new Date());
   gtag('config', 'G-FSYC7C1CT2');
+  gtag('config', 'AW-18257733498');
 </script>
 <script type="text/javascript">
     (function(c,l,a,r,i,t,y){
@@ -501,7 +503,7 @@ footer{border-top:1px solid rgba(240,235,226,0.06);padding:40px 32px;text-align:
   <a href="#about">Who We Are</a>
   <a href="#guide">Visitor Guide</a>
   <a href="#" style="color:var(--gold);border-color:rgba(201,168,76,0.2);">✦ Get Listed</a>
-  <a href="#" class="nav-book" onclick="closeMenu();gtag('event','conversion_click',{event_category:'book',event_label:'index_find_artist'});openContactModal();return false;">Find My Artist</a>
+  <a href="#" class="nav-book" onclick="closeMenu();trackConversion('book','index_find_artist');openContactModal();return false;">Find My Artist</a>
 </nav>
 
 <!-- HERO -->
@@ -566,8 +568,8 @@ footer{border-top:1px solid rgba(240,235,226,0.06);padding:40px 32px;text-align:
           </div>
           <div class="card-cta">
             <div class="card-cta-row">
-              <a href="tel:6157396241" class="cta-phone" onclick="gtag('event','conversion_click',{event_category:'call',event_label:'index_call_cait'})">📞 Call Now</a>
-              <a href="#" class="cta-msg" ontouchstart="" onclick="gtag('event','conversion_click',{event_category:'book',event_label:'index_book_cait'});openContactModal();return false;">💬 Book Now</a>
+              <a href="tel:6157396241" class="cta-phone" onclick="trackConversion('call','index_call_cait')">📞 Call Now</a>
+              <a href="#" class="cta-msg" ontouchstart="" onclick="trackConversion('book','index_book_cait');openContactModal();return false;">💬 Book Now</a>
             </div>
           </div>
         </div>
@@ -605,8 +607,8 @@ footer{border-top:1px solid rgba(240,235,226,0.06);padding:40px 32px;text-align:
           </div>
           <div class="card-cta">
             <div class="card-cta-row">
-              <a href="tel:6156647724" class="cta-phone" onclick="gtag('event','conversion_click',{event_category:'call',event_label:'index_call_sunrise'})">📞 Call Now</a>
-              <a href="#" class="cta-msg" ontouchstart="" onclick="gtag('event','conversion_click',{event_category:'book',event_label:'index_book_sunrise'});openContactModal();return false;">💬 Book Now</a>
+              <a href="tel:6156647724" class="cta-phone" onclick="trackConversion('call','index_call_sunrise')">📞 Call Now</a>
+              <a href="#" class="cta-msg" ontouchstart="" onclick="trackConversion('book','index_book_sunrise');openContactModal();return false;">💬 Book Now</a>
             </div>
           </div>
         </div>
@@ -644,8 +646,8 @@ footer{border-top:1px solid rgba(240,235,226,0.06);padding:40px 32px;text-align:
           </div>
           <div class="card-cta">
             <div class="card-cta-row">
-              <a href="#" class="cta-phone" ontouchstart="" onclick="gtag('event','conversion_click',{event_category:'book',event_label:'index_book_natasha'});openContactModal();return false;">✦ Book Session</a>
-              <a href="mailto:natasharacheltattoos@gmail.com?subject=Tattoo Inquiry" class="cta-msg" onclick="gtag('event','conversion_click',{event_category:'email',event_label:'index_msg_natasha'})">✉ Message</a>
+              <a href="#" class="cta-phone" ontouchstart="" onclick="trackConversion('book','index_book_natasha');openContactModal();return false;">✦ Book Session</a>
+              <a href="mailto:natasharacheltattoos@gmail.com?subject=Tattoo Inquiry" class="cta-msg" onclick="trackConversion('email','index_msg_natasha')">✉ Message</a>
             </div>
           </div>
         </div>
@@ -683,8 +685,8 @@ footer{border-top:1px solid rgba(240,235,226,0.06);padding:40px 32px;text-align:
           </div>
           <div class="card-cta">
             <div class="card-cta-row">
-              <a href="tel:7022976079" class="cta-phone" onclick="gtag('event','conversion_click',{event_category:'call',event_label:'index_call_skindesign'})">📞 Call Now</a>
-              <a href="#" class="cta-msg" ontouchstart="" onclick="gtag('event','conversion_click',{event_category:'book',event_label:'index_book_skindesign'});openContactModal();return false;">💬 Book Now</a>
+              <a href="tel:7022976079" class="cta-phone" onclick="trackConversion('call','index_call_skindesign')">📞 Call Now</a>
+              <a href="#" class="cta-msg" ontouchstart="" onclick="trackConversion('book','index_book_skindesign');openContactModal();return false;">💬 Book Now</a>
             </div>
           </div>
         </div>
@@ -722,8 +724,8 @@ footer{border-top:1px solid rgba(240,235,226,0.06);padding:40px 32px;text-align:
           </div>
           <div class="card-cta">
             <div class="card-cta-row">
-              <a href="tel:6296669201" class="cta-phone" onclick="gtag('event','conversion_click',{event_category:'call',event_label:'index_call_weirdsis'})">📞 Call Now</a>
-              <a href="#" class="cta-msg" ontouchstart="" onclick="gtag('event','conversion_click',{event_category:'book',event_label:'index_book_weirdsis'});openContactModal();return false;">💬 Book Now</a>
+              <a href="tel:6296669201" class="cta-phone" onclick="trackConversion('call','index_call_weirdsis')">📞 Call Now</a>
+              <a href="#" class="cta-msg" ontouchstart="" onclick="trackConversion('book','index_book_weirdsis');openContactModal();return false;">💬 Book Now</a>
             </div>
           </div>
         </div>
@@ -761,8 +763,8 @@ footer{border-top:1px solid rgba(240,235,226,0.06);padding:40px 32px;text-align:
           </div>
           <div class="card-cta">
             <div class="card-cta-row">
-              <a href="tel:6155436650" class="cta-phone" onclick="gtag('event','conversion_click',{event_category:'call',event_label:'index_call_sasha'})">📞 Call Now</a>
-              <a href="#" class="cta-msg" ontouchstart="" onclick="gtag('event','conversion_click',{event_category:'book',event_label:'index_book_sasha'});openContactModal();return false;">💬 Book Now</a>
+              <a href="tel:6155436650" class="cta-phone" onclick="trackConversion('call','index_call_sasha')">📞 Call Now</a>
+              <a href="#" class="cta-msg" ontouchstart="" onclick="trackConversion('book','index_book_sasha');openContactModal();return false;">💬 Book Now</a>
             </div>
           </div>
         </div>
@@ -801,7 +803,7 @@ footer{border-top:1px solid rgba(240,235,226,0.06);padding:40px 32px;text-align:
   <div class="about-cta">
     <p class="about-cta-label">Not sure which artist is right for you?</p>
     <div class="about-cta-btns">
-      <a href="#" class="btn-primary" onclick="gtag('event','conversion_click',{event_category:'book',event_label:'index_find_artist'});openContactModal();return false;">Find My Artist</a>
+      <a href="#" class="btn-primary" onclick="trackConversion('book','index_find_artist');openContactModal();return false;">Find My Artist</a>
       <a href="#artists" class="btn-secondary">Browse the List</a>
     </div>
   </div>
@@ -845,14 +847,14 @@ footer{border-top:1px solid rgba(240,235,226,0.06);padding:40px 32px;text-align:
 <div class="sticky-cta">
   <p class="sticky-cta-text">Find your Nashville artist</p>
   <div class="sticky-cta-btns">
-    <a href="#" onclick="gtag('event','conversion_click',{event_category:'book',event_label:'index_find_artist'});openContactModal();return false;">Find My Artist</a>
+    <a href="#" onclick="trackConversion('book','index_find_artist');openContactModal();return false;">Find My Artist</a>
   </div>
 </div>
 
 <!-- COLLAB BAR -->
 <div class="collab-bar">
   <span class="collab-text">Tattoo artist or shop in Nashville?</span>
-  <a href="#" class="collab-btn" onclick="gtag('event','conversion_click',{event_category:'collab',event_label:'index_get_listed'});openCollabModal();return false;">Get Listed with Us →</a>
+  <a href="#" class="collab-btn" onclick="trackConversion('collab','index_get_listed');openCollabModal();return false;">Get Listed with Us →</a>
 </div>
 
 <!-- FOOTER -->
@@ -932,7 +934,7 @@ function handleCollabSubmit(e){e.preventDefault();var form=document.querySelecto
 function openContactModal(){document.getElementById('contactModal').classList.add('open');document.body.style.overflow='hidden';}
 function closeContactModal(){document.getElementById('contactModal').classList.remove('open');document.body.style.overflow='';}
 document.getElementById('contactModal').addEventListener('click',function(e){if(e.target===this)closeContactModal();});
-function handleContactSubmit(e){e.preventDefault();const form=document.getElementById('contactForm');const btn=form.querySelector('button[type="submit"]');btn.disabled=true;btn.textContent='Sending...';fetch('https://formspree.io/f/maqzqejk',{method:'POST',body:new FormData(form),headers:{'Accept':'application/json'}}).then(r=>{if(r.ok){form.style.display='none';document.getElementById('contactSuccess').style.display='block';if(typeof gtag!=='undefined'){gtag('event','conversion_click',{event_category:'form',event_label:'index_form_submit'});}}else{btn.disabled=false;btn.textContent='Send My Details →';}}).catch(()=>{btn.disabled=false;btn.textContent='Send My Details →';});}
+function handleContactSubmit(e){e.preventDefault();const form=document.getElementById('contactForm');const btn=form.querySelector('button[type="submit"]');btn.disabled=true;btn.textContent='Sending...';fetch('https://formspree.io/f/maqzqejk',{method:'POST',body:new FormData(form),headers:{'Accept':'application/json'}}).then(r=>{if(r.ok){form.style.display='none';document.getElementById('contactSuccess').style.display='block';if(typeof gtag!=='undefined'){trackConversion('form','index_form_submit');}}else{btn.disabled=false;btn.textContent='Send My Details →';}}).catch(()=>{btn.disabled=false;btn.textContent='Send My Details →';});}
 </script>
 
 <script>
