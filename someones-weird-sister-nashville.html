@@ -229,7 +229,7 @@ footer{border-top:1px solid rgba(240,235,226,0.06);padding:28px 24px;text-align:
 <body>
 
 <header>
-  <a href="tel:6296669201" class="header-back"><span>East Nashville, TN</span></a>
+  <a href="https://nashvillebesttattoo.com" class="header-back"><span>East Nashville, TN</span></a>
   <div class="header-logo">
     <svg viewBox="0 0 200 36" xmlns="http://www.w3.org/2000/svg">
       <rect x="0" y="1" width="34" height="34" fill="#c9a84c" rx="3"/>
@@ -245,7 +245,7 @@ footer{border-top:1px solid rgba(240,235,226,0.06);padding:28px 24px;text-align:
 <div class="artist-mobile-menu" id="artistMobileMenu">
   <button class="amm-close" onclick="closeArtistMenu()">✕</button>
   <a href="tel:6296669201" class="amm-btn primary" onclick="closeArtistMenu();gtag('event','conversion_click',{event_category:'call',event_label:'weirdsis_call_menu'});">📞 Call Now</a>
-  <button class="amm-btn primary" onclick="closeArtistMenu();openContactModal();" style="border:none;">💬 Book Appointment</button>
+  <button class="amm-btn primary" onclick="closeArtistMenu();gtag('event','conversion_click',{event_category:'book',event_label:'weirdsis_book_menu'});openContactModal();" style="border:none;">💬 Book Appointment</button>
   <a href="#someones-weird-sister-nashville" class="amm-btn secondary" onclick="closeArtistMenu();">👤 About Someone's Weird Sister</a>
   <a href="#gallery" class="amm-btn secondary" onclick="closeArtistMenu();">🖼️ View Gallery</a>
   <a href="https://nashvillebesttattoo.com" class="amm-btn back" onclick="closeArtistMenu();">← All Nashville Artists</a>
@@ -553,6 +553,8 @@ document.addEventListener('keydown', function(e) {
 <script>
 function openContactModal(){const m=document.getElementById('contact-modal');m.style.display='flex';document.body.style.overflow='hidden';}
 function closeContactModal(){document.getElementById('contact-modal').style.display='none';document.body.style.overflow='';}
+function toggleArtistMenu(){document.getElementById('artistMobileMenu').classList.toggle('open');}
+function closeArtistMenu(){document.getElementById('artistMobileMenu').classList.remove('open');}
 document.getElementById('contact-modal').addEventListener('click',function(e){if(e.target===this)closeContactModal();});
 async function submitContactForm(e){e.preventDefault();const btn=document.getElementById('contact-submit-btn');btn.textContent='Sending...';btn.disabled=true;const formData=new FormData(e.target);try{const res=await fetch('https://formspree.io/f/maqzqejk',{method:'POST',body:formData,headers:{Accept:'application/json'}});if(res.ok){document.getElementById('contact-success').style.display='block';document.getElementById('contact-error').style.display='none';btn.style.display='none';e.target.reset();if(typeof gtag!=='undefined'){gtag('event','conversion_click',{event_category:'form',event_label:'weirdsis_form_submit'});}}else{throw new Error('failed');}}catch{document.getElementById('contact-error').style.display='block';btn.textContent='Send Message';btn.disabled=false;}}
 </script>

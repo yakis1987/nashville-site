@@ -186,7 +186,7 @@ footer{border-top:1px solid rgba(240,235,226,0.06);padding:28px 24px;text-align:
 <body>
 
 <header>
-  <a href="tel:natasharacheltattoos@gmail.com" class="header-back"><span>Nashville, TN</span></a>
+  <a href="https://nashvillebesttattoo.com" class="header-back"><span>Nashville, TN</span></a>
   <div class="header-logo">
     <svg viewBox="0 0 200 36" xmlns="http://www.w3.org/2000/svg">
       <rect x="0" y="1" width="34" height="34" fill="#c9a84c" rx="3"/>
@@ -202,7 +202,7 @@ footer{border-top:1px solid rgba(240,235,226,0.06);padding:28px 24px;text-align:
 <div class="artist-mobile-menu" id="artistMobileMenu">
   <button class="amm-close" onclick="closeArtistMenu()">✕</button>
   <a href="tel:6157396241" class="amm-btn primary" onclick="closeArtistMenu();gtag('event','conversion_click',{event_category:'call',event_label:'natasha_call_menu'});">📞 Call Now</a>
-  <button class="amm-btn primary" onclick="closeArtistMenu();openContactModal();" style="border:none;">💬 Book Appointment</button>
+  <button class="amm-btn primary" onclick="closeArtistMenu();gtag('event','conversion_click',{event_category:'book',event_label:'natasha_book_menu'});openContactModal();" style="border:none;">💬 Book Appointment</button>
   <a href="#natasha-rachel-nashville" class="amm-btn secondary" onclick="closeArtistMenu();">👤 About Natasha Rachel</a>
   <a href="#gallery" class="amm-btn secondary" onclick="closeArtistMenu();">🖼️ View Gallery</a>
   <a href="https://nashvillebesttattoo.com" class="amm-btn back" onclick="closeArtistMenu();">← All Nashville Artists</a>
@@ -473,6 +473,8 @@ function closeContactModal() {
   document.getElementById('contact-modal').style.display = 'none';
   document.body.style.overflow = '';
 }
+function toggleArtistMenu(){document.getElementById('artistMobileMenu').classList.toggle('open');}
+function closeArtistMenu(){document.getElementById('artistMobileMenu').classList.remove('open');}
 document.getElementById('contact-modal').addEventListener('click', function(e) {
   if (e.target === this) closeContactModal();
 });
