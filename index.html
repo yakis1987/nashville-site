@@ -329,12 +329,17 @@ footer{border-top:1px solid rgba(240,235,226,0.06);padding:40px 32px;text-align:
     max-width:1200px;
   }
 
-  /* CARD - full width, better layout */
+  /* CARD - masonry/Pinterest-style staggered layout */
   .card-grid{
-    gap:28px;
+    display:block;
+    column-count:2;
+    column-gap:28px;
   }
   .studio-card{
     max-width:100%;
+    break-inside:avoid;
+    -webkit-column-break-inside:avoid;
+    margin-bottom:28px;
   }
   .card-body{
     padding:28px 28px 0 28px;
@@ -537,6 +542,84 @@ footer{border-top:1px solid rgba(240,235,226,0.06);padding:40px 32px;text-align:
 
   <div class="card-grid" style="margin-top:32px">
 
+    <!-- 5. Skin Design Tattoo -->
+    <div class="studio-card">
+      <span class="editors-pick">⭐ Editor's Pick</span>
+      <div class="card-inner">
+        <div class="card-body">
+          <div class="card-left">
+            <div class="card-stars">
+              <span class="stars">★★★★★</span>
+              <span class="stars-label">5.0 · Google Reviews</span>
+            </div>
+            <p class="card-location">📍 Downtown Nashville, TN</p>
+            <div class="card-photo-strip">
+              <img src="index-images/index-images/artist-skin-1.webp" alt="Color realism back piece tattoo by Skin Design Nashville" loading="lazy" decoding="async" width="500" height="500">
+              <img src="index-images/index-images/artist-skin-2.webp" alt="Color realism portrait sleeve tattoo by Skin Design Nashville" loading="lazy" decoding="async" width="500" height="500">
+            </div>
+            <h3 class="card-name"><a href="skin-design-tattoo-nashville.html" style="color:inherit;text-decoration:none;border-bottom:1px solid rgba(201,168,76,0.4);padding-bottom:1px;transition:border-color 0.2s;" onmouseover="this.style.borderColor='var(--gold)'" onmouseout="this.style.borderColor='rgba(201,168,76,0.4)'" onclick="location.href=this.href">Skin Design Tattoo</a></h3>
+            <div class="card-tags"><span class="tag">Black &amp; Grey</span><span class="tag">Realism</span><span class="tag">Fine Line</span><span class="tag">Color</span><span class="tag">Free Consultation</span></div>
+            <div class="why-section">
+              <p class="why-label">Why we picked them</p>
+              <p class="why-text">Robert Pho is recognized globally for black and grey mastery. World-class results, free consultations, and financing through Affirm and Klarna.</p>
+            </div>
+            <div class="top-rated-badge">
+              <span class="badge-icon">🏆</span>
+              <span class="badge-text"><strong>Top Rated in Nashville · Published worldwide</strong></span>
+            </div>
+            <div class="card-link-row">
+              <a href="skin-design-tattoo-nashville.html" class="cta-visit" ontouchstart="">→ View Full Profile</a>
+            </div>
+          </div>
+          <div class="card-cta">
+            <div class="card-cta-row">
+              <a href="tel:7022976079" class="cta-phone" onclick="trackConversion('call','index_call_skindesign')">📞 Call Now</a>
+              <a href="#" class="cta-msg" ontouchstart="" onclick="trackConversion('book','index_book_skindesign');openContactModal();return false;">💬 Book Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3. Natasha Rachel -->
+    <div class="studio-card">
+      <span class="editors-pick">⭐ Editor's Pick</span>
+      <div class="card-inner">
+        <div class="card-body">
+          <div class="card-left">
+            <div class="card-stars">
+              <span class="stars">★★★★★</span>
+              <span class="stars-label">5.0 · Google Reviews</span>
+            </div>
+            <p class="card-location">📍 Nashville, Tennessee</p>
+            <div class="card-photo-strip">
+              <img src="index-images/index-images/artist-natasha-1.webp" alt="Color sunflower fine line tattoo by Natasha Rachel" loading="lazy" decoding="async" width="500" height="500">
+              <img src="index-images/index-images/artist-natasha-2.webp" alt="Colorful wildflower fine line tattoo by Natasha Rachel" loading="lazy" decoding="async" width="500" height="500">
+            </div>
+            <h3 class="card-name"><a href="natasha-rachel-nashville.html" style="color:inherit;text-decoration:none;border-bottom:1px solid rgba(201,168,76,0.4);padding-bottom:1px;transition:border-color 0.2s;" onmouseover="this.style.borderColor='var(--gold)'" onmouseout="this.style.borderColor='rgba(201,168,76,0.4)'" onclick="location.href=this.href">Natasha Rachel</a></h3>
+            <div class="card-tags"><span class="tag">Color Fine Line</span><span class="tag">Botanical</span><span class="tag">Mandalas</span><span class="tag">Whimsical</span><span class="tag walkin">By Appointment</span></div>
+            <div class="why-section">
+              <p class="why-label">Why we picked her</p>
+              <p class="why-text">Every piece designed from scratch, priced upfront, never repeated. Natasha's color fine line work is exceptional.</p>
+            </div>
+            <div class="top-rated-badge">
+              <span class="badge-icon">🏆</span>
+              <span class="badge-text"><strong>Top Rated in Nashville · Custom Only</strong></span>
+            </div>
+            <div class="card-link-row">
+              <a href="natasha-rachel-nashville.html" class="cta-visit" ontouchstart="">→ View Full Profile</a>
+            </div>
+          </div>
+          <div class="card-cta">
+            <div class="card-cta-row">
+              <a href="#" class="cta-phone" ontouchstart="" onclick="trackConversion('book','index_book_natasha');openContactModal();return false;">✦ Book Session</a>
+              <a href="mailto:natasharacheltattoos@gmail.com?subject=Tattoo Inquiry" class="cta-msg" onclick="trackConversion('email','index_msg_natasha')">✉ Message</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- 1. Darlin' Cait -->
     <div class="studio-card">
       <span class="editors-pick">⭐ Editor's Pick</span>
@@ -609,84 +692,6 @@ footer{border-top:1px solid rgba(240,235,226,0.06);padding:40px 32px;text-align:
             <div class="card-cta-row">
               <a href="tel:6156647724" class="cta-phone" onclick="trackConversion('call','index_call_sunrise')">📞 Call Now</a>
               <a href="#" class="cta-msg" ontouchstart="" onclick="trackConversion('book','index_book_sunrise');openContactModal();return false;">💬 Book Now</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 3. Natasha Rachel -->
-    <div class="studio-card">
-      <span class="editors-pick">⭐ Editor's Pick</span>
-      <div class="card-inner">
-        <div class="card-body">
-          <div class="card-left">
-            <div class="card-stars">
-              <span class="stars">★★★★★</span>
-              <span class="stars-label">5.0 · Google Reviews</span>
-            </div>
-            <p class="card-location">📍 Nashville, Tennessee</p>
-            <div class="card-photo-strip">
-              <img src="index-images/index-images/artist-natasha-1.webp" alt="Color sunflower fine line tattoo by Natasha Rachel" loading="lazy" decoding="async" width="500" height="500">
-              <img src="index-images/index-images/artist-natasha-2.webp" alt="Colorful wildflower fine line tattoo by Natasha Rachel" loading="lazy" decoding="async" width="500" height="500">
-            </div>
-            <h3 class="card-name"><a href="natasha-rachel-nashville.html" style="color:inherit;text-decoration:none;border-bottom:1px solid rgba(201,168,76,0.4);padding-bottom:1px;transition:border-color 0.2s;" onmouseover="this.style.borderColor='var(--gold)'" onmouseout="this.style.borderColor='rgba(201,168,76,0.4)'" onclick="location.href=this.href">Natasha Rachel</a></h3>
-            <div class="card-tags"><span class="tag">Color Fine Line</span><span class="tag">Botanical</span><span class="tag">Mandalas</span><span class="tag">Whimsical</span><span class="tag walkin">By Appointment</span></div>
-            <div class="why-section">
-              <p class="why-label">Why we picked her</p>
-              <p class="why-text">Every piece designed from scratch, priced upfront, never repeated. Natasha's color fine line work is exceptional.</p>
-            </div>
-            <div class="top-rated-badge">
-              <span class="badge-icon">🏆</span>
-              <span class="badge-text"><strong>Top Rated in Nashville · Custom Only</strong></span>
-            </div>
-            <div class="card-link-row">
-              <a href="natasha-rachel-nashville.html" class="cta-visit" ontouchstart="">→ View Full Profile</a>
-            </div>
-          </div>
-          <div class="card-cta">
-            <div class="card-cta-row">
-              <a href="#" class="cta-phone" ontouchstart="" onclick="trackConversion('book','index_book_natasha');openContactModal();return false;">✦ Book Session</a>
-              <a href="mailto:natasharacheltattoos@gmail.com?subject=Tattoo Inquiry" class="cta-msg" onclick="trackConversion('email','index_msg_natasha')">✉ Message</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 5. Skin Design Tattoo -->
-    <div class="studio-card">
-      <span class="editors-pick">⭐ Editor's Pick</span>
-      <div class="card-inner">
-        <div class="card-body">
-          <div class="card-left">
-            <div class="card-stars">
-              <span class="stars">★★★★★</span>
-              <span class="stars-label">5.0 · Google Reviews</span>
-            </div>
-            <p class="card-location">📍 Downtown Nashville, TN</p>
-            <div class="card-photo-strip">
-              <img src="index-images/index-images/artist-skin-1.webp" alt="Color realism back piece tattoo by Skin Design Nashville" loading="lazy" decoding="async" width="500" height="500">
-              <img src="index-images/index-images/artist-skin-2.webp" alt="Color realism portrait sleeve tattoo by Skin Design Nashville" loading="lazy" decoding="async" width="500" height="500">
-            </div>
-            <h3 class="card-name"><a href="skin-design-tattoo-nashville.html" style="color:inherit;text-decoration:none;border-bottom:1px solid rgba(201,168,76,0.4);padding-bottom:1px;transition:border-color 0.2s;" onmouseover="this.style.borderColor='var(--gold)'" onmouseout="this.style.borderColor='rgba(201,168,76,0.4)'" onclick="location.href=this.href">Skin Design Tattoo</a></h3>
-            <div class="card-tags"><span class="tag">Black &amp; Grey</span><span class="tag">Realism</span><span class="tag">Fine Line</span><span class="tag">Color</span><span class="tag">Free Consultation</span></div>
-            <div class="why-section">
-              <p class="why-label">Why we picked them</p>
-              <p class="why-text">Robert Pho is recognized globally for black and grey mastery. World-class results, free consultations, and financing through Affirm and Klarna.</p>
-            </div>
-            <div class="top-rated-badge">
-              <span class="badge-icon">🏆</span>
-              <span class="badge-text"><strong>Top Rated in Nashville · Published worldwide</strong></span>
-            </div>
-            <div class="card-link-row">
-              <a href="skin-design-tattoo-nashville.html" class="cta-visit" ontouchstart="">→ View Full Profile</a>
-            </div>
-          </div>
-          <div class="card-cta">
-            <div class="card-cta-row">
-              <a href="tel:7022976079" class="cta-phone" onclick="trackConversion('call','index_call_skindesign')">📞 Call Now</a>
-              <a href="#" class="cta-msg" ontouchstart="" onclick="trackConversion('book','index_book_skindesign');openContactModal();return false;">💬 Book Now</a>
             </div>
           </div>
         </div>
