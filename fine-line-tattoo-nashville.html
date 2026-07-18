@@ -69,18 +69,20 @@ header{position:fixed;top:0;left:0;right:0;z-index:100;padding:18px 32px;display
 }
 .sidebar-artists-label{display:none;}
 .sidebar-artists-title{font-family:var(--display);font-size:15px;letter-spacing:0.02em;color:var(--white);margin-bottom:5px;line-height:1;}
-.sidebar-artist-thumbs{display:flex;gap:2px;margin-bottom:3px;}
-.sidebar-artist-thumbs img{flex:1; width:0; height:28px; object-fit:cover;border-radius:4px;display:block;}
+.sidebar-artist-photo{width:52px;height:52px;object-fit:cover;border-radius:8px;flex-shrink:0;display:block;}
+.sidebar-artist-stars{color:var(--gold);font-size:10px;letter-spacing:1px;margin-top:2px;line-height:1;}
 .sidebar-cta-btn{display:flex;align-items:center;justify-content:center;gap:6px;width:100%;background:var(--gold);color:var(--ink);font-family:var(--mono);font-size:9px;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;text-decoration:none;padding:7px;border-radius:8px;border:none;cursor:pointer;margin-bottom:6px;transition:all 0.2s;}
 .sidebar-cta-btn:hover{background:var(--gold-light);transform:translateY(-1px);}
 .sidebar-artist-list{display:flex;flex-direction:column;gap:3px;margin-bottom:6px;}
-.sidebar-artist-card{display:flex;flex-direction:column;gap:0;padding:3px 3px 4px;background:rgba(255,255,255,0.02);border:1px solid rgba(240,235,226,0.08);border-radius:7px;text-decoration:none;color:inherit;transition:all 0.2s;}
-.sidebar-artist-bottom{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:0 3px;}
+.sidebar-artist-card{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:8px 10px;background:rgba(255,255,255,0.02);border:1px solid rgba(240,235,226,0.08);border-radius:9px;text-decoration:none;color:inherit;transition:all 0.2s;cursor:pointer;}
+.sidebar-artist-bottom{display:flex;align-items:center;gap:0;flex:1;min-width:0;}
 .sidebar-artist-card:hover{border-color:rgba(201,168,76,0.4);background:rgba(201,168,76,0.05);}
 .sidebar-artist-info{min-width:0;}
-.sidebar-artist-name{font-family:var(--serif);font-size:12px;color:var(--bone);font-weight:400;line-height:1.1;margin-top:2px;}
-.sidebar-artist-specialty{font-family:var(--mono);font-size:6.5px;letter-spacing:0.03em;color:var(--gold);text-transform:uppercase;margin-top:0px;}
-.sidebar-artist-arrow{font-size:14px;color:var(--bone-dim);flex-shrink:0;}
+.sidebar-artist-name{font-family:var(--serif);font-size:14px;color:var(--bone);font-weight:400;line-height:1.2;}
+.sidebar-artist-specialty{font-family:var(--mono);font-size:7.5px;letter-spacing:0.03em;color:var(--bone-dim);text-transform:uppercase;margin-top:1px;}
+.sidebar-artist-cta{display:inline-block;margin-top:5px;padding:3px 8px;border:1px solid rgba(201,168,76,0.4);border-radius:20px;font-family:var(--mono);font-size:7px;letter-spacing:0.04em;color:var(--gold);text-transform:uppercase;background:rgba(201,168,76,0.06);transition:all 0.2s;}
+.sidebar-artist-card:hover .sidebar-artist-cta{background:var(--gold);color:var(--ink);}
+.sidebar-artist-arrow{display:none;}
 .sidebar-view-all{display:block;text-align:center;font-family:var(--mono);font-size:8px;letter-spacing:0.06em;color:var(--bone-dim);text-decoration:none;padding-top:5px;border-top:1px solid rgba(240,235,226,0.08);text-transform:uppercase;}
 .sidebar-view-all:hover{color:var(--gold);}
 .section{padding:64px 0;border-bottom:1px solid rgba(240,235,226,0.06);}
@@ -535,81 +537,70 @@ IN NASHVILLE<em>The artist makes all the difference</em></h1>
   <a href="#" onclick="openContactModal();return false;" class="sidebar-cta-btn">Find My Artist →</a>
   <div class="sidebar-artist-list">
     <a href="https://nashvillebesttattoo.com/natasha-rachel-nashville.html" class="sidebar-artist-card">
-      <div class="sidebar-artist-thumbs">
-        <img src="index-images/index-images/artist-natasha-1.webp" alt="Color sunflower fine line tattoo by Natasha Rachel" loading="lazy">
-        <img src="index-images/index-images/artist-natasha-2.webp" alt="Colorful wildflower fine line tattoo by Natasha Rachel" loading="lazy">
-      </div>
       <div class="sidebar-artist-bottom">
         <div class="sidebar-artist-info">
           <p class="sidebar-artist-name">Natasha Rachel</p>
+          <p class="sidebar-artist-stars">★★★★★</p>
           <p class="sidebar-artist-specialty">Fine Line · Illustrative</p>
+          <span class="sidebar-artist-cta">View Profile →</span>
         </div>
-        <span class="sidebar-artist-arrow">→</span>
       </div>
+      <img class="sidebar-artist-photo" src="index-images/index-images/artist-natasha-1.webp" alt="Color sunflower fine line tattoo by Natasha Rachel" loading="lazy">
     </a>
     <a href="https://nashvillebesttattoo.com/someones-weird-sister-nashville.html" class="sidebar-artist-card">
-      <div class="sidebar-artist-thumbs">
-        <img src="index-images/index-images/artist-sister-1.webp" alt="Neo-traditional moth tattoo by Someones Weird Sister Nashville" loading="lazy">
-        <img src="index-images/index-images/artist-sister-2.webp" alt="Neo-traditional lemon tattoo by Someones Weird Sister Nashville" loading="lazy">
-      </div>
       <div class="sidebar-artist-bottom">
         <div class="sidebar-artist-info">
           <p class="sidebar-artist-name">Sophie</p>
+          <p class="sidebar-artist-stars">★★★★★</p>
           <p class="sidebar-artist-specialty">Illustrative · Neo-Trad</p>
+          <span class="sidebar-artist-cta">View Profile →</span>
         </div>
-        <span class="sidebar-artist-arrow">→</span>
       </div>
+      <img class="sidebar-artist-photo" src="index-images/index-images/artist-sister-1.webp" alt="Neo-traditional moth tattoo by Someones Weird Sister Nashville" loading="lazy">
     </a>
     <a href="https://nashvillebesttattoo.com/darlin-cait-nashville.html" class="sidebar-artist-card">
-      <div class="sidebar-artist-thumbs">
-        <div style="flex:1;height:28px;border-radius:4px;background:linear-gradient(135deg,rgba(201,168,76,0.12),rgba(201,168,76,0.03));display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:6.5px;color:var(--bone-dim);letter-spacing:0.03em;">PHOTOS SOON</div>
-      </div>
       <div class="sidebar-artist-bottom">
         <div class="sidebar-artist-info">
           <p class="sidebar-artist-name">Darlin' Cait</p>
+          <p class="sidebar-artist-stars">★★★★★</p>
           <p class="sidebar-artist-specialty">Color · Traditional</p>
+          <span class="sidebar-artist-cta">View Profile →</span>
         </div>
-        <span class="sidebar-artist-arrow">→</span>
       </div>
+      <img class="sidebar-artist-photo" src="index-images/index-images/artist-cait-1.webp" alt="All-seeing eye traditional color tattoo by Darlin Cait Nashville" loading="lazy">
     </a>
     <a href="https://nashvillebesttattoo.com/sasha-vandal-nashville.html" class="sidebar-artist-card">
-      <div class="sidebar-artist-thumbs">
-        <img src="index-images/index-images/artist-sasha-1.webp" alt="Bold American Traditional tattoo by Sasha Vandal Nashville" loading="lazy">
-        <img src="index-images/index-images/artist-sasha-2.webp" alt="Color traditional tattoo by Sasha Vandal Nashville" loading="lazy">
-      </div>
       <div class="sidebar-artist-bottom">
         <div class="sidebar-artist-info">
           <p class="sidebar-artist-name">Sasha Vandal</p>
+          <p class="sidebar-artist-stars">★★★★★</p>
           <p class="sidebar-artist-specialty">Black & Grey · Realism</p>
+          <span class="sidebar-artist-cta">View Profile →</span>
         </div>
-        <span class="sidebar-artist-arrow">→</span>
       </div>
+      <img class="sidebar-artist-photo" src="index-images/index-images/artist-sasha-1.webp" alt="Bold American Traditional tattoo by Sasha Vandal Nashville" loading="lazy">
     </a>
     <a href="https://nashvillebesttattoo.com/skin-design-tattoo-nashville.html" class="sidebar-artist-card">
-      <div class="sidebar-artist-thumbs">
-        <img src="index-images/index-images/artist-skin-1.webp" alt="Color realism back piece tattoo by Skin Design Nashville" loading="lazy">
-        <img src="index-images/index-images/artist-skin-2.webp" alt="Color realism portrait sleeve tattoo by Skin Design Nashville" loading="lazy">
-      </div>
       <div class="sidebar-artist-bottom">
         <div class="sidebar-artist-info">
           <p class="sidebar-artist-name">Skin Design Tattoo</p>
+          <p class="sidebar-artist-stars">★★★★★</p>
           <p class="sidebar-artist-specialty">Custom · Multi-Style</p>
+          <span class="sidebar-artist-cta">View Profile →</span>
         </div>
-        <span class="sidebar-artist-arrow">→</span>
       </div>
+      <img class="sidebar-artist-photo" src="index-images/index-images/artist-skin-1.webp" alt="Color realism back piece tattoo by Skin Design Nashville" loading="lazy">
     </a>
     <a href="https://nashvillebesttattoo.com/sunrise-nashville.html" class="sidebar-artist-card">
-      <div class="sidebar-artist-thumbs">
-        <img src="index-images/index-images/artist-sunrise-1.webp" alt="Traditional snake and roses tattoo - Sunrise Tattoo Nashville" loading="lazy">
-        <img src="index-images/index-images/artist-sunrise-2.webp" alt="Magnolia fine line tattoo - Sunrise Tattoo Nashville" loading="lazy">
-      </div>
       <div class="sidebar-artist-bottom">
         <div class="sidebar-artist-info">
           <p class="sidebar-artist-name">Sunrise</p>
+          <p class="sidebar-artist-stars">★★★★★</p>
           <p class="sidebar-artist-specialty">Color · Illustrative</p>
+          <span class="sidebar-artist-cta">View Profile →</span>
         </div>
-        <span class="sidebar-artist-arrow">→</span>
       </div>
+      <img class="sidebar-artist-photo" src="index-images/index-images/artist-sunrise-1.webp" alt="Traditional snake and roses tattoo - Sunrise Tattoo Nashville" loading="lazy">
     </a>
   </div>
   <a href="https://nashvillebesttattoo.com" class="sidebar-view-all">View All Artists →</a>
