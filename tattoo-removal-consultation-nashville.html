@@ -206,8 +206,8 @@ img{max-width:100%;display:block;}
 .final-cta h2{font-family:var(--display);font-size:34px;color:var(--white);margin-bottom:12px;}
 .final-cta p{font-size:16px;color:var(--bone-dim);margin-bottom:24px;max-width:520px;margin-left:auto;margin-right:auto;}
 
-footer{padding:32px 24px;text-align:center;font-family:var(--mono);font-size:11px;color:var(--bone-dim);border-top:1px solid rgba(240,235,226,0.06);}
-footer a{color:var(--gold);text-decoration:none;}
+footer{border-top:1px solid rgba(240,235,226,0.06);padding:36px 32px 120px;text-align:center;font-family:var(--mono);font-size:10px;letter-spacing:0.1em;color:var(--bone-dim);opacity:0.35;}
+footer a{color:inherit;text-decoration:none;}
 
 .sticky-cta{display:none;position:fixed;bottom:0;left:0;right:0;background:rgba(10,10,10,0.97);backdrop-filter:blur(8px);border-top:1px solid rgba(201,168,76,0.2);padding:14px 20px;z-index:90;text-align:center;}
 @media(max-width:768px){.sticky-cta{display:block;}}
@@ -388,6 +388,7 @@ footer a{color:var(--gold);text-decoration:none;}
       <option value="Full sleeve or back piece">Full sleeve or back piece</option>
     </select>
     <textarea name="message" placeholder="Anything else we should know? (optional)" rows="2"></textarea>
+    <label style="display:flex;align-items:flex-start;gap:10px;cursor:pointer;font-family:var(--mono);font-size:11px;color:var(--bone-dim);letter-spacing:0.05em;line-height:1.5;"><input type="checkbox" name="consent" value="yes" required style="accent-color:var(--gold);margin-top:2px;flex-shrink:0;">I agree to be matched with a removal clinic, who may contact me about my request. See our <a href="https://nashvillebesttattoo.com/privacy-policy-nashville.html" style="color:var(--gold);">Privacy Policy</a>.</label>
     <button type="submit" class="lead-submit">Match Me With a Clinic</button>
   </form>
   <div id="ctaLeadSuccess" style="display:none;color:var(--gold-light);font-family:var(--mono);font-size:13px;padding:12px;">Thanks! We will match you with the right clinic shortly.</div>
@@ -464,7 +465,8 @@ footer a{color:var(--gold);text-decoration:none;}
       <option value="Full sleeve or back piece">Full sleeve or back piece</option>
     </select>
     <textarea name="message" placeholder="Anything else we should know? (optional)" rows="2"></textarea>
-    <button type="submit" class="lead-submit">Get My Free Recommendations</button>
+    <label style="display:flex;align-items:flex-start;gap:10px;cursor:pointer;font-family:var(--mono);font-size:11px;color:var(--bone-dim);letter-spacing:0.05em;line-height:1.5;"><input type="checkbox" name="consent" value="yes" required style="accent-color:var(--gold);margin-top:2px;flex-shrink:0;">I agree to be matched with a removal clinic, who may contact me about my request. See our <a href="https://nashvillebesttattoo.com/privacy-policy-nashville.html" style="color:var(--gold);">Privacy Policy</a>.</label>
+  <button type="submit" class="lead-submit">Get My Free Recommendations</button>
   </form>
   <div id="contactSuccess">Thanks! We will be in touch shortly.</div>
 </div>
@@ -475,9 +477,7 @@ footer a{color:var(--gold);text-decoration:none;}
   <a class="btn-primary" href="#contact" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'});return false;">Find a Trusted Removal Clinic</a>
 </div>
 
-<footer>
-  &copy; 2026 <a href="https://nashvillebesttattoo.com">Nashville Best Tattoo</a> &middot; <a href="https://nashvillebesttattoo.com/nashville-tattoo-guide.html">Full Guide</a>
-</footer>
+<footer><a href="https://nashvillebesttattoo.com">Back to Nashville Best Tattoo</a> &nbsp;&middot;&nbsp; &copy; 2026 Nashville Best Tattoo &nbsp;&middot;&nbsp; Tattooing is for adults 18 and older. &nbsp;&middot;&nbsp; <a href="https://nashvillebesttattoo.com/privacy-policy-nashville.html">Privacy Policy</a></footer>
 
 <div class="sticky-cta">
   <a href="#contact" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'});return false;">Get Matched With a Clinic &#8594;</a>

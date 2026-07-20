@@ -180,6 +180,7 @@ hr.divider{border:none;border-top:1px solid rgba(240,235,226,0.06);margin:0 24px
 
 /* FOOTER */
 footer{border-top:1px solid rgba(240,235,226,0.06);padding:28px 24px;text-align:center;}
+footer a{color:inherit;text-decoration:none;}
 .footer-copy{font-family:var(--mono);font-size:10px;letter-spacing:0.12em;color:var(--bone-dim);opacity:0.35;}
 
 @keyframes fadeUp{from{opacity:0;transform:translateY(16px);}to{opacity:1;transform:translateY(0);}}
@@ -556,7 +557,7 @@ footer{border-top:1px solid rgba(240,235,226,0.06);padding:28px 24px;text-align:
 </div>
 
 <footer>
-  <p class="footer-copy">© 2026 Nashville Best Tattoo</p>
+  <p class="footer-copy">© 2026 Nashville Best Tattoo &nbsp;&middot;&nbsp; Tattooing is for adults 18 and older. &nbsp;&middot;&nbsp; <a href="https://nashvillebesttattoo.com/privacy-policy-nashville.html">Privacy Policy</a></p>
 </footer>
 
 <script>
@@ -648,6 +649,7 @@ document.addEventListener('keydown', function(e) {
         <textarea name="message" rows="3" style="width:100%;background:rgba(240,235,226,0.06);border:1px solid rgba(240,235,226,0.15);border-radius:8px;padding:11px 14px;color:var(--bone);font-family:var(--mono);font-size:13px;box-sizing:border-box;resize:vertical;"></textarea>
       </div>
       <input type="hidden" name="source" value="Sunrise Tattoo Nashville">
+      <label style="display:flex;align-items:flex-start;gap:10px;cursor:pointer;font-family:var(--mono);font-size:11px;color:var(--bone-dim);letter-spacing:0.05em;line-height:1.5;margin-bottom:14px;"><input type="checkbox" name="consent" value="yes" required style="accent-color:var(--gold);margin-top:2px;flex-shrink:0;">I agree to be contacted by Sunrise Tattoo or Nashville Best Tattoo by phone, text, or email about my request. See our <a href="https://nashvillebesttattoo.com/privacy-policy-nashville.html" style="color:var(--gold);">Privacy Policy</a>.</label>
       <button type="submit" id="contact-submit-btn" style="width:100%;background:var(--gold);color:var(--ink);font-family:var(--mono);font-size:12px;font-weight:600;letter-spacing:0.08em;border:none;border-radius:10px;padding:14px;cursor:pointer;text-transform:uppercase;">Send Message</button>
       <p id="contact-success" style="display:none;text-align:center;color:var(--gold);font-family:var(--mono);font-size:12px;margin-top:16px;letter-spacing:0.08em;">✓ Message sent! We'll be in touch soon.</p>
       <p id="contact-error" style="display:none;text-align:center;color:#e05;font-family:var(--mono);font-size:12px;margin-top:16px;">Something went wrong. Please try again.</p>

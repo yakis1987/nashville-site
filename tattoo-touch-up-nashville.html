@@ -344,13 +344,11 @@ footer a{color:inherit;text-decoration:none;}
 </div>
 
 <div class="related-section"><p class="related-sub">Keep Exploring</p><h2 class="related-title">Related Guides</h2><div class="related-grid"><a href="https://nashvillebesttattoo.com/tattoo-aftercare-nashville.html" class="related-card"><div><p class="related-card-label">Aftercare</p><p class="related-card-title">Tattoo Aftercare Nashville</p><p class="related-card-desc">Aftercare that prevents the need for touch-ups</p></div><span class="related-card-arrow">&#8594;</span></a><a href="https://nashvillebesttattoo.com/tattoo-sun-exposure-nashville.html" class="related-card"><div><p class="related-card-label">Sun</p><p class="related-card-title">Tattoo Sun Exposure Nashville</p><p class="related-card-desc">UV protection to extend the life of your work</p></div><span class="related-card-arrow">&#8594;</span></a><a href="https://nashvillebesttattoo.com/tattoo-healing-stages-nashville.html" class="related-card"><div><p class="related-card-label">Healing</p><p class="related-card-title">Tattoo Healing Stages Nashville</p><p class="related-card-desc">Week-by-week healing and what to expect</p></div><span class="related-card-arrow">&#8594;</span></a></div></div>
-</div>
-</div>
 
 <section class="newsletter-section"><div class="newsletter-inner">
 <p class="newsletter-label">&#10022; Nashville Tattoo Insider</p>
 <p style="color:#c9c0b0;font-size:16px;margin:0 0 20px 0;font-family:'Cormorant Garamond',serif;font-style:italic;">Weekly tattoo news, style guides, and Nashville artist updates to your inbox.</p>
-<form action="https://formspree.io/f/mzdqygkn" method="POST" style="display:flex;gap:8px;flex-direction:column;max-width:400px;margin:0 auto;" onsubmit="handleNewsletterSubmit(event)" id="newsletterForm">
+<form action="https://formspree.io/f/maqzqejk" method="POST" style="display:flex;gap:8px;flex-direction:column;max-width:400px;margin:0 auto;" onsubmit="handleNewsletterSubmit(event)" id="newsletterForm">
 <div style="display:flex;gap:8px;flex-wrap:wrap;">
 <input type="email" name="email" placeholder="your@email.com" required style="flex:1;min-width:200px;background:rgba(255,255,255,0.06);border:1px solid rgba(201,168,76,0.35);border-radius:10px;padding:14px 16px;font-family:'DM Mono',monospace;font-size:13px;color:#f0ebe2;outline:none;">
 <button type="submit" style="background:#c9a84c;color:#0a0a0a;border:none;border-radius:10px;padding:14px 22px;font-family:'DM Mono',monospace;font-size:11px;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;cursor:pointer;white-space:nowrap;">Subscribe</button>
@@ -371,7 +369,7 @@ footer a{color:inherit;text-decoration:none;}
 </div>
 </section>
 
-<footer><a href="https://nashvillebesttattoo.com">Back to Nashville Best Tattoo</a> &nbsp;·&nbsp; &copy; 2026 Nashville Best Tattoo &nbsp;·&nbsp; Tattooing is for adults 18 and older.</footer>
+<footer><a href="https://nashvillebesttattoo.com">Back to Nashville Best Tattoo</a> &nbsp;·&nbsp; &copy; 2026 Nashville Best Tattoo &nbsp;·&nbsp; Tattooing is for adults 18 and older. &nbsp;&middot;&nbsp; <a href="https://nashvillebesttattoo.com/privacy-policy-nashville.html">Privacy Policy</a></footer>
 
 <div class="sticky-cta">
 <p class="sticky-cta-text">Need a Nashville tattoo touch up or starting fresh?</p>
@@ -386,7 +384,7 @@ footer a{color:inherit;text-decoration:none;}
 <button class="modal-close" onclick="closeContactModal()">&#x2715;</button>
 <h3 class="modal-title">LET'S TALK INK</h3>
 <p class="modal-sub">Tell us your concept and we will match you with the right Nashville artist.</p>
-<form class="lead-form" id="contactForm" action="https://formspree.io/f/mzdqygkn" method="POST" onsubmit="handleContactSubmit(event)">
+<form class="lead-form" id="contactForm" action="https://formspree.io/f/maqzqejk" method="POST" onsubmit="handleContactSubmit(event)">
 <input class="lead-input" type="text" name="name" placeholder="Your name" required>
 <input class="lead-input" type="tel" name="phone" placeholder="Your phone number" required>
 <div style="display:flex;flex-direction:column;gap:8px;">
@@ -401,7 +399,8 @@ footer a{color:inherit;text-decoration:none;}
 </div>
 </div>
 <textarea class="lead-input" name="description" placeholder="Tell us about your idea (optional)" rows="3" style="resize:none;font-family:var(--mono);font-size:12px;"></textarea>
-<button type="submit" class="lead-submit">Send My Details</button>
+<label style="display:flex;align-items:flex-start;gap:10px;cursor:pointer;font-family:var(--mono);font-size:11px;color:var(--bone-dim);letter-spacing:0.05em;line-height:1.5;"><input type="checkbox" name="consent" value="yes" required style="accent-color:var(--gold);margin-top:2px;flex-shrink:0;">I agree to be matched with a tattoo artist or studio, who may contact me by phone or text about my request. See our <a href="https://nashvillebesttattoo.com/privacy-policy-nashville.html" style="color:var(--gold);">Privacy Policy</a>.</label>
+    <button type="submit" class="lead-submit">Send My Details</button>
 </form>
 <div id="contactSuccess" style="display:none;text-align:center;padding:20px 0;">
 <div style="font-size:36px;margin-bottom:12px;">&#10022;</div>
@@ -416,6 +415,6 @@ function closeContactModal(){document.getElementById('contactModal').classList.r
 function toggleMenu(){document.getElementById('mobileMenu').classList.toggle('open');document.getElementById('hamburger').classList.toggle('open');}
 function closeMenu(){document.getElementById('mobileMenu').classList.remove('open');document.getElementById('hamburger').classList.remove('open');}
 document.getElementById('contactModal').addEventListener('click',function(e){if(e.target===this)closeContactModal();});
-function handleContactSubmit(e){e.preventDefault();var btn=document.querySelector('#contactForm .lead-submit');btn.disabled=true;btn.textContent='Sending...';fetch('https://formspree.io/f/mzdqygkn',{method:'POST',body:new FormData(document.getElementById('contactForm')),headers:{'Accept':'application/json'}}).then(function(r){if(r.ok){document.getElementById('contactForm').style.display='none';document.getElementById('contactSuccess').style.display='block';}else{btn.disabled=false;btn.textContent='Send My Details';}}).catch(function(){btn.disabled=false;btn.textContent='Send My Details';});}
+function handleContactSubmit(e){e.preventDefault();var btn=document.querySelector('#contactForm .lead-submit');btn.disabled=true;btn.textContent='Sending...';fetch('https://formspree.io/f/maqzqejk',{method:'POST',body:new FormData(document.getElementById('contactForm')),headers:{'Accept':'application/json'}}).then(function(r){if(r.ok){document.getElementById('contactForm').style.display='none';document.getElementById('contactSuccess').style.display='block';}else{btn.disabled=false;btn.textContent='Send My Details';}}).catch(function(){btn.disabled=false;btn.textContent='Send My Details';});}
 </script>
 </body></html>
