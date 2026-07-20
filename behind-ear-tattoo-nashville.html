@@ -44,7 +44,7 @@
 <section class="newsletter-section"><div class="newsletter-inner">
 <p class="newsletter-label">&#10022; Nashville Tattoo Insider</p>
 <p style="color:#c9c0b0;font-size:16px;margin:0 0 20px 0;font-family:'Cormorant Garamond',serif;font-style:italic;">Weekly tattoo news, style guides, and Nashville artist updates to your inbox.</p>
-<form action="https://formspree.io/f/mzdqygkn" method="POST" style="display:flex;gap:8px;flex-direction:column;max-width:400px;margin:0 auto;" onsubmit="handleNewsletterSubmit(event)" id="newsletterForm">
+<form action="https://formspree.io/f/maqzqejk" method="POST" style="display:flex;gap:8px;flex-direction:column;max-width:400px;margin:0 auto;" onsubmit="handleNewsletterSubmit(event)" id="newsletterForm">
 <div style="display:flex;gap:8px;flex-wrap:wrap;">
 <input type="email" name="email" placeholder="your@email.com" required style="flex:1;min-width:200px;background:rgba(255,255,255,0.06);border:1px solid rgba(201,168,76,0.35);border-radius:10px;padding:14px 16px;font-family:'DM Mono',monospace;font-size:13px;color:#f0ebe2;outline:none;">
 <button type="submit" style="background:#c9a84c;color:#0a0a0a;border:none;border-radius:10px;padding:14px 22px;font-family:'DM Mono',monospace;font-size:11px;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;cursor:pointer;white-space:nowrap;">Subscribe</button>
@@ -59,13 +59,13 @@
 <p class="final-cta-desc">Tell us what you are envisioning and we will match you with a Nashville artist experienced with behind-the-ear placement work.</p>
 <div class="final-cta-btns"><button onclick="openContactModal()" class="btn-primary">Find My Artist</button><a href="https://nashvillebesttattoo.com" class="btn-secondary">View All Artists</a></div>
 </section>
-<footer><a href="https://nashvillebesttattoo.com">Back to Nashville Best Tattoo</a> &nbsp;&#183;&nbsp; &copy; 2026 Nashville Best Tattoo &nbsp;&#183;&nbsp; Tattooing is for adults 18 and older.</footer>
+<footer><a href="https://nashvillebesttattoo.com">Back to Nashville Best Tattoo</a> &nbsp;&#183;&nbsp; &copy; 2026 Nashville Best Tattoo &nbsp;&#183;&nbsp; Tattooing is for adults 18 and older. &nbsp;&#183;&nbsp; <a href="https://nashvillebesttattoo.com/privacy-policy-nashville.html">Privacy Policy</a></footer>
 <div class="sticky-cta"><p class="sticky-cta-text">Behind-the-ear tattoo questions in Nashville? We can help.</p>
 <div class="sticky-cta-btns"><button onclick="openContactModal()" class="sticky-primary">Find My Artist</button><a href="https://nashvillebesttattoo.com" class="sticky-secondary">View Artists</a></div></div>
 <div class="modal-overlay" id="contactModal"><div class="modal-box">
 <button class="modal-close" onclick="closeContactModal()">&#x2715;</button>
 <h3 class="modal-title">LET'S TALK INK</h3><p class="modal-sub">Tell us your behind-the-ear concept and we will find the Nashville artist who handles this technically specific placement with care.</p>
-<form class="lead-form" id="contactForm" action="https://formspree.io/f/mzdqygkn" method="POST" onsubmit="handleContactSubmit(event)">
+<form class="lead-form" id="contactForm" action="https://formspree.io/f/maqzqejk" method="POST" onsubmit="handleContactSubmit(event)">
 <input class="lead-input" type="text" name="name" placeholder="Your name" required>
 <input class="lead-input" type="tel" name="phone" placeholder="Your phone number" required>
 <div style="display:flex;flex-direction:column;gap:8px;">
@@ -79,6 +79,10 @@
 <label class="style-option"><input type="radio" name="style" value="Not Sure"> Not Sure Yet</label>
 </div></div>
 <textarea class="lead-input" name="description" placeholder="Tell us about your idea (optional)" rows="3" style="resize:none;font-family:var(--mono);font-size:12px;"></textarea>
+<label style="display:flex;align-items:flex-start;gap:10px;cursor:pointer;font-family:var(--mono);font-size:11px;color:var(--bone-dim);letter-spacing:0.05em;line-height:1.5;">
+<input type="checkbox" name="consent" value="yes" required style="accent-color:var(--gold);margin-top:2px;flex-shrink:0;">
+I agree to be matched with a tattoo artist or studio, who may contact me by phone or text about my request.
+</label>
 <button type="submit" class="lead-submit">Send My Details</button>
 </form>
 <div id="contactSuccess" style="display:none;text-align:center;padding:20px 0;">
@@ -91,5 +95,5 @@ function closeContactModal(){document.getElementById('contactModal').classList.r
 function toggleMenu(){document.getElementById('mobileMenu').classList.toggle('open');document.getElementById('hamburger').classList.toggle('open');}
 function closeMenu(){document.getElementById('mobileMenu').classList.remove('open');document.getElementById('hamburger').classList.remove('open');}
 document.getElementById('contactModal').addEventListener('click',function(e){if(e.target===this)closeContactModal();});
-function handleContactSubmit(e){e.preventDefault();var btn=document.querySelector('#contactForm .lead-submit');btn.disabled=true;btn.textContent='Sending...';fetch('https://formspree.io/f/mzdqygkn',{method:'POST',body:new FormData(document.getElementById('contactForm')),headers:{'Accept':'application/json'}}).then(function(r){if(r.ok){document.getElementById('contactForm').style.display='none';document.getElementById('contactSuccess').style.display='block';}else{btn.disabled=false;btn.textContent='Send My Details';}}).catch(function(){btn.disabled=false;btn.textContent='Send My Details';});}
+function handleContactSubmit(e){e.preventDefault();var btn=document.querySelector('#contactForm .lead-submit');btn.disabled=true;btn.textContent='Sending...';fetch('https://formspree.io/f/maqzqejk',{method:'POST',body:new FormData(document.getElementById('contactForm')),headers:{'Accept':'application/json'}}).then(function(r){if(r.ok){document.getElementById('contactForm').style.display='none';document.getElementById('contactSuccess').style.display='block';}else{btn.disabled=false;btn.textContent='Send My Details';}}).catch(function(){btn.disabled=false;btn.textContent='Send My Details';});}
 </script></body></html>
