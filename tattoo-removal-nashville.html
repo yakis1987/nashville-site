@@ -18,13 +18,13 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Article",
+  "@type": "MedicalWebPage",
   "headline": "Tattoo Removal in Nashville: The Complete Guide",
   "description": "Everything you need to know about tattoo removal in Nashville: how it works, what it costs, how long it takes, and when a cover-up beats full removal.",
   "author": {"@type": "Person", "name": "Yaki Shasha", "jobTitle": "Tattoo Artist", "sameAs": ["https://www.instagram.com/yakishasha_tattoos/", "https://yakishasha.com"]},
   "publisher": {"@type": "Organization", "name": "Nashville Best Tattoo", "url": "https://nashvillebesttattoo.com"},
   "datePublished": "2026-06-01",
-  "dateModified": "2026-07-17",
+  "dateModified": "2026-07-20",
   "about": {"@type": "MedicalProcedure", "name": "Laser Tattoo Removal"},
   "spatialCoverage": {"@type": "City", "name": "Nashville", "containedInPlace": {"@type": "State", "name": "Tennessee"}},
   "mainEntityOfPage": "https://nashvillebesttattoo.com/tattoo-removal-nashville.html"
@@ -113,7 +113,6 @@
   ]
 }
 </script>
-
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -129,7 +128,6 @@
   ]
 }
 </script>
-
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -137,662 +135,470 @@
   "url": "https://nashvillebesttattoo.com/tattoo-removal-nashville.html",
   "speakable": {
     "@type": "SpeakableSpecification",
-    "cssSelector": [".quick-answer", ".faq-item"]
+    "cssSelector": [".quick-answer", ".faq-a", ".cat-block-text"]
   }
 }
 </script>
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400;500&family=Bebas+Neue&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400;500&family=Bebas+Neue&display=swap"></noscript>
 <style>
-:root{--ink:#0a0a0a;--ink-soft:#141414;--ink-card:#161410;--bone:#f0ebe2;--bone-dim:#c9c0b0;--gold:#c9a84c;--gold-light:#e8c96a;--white:#fafafa;--serif:'Cormorant Garamond',Georgia,serif;--mono:'DM Mono',monospace;--display:'Bebas Neue',sans-serif;}
-*{margin:0;padding:0;box-sizing:border-box;}
-body{background:var(--ink);color:var(--bone);font-family:var(--serif);line-height:1.7;-webkit-font-smoothing:antialiased;}
-a{color:inherit;}
-img{max-width:100%;display:block;}
+:root{--ink:#0a0a0a;--ink-soft:#141414;--ink-mid:#1e1e1e;--bone:#f0ebe2;--bone-dim:#c9c0b0;--gold:#c9a84c;--gold-light:#e8c96a;--white:#fafafa;--serif:'Cormorant Garamond',Georgia,serif;--mono:'DM Mono',monospace;--display:'Bebas Neue',sans-serif;}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{background:var(--ink);color:var(--bone);font-family:var(--serif);font-size:18px;line-height:1.6;overflow-x:clip;padding-bottom:120px;}
+body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");pointer-events:none;z-index:-1;opacity:0.4;}
 
-.header{position:sticky;top:0;z-index:100;background:rgba(10,10,10,0.96);backdrop-filter:blur(8px);border-bottom:1px solid rgba(201,168,76,0.15);padding:16px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;}
-.header-back{display:flex;align-items:center;gap:4px;text-decoration:none;color:var(--bone-dim);font-family:var(--mono);font-size:10px;letter-spacing:0.08em;white-space:nowrap;}
-.header-back::before{content:"←";font-size:13px;}
-.header-logo{font-family:var(--display);font-size:16px;letter-spacing:0.05em;color:var(--bone);text-decoration:none;}
-.hamburger{width:36px;height:36px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:5px;background:none;border:none;cursor:pointer;}
-.hamburger span{display:block;width:22px;height:2px;background:var(--bone);}
-.mobile-menu{display:none;position:fixed;inset:0;background:rgba(10,10,10,0.98);z-index:999;flex-direction:column;align-items:center;justify-content:center;gap:14px;padding:24px;}
+header{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 24px;display:flex;justify-content:space-between;align-items:center;background:rgba(10,10,10,0.97);border-bottom:1px solid rgba(240,235,226,0.08);backdrop-filter:blur(12px);}
+.hamburger{background:none;border:none;cursor:pointer;padding:8px;display:flex;flex-direction:column;gap:5px;margin-left:auto;}
+.mobile-menu{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(10,10,10,0.98);z-index:90;flex-direction:column;align-items:center;justify-content:center;gap:16px;padding:20px;}
 .mobile-menu.open{display:flex;}
-.mm-close{position:absolute;top:20px;right:20px;background:none;border:none;color:var(--bone);font-size:24px;cursor:pointer;}
-.mm-link{color:var(--bone);text-decoration:none;font-family:var(--mono);font-size:13px;letter-spacing:0.1em;text-transform:uppercase;padding:14px 24px;border:1px solid rgba(201,168,76,0.25);border-radius:10px;width:100%;max-width:320px;text-align:center;}
+.mobile-menu-item{width:100%;max-width:320px;padding:16px 24px;font-family:var(--mono);font-size:13px;letter-spacing:0.1em;text-align:center;border-radius:10px;cursor:pointer;text-decoration:none;display:block;}
+.mobile-menu-item.primary{background:var(--gold);color:var(--ink);border:none;}
+.mobile-menu-item.secondary{background:transparent;color:var(--bone);border:1px solid rgba(240,235,226,0.2);}
+.hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:0.16;z-index:0;}
 
-.hub-nav{max-width:820px;margin:24px auto 0;padding:0 24px;display:flex;flex-wrap:wrap;gap:8px;}
-.hub-nav-item{flex-shrink:0;font-family:var(--mono);font-size:11px;letter-spacing:0.05em;text-transform:uppercase;padding:9px 16px;border-radius:20px;border:1px solid rgba(201,168,76,0.25);color:var(--bone-dim);text-decoration:none;white-space:nowrap;transition:all 0.2s;}
-.hub-nav-item:hover{border-color:rgba(201,168,76,0.6);color:var(--bone);}
-.hub-nav-item.active{background:var(--gold);color:var(--ink);border-color:var(--gold);font-weight:500;}
+.hero{min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;padding:100px 32px 64px;position:relative;overflow:hidden;}
+.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 60% 30%,rgba(201,168,76,0.07),transparent),linear-gradient(160deg,#0f0c08,#0a0a0a,#0d0810);}
+.hero-ornament{position:absolute;top:50%;right:-80px;transform:translateY(-50%);width:600px;height:600px;border:1px solid rgba(201,168,76,0.08);border-radius:50%;animation:rotate 60s linear infinite;}
+.hero-ornament::before{content:'';position:absolute;inset:30px;border:1px solid rgba(201,168,76,0.05);border-radius:50%;}
+.hero-ornament::after{content:'';position:absolute;inset:80px;border:1px solid rgba(201,168,76,0.04);border-radius:50%;}
+@keyframes rotate{to{transform:translateY(-50%) rotate(360deg);}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px);}to{opacity:1;transform:translateY(0);}}
+.hero-label{position:relative;z-index:2;font-family:var(--mono);font-size:11px;letter-spacing:0.25em;color:var(--gold);text-transform:uppercase;margin-bottom:20px;display:flex;align-items:center;gap:14px;animation:fadeUp 0.8s ease 0.1s both;}
+.hero-label::before{content:'';display:block;width:40px;height:1px;background:var(--gold);opacity:0.6;}
+.hero-title{position:relative;z-index:2;font-family:var(--display);font-size:clamp(52px,9vw,112px);line-height:0.92;color:var(--white);max-width:820px;animation:fadeUp 0.9s ease 0.25s both;}
+.hero-title em{font-family:var(--serif);font-style:italic;color:var(--gold-light);font-size:0.7em;display:block;margin-top:8px;}
+.hero-sub{position:relative;z-index:2;margin-top:28px;font-size:17px;font-weight:300;color:var(--bone-dim);max-width:480px;line-height:1.7;animation:fadeUp 0.8s ease 0.4s both;}
+.hero-cta{position:relative;z-index:2;margin-top:36px;display:flex;gap:16px;flex-wrap:wrap;animation:fadeUp 0.8s ease 0.55s both;}
+.btn-primary{display:inline-flex;align-items:center;gap:10px;background:var(--gold);color:var(--ink);font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;text-decoration:none;padding:16px 32px;border-radius:10px;transition:all 0.3s ease;cursor:pointer;border:none;}
+.btn-primary:hover{background:var(--gold-light);transform:translateY(-2px);}
+.btn-secondary{display:inline-flex;align-items:center;gap:10px;border:1px solid rgba(240,235,226,0.2);color:var(--bone);font-family:var(--mono);font-size:12px;letter-spacing:0.15em;text-transform:uppercase;text-decoration:none;padding:16px 32px;border-radius:10px;transition:all 0.3s ease;background:transparent;cursor:pointer;}
+.btn-secondary:hover{border-color:rgba(240,235,226,0.5);background:rgba(240,235,226,0.04);}
 
-.article-hero{padding:24px 24px 40px;max-width:820px;margin:0 auto;}
-.article-label{font-family:var(--mono);font-size:11px;letter-spacing:0.25em;color:var(--gold);text-transform:uppercase;margin-bottom:18px;}
-.article-title{font-family:var(--display);font-size:clamp(36px,6vw,56px);line-height:0.98;letter-spacing:0.01em;color:var(--white);margin-bottom:20px;}
-.article-sub{font-size:19px;font-weight:300;color:var(--bone-dim);line-height:1.6;max-width:640px;}
-.article-meta{display:flex;gap:16px;margin-top:24px;font-family:var(--mono);font-size:11px;color:var(--bone-dim);letter-spacing:0.05em;}
+.trust-bar{border-top:1px solid rgba(240,235,226,0.08);border-bottom:1px solid rgba(240,235,226,0.08);padding:20px 32px;display:flex;flex-wrap:wrap;justify-content:center;gap:16px 40px;background:rgba(255,255,255,0.015);}
+.trust-item{display:flex;align-items:center;gap:10px;}
+.trust-icon{font-size:14px;color:var(--gold);opacity:0.7;}
+.trust-text{font-family:var(--mono);font-size:11px;letter-spacing:0.1em;color:var(--bone-dim);}
 
-.quick-answer{max-width:760px;margin:0 auto 32px;padding:24px 28px;background:var(--ink-card);border:1px solid rgba(201,168,76,0.3);border-radius:14px;}
+.expert-bar{border-bottom:1px solid rgba(240,235,226,0.08);background:rgba(201,168,76,0.04);}
+.expert-inner{max-width:760px;margin:0 auto;padding:36px 32px;display:flex;gap:20px;align-items:flex-start;}
+.expert-icon{font-size:24px;flex-shrink:0;color:var(--gold);margin-top:4px;}
+.expert-label{font-family:var(--mono);font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;}
+.expert-text{font-size:15px;font-weight:300;color:var(--bone-dim);line-height:1.8;}
+
+.section{padding:80px 32px;max-width:1100px;margin:0 auto;}
+.section-narrow{padding:80px 32px;max-width:1100px;margin:0 auto;width:100%;box-sizing:border-box;}
+.section-label{font-family:var(--mono);font-size:10px;letter-spacing:0.3em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;display:flex;align-items:center;gap:14px;}
+.section-label::after{content:'';flex:1;height:1px;background:rgba(201,168,76,0.2);}
+.section-title{font-family:var(--display);font-size:clamp(36px,5vw,60px);color:var(--white);line-height:1;margin-bottom:16px;}
+.section-title em{font-family:var(--serif);font-style:italic;color:var(--gold-light);font-size:0.7em;}
+.section-intro{font-size:18px;font-weight:300;color:var(--bone-dim);line-height:1.9;max-width:720px;margin-bottom:36px;}
+
+.quick-answer{max-width:760px;margin:0 auto 0;padding:24px 28px;background:var(--ink-soft);border:1px solid rgba(201,168,76,0.3);border-radius:14px;}
 .quick-answer-label{font-family:var(--mono);font-size:10px;letter-spacing:0.2em;color:var(--gold);text-transform:uppercase;margin-bottom:10px;display:flex;align-items:center;gap:8px;}
 .quick-answer p{font-size:17px;line-height:1.65;color:var(--bone);font-weight:300;margin:0;}
 
-.reviewed-by{max-width:760px;margin:32px auto;padding:18px 24px;border-top:1px solid rgba(201,168,76,0.15);border-bottom:1px solid rgba(201,168,76,0.15);display:flex;align-items:center;gap:14px;}
-.reviewed-by-icon{font-size:20px;flex-shrink:0;}
-.reviewed-by p{font-size:14px;color:var(--bone-dim);font-weight:300;line-height:1.5;margin:0;}
-.reviewed-by strong{color:var(--bone);font-weight:600;}
+.find-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;}
+.find-card{background:var(--ink-soft);border:1px solid rgba(201,168,76,0.2);border-radius:12px;padding:24px;cursor:pointer;transition:border-color 0.3s,box-shadow 0.3s;text-decoration:none;display:block;}
+.find-card:hover{border-color:rgba(201,168,76,0.55);box-shadow:0 6px 24px rgba(201,168,76,0.1);}
+.find-card-icon{font-size:24px;margin-bottom:12px;display:block;}
+.find-card-title{font-family:var(--display);font-size:22px;color:var(--white);margin-bottom:6px;}
+.find-card-desc{font-size:13px;font-weight:300;color:var(--bone-dim);line-height:1.6;margin-bottom:12px;}
+.find-card-link{font-family:var(--mono);font-size:10px;letter-spacing:0.12em;color:var(--gold);}
 
-.section{max-width:760px;margin:0 auto;padding:32px 24px;}
-.section p{font-size:18px;font-weight:300;color:var(--bone-dim);margin-bottom:20px;}
-.section h2{font-family:var(--display);font-size:32px;letter-spacing:0.02em;color:var(--white);margin:8px 0 20px;line-height:1.05;clear:both;}
-.section h2 em{font-family:var(--serif);font-style:italic;color:var(--gold-light);}
-.section-label{font-family:var(--mono);font-size:10px;letter-spacing:0.2em;color:var(--gold);text-transform:uppercase;margin-bottom:10px;}
-.divider{border:none;border-top:1px solid rgba(240,235,226,0.08);max-width:760px;margin:8px auto;}
+.cat-block{border-bottom:1px solid rgba(240,235,226,0.07);padding:48px 0;}
+.cat-block:last-child{border-bottom:none;}
+.cat-block-header{display:flex;align-items:baseline;gap:16px;margin-bottom:16px;}
+.cat-block-title{font-family:var(--display);font-size:28px;color:var(--white);}
+.cat-block-count{font-family:var(--mono);font-size:10px;letter-spacing:0.15em;color:var(--gold);opacity:0.7;}
+.cat-block-text{font-size:17px;font-weight:300;color:var(--bone-dim);line-height:1.9;margin-bottom:20px;max-width:700px;}
+.cat-links{display:flex;flex-wrap:wrap;gap:8px;}
+.cat-link{font-family:var(--mono);font-size:10px;letter-spacing:0.1em;padding:7px 14px;border:1px solid rgba(201,168,76,0.2);border-radius:20px;color:var(--bone-dim);text-decoration:none;transition:all 0.2s;}
+.cat-link:hover{border-color:rgba(201,168,76,0.55);color:var(--gold);}
+.cat-link.featured{border-color:rgba(201,168,76,0.4);color:var(--gold);}
 
-.pull-quote{max-width:760px;margin:16px auto 32px;padding:28px 32px;border-left:3px solid var(--gold);background:var(--ink-card);border-radius:0 12px 12px 0;clear:both;}
-.pull-quote p{font-family:var(--serif);font-style:italic;font-size:22px;color:var(--bone);line-height:1.5;margin:0;}
-.pull-quote-attr{font-family:var(--mono);font-size:11px;letter-spacing:0.1em;color:var(--bone-dim);margin-top:14px;text-transform:uppercase;}
+a.il{color:var(--gold);text-decoration:none;border-bottom:1px solid rgba(201,168,76,0.3);}
+a.il:hover{border-color:var(--gold);}
 
-.article-img{max-width:280px;margin:8px auto 32px;border-radius:14px;overflow:hidden;border:1px solid rgba(201,168,76,0.18);}
-.article-img img{aspect-ratio:1/1;object-fit:cover;width:100%;height:auto;}
-.article-img-float{float:right;max-width:220px;margin:4px 0 16px 24px;}
-.article-img-float-left{float:left;margin:4px 24px 16px 0;}
-@media(max-width:600px){.article-img-float{float:none;margin:8px auto 32px;}}
-.article-img-caption{padding:14px 16px;font-family:var(--mono);font-size:11px;color:var(--bone-dim);letter-spacing:0.03em;border-top:1px solid rgba(201,168,76,0.1);}
+.faq-item{border-bottom:1px solid rgba(240,235,226,0.07);padding:24px 0;}
+.faq-q{font-family:var(--display);font-size:20px;color:var(--white);margin-bottom:10px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;}
+.faq-q span{font-family:var(--mono);font-size:16px;color:var(--gold);flex-shrink:0;}
+.faq-a{font-size:15px;font-weight:300;color:var(--bone-dim);line-height:1.8;display:none;padding-top:8px;}
+.faq-item.open .faq-a{display:block;}
+.faq-item.open .faq-q span{transform:rotate(45deg);display:inline-block;}
 
-.tips-grid{max-width:760px;margin:8px auto 32px;display:grid;grid-template-columns:1fr;gap:14px;}
-@media(min-width:640px){.tips-grid{grid-template-columns:1fr 1fr;}}
-.tip-card{background:var(--ink-card);border:1px solid rgba(201,168,76,0.18);border-radius:12px;padding:20px;}
-.tip-card-title{font-family:var(--mono);font-size:11px;letter-spacing:0.1em;color:var(--gold);text-transform:uppercase;margin-bottom:8px;}
-.tip-card p{font-size:15px;color:var(--bone-dim);margin:0;}
+.final-cta{padding:80px 32px;text-align:center;border-top:1px solid rgba(240,235,226,0.06);}
+.final-cta-title{font-family:var(--display);font-size:clamp(36px,5vw,64px);color:var(--white);line-height:1;margin-bottom:8px;}
+.final-cta-title em{font-family:var(--serif);font-style:italic;color:var(--gold-light);font-size:0.65em;display:block;margin-top:6px;}
+.final-cta-desc{font-size:16px;font-weight:300;color:var(--bone-dim);max-width:480px;margin:20px auto 32px;}
+.final-cta-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;}
 
-.timeline{max-width:760px;margin:8px auto 32px;}
-.timeline-item{display:flex;gap:18px;padding:18px 0;border-bottom:1px solid rgba(240,235,226,0.06);}
-.timeline-num{font-family:var(--display);font-size:28px;color:var(--gold);flex-shrink:0;width:48px;}
-.timeline-body h3{font-size:17px;color:var(--white);font-weight:600;margin-bottom:6px;}
-.timeline-body p{font-size:15px;color:var(--bone-dim);margin:0;}
+.sticky-cta{display:none;position:fixed;bottom:0;left:0;right:0;background:rgba(10,10,10,0.97);border-top:1px solid rgba(240,235,226,0.08);padding:12px 20px 16px;z-index:200;backdrop-filter:blur(10px);}
+.sticky-text{font-family:var(--mono);font-size:10px;letter-spacing:0.15em;color:var(--gold);margin-bottom:8px;text-align:center;text-transform:uppercase;}
+.sticky-btns{display:flex;gap:10px;max-width:420px;margin:0 auto;}
+.sticky-btns a{flex:1;display:flex;align-items:center;justify-content:center;padding:13px 10px;font-family:var(--mono);font-size:13px;letter-spacing:0.08em;text-decoration:none;font-weight:500;border-radius:10px;}
+.sticky-btns a:first-child{background:var(--gold);color:var(--ink);}
+.sticky-btns a:last-child{border:1px solid rgba(240,235,226,0.2);color:var(--bone);}
 
-.cta-block{max-width:760px;margin:32px auto;background:linear-gradient(135deg,rgba(201,168,76,0.1),rgba(201,168,76,0.03));border:1px solid rgba(201,168,76,0.25);border-radius:16px;padding:32px;text-align:center;}
-.cta-title{font-family:var(--display);font-size:26px;color:var(--white);margin-bottom:10px;}
-.cta-sub{font-size:17px;line-height:1.6;color:var(--bone-dim);margin-bottom:20px;}
-.btn-primary{display:inline-flex;align-items:center;gap:8px;background:var(--gold);color:var(--ink);font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:0.1em;text-decoration:none;padding:14px 26px;border-radius:10px;border:none;cursor:pointer;}
+footer{padding:40px 32px;text-align:center;border-top:1px solid rgba(240,235,226,0.06);}
+.footer-copy{font-family:var(--mono);font-size:10px;color:var(--bone-dim);opacity:0.4;margin-bottom:6px;}
+.footer-badge{font-family:var(--mono);font-size:10px;color:var(--gold);opacity:0.6;}
 
-.faq-item{max-width:760px;margin:0 auto;border-bottom:1px solid rgba(240,235,226,0.08);padding:20px 24px;}
-.faq-q{font-size:18px;color:var(--white);font-weight:600;margin-bottom:8px;}
-.faq-a{font-size:15px;color:var(--bone-dim);font-weight:300;}
+.modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.75);backdrop-filter:blur(4px);z-index:500;align-items:center;justify-content:center;padding:20px;}
+.modal-overlay.open{display:flex;}
+.modal-box{background:#111;border:1px solid rgba(201,168,76,0.3);border-radius:16px;padding:36px 32px;width:100%;max-width:420px;max-height:90vh;overflow-y:auto;position:relative;}
+.modal-close{position:absolute;top:16px;right:16px;background:none;border:none;color:var(--bone-dim);font-size:18px;cursor:pointer;font-family:var(--mono);}
+.modal-title{font-family:var(--display);font-size:28px;color:var(--white);margin-bottom:6px;}
+.modal-sub{font-family:var(--serif);font-style:italic;font-size:15px;font-weight:300;color:var(--bone-dim);margin-bottom:24px;}
+.lead-input{width:100%;background:rgba(255,255,255,0.04);border:1px solid rgba(201,168,76,0.25);border-radius:10px;padding:13px 16px;font-family:var(--mono);font-size:13px;color:var(--bone);margin-bottom:12px;outline:none;}
+.lead-input:focus{border-color:rgba(201,168,76,0.6);}
+.radio-group{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px;}
+.radio-label{display:flex;align-items:center;gap:6px;font-family:var(--mono);font-size:11px;color:var(--bone-dim);cursor:pointer;padding:7px 12px;border:1px solid rgba(201,168,76,0.2);border-radius:20px;}
+.radio-label input{accent-color:var(--gold);}
+.lead-submit{width:100%;background:var(--gold);color:var(--ink);font-family:var(--mono);font-size:13px;font-weight:500;letter-spacing:0.1em;padding:15px;border-radius:10px;border:none;cursor:pointer;margin-top:8px;}
+.lead-submit:hover{background:var(--gold-light);}
+.modal-success{display:none;text-align:center;padding:20px 0;}
+.modal-success h4{font-family:var(--display);font-size:28px;color:var(--gold);margin-bottom:8px;}
+.modal-success p{font-family:var(--serif);font-style:italic;font-weight:300;color:var(--bone-dim);}
 
-.related-section{max-width:920px;margin:0 auto;padding:48px 24px;}
-.related-grid{display:grid;grid-template-columns:1fr;gap:14px;margin-top:20px;}
-@media(min-width:700px){.related-grid{grid-template-columns:repeat(3,1fr);}}
-.related-card{background:var(--ink-card);border:1px solid rgba(201,168,76,0.15);border-radius:12px;padding:18px;text-decoration:none;color:var(--bone);transition:border-color 0.2s;}
-.related-card:hover{border-color:rgba(201,168,76,0.5);}
-.related-card-label{font-family:var(--mono);font-size:9px;letter-spacing:0.15em;color:var(--gold);text-transform:uppercase;margin-bottom:6px;}
-.related-card-title{font-size:16px;font-weight:600;}
-
-.topic-hub{max-width:920px;margin:0 auto;padding:24px 24px 48px;}
-.topic-hub-intro{text-align:center;max-width:640px;margin:0 auto 40px;}
-.topic-category{margin-bottom:40px;}
-.topic-category-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-bottom:6px;flex-wrap:wrap;}
-.topic-category-title{font-family:var(--display);font-size:24px;color:var(--white);letter-spacing:0.01em;}
-.topic-category-count{font-family:var(--mono);font-size:10px;letter-spacing:0.1em;color:var(--gold);text-transform:uppercase;}
-.topic-category-desc{font-size:15px;color:var(--bone-dim);font-weight:300;margin-bottom:16px;max-width:640px;}
-
-.newsletter-section{max-width:760px;margin:0 auto;padding:40px 24px;text-align:center;}
-.lead-form{max-width:420px;margin:20px auto 0;display:flex;flex-direction:column;gap:12px;}
-.lead-form input,.lead-form textarea,.lead-form select{background:var(--ink-card);border:1px solid rgba(201,168,76,0.2);border-radius:10px;padding:13px 16px;color:var(--bone);font-family:var(--serif);font-size:15px;}
-.lead-form select{appearance:none;-webkit-appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23c9a84c' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 16px center;cursor:pointer;}
-.lead-form select:invalid{color:var(--bone-dim);}
-.lead-form select option{background:var(--ink-card);color:var(--bone);}
-.lead-submit{background:var(--gold);color:var(--ink);font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:0.1em;padding:14px;border-radius:10px;border:none;cursor:pointer;text-transform:uppercase;}
-#contactSuccess{display:none;color:var(--gold-light);font-family:var(--mono);font-size:14px;padding:20px;}
-
-.final-cta{background:var(--ink-card);border-top:1px solid rgba(201,168,76,0.15);padding:56px 24px;text-align:center;}
-.final-cta h2{font-family:var(--display);font-size:34px;color:var(--white);margin-bottom:12px;}
-.final-cta p{font-size:16px;color:var(--bone-dim);margin-bottom:24px;max-width:520px;margin-left:auto;margin-right:auto;}
-
-footer{border-top:1px solid rgba(240,235,226,0.06);padding:36px 32px 120px;text-align:center;font-family:var(--mono);font-size:10px;letter-spacing:0.1em;color:var(--bone-dim);opacity:0.35;}
-footer a{color:inherit;text-decoration:none;}
-
-.sticky-cta{display:none;position:fixed;bottom:0;left:0;right:0;background:rgba(10,10,10,0.97);backdrop-filter:blur(8px);border-top:1px solid rgba(201,168,76,0.2);padding:14px 20px;z-index:90;text-align:center;}
-@media(max-width:768px){.sticky-cta{display:block;}}
-.sticky-cta a{color:var(--gold);font-family:var(--mono);font-size:13px;letter-spacing:0.05em;text-decoration:none;}
-
-.sticky-cta-desktop{display:none;}
+@media(max-width:768px){
+  .sticky-cta{display:block;}
+  .hero-ornament{display:none;}
+  .section,.section-narrow,.expert-inner{padding:28px 20px;}
+  .find-grid{grid-template-columns:1fr;}
+  .final-cta{padding:60px 20px;}
+  .final-cta-btns{flex-direction:column;align-items:center;}
+  header{padding:14px 20px;}
+}
 @media(min-width:769px){
-  .sticky-cta-desktop{display:flex;align-items:center;gap:10px;position:fixed;bottom:28px;right:28px;background:var(--gold);color:var(--ink);font-family:var(--mono);font-size:13px;font-weight:500;letter-spacing:0.06em;text-decoration:none;padding:15px 24px;border-radius:50px;box-shadow:0 8px 24px rgba(0,0,0,0.4);z-index:90;transition:transform 0.2s,box-shadow 0.2s;}
-  .sticky-cta-desktop:hover{transform:translateY(-2px);box-shadow:0 12px 32px rgba(201,168,76,0.35);}
+  header{padding:18px 48px;}
+  .hero{padding-top:80px;}
+  .section,.section-narrow{padding:64px 64px;max-width:1160px;}
+  .cat-links{justify-content:flex-start;}
+  .cat-block{padding:52px 0;}
+  .cat-block-title{font-size:32px;}
+}
+@media(min-width:1200px){
+  .section,.section-narrow{padding:72px 80px;max-width:1280px;}
 }
 </style>
 </head>
 <body>
 
-<div class="header">
-  <a href="https://nashvillebesttattoo.com" class="header-back"><span>Nashville, TN</span></a>
-  <a href="https://nashvillebesttattoo.com" class="header-logo">NASHVILLE BEST TATTOO</a>
-  <button class="hamburger" onclick="toggleMenu()" aria-label="Menu"><span></span><span></span><span></span></button>
-</div>
+<header>
+  <a href="https://nashvillebesttattoo.com" style="display:flex;align-items:center;text-decoration:none;">
+    <svg viewBox="0 0 260 52" xmlns="http://www.w3.org/2000/svg" height="44" width="auto">
+      <rect x="0" y="2" width="48" height="48" fill="#c9a84c" rx="3"/>
+      <text x="24" y="37" text-anchor="middle" font-family="'Bebas Neue', sans-serif" font-size="26" fill="#0a0a0a" letter-spacing="-0.5">NBT</text>
+      <text x="62" y="22" font-family="'Bebas Neue', sans-serif" font-size="18" fill="#f0ebe2" letter-spacing="3">NASHVILLE</text>
+      <line x1="62" y1="27" x2="258" y2="27" stroke="#c9a84c" stroke-width="0.5" opacity="0.4"/>
+      <text x="62" y="43" font-family="'Bebas Neue', sans-serif" font-size="18" fill="#f0ebe2" letter-spacing="3">BEST TATTOO</text>
+    </svg>
+  </a>
+  <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
+    <span style="display:block;width:24px;height:2px;background:#f0ebe2;border-radius:2px;"></span>
+    <span style="display:block;width:24px;height:2px;background:#f0ebe2;border-radius:2px;"></span>
+    <span style="display:block;width:24px;height:2px;background:#f0ebe2;border-radius:2px;"></span>
+  </button>
+</header>
 
 <div class="mobile-menu" id="mobileMenu">
-  <button class="mm-close" onclick="closeMenu()">&#10005;</button>
-  <a class="mm-link" href="https://nashvillebesttattoo.com">Back to All Artists</a>
-  <a class="mm-link" href="https://nashvillebesttattoo.com/nashville-tattoo-guide.html">Full Guide</a>
-  <a class="mm-link" href="#contact">Get Removal Advice</a>
+  <button class="mobile-menu-item primary" onclick="closeMenu();openContactModal();">Get Matched With a Clinic</button>
+  <a href="#categories" class="mobile-menu-item secondary" onclick="closeMenu();">Browse All Removal Guides</a>
+  <a href="https://nashvillebesttattoo.com" class="mobile-menu-item secondary">Back to Nashville Best Tattoo</a>
 </div>
 
-<nav class="hub-nav">
-  <a href="https://nashvillebesttattoo.com/tattoo-removal-nashville.html" class="hub-nav-item active">Overview</a>
-  <a href="https://nashvillebesttattoo.com/tattoo-removal-consultation-nashville.html" class="hub-nav-item">Consultation</a>
-  <a href="https://nashvillebesttattoo.com/prepare-for-tattoo-removal-nashville.html" class="hub-nav-item">Preparing for a Session</a>
-  <a href="https://nashvillebesttattoo.com/picosure-vs-laser-tattoo-removal-nashville.html" class="hub-nav-item">PicoSure vs Traditional</a>
-  <a href="https://nashvillebesttattoo.com/tattoo-removal-cream-vs-laser-nashville.html" class="hub-nav-item">Cream vs Laser</a>
-  <a href="https://nashvillebesttattoo.com/diy-tattoo-removal-risks-nashville.html" class="hub-nav-item">DIY Risks</a>
-  <a href="https://nashvillebesttattoo.com/numbing-options-tattoo-removal-nashville.html" class="hub-nav-item">Numbing Options</a>
-  <a href="https://nashvillebesttattoo.com/tattoo-removal-aftercare-nashville.html" class="hub-nav-item">Aftercare</a>
-  <a href="https://nashvillebesttattoo.com/signs-tattoo-removal-working-nashville.html" class="hub-nav-item">Signs It's Working</a>
-  <a href="https://nashvillebesttattoo.com/laser-tattoo-removal-sessions-nashville.html" class="hub-nav-item">Sessions</a>
-  <a href="https://nashvillebesttattoo.com/what-happens-during-removal-session-nashville.html" class="hub-nav-item">What Happens in a Session</a>
-  <a href="https://nashvillebesttattoo.com/tattoo-removal-timeline-nashville.html" class="hub-nav-item">Timeline</a>
-  <a href="https://nashvillebesttattoo.com/tattoo-removal-side-effects-nashville.html" class="hub-nav-item">Side Effects</a>
-  <a href="https://nashvillebesttattoo.com/tattoo-removal-cost-nashville.html" class="hub-nav-item">Cost</a>
-  <a href="https://nashvillebesttattoo.com/tattoo-removal-insurance-nashville.html" class="hub-nav-item">Insurance</a>
-  <a href="https://nashvillebesttattoo.com/tattoo-removal-financing-nashville.html" class="hub-nav-item">Financing</a>
-  <a href="https://nashvillebesttattoo.com/cheap-tattoo-removal-nashville.html" class="hub-nav-item">Cheap Clinics</a>
-  <a href="https://nashvillebesttattoo.com/tattoo-removal-cost-by-body-part-nashville.html" class="hub-nav-item">Cost by Body Part</a>
-  <a href="https://nashvillebesttattoo.com/tattoo-removal-package-deals-nashville.html" class="hub-nav-item">Package Deals</a>
-  <a href="https://nashvillebesttattoo.com/multiple-tattoo-removal-cost-nashville.html" class="hub-nav-item">Multiple Tattoos</a>
-  <a href="https://nashvillebesttattoo.com/tattoo-removal-cost-calculator-nashville.html" class="hub-nav-item">Cost Calculator</a>
-  <a href="https://nashvillebesttattoo.com/cosmetic-tattoo-removal-eyebrows-lips-nashville.html" class="hub-nav-item">Cosmetic Tattoo Removal</a>
-  <a href="https://nashvillebesttattoo.com/laser-fading-before-cover-up-nashville.html" class="hub-nav-item">Fading Before Cover-Up</a>
-  <a href="https://nashvillebesttattoo.com/tattoo-removal-vs-blackout-nashville.html" class="hub-nav-item">Blackout vs Removal</a>
-  <a href="https://nashvillebesttattoo.com/removal-then-new-tattoo-nashville.html" class="hub-nav-item">New Tattoo on Removed Skin</a>
-  <a href="https://nashvillebesttattoo.com/cover-up-vs-removal-nashville.html" class="hub-nav-item">Cover-Up vs Removal</a>
-  <a href="https://nashvillebesttattoo.com/tattoo-removal-pain-nashville.html" class="hub-nav-item">Pain</a>
-  <a href="https://nashvillebesttattoo.com/partial-tattoo-removal-nashville.html" class="hub-nav-item">Partial Removal</a>
-  <a href="https://nashvillebesttattoo.com/tattoo-removal-old-vs-new-tattoos-nashville.html" class="hub-nav-item">Old vs New Tattoos</a>
-  <a href="https://nashvillebesttattoo.com/what-to-look-for-removal-clinic-nashville.html" class="hub-nav-item">Choosing a Clinic</a>
-</nav>
-
-<div class="article-hero">
-  <p class="article-label">Tattoo Removal Guide &middot; Nashville</p>
-  <h1 class="article-title">Tattoo Removal in Nashville, <em>Explained Honestly</em></h1>
-  <p class="article-sub">Removal works, but it takes longer, costs more, and removes less completely than most people expect walking in. This is the complete overview, with links to a deep dive on every part of the process.</p>
-  <div class="article-meta">
-    <span>13 min read</span>
-    <span>&middot;</span>
-    <span>Last Updated: July 17, 2026</span>
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-bg"></div>
+  <img src="removal/removal-before-after.webp" alt="Before and after comparison of laser tattoo removal in Nashville" class="hero-img" fetchpriority="high" loading="eager" decoding="async">
+  <div class="hero-ornament"></div>
+  <p class="hero-label">Nashville, Tennessee &middot; Complete Removal Guide &middot; 2026</p>
+  <h1 class="hero-title">
+    TATTOO REMOVAL<br>IN NASHVILLE
+    <em>Explained honestly, start to finish</em>
+  </h1>
+  <p class="hero-sub">Removal works, but it takes longer, costs more, and removes less completely than most people expect walking in. 30+ guides covering every part of the process, written by a working tattoo artist.</p>
+  <div class="hero-cta">
+    <button class="btn-primary" onclick="openContactModal()">Get Matched With a Clinic</button>
+    <a href="#categories" class="btn-secondary">Browse Guides</a>
   </div>
 </div>
 
-<div class="quick-answer">
-  <p class="quick-answer-label">&#9889; Quick Answer</p>
-  <p>Laser tattoo removal in Nashville typically requires 6 to 15+ sessions spaced 6 to 8 weeks apart, costs between $500 and $4,500+ depending on tattoo size and ink density, and takes 8 months to 2+ years to complete. Full clearance is not always necessary. If you plan to get a cover-up, 2 to 5 sessions of targeted fading is usually enough.</p>
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="trust-item"><span class="trust-icon">&#10022;</span><span class="trust-text">Written by a working artist</span></div>
+  <div class="trust-item"><span class="trust-icon">&#10022;</span><span class="trust-text">30+ removal guides</span></div>
+  <div class="trust-item"><span class="trust-icon">&#10022;</span><span class="trust-text">Every clinic vetted for licensing</span></div>
+  <div class="trust-item"><span class="trust-icon">&#10022;</span><span class="trust-text">Updated July 2026</span></div>
 </div>
 
-<nav aria-label="Table of contents" style="max-width:760px;margin:0 auto 24px;padding:0 24px;text-align:center;">
-  <p class="section-label" style="margin-bottom:14px;text-align:center;">On This Page</p>
-  <ul style="list-style:none;display:flex;flex-wrap:wrap;justify-content:center;gap:10px;font-family:var(--mono);font-size:12px;padding:0;margin:0;">
-    <li><a href="#sec-how-it-works" style="display:inline-block;color:var(--bone-dim);text-decoration:none;padding:8px 16px;border:1px solid rgba(201,168,76,0.25);border-radius:20px;white-space:nowrap;">How It Works</a></li>
-    <li><a href="#sec-timeline" style="display:inline-block;color:var(--bone-dim);text-decoration:none;padding:8px 16px;border:1px solid rgba(201,168,76,0.25);border-radius:20px;white-space:nowrap;">Realistic Timeline</a></li>
-    <li><a href="#sec-cover-up-decision" style="display:inline-block;color:var(--bone-dim);text-decoration:none;padding:8px 16px;border:1px solid rgba(201,168,76,0.25);border-radius:20px;white-space:nowrap;">Removal or Cover-Up</a></li>
-    <li><a href="#sec-determines-results" style="display:inline-block;color:var(--bone-dim);text-decoration:none;padding:8px 16px;border:1px solid rgba(201,168,76,0.25);border-radius:20px;white-space:nowrap;">What Determines Results</a></li>
-    <li><a href="#sec-choosing-clinic" style="display:inline-block;color:var(--bone-dim);text-decoration:none;padding:8px 16px;border:1px solid rgba(201,168,76,0.25);border-radius:20px;white-space:nowrap;">Choosing a Clinic</a></li>
-    <li><a href="#sec-faq" style="display:inline-block;color:var(--bone-dim);text-decoration:none;padding:8px 16px;border:1px solid rgba(201,168,76,0.25);border-radius:20px;white-space:nowrap;">FAQ</a></li>
-  </ul>
-</nav>
+<!-- EXPERT BAR -->
+<div class="expert-bar">
+  <div class="expert-inner">
+    <div class="expert-icon">&#10022;</div>
+    <div>
+      <p class="expert-label">Written by working artists</p>
+      <p class="expert-text">Every removal guide on this site was written by a tattoo artist with over 10 years of professional experience, who has watched laser technology and technique improve dramatically over the past decade. No marketing copy. No filler. Just the honest version of the process, so you can walk into your first consultation informed instead of guessing.</p>
+    </div>
+  </div>
+</div>
 
+<!-- QUICK ANSWER -->
+<div class="section" style="padding-bottom:0;">
+  <div class="quick-answer">
+    <p class="quick-answer-label">&#9889; Quick Answer</p>
+    <p>Laser tattoo removal in Nashville typically requires 6 to 15+ sessions spaced 6 to 8 weeks apart, costs between $500 and $4,500+ depending on tattoo size and ink density, and takes 8 months to 2+ years to complete. Full clearance is not always necessary. If you plan to get a cover-up, 2 to 5 sessions of targeted fading is usually enough.</p>
+  </div>
+</div>
+
+<!-- FIND YOUR PATH -->
 <div class="section">
-  <div class="article-img article-img-float">
-    <img src="removal/removal-session-in-progress.webp" alt="Laser tattoo removal treatment in progress on a geometric mandala tattoo, clinical setting" loading="lazy" width="1520" height="1520">
-    <div class="article-img-caption">The process, from first session to final results.</div>
-  </div>
-  <p>If you are researching tattoo removal in Nashville, you have probably already noticed that most clinic websites give you a single number, a single price, and a single reassuring sentence about how easy the process is. None of that is quite the full picture. Removal is a real medical procedure with real variability, and the honest version of the story is more useful than the marketing version, even if it is less tidy.</p>
-  <p>This guide is the starting point for that honest version. It covers how the process actually works, what determines your timeline and cost, and when a cover-up might serve you better than removal at all. Each section links to a deeper, more detailed guide if you want to go further on a specific topic.</p>
-  <p>Whether you are just starting to consider removal, mid-way through a treatment plan and looking for context on what to expect next, or trying to decide between removal and a cover-up, this page is built to point you to the right resource without making you dig through a wall of marketing copy first.</p>
-</div>
-
-<div class="pull-quote">
-  <p>"Most people come in expecting removal to work like it does in movies, one treatment and the tattoo is gone. The real process is slower and more involved, but it does work, and being upfront about that from the start makes for a much better client experience."</p>
-  <p class="pull-quote-attr">A Nashville laser removal technician</p>
-</div>
-
-<div class="cta-block" style="margin:16px auto 32px;padding:24px;">
-  <h2 class="cta-title" style="font-size:22px;margin-bottom:8px;">Get Our Recommended Nashville Clinics</h2>
-  <p class="cta-sub" style="margin-bottom:16px;">Submit your details and receive our trusted recommendations for tattoo removal in Nashville.</p>
-  <a class="btn-primary" href="#midCta" onclick="document.getElementById('midCta').scrollIntoView({behavior:'smooth'});return false;">Get My Recommendations &#8594;</a>
-</div>
-
-<div class="section" id="sec-how-it-works">
-  <h2 class="section-title">How Removal <em>Actually</em> Works</h2>
-  <div class="article-img article-img-float article-img-float-left">
-    <img src="removal/removal-before-after.webp" alt="Before and after comparison of a shoulder tattoo, roughly 85 percent faded after multiple laser removal sessions" loading="lazy" width="1520" height="1139">
-    <div class="article-img-caption">Gradual fading across multiple sessions.</div>
-  </div>
-  <p>Laser tattoo removal works by targeting ink particles in the skin with focused pulses of light energy. The laser shatters those particles into fragments small enough for your body's own immune system to carry away naturally over the following weeks. Each session breaks up more ink than the last, which is why results build gradually across a series of treatments rather than happening all at once.</p>
-  <p>A single session typically takes anywhere from a few minutes for a small tattoo to twenty or thirty minutes for a larger piece. Sessions are spaced 6 to 8 weeks apart to give your body adequate time to clear the fragmented ink before the next round of treatment, which means even a straightforward removal plan unfolds over several months at minimum.</p>
-  <p>It is worth setting expectations around that timeline early, since it is often the single biggest surprise for first-time clients. A tattoo that took an afternoon to create can realistically take a year or more to fully remove, not because anything is going wrong, but because that is simply how the underlying biology of ink clearance works. Patience, more than anything else, is the resource that determines whether a removal plan feels manageable or frustrating.</p>
-</div>
-
-<div class="tips-grid">
-  <div class="tip-card">
-    <div class="tip-card-title">Sessions Needed</div>
-    <p>Most tattoos need 6 to 15+ sessions depending on size, ink density, and color. See our full <a href="https://nashvillebesttattoo.com/laser-tattoo-removal-sessions-nashville.html">session guide</a> for realistic expectations.</p>
-  </div>
-  <div class="tip-card">
-    <div class="tip-card-title">Total Cost</div>
-    <p>Total cost ranges from a few hundred to several thousand dollars. Our <a href="https://nashvillebesttattoo.com/tattoo-removal-cost-nashville.html">cost guide</a> breaks it down by tattoo size.</p>
-  </div>
-  <div class="tip-card">
-    <div class="tip-card-title">Discomfort Level</div>
-    <p>Sessions are uncomfortable but brief, with numbing options available at most clinics. Read our <a href="https://nashvillebesttattoo.com/tattoo-removal-pain-nashville.html">pain guide</a> for the honest breakdown.</p>
-  </div>
-  <div class="tip-card">
-    <div class="tip-card-title">Cover-Up Alternative</div>
-    <p>Full clearance is not always the goal. Our <a href="https://nashvillebesttattoo.com/cover-up-vs-removal-nashville.html">cover-up guide</a> covers when fading beats full removal.</p>
-  </div>
-  <div class="tip-card">
-    <div class="tip-card-title">Partial Options</div>
-    <p>Targeted fading can soften, shrink, or prepare a tattoo for new work. See our <a href="https://nashvillebesttattoo.com/partial-tattoo-removal-nashville.html">partial removal guide</a>.</p>
-  </div>
-  <div class="tip-card">
-    <div class="tip-card-title">Recovery Time</div>
-    <p>Treated skin typically feels sunburned for a day or two after each session, with full healing between sessions taking 6 to 8 weeks.</p>
-  </div>
-</div>
-
-<div class="section" id="sec-timeline">
-  <h2 class="section-title">A Realistic <em>Timeline</em>, Start to Finish</h2>
-  <p>Every tattoo is different, but most removal journeys follow a similar overall shape. Here is what to expect across a typical plan for a small to medium tattoo.</p>
-</div>
-
-<div class="timeline">
-  <div class="timeline-item">
-    <div class="timeline-num">01</div>
-    <div class="timeline-body">
-      <h3>Consultation</h3>
-      <p>A technician examines your tattoo in person and gives you a realistic session and cost range, not just a per-session price.</p>
+  <p class="section-label">Start Here</p>
+  <h2 class="section-title">NOT SURE WHERE <em>to begin?</em></h2>
+  <p class="section-intro">Whether you already know you want full removal or you are still weighing removal against a cover-up, these three paths will get you to the right answer faster.</p>
+  <div class="find-grid">
+    <div class="find-card" onclick="openContactModal()">
+      <span class="find-card-icon">&#128140;</span>
+      <div class="find-card-title">Get Matched With a Clinic</div>
+      <p class="find-card-desc">Tell us about your tattoo and your goals. We will point you to a trusted, experienced Nashville removal clinic within 24 hours.</p>
+      <span class="find-card-link">&rarr; Get matched now</span>
     </div>
+    <a href="#categories" class="find-card">
+      <span class="find-card-icon">&#128065;</span>
+      <div class="find-card-title">Browse All Guides</div>
+      <p class="find-card-desc">See all 30+ removal guides organized by category, from first consultation to choosing the right clinic.</p>
+      <span class="find-card-link">&rarr; View the full list</span>
+    </a>
+    <a href="tattoo-removal-consultation-nashville.html" class="find-card">
+      <span class="find-card-icon">&#128214;</span>
+      <div class="find-card-title">New to Removal? Start Here</div>
+      <p class="find-card-desc">Never had a removal consultation? Start with what actually happens at your first appointment.</p>
+      <span class="find-card-link">&rarr; Read the guide</span>
+    </a>
   </div>
-  <div class="timeline-item">
-    <div class="timeline-num">02</div>
-    <div class="timeline-body">
-      <h3>Early Sessions (1-3)</h3>
-      <p>The most visible fading happens here, as surface-level ink breaks down and clears relatively quickly.</p>
+</div>
+
+<!-- CATEGORIES -->
+<div class="section-narrow" id="categories" style="margin-left:auto;margin-right:auto;display:block;">
+  <p class="section-label">All Guides</p>
+  <h2 class="section-title">BROWSE BY <em>category</em></h2>
+  <p class="section-intro">30+ removal guides written by a working tattoo artist. Find exactly what you need before you book a session.</p>
+
+  <div class="cat-block">
+    <div class="cat-block-header">
+      <div class="cat-block-title">Getting Started</div>
+      <div class="cat-block-count">5 guides</div>
     </div>
-  </div>
-  <div class="timeline-item">
-    <div class="timeline-num">03</div>
-    <div class="timeline-body">
-      <h3>Middle Sessions (4-8)</h3>
-      <p>Progress slows as treatment reaches deeper, denser ink. This plateau is normal, not a sign anything is wrong.</p>
-    </div>
-  </div>
-  <div class="timeline-item">
-    <div class="timeline-num">04</div>
-    <div class="timeline-body">
-      <h3>Final Sessions</h3>
-      <p>Remaining stubborn pigment clears gradually. Full results are usually visible several months after the last session.</p>
-    </div>
-  </div>
-</div>
-
-<div class="section" id="sec-cover-up-decision">
-  <h2 class="section-title">Removal or Cover-Up? <em>Start</em> Here</h2>
-  <p>Before you commit to a full removal timeline, it is worth asking whether you actually need complete clearance. If you still want tattooed skin in that spot, just a different design, fading the old tattoo enough for a skilled cover-up artist to work with is often faster and cheaper than removing it completely. Our <a href="https://nashvillebesttattoo.com/cover-up-vs-removal-nashville.html">cover-up versus removal guide</a> walks through how to make that call, and our <a href="https://nashvillebesttattoo.com/partial-tattoo-removal-nashville.html">partial removal guide</a> covers exactly how that fading process works.</p>
-  <p>If you do want the area completely clear, with no new tattoo planned, full removal is the right path, and our <a href="https://nashvillebesttattoo.com/laser-tattoo-removal-sessions-nashville.html">session guide</a> and <a href="https://nashvillebesttattoo.com/tattoo-removal-cost-nashville.html">cost guide</a> will help you plan realistically for the time and budget it takes.</p>
-</div>
-
-<div class="section" id="sec-determines-results">
-  <h2 class="section-title">What Actually <em>Determines</em> Your Results</h2>
-  <p>No two removal journeys look exactly alike, because a handful of specific factors combine to determine how many sessions you need, how much you will spend, and how complete your final results will be. Understanding these upfront helps you set realistic expectations before your first appointment rather than being surprised partway through.</p>
-  <p>Ink depth and density matter more than most people expect. Professional tattoos applied with consistent depth tend to respond predictably to treatment, while amateur or stick-and-poke tattoos, which are often inconsistent in depth, can sometimes be harder to fully clear. Color plays a major role too. Black ink responds best to laser treatment, while greens, light blues, and whites are notoriously more resistant and can add sessions to even a well-planned timeline.</p>
-  <p>Your own body plays a role as well. Removal depends on your immune system clearing away fragmented ink particles after each session, and that clearance rate genuinely varies from person to person based on factors like circulation, hydration, and overall health. None of these factors are things a clinic can control, which is exactly why an honest technician gives you a realistic range rather than a single confident number at your first consultation.</p>
-</div>
-
-<div class="section" id="sec-choosing-clinic">
-  <h2 class="section-title">Choosing the Right Nashville <em>Clinic</em></h2>
-  <div class="article-img article-img-float">
-    <img src="removal/removal-full-clear.webp" alt="Fully cleared skin after completing a full course of laser tattoo removal sessions" loading="lazy" width="1520" height="1520">
-    <div class="article-img-caption">The right clinic is what gets you to this result.</div>
-  </div>
-  <p>Nashville has seen real growth in the number of removal clinics over the past few years, ranging from dedicated laser removal clinics to medical spas offering removal alongside other services. More options generally means more competition on price and quality, but it also means the gap between the best and worst choices in the city can be wider than people expect.</p>
-  <p>A few questions are worth asking at any consultation, regardless of which clinic you are considering. Ask what laser technology they use and how it is suited to your specific skin tone and ink colors. Ask how many years the treating technician has specifically practiced removal, not just general aesthetics or tattooing. Ask for a realistic total session and cost range based on an in-person look at your tattoo, not a generic number pulled from a price list. A clinic that answers all three clearly and without pressure is one worth trusting with your skin.</p>
-</div>
-
-<div class="section">
-  <h2 class="section-title">Aftercare, in <em>Brief</em></h2>
-  <p>Proper aftercare between sessions plays a real role in how smoothly your removal plan progresses. Immediately after treatment, the area typically looks and feels similar to a sunburn, with mild redness and swelling that generally resolves within a few days. Keeping the area clean, moisturized, and protected from direct sun exposure during this window supports proper healing and helps your body clear fragmented ink efficiently before your next session.</p>
-  <p>Sun protection matters for the full duration of your treatment plan, not just immediately after each session. Tanned or sun-damaged skin absorbs more laser energy at the surface level, which can both increase discomfort during treatment and reduce how effectively the laser reaches the ink itself. Most clinics will ask you to avoid direct sun exposure on the treatment area for several weeks before and after each appointment, and skipping that guidance is one of the more common reasons a removal plan takes longer than expected.</p>
-  <p>Staying well hydrated in the days surrounding each session also appears to support your body's natural clearance process, since the lymphatic system responsible for carrying away fragmented ink relies on adequate fluid intake to function well. None of this is complicated, but consistency across every session adds up to a meaningfully smoother overall experience.</p>
-</div>
-
-<div class="cta-block" id="midCta">
-  <h2 class="cta-title">Not Sure Which Nashville Clinic Is Worth Your Money?</h2>
-  <p class="cta-sub">Tell us about your tattoo and your goals, and we will point you to trusted, experienced clinics in Nashville.</p>
-  <form class="lead-form" id="ctaLeadForm" action="https://formspree.io/f/maqzqejk" method="POST" onsubmit="handleCtaSubmit(event)" style="text-align:left;">
-    <input type="hidden" name="source" value="removal-overview-midarticle-cta">
-    <input type="text" name="name" placeholder="Your name" required>
-    <input type="email" name="email" placeholder="Email" required>
-    <select name="goal" required>
-      <option value="" disabled selected>What's your goal?</option>
-      <option value="Full removal, no new tattoo">Full removal, no new tattoo</option>
-      <option value="Cover-up with a new design">Cover-up with a new design</option>
-      <option value="Not sure yet, need advice">Not sure yet, need advice</option>
-    </select>
-    <select name="tattoo_size" required>
-      <option value="" disabled selected>Tattoo size</option>
-      <option value="Small (2-3 inches)">Small (2-3 inches)</option>
-      <option value="Medium (palm-sized)">Medium (palm-sized)</option>
-      <option value="Large (multiple sessions expected)">Large (multiple sessions expected)</option>
-      <option value="Full sleeve or back piece">Full sleeve or back piece</option>
-    </select>
-    <textarea name="message" placeholder="Anything else we should know? (optional)" rows="2"></textarea>
-    <label style="display:flex;align-items:flex-start;gap:10px;cursor:pointer;font-family:var(--mono);font-size:11px;color:var(--bone-dim);letter-spacing:0.05em;line-height:1.5;"><input type="checkbox" name="consent" value="yes" required style="accent-color:var(--gold);margin-top:2px;flex-shrink:0;">I agree to be matched with a removal clinic, who may contact me about my request. See our <a href="https://nashvillebesttattoo.com/privacy-policy-nashville.html" style="color:var(--gold);">Privacy Policy</a>.</label>
-    <button type="submit" class="lead-submit">Match Me With a Clinic</button>
-  </form>
-  <div id="ctaLeadSuccess" style="display:none;color:var(--gold-light);font-family:var(--mono);font-size:13px;padding:12px;">Thanks! We will match you with the right clinic shortly.</div>
-</div>
-
-<div class="reviewed-by">
-  <span class="reviewed-by-icon">&#10003;</span>
-  <p><strong>Reviewed by a tattoo artist</strong> with over 10 years of industry experience, who has watched laser removal technology and technique improve dramatically over the past decade and regularly advises clients on full removal versus partial fading for a cover-up.</p>
-</div>
-
-<div class="section" style="max-width:760px;" id="sec-faq">
-  <h2 class="section-title">Frequently Asked Questions</h2>
-</div>
-
-<div class="faq-item">
-  <div class="faq-q">Does laser tattoo removal actually work?</div>
-  <div class="faq-a">Yes, though results and timeline vary by tattoo. Most tattoos can be significantly faded or fully cleared with enough sessions, though very stubborn colors like green or white can be more resistant.</div>
-</div>
-<div class="faq-item">
-  <div class="faq-q">How do I choose between removal and a cover-up?</div>
-  <div class="faq-a">Start by asking whether you want tattooed skin in that spot at all going forward. If yes, fading for a cover-up is usually faster and cheaper. If no, full removal is the right path.</div>
-</div>
-<div class="faq-item">
-  <div class="faq-q">Is removal safe?</div>
-  <div class="faq-a">When performed by a trained technician using appropriate equipment for your skin tone and ink, removal is a well-established, generally safe procedure. Choosing an experienced clinic matters more than choosing the cheapest option.</div>
-</div>
-<div class="faq-item">
-  <div class="faq-q">Where should I start if I am completely new to this?</div>
-  <div class="faq-a">Book a consultation at a reputable Nashville clinic before making any decisions. An in-person look at your specific tattoo is the only way to get a realistic session count, cost estimate, and timeline.</div>
-</div>
-<div class="faq-item">
-  <div class="faq-q">Can all tattoo colors be removed?</div>
-  <div class="faq-a">Black responds best to laser treatment. Colors like green, light blue, and white are more resistant and may require more sessions or specialized laser wavelengths to fully clear.</div>
-</div>
-
-<div class="faq-item">
-  <div class="faq-q">Does tattoo removal work the same way on dark skin tones?</div>
-  <div class="faq-a">Yes, but it requires more caution. Certain laser wavelengths carry a higher risk of pigment changes on darker skin, so an experienced technician will select equipment and settings suited to your specific skin tone rather than using a one-size-fits-all approach.</div>
-</div>
-<div class="faq-item">
-  <div class="faq-q">How soon after getting a tattoo can you start removal?</div>
-  <div class="faq-a">Most clinics require the tattoo to be fully healed first, typically 4 to 6 weeks minimum. Starting removal on unhealed skin increases risk of complications and is not recommended by reputable clinics.</div>
-</div>
-<div class="faq-item">
-  <div class="faq-q">Is tattoo removal ever covered by HSA or FSA funds?</div>
-  <div class="faq-a">Standard insurance almost never covers cosmetic removal, but some HSA and FSA plans do, particularly with a documented medical reason. It is worth a quick call to your plan administrator before ruling it out.</div>
-</div>
-
-<div class="topic-hub">
-  <div class="topic-hub-intro">
-    <p class="section-label">Explore the Full Guide</p>
-    <h2 style="font-family:var(--display);font-size:30px;color:var(--white);">Every Removal Topic, Organized</h2>
-    <p style="font-size:15px;color:var(--bone-dim);margin-top:8px;">This library grows regularly. Start with the category closest to your question.</p>
-  </div>
-
-  <div class="topic-category">
-    <div class="topic-category-head">
-      <h3 class="topic-category-title">Getting Started</h3>
-      <span class="topic-category-count">7 guides</span>
-    </div>
-    <p class="topic-category-desc">How the process actually works and what a realistic treatment plan looks like from first session to last.</p>
-    <div class="related-grid">
-      <a class="related-card" href="https://nashvillebesttattoo.com/tattoo-removal-consultation-nashville.html">
-        <div class="related-card-label">Getting Started</div>
-        <div class="related-card-title">What Happens at a Removal Consultation</div>
-      </a>
-      <a class="related-card" href="https://nashvillebesttattoo.com/prepare-for-tattoo-removal-nashville.html">
-        <div class="related-card-label">Getting Started</div>
-        <div class="related-card-title">How to Prepare for Your First Session</div>
-      </a>
-      <a class="related-card" href="https://nashvillebesttattoo.com/laser-tattoo-removal-sessions-nashville.html">
-        <div class="related-card-label">Session Guide</div>
-        <div class="related-card-title">How Many Sessions You Actually Need</div>
-      </a>
-      <a class="related-card" href="https://nashvillebesttattoo.com/picosure-vs-laser-tattoo-removal-nashville.html">
-        <div class="related-card-label">Technology</div>
-        <div class="related-card-title">PicoSure vs Traditional Lasers</div>
-      </a>
-      <a class="related-card" href="https://nashvillebesttattoo.com/tattoo-removal-cream-vs-laser-nashville.html">
-        <div class="related-card-label">Getting Started</div>
-        <div class="related-card-title">Do Removal Creams Actually Work?</div>
-      </a>
-      <a class="related-card" href="https://nashvillebesttattoo.com/diy-tattoo-removal-risks-nashville.html">
-        <div class="related-card-label">Safety</div>
-        <div class="related-card-title">Why DIY Removal Kits Are Dangerous</div>
-      </a>
-      <a class="related-card" href="https://nashvillebesttattoo.com/signs-tattoo-removal-working-nashville.html">
-        <div class="related-card-label">Progress Guide</div>
-        <div class="related-card-title">Signs Your Removal Is Actually Working</div>
-      </a>
+    <p class="cat-block-text">The first few decisions, your consultation, prepping your skin, and knowing what an actual session looks like, shape the rest of your removal plan. Start with <a href="tattoo-removal-consultation-nashville.html" class="il">what happens at a removal consultation</a> if you have not booked one yet, or jump to the <a href="tattoo-removal-timeline-nashville.html" class="il">full timeline</a> if you just want the big picture.</p>
+    <div class="cat-links">
+      <a href="tattoo-removal-consultation-nashville.html" class="cat-link featured">Consultation</a>
+      <a href="prepare-for-tattoo-removal-nashville.html" class="cat-link featured">Preparing for a Session</a>
+      <a href="laser-tattoo-removal-sessions-nashville.html" class="cat-link">Sessions</a>
+      <a href="what-happens-during-removal-session-nashville.html" class="cat-link">What Happens in a Session</a>
+      <a href="tattoo-removal-timeline-nashville.html" class="cat-link">Full Timeline</a>
     </div>
   </div>
 
-  <div class="topic-category">
-    <div class="topic-category-head">
-      <h3 class="topic-category-title">Cost &amp; Financing</h3>
-      <span class="topic-category-count">8 guides</span>
+  <div class="cat-block">
+    <div class="cat-block-header">
+      <div class="cat-block-title">Cost &amp; Financing</div>
+      <div class="cat-block-count">8 guides</div>
     </div>
-    <p class="topic-category-desc">Realistic total pricing, package deals, and how to avoid an advertised price that isn't the real one.</p>
-    <div class="related-grid">
-      <a class="related-card" href="https://nashvillebesttattoo.com/tattoo-removal-cost-nashville.html">
-        <div class="related-card-label">Cost Guide</div>
-        <div class="related-card-title">What Removal Actually Costs in Nashville</div>
-      </a>
-      <a class="related-card" href="https://nashvillebesttattoo.com/tattoo-removal-insurance-nashville.html">
-        <div class="related-card-label">Insurance</div>
-        <div class="related-card-title">Does Insurance Cover Tattoo Removal?</div>
-      </a>
-      <a class="related-card" href="https://nashvillebesttattoo.com/tattoo-removal-financing-nashville.html">
-        <div class="related-card-label">Financing</div>
-        <div class="related-card-title">Affirm vs Klarna vs In-House Financing</div>
-      </a>
-      <a class="related-card" href="https://nashvillebesttattoo.com/cheap-tattoo-removal-nashville.html">
-        <div class="related-card-label">Cost Guide</div>
-        <div class="related-card-title">Why Cheap Removal Clinics Exist</div>
-      </a>
-      <a class="related-card" href="https://nashvillebesttattoo.com/tattoo-removal-cost-by-body-part-nashville.html">
-        <div class="related-card-label">Cost Guide</div>
-        <div class="related-card-title">Cost by Body Part</div>
-      </a>
-      <a class="related-card" href="https://nashvillebesttattoo.com/tattoo-removal-package-deals-nashville.html">
-        <div class="related-card-label">Cost Guide</div>
-        <div class="related-card-title">Package Deals: Are They Worth It?</div>
-      </a>
-      <a class="related-card" href="https://nashvillebesttattoo.com/multiple-tattoo-removal-cost-nashville.html">
-        <div class="related-card-label">Cost Guide</div>
-        <div class="related-card-title">Removing Several Tattoos: Does Cost Scale Down?</div>
-      </a>
-      <a class="related-card" href="https://nashvillebesttattoo.com/tattoo-removal-cost-calculator-nashville.html">
-        <div class="related-card-label">Cost Guide</div>
-        <div class="related-card-title">What Actually Determines Your Price</div>
-      </a>
+    <p class="cat-block-text">Total cost is the single biggest surprise for first-time clients, since per-session pricing rarely tells the real story. These guides break down realistic totals by size and location, financing options, insurance, and when a package deal actually saves money. Start with <a href="tattoo-removal-cost-nashville.html" class="il">what removal actually costs</a> or jump straight to the <a href="tattoo-removal-cost-calculator-nashville.html" class="il">cost calculator</a> for a factor-by-factor breakdown.</p>
+    <div class="cat-links">
+      <a href="tattoo-removal-cost-nashville.html" class="cat-link featured">Cost Guide</a>
+      <a href="tattoo-removal-cost-calculator-nashville.html" class="cat-link featured">Cost Calculator</a>
+      <a href="tattoo-removal-insurance-nashville.html" class="cat-link">Insurance</a>
+      <a href="tattoo-removal-financing-nashville.html" class="cat-link">Financing</a>
+      <a href="cheap-tattoo-removal-nashville.html" class="cat-link">Cheap Clinics</a>
+      <a href="tattoo-removal-cost-by-body-part-nashville.html" class="cat-link">Cost by Body Part</a>
+      <a href="tattoo-removal-package-deals-nashville.html" class="cat-link">Package Deals</a>
+      <a href="multiple-tattoo-removal-cost-nashville.html" class="cat-link">Multiple Tattoos</a>
     </div>
   </div>
 
-  <div class="topic-category">
-    <div class="topic-category-head">
-      <h3 class="topic-category-title">Cover-Up &amp; Alternatives</h3>
-      <span class="topic-category-count">5 guides</span>
+  <div class="cat-block">
+    <div class="cat-block-header">
+      <div class="cat-block-title">What to Expect</div>
+      <div class="cat-block-count">5 guides</div>
     </div>
-    <p class="topic-category-desc">You don't always need full clearance. When fading beats complete removal, and how to combine both.</p>
-    <div class="related-grid">
-      <a class="related-card" href="https://nashvillebesttattoo.com/cover-up-vs-removal-nashville.html">
-        <div class="related-card-label">Decision Guide</div>
-        <div class="related-card-title">Cover-Up vs. Removal: Which Is Right for You</div>
-      </a>
-      <a class="related-card" href="https://nashvillebesttattoo.com/partial-tattoo-removal-nashville.html">
-        <div class="related-card-label">Alternative Option</div>
-        <div class="related-card-title">Partial Removal &amp; Fading Before a Cover-Up</div>
-      </a>
-      <a class="related-card" href="https://nashvillebesttattoo.com/laser-fading-before-cover-up-nashville.html">
-        <div class="related-card-label">Cover-Up</div>
-        <div class="related-card-title">How Much Fading You Actually Need</div>
-      </a>
-      <a class="related-card" href="https://nashvillebesttattoo.com/tattoo-removal-vs-blackout-nashville.html">
-        <div class="related-card-label">Cover-Up</div>
-        <div class="related-card-title">Full Removal vs Blackout Tattoo</div>
-      </a>
-      <a class="related-card" href="https://nashvillebesttattoo.com/removal-then-new-tattoo-nashville.html">
-        <div class="related-card-label">Cover-Up</div>
-        <div class="related-card-title">Getting a New Tattoo on Removed Skin</div>
-      </a>
+    <p class="cat-block-text">Honest expectations about discomfort, numbing options, healing, and what real progress looks like between sessions. If you are nervous about pain specifically, start with the <a href="tattoo-removal-pain-nashville.html" class="il">honest pain breakdown</a>, then check <a href="numbing-options-tattoo-removal-nashville.html" class="il">numbing options</a> before your first appointment.</p>
+    <div class="cat-links">
+      <a href="tattoo-removal-pain-nashville.html" class="cat-link featured">Pain, Honestly</a>
+      <a href="numbing-options-tattoo-removal-nashville.html" class="cat-link featured">Numbing Options</a>
+      <a href="tattoo-removal-side-effects-nashville.html" class="cat-link">Side Effects</a>
+      <a href="tattoo-removal-aftercare-nashville.html" class="cat-link">Aftercare</a>
+      <a href="signs-tattoo-removal-working-nashville.html" class="cat-link">Signs It's Working</a>
     </div>
   </div>
 
-  <div class="topic-category">
-    <div class="topic-category-head">
-      <h3 class="topic-category-title">What to Expect</h3>
-      <span class="topic-category-count">4 guides</span>
+  <div class="cat-block">
+    <div class="cat-block-header">
+      <div class="cat-block-title">Technology &amp; Methods</div>
+      <div class="cat-block-count">3 guides</div>
     </div>
-    <p class="topic-category-desc">Honest expectations about discomfort, numbing options, and healing between sessions.</p>
-    <div class="related-grid">
-      <a class="related-card" href="https://nashvillebesttattoo.com/tattoo-removal-pain-nashville.html">
-        <div class="related-card-label">Pain Guide</div>
-        <div class="related-card-title">How Much Does Removal Actually Hurt</div>
-      </a>
-      <a class="related-card" href="https://nashvillebesttattoo.com/numbing-options-tattoo-removal-nashville.html">
-        <div class="related-card-label">What to Expect</div>
-        <div class="related-card-title">Numbing Options, Honestly Compared</div>
-      </a>
-      <a class="related-card" href="https://nashvillebesttattoo.com/what-happens-during-removal-session-nashville.html">
-        <div class="related-card-label">What to Expect</div>
-        <div class="related-card-title">What Happens During a Session</div>
-      </a>
-      <a class="related-card" href="https://nashvillebesttattoo.com/tattoo-removal-side-effects-nashville.html">
-        <div class="related-card-label">What to Expect</div>
-        <div class="related-card-title">Real Side Effects, Ranked Honestly</div>
-      </a>
+    <p class="cat-block-text">Not every clinic uses the same equipment, and not every removal method actually works. These guides cover the real difference between laser technologies and why removal creams and DIY kits cannot reach ink the way a laser can.</p>
+    <div class="cat-links">
+      <a href="picosure-vs-laser-tattoo-removal-nashville.html" class="cat-link featured">PicoSure vs Traditional</a>
+      <a href="tattoo-removal-cream-vs-laser-nashville.html" class="cat-link">Cream vs Laser</a>
+      <a href="diy-tattoo-removal-risks-nashville.html" class="cat-link">DIY Risks</a>
     </div>
   </div>
 
-  <div class="topic-category">
-    <div class="topic-category-head">
-      <h3 class="topic-category-title">Special Cases &amp; Choosing a Provider</h3>
-      <span class="topic-category-count">4 guides</span>
+  <div class="cat-block">
+    <div class="cat-block-header">
+      <div class="cat-block-title">Cover-Up &amp; Alternatives</div>
+      <div class="cat-block-count">5 guides</div>
     </div>
-    <p class="topic-category-desc">Cosmetic tattoos, honest timelines, how ink age matters, and how to actually vet a clinic before you book.</p>
-    <div class="related-grid">
-      <a class="related-card" href="https://nashvillebesttattoo.com/cosmetic-tattoo-removal-eyebrows-lips-nashville.html">
-        <div class="related-card-label">Special Case</div>
-        <div class="related-card-title">Removing Eyebrow, Lip &amp; Microblading Tattoos</div>
-      </a>
-      <a class="related-card" href="https://nashvillebesttattoo.com/tattoo-removal-timeline-nashville.html">
-        <div class="related-card-label">Timeline</div>
-        <div class="related-card-title">How Long Removal Takes, Start to Finish</div>
-      </a>
-      <a class="related-card" href="https://nashvillebesttattoo.com/tattoo-removal-old-vs-new-tattoos-nashville.html">
-        <div class="related-card-label">Special Case</div>
-        <div class="related-card-title">Does an Old Tattoo Remove Easier?</div>
-      </a>
-      <a class="related-card" href="https://nashvillebesttattoo.com/what-to-look-for-removal-clinic-nashville.html">
-        <div class="related-card-label">Choosing a Provider</div>
-        <div class="related-card-title">What to Look for in a Removal Clinic</div>
-      </a>
+    <p class="cat-block-text">You do not always need full clearance. Targeted fading can prepare skin for a cover-up in a fraction of the time and cost of complete removal. Start with <a href="cover-up-vs-removal-nashville.html" class="il">cover-up vs. full removal</a> to see which path actually fits your goal.</p>
+    <div class="cat-links">
+      <a href="cover-up-vs-removal-nashville.html" class="cat-link featured">Cover-Up vs Removal</a>
+      <a href="partial-tattoo-removal-nashville.html" class="cat-link featured">Partial Removal</a>
+      <a href="laser-fading-before-cover-up-nashville.html" class="cat-link">Fading Before Cover-Up</a>
+      <a href="tattoo-removal-vs-blackout-nashville.html" class="cat-link">Blackout vs Removal</a>
+      <a href="removal-then-new-tattoo-nashville.html" class="cat-link">New Tattoo on Removed Skin</a>
     </div>
   </div>
+
+  <div class="cat-block">
+    <div class="cat-block-header">
+      <div class="cat-block-title">Special Cases &amp; Choosing a Provider</div>
+      <div class="cat-block-count">3 guides</div>
+    </div>
+    <p class="cat-block-text">Cosmetic tattoos, tattoo age, and clinic quality all change the equation. Before booking anywhere, read <a href="what-to-look-for-removal-clinic-nashville.html" class="il">what to actually look for in a removal clinic</a>, the honest checklist most people skip.</p>
+    <div class="cat-links">
+      <a href="what-to-look-for-removal-clinic-nashville.html" class="cat-link featured">Choosing a Clinic</a>
+      <a href="cosmetic-tattoo-removal-eyebrows-lips-nashville.html" class="cat-link">Cosmetic Tattoo Removal</a>
+      <a href="tattoo-removal-old-vs-new-tattoos-nashville.html" class="cat-link">Old vs New Tattoos</a>
+    </div>
+  </div>
+
 </div>
 
-<div class="newsletter-section" id="contact">
-  <h2 style="font-family:var(--display);font-size:28px;color:var(--white);margin-bottom:10px;">Get Matched With a Removal Clinic</h2>
-  <p style="color:var(--bone-dim);font-size:17px;line-height:1.6;">Tell us about your tattoo and we will point you to the right clinic.</p>
-  <form class="lead-form" id="contactForm" action="https://formspree.io/f/maqzqejk" method="POST" onsubmit="handleContactSubmit(event)">
-    <input type="hidden" name="source" value="removal-overview-bottom-form">
-    <input type="text" name="name" placeholder="Your name" required>
-    <input type="email" name="email" placeholder="Email" required>
-    <select name="goal" required>
-      <option value="" disabled selected>What's your goal?</option>
-      <option value="Full removal, no new tattoo">Full removal, no new tattoo</option>
-      <option value="Cover-up with a new design">Cover-up with a new design</option>
-      <option value="Not sure yet, need advice">Not sure yet, need advice</option>
-    </select>
-    <textarea name="message" placeholder="Anything else we should know? (optional)" rows="2"></textarea>
-    <label style="display:flex;align-items:flex-start;gap:10px;cursor:pointer;font-family:var(--mono);font-size:11px;color:var(--bone-dim);letter-spacing:0.05em;line-height:1.5;"><input type="checkbox" name="consent" value="yes" required style="accent-color:var(--gold);margin-top:2px;flex-shrink:0;">I agree to be matched with a removal clinic, who may contact me about my request. See our <a href="https://nashvillebesttattoo.com/privacy-policy-nashville.html" style="color:var(--gold);">Privacy Policy</a>.</label>
-  <button type="submit" class="lead-submit">Get My Free Recommendations</button>
-  </form>
-  <div id="contactSuccess">Thanks! We will be in touch shortly.</div>
+<!-- FAQ -->
+<div class="section-narrow" id="faq" style="margin-left:auto;margin-right:auto;display:block;">
+  <p class="section-label">FAQ</p>
+  <h2 class="section-title">COMMON <em>questions</em></h2>
+
+  <div class="faq-item">
+    <div class="faq-q" onclick="toggleFaq(this)">Does laser tattoo removal actually work?<span>+</span></div>
+    <div class="faq-a">Yes, though results and timeline vary by tattoo. Most tattoos can be significantly faded or fully cleared with enough sessions, though very stubborn colors like green or white can be more resistant.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q" onclick="toggleFaq(this)">How do I choose between removal and a cover-up?<span>+</span></div>
+    <div class="faq-a">Start by asking whether you want tattooed skin in that spot at all going forward. If yes, fading for a <a href="cover-up-vs-removal-nashville.html" class="il">cover-up</a> is usually faster and cheaper. If no, full removal is the right path.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q" onclick="toggleFaq(this)">Is removal safe?<span>+</span></div>
+    <div class="faq-a">When performed by a trained technician using appropriate equipment for your skin tone and ink, removal is a well-established, generally safe procedure. Choosing an <a href="what-to-look-for-removal-clinic-nashville.html" class="il">experienced clinic</a> matters more than choosing the cheapest option.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q" onclick="toggleFaq(this)">Where should I start if I am completely new to this?<span>+</span></div>
+    <div class="faq-a">Book a <a href="tattoo-removal-consultation-nashville.html" class="il">consultation</a> at a reputable Nashville clinic before making any decisions. An in-person look at your specific tattoo is the only way to get a realistic session count, cost estimate, and timeline.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q" onclick="toggleFaq(this)">Can all tattoo colors be removed?<span>+</span></div>
+    <div class="faq-a">Black responds best to laser treatment. Colors like green, light blue, and white are more resistant and may require more sessions or specialized laser wavelengths to fully clear.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q" onclick="toggleFaq(this)">Does tattoo removal work the same way on dark skin tones?<span>+</span></div>
+    <div class="faq-a">Yes, but it requires more caution. Certain laser wavelengths carry a higher risk of pigment changes on darker skin, so an experienced technician will select equipment and settings suited to your specific skin tone rather than using a one-size-fits-all approach.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q" onclick="toggleFaq(this)">How soon after getting a tattoo can you start removal?<span>+</span></div>
+    <div class="faq-a">Most clinics require the tattoo to be fully healed first, typically 4 to 6 weeks minimum. Starting removal on unhealed skin increases risk of complications and is not recommended by reputable clinics.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q" onclick="toggleFaq(this)">Is tattoo removal ever covered by HSA or FSA funds?<span>+</span></div>
+    <div class="faq-a">Standard insurance almost never covers cosmetic removal, but some <a href="tattoo-removal-insurance-nashville.html" class="il">HSA and FSA plans</a> do, particularly with a documented medical reason. It is worth a quick call to your plan administrator before ruling it out.</div>
+  </div>
+
 </div>
 
+<!-- FINAL CTA -->
 <div class="final-cta">
-  <h2>Thinking About Changing Your Tattoo?</h2>
-  <p>Removal or cover-up, we can help you find the right path and the right Nashville clinic or artist.</p>
-  <a class="btn-primary" href="#contact" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'});return false;">Find a Trusted Removal Clinic</a>
+  <h2 class="final-cta-title">THINKING ABOUT<br>CHANGING YOUR TATTOO?
+    <em>we will find the right path for you</em>
+  </h2>
+  <p class="final-cta-desc">Removal or cover-up, tell us about your tattoo and we will point you to a trusted Nashville clinic or artist.</p>
+  <div class="final-cta-btns">
+    <button class="btn-primary" onclick="openContactModal()">Get Matched With a Clinic</button>
+    <a href="#categories" class="btn-secondary">Browse All Guides</a>
+  </div>
 </div>
 
-<footer><a href="https://nashvillebesttattoo.com">Back to Nashville Best Tattoo</a> &nbsp;&middot;&nbsp; &copy; 2026 Nashville Best Tattoo &nbsp;&middot;&nbsp; <a href="https://nashvillebesttattoo.com/nashville-tattoo-guide.html">Full Guide</a> &nbsp;&middot;&nbsp; Tattooing is for adults 18 and older. &nbsp;&middot;&nbsp; <a href="https://nashvillebesttattoo.com/privacy-policy-nashville.html">Privacy Policy</a></footer>
+<!-- FOOTER -->
+<footer>
+  <p class="footer-copy"><a href="https://nashvillebesttattoo.com" style="color:inherit;text-decoration:none;">Back to Nashville Best Tattoo</a> &middot; 2026 Nashville Best Tattoo &middot; <a href="https://nashvillebesttattoo.com/nashville-tattoo-guide.html" style="color:inherit;text-decoration:none;">Full Guide</a> &middot; Tattooing is for adults 18 and older. &middot; <a href="https://nashvillebesttattoo.com/privacy-policy-nashville.html" style="color:inherit;text-decoration:none;">Privacy Policy</a></p>
+  <p class="footer-badge">Curated by a working tattoo artist</p>
+</footer>
 
+<!-- STICKY CTA -->
 <div class="sticky-cta">
-  <a href="#contact" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'});return false;">Get Matched With a Clinic &#8594;</a>
+  <p class="sticky-text">Find Your Nashville Removal Clinic</p>
+  <div class="sticky-btns">
+    <a href="#" onclick="openContactModal();return false;">Get Matched</a>
+    <a href="#categories">Browse Guides</a>
+  </div>
 </div>
 
-<a class="sticky-cta-desktop" href="#contact" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'});return false;">Get Matched With a Clinic &#8594;</a>
+<!-- MODAL -->
+<div class="modal-overlay" id="contactModal">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeContactModal()">&#10005;</button>
+    <h3 class="modal-title">GET MATCHED</h3>
+    <p class="modal-sub">Leave your details and we will point you to a trusted Nashville removal clinic.</p>
+    <div id="contactForm">
+      <form onsubmit="handleSubmit(event,'contactFormEl','contactSuccess')" id="contactFormEl">
+        <input type="hidden" name="source" value="removal-overview-hub-modal">
+        <input class="lead-input" name="name" placeholder="Your name" required>
+        <input class="lead-input" name="email" placeholder="Email address" required>
+        <div class="radio-group">
+          <label class="radio-label"><input type="radio" name="goal" value="Full removal, no new tattoo"> Full Removal</label>
+          <label class="radio-label"><input type="radio" name="goal" value="Cover-up with a new design"> Cover-Up</label>
+          <label class="radio-label"><input type="radio" name="goal" value="Not sure yet, need advice"> Not Sure Yet</label>
+        </div>
+        <textarea class="lead-input" name="description" placeholder="Tell us about your tattoo..." rows="3" style="resize:vertical;"></textarea>
+        <label style="display:flex;align-items:flex-start;gap:10px;cursor:pointer;font-family:var(--mono);font-size:11px;color:var(--bone-dim);letter-spacing:0.05em;line-height:1.5;">
+          <input type="checkbox" name="consent" value="yes" required style="accent-color:var(--gold);margin-top:2px;flex-shrink:0;">
+          I agree to be matched with a removal clinic, who may contact me about my request. See our <a href="https://nashvillebesttattoo.com/privacy-policy-nashville.html" style="color:var(--gold);">Privacy Policy</a>.
+        </label>
+        <button type="submit" class="lead-submit">Send My Details</button>
+      </form>
+    </div>
+    <div class="modal-success" id="contactSuccess">
+      <h4>We will be in touch</h4>
+      <p>Expect a reply within 24 hours.</p>
+    </div>
+  </div>
+</div>
 
 <script>
-function toggleMenu(){document.getElementById('mobileMenu').classList.toggle('open');}
-function closeMenu(){document.getElementById('mobileMenu').classList.remove('open');}
-function handleCtaSubmit(e){
-  e.preventDefault();
-  var form = document.getElementById('ctaLeadForm');
-  var btn = form.querySelector('.lead-submit');
-  btn.disabled = true;
-  btn.textContent = 'Sending...';
-  fetch('https://formspree.io/f/maqzqejk', {
-    method: 'POST',
-    body: new FormData(form),
-    headers: {'Accept': 'application/json'}
-  }).then(function(r){
-    if (r.ok) {
-      form.style.display = 'none';
-      document.getElementById('ctaLeadSuccess').style.display = 'block';
-      if (typeof gtag !== 'undefined') {
-        gtag('event', 'conversion_click', {event_category:'form', event_label:'removal_overview_midarticle_cta_form'});
-      }
-    } else {
-      btn.disabled = false;
-      btn.textContent = 'Match Me With a Clinic';
-    }
-  }).catch(function(){
-    btn.disabled = false;
-    btn.textContent = 'Match Me With a Clinic';
-  });
+function toggleMenu(){
+  document.getElementById('hamburger').classList.toggle('open');
+  document.getElementById('mobileMenu').classList.toggle('open');
 }
-function handleContactSubmit(e){
+function closeMenu(){
+  document.getElementById('hamburger').classList.remove('open');
+  document.getElementById('mobileMenu').classList.remove('open');
+}
+function openContactModal(){document.getElementById('contactModal').classList.add('open');document.body.style.overflow='hidden';}
+function closeContactModal(){document.getElementById('contactModal').classList.remove('open');document.body.style.overflow='';}
+document.getElementById('contactModal').addEventListener('click',function(e){if(e.target===this)closeContactModal();});
+function handleSubmit(e,formId,successId){
   e.preventDefault();
-  var form = document.getElementById('contactForm');
-  var btn = form.querySelector('.lead-submit');
-  btn.disabled = true;
-  btn.textContent = 'Sending...';
-  fetch('https://formspree.io/f/maqzqejk', {
-    method: 'POST',
-    body: new FormData(form),
-    headers: {'Accept': 'application/json'}
-  }).then(function(r){
-    if (r.ok) {
-      form.style.display = 'none';
-      document.getElementById('contactSuccess').style.display = 'block';
-      if (typeof gtag !== 'undefined') {
-        gtag('event', 'conversion_click', {event_category:'form', event_label:'removal_overview_article_form'});
-      }
-    } else {
-      btn.disabled = false;
-      btn.textContent = 'Get My Free Recommendations';
-    }
-  }).catch(function(){
-    btn.disabled = false;
-    btn.textContent = 'Get My Free Recommendations';
-  });
+  const form=document.getElementById(formId);
+  fetch('https://formspree.io/f/maqzqejk',{method:'POST',body:new FormData(form),headers:{'Accept':'application/json'}})
+  .then(r=>{if(r.ok){form.style.display='none';document.getElementById(successId).style.display='block';
+    if (typeof gtag !== 'undefined') { gtag('event', 'conversion_click', {event_category:'form', event_label:'removal_overview_hub_modal_form'}); }
+  }});
+}
+function toggleFaq(el){
+  const item=el.parentElement;
+  item.classList.toggle('open');
 }
 </script>
 
