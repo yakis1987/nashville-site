@@ -172,6 +172,18 @@ a.il:hover{border-color:var(--gold);}
 .sticky-btns a:first-child{background:var(--gold);color:var(--ink);}
 .sticky-btns a:last-child{border:1px solid rgba(240,235,226,0.2);color:var(--bone);}
 
+/* STICKY - DESKTOP */
+.sticky-cta-desktop{display:none;}
+@media(min-width:769px){
+  .sticky-cta-desktop{display:block;position:fixed;bottom:0;left:0;right:0;background:rgba(10,10,10,0.97);border-top:1px solid rgba(240,235,226,0.08);backdrop-filter:blur(10px);z-index:200;padding:16px 32px;}
+  .scd-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:24px;}
+  .scd-copy{display:flex;align-items:baseline;gap:14px;}
+  .scd-label{font-family:var(--mono);font-size:12px;letter-spacing:0.1em;color:var(--bone);text-transform:uppercase;font-weight:500;}
+  .scd-sub{font-family:var(--mono);font-size:11px;color:var(--bone-dim);letter-spacing:0.02em;}
+  .scd-btn{flex-shrink:0;font-family:var(--mono);font-size:13px;letter-spacing:0.08em;font-weight:500;background:var(--gold);color:var(--ink);padding:13px 30px;border-radius:10px;text-decoration:none;white-space:nowrap;transition:background 0.15s ease;}
+  .scd-btn:hover{background:var(--gold-light);}
+}
+
 /* FOOTER */
 footer{padding:40px 32px;text-align:center;border-top:1px solid rgba(240,235,226,0.06);}
 .footer-copy{font-family:var(--mono);font-size:10px;color:var(--bone-dim);opacity:0.4;margin-bottom:6px;}
@@ -765,6 +777,16 @@ function closeMenu(){
   </div>
 </div>
 
+<div class="sticky-cta-desktop">
+  <div class="scd-inner">
+    <div class="scd-copy">
+      <span class="scd-label">Free Nashville Artist Match</span>
+      <span class="scd-sub">No cost, no commitment &middot; reply within 24 hours</span>
+    </div>
+    <a href="#" class="scd-btn" onclick="openContactModal();return false;">Find My Artist &rarr;</a>
+  </div>
+</div>
+
 <!-- MODAL -->
 <div class="modal-overlay" id="contactModal">
   <div class="modal-box">
@@ -772,7 +794,7 @@ function closeMenu(){
     <h3 class="modal-title">FIND MY ARTIST</h3>
     <p class="modal-sub">Leave your details and we will match you with the right Nashville artist.</p>
     <div id="contactForm">
-      <form onsubmit="handleSubmit(event,'contactFormEl','contactSuccess')" id="contactFormEl">
+      <form onsubmit="handleSubmit(event,'contactFormEl','contactSuccess')" id="contactFormEl"><input type="hidden" name="page_url" value="https://nashvillebesttattoo.com/nashville-tattoo-guide.html">
         <input class="lead-input" name="name" placeholder="Your name" required>
         <input class="lead-input" name="phone" placeholder="Phone number">
         <input class="lead-input" name="email" placeholder="Email address">
