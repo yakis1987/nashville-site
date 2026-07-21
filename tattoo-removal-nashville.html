@@ -209,6 +209,11 @@ header{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 24px;display
 .find-card-link{font-family:var(--mono);font-size:10px;letter-spacing:0.12em;color:var(--gold);}
 
 .cat-block{border-bottom:1px solid rgba(240,235,226,0.07);padding:48px 0;}
+.mid-cta{margin:56px 0;padding:32px 36px;border:1px solid rgba(201,168,76,0.25);border-radius:16px;background:rgba(201,168,76,0.04);display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;}
+.mid-cta-copy{max-width:560px;}
+.mid-cta-title{font-family:var(--display);font-size:26px;color:var(--white);letter-spacing:0.01em;margin-bottom:6px;}
+.mid-cta-text{font-size:15px;font-weight:300;color:var(--bone-dim);}
+.mid-cta .btn-primary{flex-shrink:0;}
 .cat-block:last-child{border-bottom:none;}
 .cat-block-header{display:flex;align-items:baseline;gap:16px;margin-bottom:16px;}
 .cat-block-title{font-family:var(--display);font-size:28px;color:var(--white);}
@@ -447,6 +452,14 @@ footer{padding:40px 32px;text-align:center;border-top:1px solid rgba(240,235,226
     </div>
   </div>
 
+  <div class="mid-cta">
+    <div class="mid-cta-copy">
+      <p class="mid-cta-title">Ready to get started?</p>
+      <p class="mid-cta-text">Tell us about your tattoo and we will match you with a trusted Nashville removal clinic within 24 hours.</p>
+    </div>
+    <button class="btn-primary" onclick="openContactModal()">Book Now</button>
+  </div>
+
   <div class="cat-block">
     <div class="cat-block-header">
       <div class="cat-block-title">Technology &amp; Methods</div>
@@ -552,8 +565,7 @@ footer{padding:40px 32px;text-align:center;border-top:1px solid rgba(240,235,226
 <div class="sticky-cta-desktop">
   <div class="scd-inner">
     <div class="scd-copy">
-      <span class="scd-label">Free Removal Clinic Match</span>
-      <span class="scd-sub">No cost, no commitment &middot; reply within 24 hours</span>
+      <span class="scd-label">Find Your Nashville Removal Clinic</span>
     </div>
     <a href="#" class="scd-btn" onclick="openContactModal();return false;">Get Matched &rarr;</a>
   </div>

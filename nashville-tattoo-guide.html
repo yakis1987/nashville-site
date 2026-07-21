@@ -121,6 +121,11 @@ header{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 24px;display
 
 /* CATEGORY BLOCKS */
 .cat-block{border-bottom:1px solid rgba(240,235,226,0.07);padding:48px 0;}
+.mid-cta{margin:56px 0;padding:32px 36px;border:1px solid rgba(201,168,76,0.25);border-radius:16px;background:rgba(201,168,76,0.04);display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;}
+.mid-cta-copy{max-width:560px;}
+.mid-cta-title{font-family:var(--display);font-size:26px;color:var(--white);letter-spacing:0.01em;margin-bottom:6px;}
+.mid-cta-text{font-size:15px;font-weight:300;color:var(--bone-dim);}
+.mid-cta .btn-primary{flex-shrink:0;}
 .cat-block:last-child{border-bottom:none;}
 .cat-block-header{display:flex;align-items:baseline;gap:16px;margin-bottom:16px;}
 .cat-block-title{font-family:var(--display);font-size:28px;color:var(--white);}
@@ -530,6 +535,14 @@ function closeMenu(){
     </div>
   </div>
 
+  <div class="mid-cta">
+    <div class="mid-cta-copy">
+      <p class="mid-cta-title">Already know what you want?</p>
+      <p class="mid-cta-text">Skip the research. Tell us your idea and we will match you with the right Nashville artist within 24 hours.</p>
+    </div>
+    <button class="btn-primary" onclick="openContactModal()">Book Now</button>
+  </div>
+
   <div class="cat-block">
     <div class="cat-block-header">
       <div class="cat-block-title">Aftercare</div>
@@ -780,8 +793,7 @@ function closeMenu(){
 <div class="sticky-cta-desktop">
   <div class="scd-inner">
     <div class="scd-copy">
-      <span class="scd-label">Free Nashville Artist Match</span>
-      <span class="scd-sub">No cost, no commitment &middot; reply within 24 hours</span>
+      <span class="scd-label">Find Your Nashville Tattoo Artist</span>
     </div>
     <a href="#" class="scd-btn" onclick="openContactModal();return false;">Find My Artist &rarr;</a>
   </div>
