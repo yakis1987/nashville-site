@@ -302,6 +302,23 @@ footer a{color:inherit;text-decoration:none;}
   .comparison-table th,.comparison-table td{padding:10px 10px;}
 }
 </style>
+<!-- GA4 Nashville -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FSYC7C1CT2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  function trackConversion(category,label){gtag('event','conversion_click',{event_category:category,event_label:label});var adsLabels={call:'GFcOCNPhk9EcEPrO-4FE',email:'GFcOCNPhk9EcEPrO-4FE',book:'bv3BCNbhk9EcEPrO-4FE',form:'ScQ1CKzRvsQcEPrO-4FE'};if(adsLabels[category]&&typeof gtag!=='undefined'){gtag('event','conversion',{'send_to':'AW-18257733498/'+adsLabels[category]});}}
+  gtag('js', new Date());
+  gtag('config', 'G-FSYC7C1CT2');
+  gtag('config', 'AW-18257733498');
+</script>
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "x93umdg88y");
+</script>
 </head>
 <body>
 
@@ -842,7 +859,7 @@ function closeContactModal(){document.getElementById('contactModal').classList.r
 function toggleMenu(){document.getElementById('mobileMenu').classList.toggle('open');document.getElementById('hamburger').classList.toggle('open');}
 function closeMenu(){document.getElementById('mobileMenu').classList.remove('open');document.getElementById('hamburger').classList.remove('open');}
 document.getElementById('contactModal').addEventListener('click',function(e){if(e.target===this)closeContactModal();});
-function handleContactSubmit(e){e.preventDefault();var btn=document.querySelector('#contactForm .lead-submit');btn.disabled=true;btn.textContent='Sending...';fetch('https://formspree.io/f/maqzqejk',{method:'POST',body:new FormData(document.getElementById('contactForm')),headers:{'Accept':'application/json'}}).then(function(r){if(r.ok){document.getElementById('contactForm').style.display='none';document.getElementById('contactSuccess').style.display='block';}else{btn.disabled=false;btn.textContent='Send My Details';alert('Something went wrong. Please try again.');}}).catch(function(){btn.disabled=false;btn.textContent='Send My Details';alert('Something went wrong. Please try again.');});}
+function handleContactSubmit(e){e.preventDefault();var btn=document.querySelector('#contactForm .lead-submit');btn.disabled=true;btn.textContent='Sending...';fetch('https://formspree.io/f/maqzqejk',{method:'POST',body:new FormData(document.getElementById('contactForm')),headers:{'Accept':'application/json'}}).then(function(r){if(r.ok){document.getElementById('contactForm').style.display='none';document.getElementById('contactSuccess').style.display='block';if(typeof gtag!=='undefined'){trackConversion('form','fine_line_form_submit');}}else{btn.disabled=false;btn.textContent='Send My Details';alert('Something went wrong. Please try again.');}}).catch(function(){btn.disabled=false;btn.textContent='Send My Details';alert('Something went wrong. Please try again.');});}
 function handleInlineSubscribe(e){e.preventDefault();var btn=e.target.querySelector('.inline-newsletter-btn');btn.disabled=true;btn.textContent='...';fetch('https://assets.mailerlite.com/jsonp/2416847/forms/190252140787140303/subscribe',{method:'POST',body:new FormData(e.target),headers:{'Accept':'application/json'}}).then(function(){e.target.querySelector('.inline-newsletter-row').style.display='none';document.getElementById('inlineNewsSuccess').style.display='block';}).catch(function(){btn.disabled=false;btn.textContent='Subscribe Free';});}
 function handleNewsletterSubmit(e){e.preventDefault();var btn=e.target.querySelector('button.primary');btn.disabled=true;btn.textContent='Sending...';fetch('https://assets.mailerlite.com/jsonp/2416847/forms/190252140787140303/subscribe',{method:'POST',body:new FormData(e.target),headers:{'Accept':'application/json'}}).then(function(){document.querySelector('.ml-subscribe-form-42584477 .row-form').style.display='none';document.querySelector('.ml-subscribe-form-42584477 .row-success').style.display='block';}).catch(function(){btn.disabled=false;btn.textContent="Subscribe · It's Free";});}
 function ml_webform_success_42584477(){var $=ml_jQuery||jQuery;$('.ml-subscribe-form-42584477 .row-success').show();$('.ml-subscribe-form-42584477 .row-form').hide();}
