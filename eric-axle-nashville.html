@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eric Axle Nashville: Fine Line &amp; Black and Grey Tattoo Artist</title>
+<meta name="description" content="Fine line, black &amp; grey, and illustrative tattoos by Eric Axle at Circa Tattoo · Nashville, TN. Private, appointment-only studio specializing in clean linework and custom design.">
+<link rel="canonical" href="https://www.circatattoos.com/">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TattooParlor","name":"Circa Tattoo","address":{"@type":"PostalAddress","streetAddress":"4710 Lebanon Pike #107","addressLocality":"Hermitage","addressRegion":"TN","postalCode":"37076","addressCountry":"US"},"telephone":"+16159339168","url":"https://www.circatattoos.com"}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400;500&family=Bebas+Neue&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400;500&family=Bebas+Neue&display=swap"></noscript>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230a0a0a'/%3E%3Cpath d='M16 5 C16 5 10 13 10 18 C10 21.3 12.7 24 16 24 C19.3 24 22 21.3 22 18 C22 13 16 5 16 5Z' fill='%23c9a84c'/%3E%3C/svg%3E">
+<style>
+:root{--ink:#0a0a0a;--ink-soft:#111111;--ink-card:#131313;--bone:#f0ebe2;--bone-dim:#c8c0b4;--gold:#c9a84c;--gold-light:#dfc078;--serif:"Cormorant Garamond",Georgia,serif;--display:"Bebas Neue",sans-serif;--mono:"DM Mono",monospace;}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}html{scroll-behavior:smooth;}
+body{background:var(--ink);color:var(--bone);font-family:var(--serif);-webkit-font-smoothing:antialiased;padding-bottom:110px;}
+
+/* HEADER */
+header{position:fixed;top:0;left:0;right:0;z-index:100;padding:10px 14px;display:flex;justify-content:space-between;align-items:center;gap:6px;background:rgba(10,10,10,0.97);border-bottom:1.5px solid rgba(240,235,226,0.12);backdrop-filter:blur(8px);}
+.header-back{display:flex;align-items:center;gap:4px;text-decoration:none;color:var(--bone-dim);font-family:var(--mono);font-size:10px;letter-spacing:0.08em;transition:color 0.2s;white-space:nowrap;flex-shrink:0;min-width:0;overflow:hidden;}
+.header-back:hover{color:var(--gold);}
+.header-back::before{content:"←";font-size:13px;}
+.header-logo{flex:1;display:flex;justify-content:center;min-width:0;overflow:hidden;}
+.header-logo svg{height:28px;width:auto;max-width:160px;}
+.header-btn{background:var(--gold);color:var(--ink);font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:0.06em;text-decoration:none;padding:9px 12px;border-radius:8px;white-space:nowrap;transition:background 0.2s;flex-shrink:0;}
+.header-btn:hover{background:var(--gold-light);}
+@media(max-width:380px){.header-back span{display:none;}.header-logo svg{max-width:120px;}.header-btn{padding:8px 10px;font-size:10px;}}
+
+/* HERO */
+
+/* HERO IMAGE */
+.hero-img-bg{position:absolute;top:0;right:0;width:55%;height:100%;z-index:1;overflow:hidden;}
+.hero-img-bg img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block;}
+.hero-img-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(to left, rgba(0,0,0,0.72) 0%, rgba(10,10,10,0.82) 65%, var(--ink) 100%);}
+@media(max-width:768px){.hero-img-bg{width:70%;}}
+
+.hero{min-height:100svh;display:grid;grid-template-columns:1fr 1fr;align-items:end;padding-top:58px;position:relative;overflow:hidden;}
+@media(max-width:768px){.hero{grid-template-columns:1fr;min-height:auto;}}
+.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 60% 70% at 20% 60%,rgba(201,168,76,0.05) 0%,transparent 60%),linear-gradient(135deg,#0f0c08 0%,#0a0a0a 50%,#08080c 100%);}
+.hero-left{position:relative;z-index:2;padding:60px 40px;display:flex;flex-direction:column;justify-content:flex-end;}
+@media(max-width:768px){.hero-left{padding:36px 20px 32px;}}
+.hero-breadcrumb{font-family:var(--mono);font-size:10px;letter-spacing:0.3em;color:var(--gold);text-transform:uppercase;margin-bottom:20px;opacity:0.8;display:flex;align-items:center;gap:10px;animation:fadeUp 0.6s ease 0.1s both;}
+.hero-breadcrumb::before{content:"";display:block;width:28px;height:1px;background:var(--gold);opacity:0.6;}
+.hero-name{font-family:var(--display);font-size:clamp(44px,7vw,92px);line-height:0.9;letter-spacing:0.02em;color:var(--bone);margin-bottom:16px;animation:fadeUp 0.7s ease 0.2s both;}
+.hero-tagline{font-family:var(--serif);font-style:italic;font-size:clamp(18px,2.6vw,26px);font-weight:300;color:var(--gold);margin-bottom:28px;line-height:1.4;animation:fadeUp 0.6s ease 0.3s both;}
+.hero-meta{display:flex;flex-direction:column;gap:10px;margin-bottom:32px;animation:fadeUp 0.6s ease 0.38s both;}
+.hero-meta-item{display:flex;align-items:center;gap:10px;font-family:var(--mono);font-size:13px;letter-spacing:0.1em;color:var(--bone-dim);}
+.hero-meta-item .dot{color:var(--gold);font-size:13px;}
+.hero-btns{display:flex;gap:12px;flex-wrap:wrap;animation:fadeUp 0.6s ease 0.46s both;}
+.btn-primary{display:inline-flex;align-items:center;gap:8px;background:var(--gold);color:var(--ink);font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:0.1em;text-decoration:none;padding:15px 24px;border-radius:10px;transition:background 0.2s;white-space:nowrap;}
+.btn-primary:hover{background:var(--gold-light);}
+.btn-secondary{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(201,168,76,0.35);color:var(--bone);font-family:var(--mono);font-size:12px;letter-spacing:0.1em;text-decoration:none;padding:14px 20px;border-radius:10px;transition:all 0.2s;background:transparent;white-space:nowrap;}
+.btn-secondary:hover{border-color:rgba(201,168,76,0.7);}
+.hero-right{position:relative;z-index:2;display:grid;grid-template-rows:1fr 1fr;height:100svh;gap:3px;}
+@media(max-width:768px){.hero-right{grid-template-rows:unset;grid-template-columns:1fr 1fr;height:260px;gap:3px;}}
+.hero-img-wrap{overflow:hidden;position:relative;background:#161410;display:flex;align-items:center;justify-content:center;}
+.hero-img-wrap img{width:100%;height:100%;object-fit:cover;transition:transform 0.6s ease;display:block;}
+.hero-img-wrap:hover img{transform:scale(1.04);}
+.hero-img-wrap::after{content:"";position:absolute;inset:0;background:linear-gradient(to right,rgba(10,10,10,0.3) 0%,transparent 40%);pointer-events:none;}
+@media(max-width:768px){.hero-img-wrap::after{background:linear-gradient(to bottom,transparent 60%,rgba(10,10,10,0.4) 100%);}}
+.hero-placeholder{font-family:var(--display);font-size:22px;color:rgba(201,168,76,0.18);text-align:center;padding:20px;line-height:1.4;}
+
+/* RATING / INFO */
+.rating-bar{background:var(--ink-soft);border-top:1px solid rgba(240,235,226,0.06);border-bottom:1px solid rgba(240,235,226,0.06);padding:16px 24px;display:flex;flex-wrap:wrap;gap:10px 24px;align-items:center;justify-content:center;}
+.rating-item{display:flex;align-items:center;gap:8px;white-space:nowrap;}
+.rating-stars{color:var(--gold);font-size:13px;letter-spacing:2px;}
+.rating-text{font-family:var(--mono);font-size:11px;letter-spacing:0.1em;color:var(--bone-dim);}
+.rating-sep{width:1px;height:16px;background:rgba(240,235,226,0.1);}
+@media(max-width:500px){.rating-sep{display:none;}}
+.info-strip{display:grid;grid-template-columns:1fr 1fr;border:1px solid rgba(201,168,76,0.12);border-radius:12px;overflow:hidden;background:rgba(240,235,226,0.03);}
+.info-item{padding:12px 20px;display:flex;align-items:center;gap:10px;border-bottom:1px solid rgba(240,235,226,0.06);border-right:1px solid rgba(240,235,226,0.06);}
+.info-item:nth-child(2n){border-right:none;}
+.info-item:nth-last-child(-n+2){border-bottom:none;}
+.info-icon{font-size:16px;}
+.info-label{font-family:var(--mono);font-size:9px;letter-spacing:0.25em;color:var(--gold);text-transform:uppercase;margin-bottom:3px;}
+.info-value{font-size:15px;font-weight:300;color:var(--bone);line-height:1.5;}
+
+/* SECTIONS */
+.section{padding:52px 24px;max-width:920px;margin:0 auto;}
+.section-label{font-family:var(--mono);font-size:10px;letter-spacing:0.3em;color:var(--gold);text-transform:uppercase;margin-bottom:12px;opacity:0.8;}
+.section-title{font-family:var(--display);font-size:clamp(26px,5vw,46px);letter-spacing:0.04em;color:var(--bone);line-height:1;margin-bottom:32px;}
+.section-title em{font-family:var(--serif);font-style:italic;font-weight:300;color:var(--gold);}
+hr.divider{border:none;border-top:1px solid rgba(240,235,226,0.06);margin:0 24px;}
+
+/* ARTIST GALLERIES · 5 photos each */
+.artist-gallery-section{padding:52px 24px;max-width:920px;margin:0 auto;}
+.artist-gallery-header{display:flex;align-items:baseline;gap:16px;margin-bottom:24px;flex-wrap:wrap;}
+.artist-gallery-name{font-family:var(--display);font-size:clamp(28px,4vw,40px);letter-spacing:0.04em;color:var(--bone);}
+.artist-gallery-sub{font-family:var(--mono);font-size:10px;letter-spacing:0.2em;color:var(--gold);text-transform:uppercase;opacity:0.8;}
+.gallery-grid-5{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;}
+@media(max-width:600px){.gallery-grid-5{grid-template-columns:repeat(2,1fr);}}
+.gal-item{aspect-ratio:1;overflow:hidden;border-radius:8px;border:1px solid rgba(201,168,76,0.12);position:relative;cursor:pointer;background:#161410;display:flex;align-items:center;justify-content:center;}
+.gal-item img{width:100%;height:100%;object-fit:cover;transition:transform 0.4s ease,filter 0.3s;filter:brightness(0.85);display:block;}
+.gal-item:hover img{transform:scale(1.06);filter:brightness(1);}
+.gal-placeholder{font-family:var(--display);font-size:14px;color:rgba(201,168,76,0.1);text-align:center;padding:8px;line-height:1.3;}
+
+/* LIGHTBOX */
+.lightbox{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.93);z-index:1000;align-items:center;justify-content:center;padding:20px;}
+.lightbox.active{display:flex;}
+.lightbox img{max-width:90vw;max-height:90vh;object-fit:contain;border-radius:6px;}
+.lightbox-close{position:absolute;top:20px;right:24px;font-family:var(--mono);font-size:22px;color:var(--bone-dim);cursor:pointer;transition:color 0.2s;background:none;border:none;line-height:1;}
+.lightbox-close:hover{color:var(--gold);}
+.lightbox-prev,.lightbox-next{position:absolute;top:50%;transform:translateY(-50%);font-family:var(--mono);font-size:28px;color:var(--bone-dim);cursor:pointer;background:none;border:none;padding:10px;transition:color 0.2s;user-select:none;}
+.lightbox-prev{left:16px;}
+.lightbox-next{right:16px;}
+.lightbox-prev:hover,.lightbox-next:hover{color:var(--gold);}
+
+/* WHY BLOCK */
+.why-block{border:1px solid rgba(201,168,76,0.22);border-radius:14px;padding:28px;background:rgba(201,168,76,0.025);position:relative;overflow:hidden;}
+.why-block::before{content:"✦";position:absolute;right:20px;top:16px;font-size:36px;color:var(--gold);opacity:0.07;}
+.why-label{font-family:var(--mono);font-size:10px;letter-spacing:0.25em;color:var(--gold);text-transform:uppercase;margin-bottom:14px;}
+.why-text{font-size:17px;font-weight:300;color:var(--bone);line-height:1.9;font-style:italic;}
+.why-points{margin-top:18px;display:flex;flex-direction:column;gap:10px;}
+.why-point{display:flex;gap:12px;align-items:flex-start;font-size:15px;font-weight:300;color:var(--bone-dim);line-height:1.7;}
+.why-point::before{content:"✦";color:var(--gold);font-size:9px;flex-shrink:0;margin-top:5px;}
+
+/* ARTISTS GRID */
+.artists-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;}
+@media(max-width:640px){.artists-grid{grid-template-columns:1fr;}}
+.artist-card{background:var(--ink-card);border:1px solid rgba(201,168,76,0.14);border-radius:12px;padding:20px;display:flex;flex-direction:column;gap:6px;}
+.artist-name{font-family:var(--display);font-size:24px;letter-spacing:0.04em;color:var(--bone);}
+.artist-specialty{font-family:var(--mono);font-size:10px;letter-spacing:0.15em;color:var(--gold);text-transform:uppercase;}
+.artist-bio{font-size:16px;font-weight:300;color:var(--bone-dim);line-height:1.8;}
+.artist-locations-tag{font-family:var(--mono);font-size:9px;letter-spacing:0.15em;color:var(--bone-dim);opacity:0.6;text-transform:uppercase;}
+
+/* REVIEWS */
+.reviews-grid{display:grid;grid-template-columns:1fr;gap:12px;}
+@media(min-width:700px){.reviews-grid{grid-template-columns:repeat(2,1fr);}}
+.review-card{background:var(--ink-card);border:1px solid rgba(201,168,76,0.14);border-radius:12px;padding:22px;}
+.review-stars{color:var(--gold);font-size:12px;letter-spacing:2px;margin-bottom:10px;}
+.review-text{font-size:16px;font-style:italic;font-weight:300;color:var(--bone-dim);line-height:1.75;margin-bottom:12px;}
+.review-author{font-family:var(--mono);font-size:10px;letter-spacing:0.12em;color:var(--gold);opacity:0.6;}
+
+/* MAP */
+.map-block{margin-top:32px;border-radius:14px;overflow:hidden;border:1px solid rgba(201,168,76,0.18);}
+.map-block iframe{width:100%;height:260px;border:none;filter:grayscale(75%) invert(88%) hue-rotate(180deg) brightness(0.82) contrast(0.88);display:block;}
+.map-caption{background:var(--ink-soft);padding:14px 18px;display:flex;align-items:center;gap:12px;border-top:1px solid rgba(201,168,76,0.08);}
+.map-caption-text{font-family:var(--mono);font-size:11px;letter-spacing:0.08em;color:var(--bone-dim);}
+.map-caption-text strong{color:var(--gold);}
+.map-directions{margin-left:auto;font-family:var(--mono);font-size:10px;letter-spacing:0.1em;color:var(--gold);text-decoration:none;border:1px solid rgba(201,168,76,0.3);padding:7px 14px;border-radius:6px;white-space:nowrap;transition:all 0.2s;cursor:pointer;}
+.map-directions:hover{background:rgba(201,168,76,0.08);}
+
+/* ABOUT */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;}
+@media(max-width:700px){.about-grid{grid-template-columns:1fr;gap:28px;}}
+.about-desc{font-size:17px;font-weight:300;color:var(--bone-dim);line-height:1.9;}
+.about-desc p+p{margin-top:16px;}
+.about-facts{display:flex;flex-direction:column;gap:12px;}
+.fact{display:flex;gap:14px;padding:16px;background:rgba(255,255,255,0.02);border:1px solid rgba(201,168,76,0.12);border-radius:10px;}
+.fact-icon{font-size:14px;flex-shrink:0;margin-top:2px;color:var(--gold);}
+.fact-label{font-family:var(--mono);font-size:9px;letter-spacing:0.2em;color:var(--gold);text-transform:uppercase;margin-bottom:4px;}
+.fact-value{font-size:15px;color:var(--bone-dim);font-weight:300;line-height:1.6;}
+
+/* STYLES */
+.styles-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;}
+@media(min-width:600px){.styles-grid{grid-template-columns:repeat(3,1fr);}}
+.style-tag{border:1px solid rgba(201,168,76,0.2);border-radius:8px;padding:16px 18px;transition:all 0.2s;}
+.style-tag:hover{border-color:rgba(201,168,76,0.5);background:rgba(201,168,76,0.04);}
+.style-name{font-family:var(--display);font-size:18px;letter-spacing:0.08em;color:var(--bone);margin-bottom:4px;}
+.style-desc{font-family:var(--mono);font-size:10px;letter-spacing:0.1em;color:var(--gold);opacity:0.7;}
+
+/* CTA */
+.cta-block{background:var(--ink-soft);border:1px solid rgba(201,168,76,0.22);border-radius:16px;padding:44px 28px;text-align:center;}
+@media(max-width:500px){.cta-block{padding:30px 18px;}}
+.cta-title{font-family:var(--display);font-size:clamp(26px,5vw,42px);letter-spacing:0.04em;color:var(--bone);margin-bottom:10px;}
+.cta-sub{font-family:var(--serif);font-style:italic;font-size:17px;font-weight:300;color:var(--bone-dim);margin-bottom:28px;}
+.cta-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;}
+@media(max-width:480px){.cta-btns{flex-direction:column;}.cta-btns a{text-align:center;justify-content:center;}}
+
+/* STICKY CTA - mobile only */
+.sticky-cta{display:none;position:fixed;bottom:0;left:0;right:0;background:rgba(10,10,10,0.97);border-top:1px solid rgba(240,235,226,0.08);padding:12px 20px 16px;z-index:200;backdrop-filter:blur(10px);}
+.sticky-text{font-family:var(--mono);font-size:10px;letter-spacing:0.15em;color:var(--bone-dim);margin-bottom:8px;text-align:center;text-transform:uppercase;}
+.sticky-btns{display:flex;gap:10px;max-width:420px;margin:0 auto;}
+.sticky-btns a{flex:1;display:flex;align-items:center;justify-content:center;padding:13px 10px;font-family:var(--mono);font-size:13px;letter-spacing:0.08em;text-decoration:none;font-weight:500;border-radius:10px;white-space:nowrap;}
+.sticky-btns a:first-child{background:var(--gold);color:var(--ink);}
+.sticky-btns a:last-child{border:1px solid rgba(240,235,226,0.2);color:var(--bone);}
+@media(max-width:768px){.sticky-cta{display:block;}}
+
+/* FOOTER */
+footer{border-top:1px solid rgba(240,235,226,0.06);padding:28px 24px;text-align:center;}
+footer a{color:inherit;text-decoration:none;}
+.footer-copy{font-family:var(--mono);font-size:10px;letter-spacing:0.12em;color:var(--bone-dim);opacity:0.35;}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(16px);}to{opacity:1;transform:translateY(0);}}
+/* SHOW MORE */
+.gallery-extra{display:none;}
+.gallery-extra.visible{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-top:6px;}
+.gallery-extra.visible .gal-item{aspect-ratio:1;}
+@media(max-width:600px){.gallery-extra.visible{grid-template-columns:repeat(2,1fr);}}
+.show-more-btn{display:flex;align-items:center;justify-content:center;gap:8px;margin:12px auto 0;font-family:var(--mono);font-size:11px;letter-spacing:0.1em;color:var(--bone-dim);background:transparent;border:1px solid rgba(240,235,226,0.15);padding:10px 24px;border-radius:8px;cursor:pointer;transition:all 0.2s;width:100%;}
+.show-more-btn:hover{border-color:rgba(201,168,76,0.4);color:var(--gold);}
+
+/* INTER-GALLERY CTA */
+.gallery-cta{background:rgba(201,168,76,0.04);border:1px solid rgba(201,168,76,0.18);border-radius:12px;padding:16px 20px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-top:12px;}
+.gallery-cta-text{font-family:var(--mono);font-size:11px;letter-spacing:0.1em;color:var(--bone-dim);}
+.gallery-cta-text strong{display:block;font-family:var(--display);font-size:20px;letter-spacing:0.04em;color:var(--bone);margin-bottom:2px;}
+.gallery-cta-btns{display:flex;gap:10px;flex-wrap:wrap;}
+@media(max-width:500px){.gallery-cta{flex-direction:column;text-align:center;}.gallery-cta-btns{width:100%;}.gallery-cta-btns a{flex:1;justify-content:center;}}
+
+
+/* HAMBURGER MENU */
+.hamburger{background:none;border:none;cursor:pointer;padding:8px;display:flex;flex-direction:column;gap:5px;margin-left:auto;}
+.hamburger span{display:block;width:24px;height:2px;background:var(--bone);border-radius:2px;transition:all 0.3s;}
+.hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+.hamburger.open span:nth-child(2){opacity:0;}
+.hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+.artist-mobile-menu{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(10,10,10,0.98);z-index:999;flex-direction:column;align-items:center;justify-content:center;gap:14px;padding:24px;}
+.artist-mobile-menu.open{display:flex;}
+.amm-btn{width:100%;max-width:320px;padding:16px 24px;font-family:var(--mono);font-size:13px;letter-spacing:0.1em;text-align:center;border-radius:10px;cursor:pointer;text-decoration:none;display:block;}
+.amm-btn.primary{background:var(--gold);color:var(--ink);border:none;font-weight:600;}
+.amm-btn.secondary{background:transparent;color:var(--bone);border:1px solid rgba(240,235,226,0.2);}
+.amm-btn.back{background:transparent;color:var(--bone-dim);border:none;font-size:11px;}
+.amm-close{position:absolute;top:20px;right:20px;background:none;border:none;color:var(--bone);font-size:24px;cursor:pointer;padding:8px;}
+
+
+.desktop-sidebar{display:none;}
+@media(min-width:1100px){
+  .desktop-grid{display:grid;grid-template-columns:1fr 340px;gap:56px;align-items:start;max-width:1320px;margin:0 auto;padding:0 32px;}
+  .desktop-main{min-width:0;}
+  .desktop-main .section,.desktop-main .artist-gallery-section{max-width:none;margin:0;padding-left:0;padding-right:0;}
+  .desktop-sidebar{display:block;position:sticky;top:96px;}
+  .dsb-inner{background:var(--ink-card);border:1px solid rgba(201,168,76,0.22);border-radius:16px;padding:28px;display:flex;flex-direction:column;gap:18px;}
+  .dsb-name{font-family:var(--display);font-size:30px;letter-spacing:0.04em;color:var(--bone);line-height:1;}
+  .dsb-tags{display:flex;flex-wrap:wrap;gap:6px;}
+  .dsb-tag{font-family:var(--mono);font-size:9px;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(201,168,76,0.3);border-radius:20px;padding:5px 10px;white-space:nowrap;}
+  .dsb-rating{display:flex;align-items:center;gap:10px;padding-bottom:16px;border-bottom:1px solid rgba(240,235,226,0.08);}
+  .dsb-stars{color:var(--gold);font-size:14px;letter-spacing:2px;}
+  .dsb-rating-text{font-family:var(--mono);font-size:11px;letter-spacing:0.08em;color:var(--bone-dim);}
+  .dsb-facts{display:flex;flex-direction:column;gap:12px;}
+  .dsb-fact{display:flex;gap:12px;align-items:flex-start;}
+  .dsb-fact-icon{font-size:14px;color:var(--gold);flex-shrink:0;margin-top:2px;}
+  .dsb-fact-label{font-family:var(--mono);font-size:9px;letter-spacing:0.2em;color:var(--gold);text-transform:uppercase;margin-bottom:3px;}
+  .dsb-fact-value{font-size:14px;color:var(--bone-dim);font-weight:300;line-height:1.5;}
+  .dsb-btns{display:flex;flex-direction:column;gap:10px;}
+  .dsb-btns a{justify-content:center;}
+
+  .desktop-main .info-strip{margin-top:44px;border-radius:10px;}
+  .desktop-main .info-strip .info-item{border-bottom:none;justify-content:center;}
+  .desktop-main .info-strip .info-item:nth-child(3n){border-right:none;}
+
+  .desktop-main .gallery-flow{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;}
+  .desktop-main .gallery-flow .gallery-grid,.desktop-main .gallery-flow .gallery-grid-5{display:contents;}
+  .desktop-main .gallery-flow .gallery-extra{display:contents;}
+  .desktop-main .gallery-flow .gallery-extra .gal-item:nth-child(n+3){display:none;}
+  .desktop-main .gallery-flow .gallery-extra.visible .gal-item:nth-child(n+3){display:flex;}
+}
+</style>
+<!-- GA4 Nashville -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FSYC7C1CT2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  function trackConversion(category,label){gtag('event','conversion_click',{event_category:category,event_label:label});var adsLabels={call:'GFcOCNPhk9EcEPrO-4FE',email:'GFcOCNPhk9EcEPrO-4FE',book:'bv3BCNbhk9EcEPrO-4FE',form:'ScQ1CKzRvsQcEPrO-4FE'};if(adsLabels[category]&&typeof gtag!=='undefined'){gtag('event','conversion',{'send_to':'AW-18257733498/'+adsLabels[category]});}}
+  gtag('js', new Date());
+  gtag('config', 'G-FSYC7C1CT2');
+  gtag('config', 'AW-18257733498');
+</script>
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "x93umdg88y");
+</script>
+</head>
+<body>
+
+<header>
+  <a href="https://nashvillebesttattoo.com" class="header-back"><span>Nashville, TN</span></a>
+  <div class="header-logo">
+    <svg viewBox="0 0 200 36" xmlns="http://www.w3.org/2000/svg">
+      <rect x="0" y="1" width="34" height="34" fill="#c9a84c" rx="3"/>
+      <text x="17" y="25" text-anchor="middle" font-family="Bebas Neue,sans-serif" font-size="19" fill="#0a0a0a" letter-spacing="-0.5">NBT</text>
+      <text x="44" y="14" font-family="Bebas Neue,sans-serif" font-size="12" fill="#f0ebe2" letter-spacing="2.5">NASHVILLE</text>
+      <line x1="44" y1="18" x2="196" y2="18" stroke="#c9a84c" stroke-width="0.5" opacity="0.4"/>
+      <text x="44" y="31" font-family="Bebas Neue,sans-serif" font-size="12" fill="#f0ebe2" letter-spacing="2.5">BEST TATTOO</text>
+    </svg>
+  </div>
+  <a href="tel:6159339168" class="header-btn" onclick="trackConversion('call','ericaxle_call_header')">📞 Call Now</a>
+  <button class="hamburger" id="artistHamburger" onclick="toggleArtistMenu()" aria-label="Menu"><span></span><span></span><span></span></button>
+</header>
+<div class="artist-mobile-menu" id="artistMobileMenu">
+  <button class="amm-close" onclick="closeArtistMenu()">✕</button>
+  <a href="tel:6159339168" class="amm-btn primary" onclick="closeArtistMenu();trackConversion('call','ericaxle_call_menu');">📞 Call Now</a>
+  <button class="amm-btn primary" onclick="closeArtistMenu();trackConversion('book','ericaxle_book_menu');openContactModal();" style="border:none;">💬 Book Now</button>
+  <a href="#about-ericaxle" class="amm-btn secondary" onclick="closeArtistMenu();">👤 About Eric Axle</a>
+  <a href="#gallery" class="amm-btn secondary" onclick="closeArtistMenu();">🖼️ View Gallery</a>
+  <a href="https://nashvillebesttattoo.com" class="amm-btn back" onclick="closeArtistMenu();">← All Nashville Artists</a>
+</div>
+
+<div class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-left">
+    <div class="hero-breadcrumb">Hermitage, Nashville, TN</div>
+    <h1 class="hero-name">ERIC<br>AXLE</h1>
+    <p class="hero-tagline">Clean fine line and black &amp; grey work, built for a lifetime</p>
+    <div class="hero-meta">
+      <div class="hero-meta-item"><span class="dot">📍</span>4710 Lebanon Pike #107, Hermitage, TN</div>
+      <div class="hero-meta-item"><span class="dot">⏰</span>By Appointment Only · Private Studio</div>
+      <div class="hero-meta-item"><span class="dot">⭐</span>Fine Line · Black &amp; Grey · Illustrative · Custom</div>
+    </div>
+    <div class="hero-btns">
+      <a href="tel:6159339168" class="btn-primary" onclick="trackConversion('call','ericaxle_call_hero')">📞 Call Now</a>
+      <a href="#" class="btn-secondary" ontouchstart="" onclick="trackConversion('book','ericaxle_book_hero');openContactModal();return false;">✦ Book Now</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-img-wrap"><img src="ericaxle/eric-axle-sword-fineline-tattoo-nashville.webp" alt="Fine line sword tattoo by Eric Axle Nashville" loading="eager" width="600" height="600"></div>
+    <div class="hero-img-wrap"><img src="ericaxle/eric-axle-rose-blackwork-tattoo-nashville.webp" alt="Black and grey rose tattoo by Eric Axle Nashville" loading="eager" width="600" height="600"></div>
+  </div>
+</div>
+
+<div class="desktop-grid">
+<div class="desktop-main">
+
+<div class="rating-bar">
+  <div class="rating-item"><span class="rating-stars">★★★★★</span><span class="rating-text">5.0 · Top-Rated Nashville Artist</span></div>
+  <div class="rating-sep"></div>
+  <div class="rating-item"><span class="rating-text">Owner · Circa Tattoo</span></div>
+  <div class="rating-sep"></div>
+  <div class="rating-item"><span class="rating-text">By Appointment Only</span></div>
+</div>
+
+<div class="info-strip">
+  <div class="info-item"><span class="info-icon">📍</span><div><div class="info-label">Location</div><div class="info-value">4710 Lebanon Pike #107, Hermitage</div></div></div>
+  <div class="info-item"><span class="info-icon">⏰</span><div><div class="info-label">Booking</div><div class="info-value">Appointment Only</div></div></div>
+</div>
+
+<hr class="divider">
+<div class="artist-gallery-section" id="gallery">
+  <p class="section-label">Portfolio</p>
+  <div class="artist-gallery-header">
+    <span class="artist-gallery-name">ERIC AXLE</span>
+    <span class="artist-gallery-sub">Owner · Fine Line · Black &amp; Grey · Illustrative</span>
+  </div>
+  <div class="gallery-flow">
+    <div class="gallery-grid-5" id="gallery-ericaxle">
+      <div class="gal-item" onclick="openLightbox('ericaxle',0)"><img src="ericaxle/eric-axle-sword-fineline-tattoo-nashville.webp" alt="Fine line sword tattoo by Eric Axle Nashville" loading="lazy" width="400" height="400"></div>
+      <div class="gal-item" onclick="openLightbox('ericaxle',1)"><img src="ericaxle/eric-axle-rose-blackwork-tattoo-nashville.webp" alt="Black and grey rose tattoo by Eric Axle Nashville" loading="lazy" width="400" height="400"></div>
+      <div class="gal-item" onclick="openLightbox('ericaxle',2)"><img src="ericaxle/eric-axle-lily-fineline-tattoo-nashville.webp" alt="Fine line lily tattoo by Eric Axle Nashville" loading="lazy" width="400" height="400"></div>
+      <div class="gal-item" onclick="openLightbox('ericaxle',3)"><img src="ericaxle/eric-axle-sun-moon-fineline-tattoo-nashville.webp" alt="Fine line sun and moon face tattoo by Eric Axle Nashville" loading="lazy" width="400" height="400"></div>
+    </div>
+    <div class="gallery-extra" id="gallery-ericaxle-extra">
+      <div class="gal-item" onclick="openLightbox('ericaxle',4)"><img src="ericaxle/eric-axle-chest-floral-tattoo-nashville.webp" alt="Fine line floral chest tattoo by Eric Axle Nashville" loading="lazy" width="400" height="400"></div>
+      <div class="gal-item" onclick="openLightbox('ericaxle',5)"><img src="ericaxle/eric-axle-trumpet-floral-tattoo-nashville.webp" alt="Fine line trumpet and flowers tattoo by Eric Axle Nashville" loading="lazy" width="400" height="400"></div>
+      <div class="gal-item" onclick="openLightbox('ericaxle',6)"><img src="ericaxle/eric-axle-otter-floral-tattoo-nashville.webp" alt="Black and grey otter and florals tattoo by Eric Axle Nashville" loading="lazy" width="400" height="400"></div>
+      <div class="gal-item" onclick="openLightbox('ericaxle',7)"><img src="ericaxle/eric-axle-hamsa-floral-tattoo-nashville.webp" alt="Illustrative hamsa and florals tattoo by Eric Axle Nashville" loading="lazy" width="400" height="400"></div>
+      <div class="gal-item" onclick="openLightbox('ericaxle',8)"><img src="ericaxle/eric-axle-dove-snake-tattoo-nashville.webp" alt="Fine line dove and snake tattoo by Eric Axle Nashville" loading="lazy" width="400" height="400"></div>
+      <div class="gal-item" onclick="openLightbox('ericaxle',9)"><img src="ericaxle/eric-axle-wave-blackwork-tattoo-nashville.webp" alt="Black and grey wave tattoo by Eric Axle Nashville" loading="lazy" width="400" height="400"></div>
+      <div class="gal-item" onclick="openLightbox('ericaxle',10)"><img src="ericaxle/eric-axle-corn-fineline-tattoo-nashville.webp" alt="Fine line corn tattoo by Eric Axle Nashville" loading="lazy" width="400" height="400"></div>
+      <div class="gal-item" onclick="openLightbox('ericaxle',11)"><img src="ericaxle/eric-axle-snake-hand-tattoo-nashville.webp" alt="Illustrative snake and hand tattoo by Eric Axle Nashville" loading="lazy" width="400" height="400"></div>
+      <div class="gal-item" onclick="openLightbox('ericaxle',12)"><img src="ericaxle/eric-axle-safety-pin-tattoo-nashville.webp" alt="Fine line safety pin tattoo by Eric Axle Nashville" loading="lazy" width="400" height="400"></div>
+      <div class="gal-item" onclick="openLightbox('ericaxle',13)"><img src="ericaxle/eric-axle-space-forest-sleeve-tattoo-nashville.webp" alt="Black and grey space and forest sleeve tattoo by Eric Axle Nashville" loading="lazy" width="400" height="400"></div>
+    </div>
+  </div><!-- /gallery-flow -->
+  <button class="show-more-btn" id="btn-ericaxle" onclick="toggleGallery('ericaxle')">&#9660; View more photos</button>
+  <div class="gallery-cta">
+    <div class="gallery-cta-text"><strong>READY TO BOOK?</strong></div>
+    <div class="gallery-cta-btns">
+      <a href="tel:6159339168" class="btn-primary" onclick="trackConversion('call','ericaxle_call_gallery')">📞 Call Now</a>
+      <a href="#" class="btn-secondary" ontouchstart="" onclick="trackConversion('book','ericaxle_book_gallery');openContactModal();return false;">✦ Book Now</a>
+    </div>
+  </div>
+</div>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" onclick="closeLightboxOutside(event)">
+  <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+  <button class="lightbox-prev" onclick="shiftLightbox(-1)">&#8592;</button>
+  <img id="lightbox-img" src="" alt="">
+  <button class="lightbox-next" onclick="shiftLightbox(1)">&#8594;</button>
+</div>
+
+<hr class="divider">
+<div class="section">
+  <div class="why-block">
+    <div class="why-label">Why We Listed Them</div>
+    <p class="why-text">Eric Axle brings over a decade of professional experience to every piece, with a portfolio built on precise linework and a calm, private studio experience.</p>
+    <div class="why-points">
+      <div class="why-point">Eric began his tattoo apprenticeship in 2010 and has been tattooing professionally in Nashville for more than 10 years.</div>
+      <div class="why-point">Circa Tattoo is a private, appointment-only studio, meaning every session is one-on-one with no walk-in traffic or distractions.</div>
+      <div class="why-point">His portfolio spans fine line botanicals, wildlife, and illustrative black &amp; grey work, all built around clean linework and long-term wear.</div>
+    </div>
+  </div>
+</div>
+
+<hr class="divider" id="about-ericaxle">
+<div class="section">
+  <p class="section-label">The Artist</p>
+  <h2 class="section-title">MEET <em>Eric</em></h2>
+  <div class="artists-grid">
+    <div class="artist-card">
+      <div class="artist-name">ERIC AXLE</div>
+      <div class="artist-specialty">Owner · Fine Line · Black &amp; Grey · Illustrative</div>
+      <p class="artist-bio">Born and raised in Nashville, Eric began tattooing in 2010 and has spent over a decade refining a style built on clean linework and smooth shading. He opened Circa Tattoo as a private, appointment-only studio so every client gets a focused, one-on-one experience from consultation to finished piece.</p>
+      <div class="artist-locations-tag">Hermitage, Nashville, TN · Owner</div>
+    </div>
+  </div>
+</div>
+
+<hr class="divider">
+<div class="section">
+  <p class="section-label">What Clients Say</p>
+  <h2 class="section-title">CLIENT <em>Reviews</em></h2>
+  <div class="reviews-grid">
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">"Eric is amazing. When my wife showed her idea to another artist, he said she needed a fine line specialist for the job."</p>
+      <div class="review-author">Yelp Review</div>
+    </div>
+  </div>
+</div>
+
+<hr class="divider">
+<div class="section">
+  <p class="section-label">Find Us</p>
+  <h2 class="section-title">4710 LEBANON Pike</h2>
+  <div class="map-block">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3237.0!2d-86.6459!3d36.1751!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x886450b2b3e3e3e3%3A0x0!2s4710+Lebanon+Pike%2C+Hermitage%2C+TN+37076!5e0!3m2!1sen!2sus!4v1717000000000" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Circa Tattoo Nashville location"></iframe>
+    <div class="map-caption">
+      <div class="map-caption-text"><strong>CIRCA TATTOO</strong> · 4710 Lebanon Pike #107, Hermitage TN 37076</div>
+      <span class="map-directions" onclick="window.open('https://maps.google.com/?q=4710+Lebanon+Pike+Hermitage+TN+37076','_blank')">Get Directions →</span>
+    </div>
+  </div>
+</div>
+
+<hr class="divider">
+<div class="section">
+  <p class="section-label">The Studio</p>
+  <h2 class="section-title">PRIVATE <em>Tattooing</em></h2>
+  <div class="about-grid">
+    <div class="about-desc">
+      <p>Circa Tattoo is a private, appointment-only studio located inside My Salon Suites in Hermitage, just outside downtown Nashville. Owner Eric Axle focuses on fine line, black &amp; grey, and illustrative custom work, drawn and tattooed with an emphasis on clean execution and long-term wear.</p>
+      <p>Every session is one-on-one, with no walk-in traffic. Consultations and booking requests go through the studio's website, and Eric typically responds within 24 hours.</p>
+    </div>
+    <div class="about-facts">
+      <div class="fact"><div class="fact-icon">✦</div><div><div class="fact-label">Specialty</div><div class="fact-value">Fine Line · Black &amp; Grey · Illustrative · Custom Botanical &amp; Wildlife</div></div></div>
+      <div class="fact"><div class="fact-icon">✦</div><div><div class="fact-label">Booking</div><div class="fact-value">Appointment only. Submit a request via the studio website; Eric typically replies within 24 hours.</div></div></div>
+      <div class="fact"><div class="fact-icon">✦</div><div><div class="fact-label">Location</div><div class="fact-value">4710 Lebanon Pike #107, inside My Salon Suites, Hermitage TN.</div></div></div>
+    </div>
+  </div>
+</div>
+
+<hr class="divider">
+<div class="section">
+  <p class="section-label">What He Does</p>
+  <h2 class="section-title">STYLES &amp; <em>Specialties</em></h2>
+  <div class="styles-grid">
+    <div class="style-tag"><div class="style-name">FINE LINE</div><div class="style-desc">Delicate · Precise · Clean</div></div>
+    <div class="style-tag"><div class="style-name">BLACK &amp; GREY</div><div class="style-desc">Deep · Dimensional · Lasting</div></div>
+    <div class="style-tag"><div class="style-name">ILLUSTRATIVE</div><div class="style-desc">Detailed · Narrative · Bold</div></div>
+    <div class="style-tag"><div class="style-name">CUSTOM</div><div class="style-desc">Original · Collaborative · Yours</div></div>
+  </div>
+</div>
+
+<hr class="divider">
+<div class="section">
+  <div class="cta-block">
+    <h2 class="cta-title">READY TO BOOK?</h2>
+    <p class="cta-sub">Appointment only · Submit a request and Eric will get back to you within 24 hours</p>
+    <div class="cta-btns">
+      <a href="tel:6159339168" class="btn-primary" onclick="trackConversion('call','ericaxle_call_bottom')">📞 Call Now</a>
+      <a href="#" class="btn-secondary" ontouchstart="" onclick="trackConversion('book','ericaxle_book_bottom');openContactModal();return false;">✦ Book Now</a>
+    </div>
+  </div>
+</div>
+
+</div><!-- /desktop-main -->
+
+<aside class="desktop-sidebar">
+  <div class="dsb-inner">
+    <div class="dsb-name">ERIC AXLE</div>
+    <div class="dsb-tags">
+      <span class="dsb-tag">Fine Line</span>
+      <span class="dsb-tag">Black &amp; Grey</span>
+      <span class="dsb-tag">Illustrative</span>
+    </div>
+    <div class="dsb-rating">
+      <span class="dsb-stars">★★★★★</span>
+      <span class="dsb-rating-text">5.0 · Yelp Reviews</span>
+    </div>
+    <div class="dsb-facts">
+      <div class="dsb-fact"><span class="dsb-fact-icon">📍</span><div><div class="dsb-fact-label">Location</div><div class="dsb-fact-value">4710 Lebanon Pike #107, Hermitage</div></div></div>
+      <div class="dsb-fact"><span class="dsb-fact-icon">⏰</span><div><div class="dsb-fact-label">Booking</div><div class="dsb-fact-value">Appointment Only</div></div></div>
+    </div>
+    <div class="dsb-btns">
+      <a class="btn-primary" href="tel:6159339168" onclick="trackConversion('call','ericaxle_call_sidebar')">📞 Call Now</a>
+    </div>
+  </div>
+</aside>
+
+</div><!-- /desktop-grid -->
+
+<div class="sticky-cta">
+  <p class="sticky-text">Book Your Tattoo · Nashville, TN</p>
+  <div class="sticky-btns">
+    <a href="tel:6159339168" onclick="trackConversion('call','ericaxle_call_sticky')">📞 Call Us</a>
+    <a href="#" ontouchstart="" onclick="trackConversion('book','ericaxle_book_sticky');openContactModal();return false;">✦ Book Now</a>
+  </div>
+</div>
+
+<footer>
+  <p class="footer-copy">© 2026 Nashville Best Tattoo &nbsp;&middot;&nbsp; Tattooing is for adults 18 and older. &nbsp;&middot;&nbsp; <a href="https://nashvillebesttattoo.com/privacy-policy-nashville.html">Privacy Policy</a></p>
+</footer>
+<script>
+let currentGallery = 'ericaxle';
+let currentIndex = 0;
+
+function getImgs(gallery) {
+  const main = Array.from(document.querySelectorAll('#gallery-' + gallery + ' .gal-item img'));
+  const extra = Array.from(document.querySelectorAll('#gallery-' + gallery + '-extra .gal-item img'));
+  return main.concat(extra);
+}
+
+function toggleGallery(gid) {
+  const mainGrid = document.getElementById('gallery-' + gid);
+  const extra = document.getElementById('gallery-' + gid + '-extra');
+  const btn = document.getElementById('btn-' + gid);
+  const isExpanded = extra.dataset.expanded === 'true';
+  if (!isExpanded) {
+    const items = Array.from(extra.querySelectorAll('.gal-item'));
+    items.forEach(item => mainGrid.appendChild(item));
+    extra.dataset.expanded = 'true';
+    btn.innerHTML = '&#9650; Show less';
+  } else {
+    const allItems = Array.from(mainGrid.querySelectorAll('.gal-item'));
+    const extraItems = allItems.slice(4);
+    extraItems.forEach(item => extra.appendChild(item));
+    extra.dataset.expanded = 'false';
+    btn.innerHTML = '&#9660; View more photos';
+  }
+}
+
+function openLightbox(gallery, index) {
+  const imgs = getImgs(gallery);
+  if (!imgs.length) return;
+  currentGallery = gallery;
+  currentIndex = index;
+  document.getElementById('lightbox-img').src = imgs[index].src;
+  document.getElementById('lightbox').classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeLightbox() {
+  document.getElementById('lightbox').classList.remove('active');
+  document.body.style.overflow = '';
+}
+
+function closeLightboxOutside(e) {
+  if (e.target === document.getElementById('lightbox')) closeLightbox();
+}
+
+function shiftLightbox(dir) {
+  const imgs = getImgs(currentGallery);
+  if (!imgs.length) return;
+  currentIndex = (currentIndex + dir + imgs.length) % imgs.length;
+  document.getElementById('lightbox-img').src = imgs[currentIndex].src;
+}
+
+document.addEventListener('keydown', function(e) {
+  if (!document.getElementById('lightbox').classList.contains('active')) return;
+  if (e.key === 'Escape') closeLightbox();
+  if (e.key === 'ArrowLeft') shiftLightbox(-1);
+  if (e.key === 'ArrowRight') shiftLightbox(1);
+});
+</script>
+
+<!-- Contact Modal -->
+<div id="contact-modal" style="display:none;position:fixed;inset:0;z-index:999;background:rgba(0,0,0,0.75);backdrop-filter:blur(4px);align-items:center;justify-content:center;padding:20px;">
+  <div style="background:#111;border:1px solid rgba(201,168,76,0.25);border-radius:16px;max-width:480px;width:100%;padding:32px 24px;position:relative;">
+    <button onclick="closeContactModal()" style="position:absolute;top:14px;right:16px;background:none;border:none;color:#888;font-size:20px;cursor:pointer;line-height:1;">✕</button>
+    <p style="font-family:var(--mono);font-size:10px;letter-spacing:0.15em;color:var(--gold);text-transform:uppercase;margin:0 0 8px;">Book Now</p>
+    <h3 style="font-family:var(--display);font-size:clamp(22px,4vw,30px);color:var(--bone);margin:0 0 24px;letter-spacing:0.03em;">GET IN TOUCH</h3>
+    <form id="contact-form" onsubmit="submitContactForm(event)">
+      <div style="margin-bottom:14px;">
+        <label style="display:block;font-family:var(--mono);font-size:10px;letter-spacing:0.1em;color:var(--bone-dim);margin-bottom:6px;text-transform:uppercase;">Your Name *</label>
+        <input type="text" name="name" required style="width:100%;background:rgba(240,235,226,0.06);border:1px solid rgba(240,235,226,0.15);border-radius:8px;padding:11px 14px;color:var(--bone);font-family:var(--mono);font-size:13px;box-sizing:border-box;">
+      </div>
+      <div style="margin-bottom:14px;">
+        <label style="display:block;font-family:var(--mono);font-size:10px;letter-spacing:0.1em;color:var(--bone-dim);margin-bottom:6px;text-transform:uppercase;">Email *</label>
+        <input type="email" name="email" required style="width:100%;background:rgba(240,235,226,0.06);border:1px solid rgba(240,235,226,0.15);border-radius:8px;padding:11px 14px;color:var(--bone);font-family:var(--mono);font-size:13px;box-sizing:border-box;">
+      </div>
+      <div style="margin-bottom:14px;">
+        <label style="display:block;font-family:var(--mono);font-size:10px;letter-spacing:0.1em;color:var(--bone-dim);margin-bottom:6px;text-transform:uppercase;">Phone</label>
+        <input type="tel" name="phone" style="width:100%;background:rgba(240,235,226,0.06);border:1px solid rgba(240,235,226,0.15);border-radius:8px;padding:11px 14px;color:var(--bone);font-family:var(--mono);font-size:13px;box-sizing:border-box;">
+      </div>
+      <div style="margin-bottom:14px;">
+        <label style="display:block;font-family:var(--mono);font-size:10px;letter-spacing:0.1em;color:var(--bone-dim);margin-bottom:6px;text-transform:uppercase;">Tell us about your tattoo idea</label>
+        <textarea name="message" rows="3" style="width:100%;background:rgba(240,235,226,0.06);border:1px solid rgba(240,235,226,0.15);border-radius:8px;padding:11px 14px;color:var(--bone);font-family:var(--mono);font-size:13px;box-sizing:border-box;resize:vertical;"></textarea>
+      </div>
+      <input type="hidden" name="source" value="Eric Axle Nashville">
+      <label style="display:flex;align-items:flex-start;gap:10px;cursor:pointer;font-family:var(--mono);font-size:11px;color:var(--bone-dim);letter-spacing:0.05em;line-height:1.5;margin-bottom:14px;">
+        <input type="checkbox" name="consent" value="yes" required style="accent-color:var(--gold);margin-top:2px;flex-shrink:0;">
+        I agree to be contacted by Eric Axle or Nashville Best Tattoo by phone, text, or email about my request. See our <a href="https://nashvillebesttattoo.com/privacy-policy-nashville.html" style="color:var(--gold);">Privacy Policy</a>.
+      </label>
+      <button type="submit" id="contact-submit-btn" style="width:100%;background:var(--gold);color:var(--ink);font-family:var(--mono);font-size:12px;font-weight:600;letter-spacing:0.08em;border:none;border-radius:10px;padding:14px;cursor:pointer;text-transform:uppercase;">Send Message</button>
+      <p id="contact-success" style="display:none;text-align:center;color:var(--gold);font-family:var(--mono);font-size:12px;margin-top:16px;letter-spacing:0.08em;">✓ Message sent! We'll be in touch soon.</p>
+      <p id="contact-error" style="display:none;text-align:center;color:#e05;font-family:var(--mono);font-size:12px;margin-top:16px;">Something went wrong. Please try again.</p>
+    </form>
+  </div>
+</div>
+
+<script>
+function openContactModal() {
+  const m = document.getElementById('contact-modal');
+  m.style.display = 'flex';
+  document.body.style.overflow = 'hidden';
+}
+function closeContactModal() {
+  document.getElementById('contact-modal').style.display = 'none';
+  document.body.style.overflow = '';
+}
+function toggleArtistMenu(){document.getElementById('artistMobileMenu').classList.toggle('open');}
+function closeArtistMenu(){document.getElementById('artistMobileMenu').classList.remove('open');}
+document.getElementById('contact-modal').addEventListener('click', function(e) {
+  if (e.target === this) closeContactModal();
+});
+async function submitContactForm(e) {
+  e.preventDefault();
+  const btn = document.getElementById('contact-submit-btn');
+  btn.textContent = 'Sending...';
+  btn.disabled = true;
+  const formData = new FormData(e.target);
+  try {
+    const res = await fetch('https://formspree.io/f/maqzqejk', {
+      method: 'POST',
+      body: formData,
+      headers: { Accept: 'application/json' }
+    });
+    if (res.ok) {
+      document.getElementById('contact-success').style.display = 'block';
+      document.getElementById('contact-error').style.display = 'none';
+      btn.style.display = 'none';
+      e.target.reset();
+      if (typeof gtag !== 'undefined') {
+        trackConversion('form','ericaxle_form_submit');
+      }
+    } else {
+      throw new Error('failed');
+    }
+  } catch {
+    document.getElementById('contact-error').style.display = 'block';
+    btn.textContent = 'Send Message';
+    btn.disabled = false;
+  }
+}
+</script>
+</body>
+</html>
