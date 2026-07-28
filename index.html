@@ -989,9 +989,17 @@ function openCollabModal(){document.getElementById('collabModal').classList.add(
 function closeCollabModal(){document.getElementById('collabModal').classList.remove('open');document.body.style.overflow='';}
 document.getElementById('collabModal').addEventListener('click',function(e){if(e.target===this)closeCollabModal();});
 var collabSending=false;
-function handleCollabSubmit(e){e.preventDefault();if(collabSending)return false;var form=document.querySelector('#collabModal .lead-form');var btn=form.querySelector('button[type="submit"]');var box=form.closest('.modal-box');collabSending=true;btn.disabled=true;btn.textContent='Sending...';var done=false;function reset(){if(done)return;done=true;collabSending=false;btn.disabled=false;btn.textContent='Send My Details \u2192';}
-function success(){if(done)return;done=true;collabSending=false;try{trackConversion('collab','index_collab_submit');}catch(err){}
-form.style.display='none';var s=document.getElementById('collabSuccess');if(s){s.style.display='block';}if(box){box.scrollTop=0;}}
+function handleCollabSubmit(e){e.preventDefault();if(collabSending)return false;var form=document.querySelector('#collabModal .lead-form');var btn=form.querySelector('button[type="submit"]');var box=form.closest('.modal-box');var msg=document.getElementById('collabSuccess');collabSending=true;btn.disabled=true;btn.textContent='Sending...';var done=false;
+function reset(){if(done)return;done=true;collabSending=false;btn.disabled=false;btn.textContent='Send My Details \u2192';}
+function success(){if(done)return;done=true;collabSending=false;
+try{trackConversion('collab','index_collab_submit');}catch(err){}
+form.setAttribute('style','display:none !important;');
+if(msg){msg.setAttribute('style','display:block;text-align:center;padding:20px 0;');}
+if(box){box.scrollTop=0;}
+setTimeout(function(){closeCollabModal();
+setTimeout(function(){form.setAttribute('style','');try{form.reset();}catch(err2){}
+if(msg){msg.setAttribute('style','display:none;text-align:center;padding:20px 0;');}
+btn.disabled=false;btn.textContent='Send My Details \u2192';},450);},2200);}
 var guard=setTimeout(reset,12000);
 fetch('https://formspree.io/f/maqzqejk',{method:'POST',body:new FormData(form),headers:{'Accept':'application/json'}}).then(function(r){clearTimeout(guard);if(r.ok){success();}else{reset();}}).catch(function(){clearTimeout(guard);reset();});return false;}
 
@@ -999,9 +1007,17 @@ function openContactModal(){document.getElementById('contactModal').classList.ad
 function closeContactModal(){document.getElementById('contactModal').classList.remove('open');document.body.style.overflow='';}
 document.getElementById('contactModal').addEventListener('click',function(e){if(e.target===this)closeContactModal();});
 var contactSending=false;
-function handleContactSubmit(e){e.preventDefault();if(contactSending)return false;var form=document.getElementById('contactForm');var btn=form.querySelector('button[type="submit"]');var box=form.closest('.modal-box');contactSending=true;btn.disabled=true;btn.textContent='Sending...';var done=false;function reset(){if(done)return;done=true;contactSending=false;btn.disabled=false;btn.textContent='Send My Details \u2192';}
-function success(){if(done)return;done=true;contactSending=false;try{trackConversion('form','index_form_submit');}catch(err){}
-form.style.display='none';var s=document.getElementById('contactSuccess');if(s){s.style.display='block';}if(box){box.scrollTop=0;}}
+function handleContactSubmit(e){e.preventDefault();if(contactSending)return false;var form=document.getElementById('contactForm');var btn=form.querySelector('button[type="submit"]');var box=form.closest('.modal-box');var msg=document.getElementById('contactSuccess');contactSending=true;btn.disabled=true;btn.textContent='Sending...';var done=false;
+function reset(){if(done)return;done=true;contactSending=false;btn.disabled=false;btn.textContent='Send My Details \u2192';}
+function success(){if(done)return;done=true;contactSending=false;
+try{trackConversion('form','index_form_submit');}catch(err){}
+form.setAttribute('style','display:none !important;');
+if(msg){msg.setAttribute('style','display:block;text-align:center;padding:20px 0;');}
+if(box){box.scrollTop=0;}
+setTimeout(function(){closeContactModal();
+setTimeout(function(){form.setAttribute('style','');try{form.reset();}catch(err2){}
+if(msg){msg.setAttribute('style','display:none;text-align:center;padding:20px 0;');}
+btn.disabled=false;btn.textContent='Send My Details \u2192';},450);},2200);}
 var guard=setTimeout(reset,12000);
 fetch('https://formspree.io/f/maqzqejk',{method:'POST',body:new FormData(form),headers:{'Accept':'application/json'}}).then(function(r){clearTimeout(guard);if(r.ok){success();}else{reset();}}).catch(function(){clearTimeout(guard);reset();});return false;}
 </script>
