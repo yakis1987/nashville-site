@@ -474,7 +474,7 @@ footer{border-top:1px solid rgba(240,235,226,0.06);padding:40px 32px;text-align:
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
-  function trackConversion(category,label){gtag('event','conversion_click',{event_category:category,event_label:label});var adsLabels={call:'GFcOCNPhk9EcEPrO-4FE',email:'GFcOCNPhk9EcEPrO-4FE',book:'bv3BCNbhk9EcEPrO-4FE',form:'ScQ1CKzRvsQcEPrO-4FE'};if(adsLabels[category]&&typeof gtag!=='undefined'){gtag('event','conversion',{'send_to':'AW-18257733498/'+adsLabels[category]});}}
+  function trackConversion(category,label){var eventNames={call:'phone_click',email:'email_click',book:'booking_start',form:'form_submit',collab:'collab_click'};var evt=eventNames[category]||'conversion_click';gtag('event',evt,{event_category:category,event_label:label});var adsLabels={call:'GFcOCNPhk9EcEPrO-4FE',email:'GFcOCNPhk9EcEPrO-4FE',book:'bv3BCNbhk9EcEPrO-4FE',form:'ScQ1CKzRvsQcEPrO-4FE'};if(adsLabels[category]&&typeof gtag!=='undefined'){gtag('event','conversion',{'send_to':'AW-18257733498/'+adsLabels[category]});}}
   gtag('js', new Date());
   gtag('config', 'G-FSYC7C1CT2');
   gtag('config', 'AW-18257733498');
