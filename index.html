@@ -492,7 +492,7 @@ footer{border-top:1px solid rgba(240,235,226,0.06);padding:40px 32px;text-align:
 <!-- HEADER -->
 <header>
   <div class="logo">
-    <svg viewBox="0 0 260 52" xmlns="http://www.w3.org/2000/svg" height="44" width="auto">
+    <svg viewBox="0 0 260 52" xmlns="http://www.w3.org/2000/svg" height="44">
       <rect x="0" y="2" width="48" height="48" fill="#c9a84c" rx="3"/>
       <text x="24" y="37" text-anchor="middle" font-family="'Bebas Neue', sans-serif" font-size="26" fill="#0a0a0a" letter-spacing="-0.5">NBT</text>
       <text x="62" y="22" font-family="'Bebas Neue', sans-serif" font-size="18" fill="#f0ebe2" letter-spacing="3">NASHVILLE</text>
@@ -970,7 +970,7 @@ footer{border-top:1px solid rgba(240,235,226,0.06);padding:40px 32px;text-align:
     </form>
     <div class="modal-success" id="contactSuccess" style="display:none;text-align:center;padding:20px 0;">
       <div style="font-size:36px;margin-bottom:12px;">✦</div>
-      <p style="font-family:var(--serif);font-style:italic;font-size:17px;color:var(--bone-dim);">We'll be in touch within 24 hours.</p>
+      <p style="font-family:var(--serif);font-style:italic;font-size:17px;color:var(--bone-dim);">We'll be in touch shortly.</p>
     </div>
   </div>
 </div>
@@ -988,12 +988,22 @@ drawer.querySelectorAll('a[href^="#"]').forEach(link=>{link.addEventListener('cl
 function openCollabModal(){document.getElementById('collabModal').classList.add('open');document.body.style.overflow='hidden';}
 function closeCollabModal(){document.getElementById('collabModal').classList.remove('open');document.body.style.overflow='';}
 document.getElementById('collabModal').addEventListener('click',function(e){if(e.target===this)closeCollabModal();});
-function handleCollabSubmit(e){e.preventDefault();var form=document.querySelector('#collabModal .lead-form');var btn=form.querySelector('button[type="submit"]');btn.disabled=true;btn.textContent='Sending...';fetch('https://formspree.io/f/maqzqejk',{method:'POST',body:new FormData(form),headers:{'Accept':'application/json'}}).then(function(r){if(r.ok){form.style.display='none';document.getElementById('collabSuccess').style.display='block';if(typeof gtag!=='undefined'){gtag('event','collab_submit',{event_category:'collab',event_label:'index_collab_submit'});}}else{btn.disabled=false;btn.textContent='Send My Details →';}}).catch(function(){btn.disabled=false;btn.textContent='Send My Details →';});}
+var collabSending=false;
+function handleCollabSubmit(e){e.preventDefault();if(collabSending)return false;var form=document.querySelector('#collabModal .lead-form');var btn=form.querySelector('button[type="submit"]');var box=form.closest('.modal-box');collabSending=true;btn.disabled=true;btn.textContent='Sending...';var done=false;function reset(){if(done)return;done=true;collabSending=false;btn.disabled=false;btn.textContent='Send My Details \u2192';}
+function success(){if(done)return;done=true;collabSending=false;try{trackConversion('collab','index_collab_submit');}catch(err){}
+form.style.display='none';var s=document.getElementById('collabSuccess');if(s){s.style.display='block';}if(box){box.scrollTop=0;}}
+var guard=setTimeout(reset,12000);
+fetch('https://formspree.io/f/maqzqejk',{method:'POST',body:new FormData(form),headers:{'Accept':'application/json'}}).then(function(r){clearTimeout(guard);if(r.ok){success();}else{reset();}}).catch(function(){clearTimeout(guard);reset();});return false;}
 
 function openContactModal(){document.getElementById('contactModal').classList.add('open');document.body.style.overflow='hidden';}
 function closeContactModal(){document.getElementById('contactModal').classList.remove('open');document.body.style.overflow='';}
 document.getElementById('contactModal').addEventListener('click',function(e){if(e.target===this)closeContactModal();});
-function handleContactSubmit(e){e.preventDefault();const form=document.getElementById('contactForm');const btn=form.querySelector('button[type="submit"]');btn.disabled=true;btn.textContent='Sending...';fetch('https://formspree.io/f/maqzqejk',{method:'POST',body:new FormData(form),headers:{'Accept':'application/json'}}).then(r=>{if(r.ok){form.style.display='none';document.getElementById('contactSuccess').style.display='block';if(typeof gtag!=='undefined'){trackConversion('form','index_form_submit');}}else{btn.disabled=false;btn.textContent='Send My Details →';}}).catch(()=>{btn.disabled=false;btn.textContent='Send My Details →';});}
+var contactSending=false;
+function handleContactSubmit(e){e.preventDefault();if(contactSending)return false;var form=document.getElementById('contactForm');var btn=form.querySelector('button[type="submit"]');var box=form.closest('.modal-box');contactSending=true;btn.disabled=true;btn.textContent='Sending...';var done=false;function reset(){if(done)return;done=true;contactSending=false;btn.disabled=false;btn.textContent='Send My Details \u2192';}
+function success(){if(done)return;done=true;contactSending=false;try{trackConversion('form','index_form_submit');}catch(err){}
+form.style.display='none';var s=document.getElementById('contactSuccess');if(s){s.style.display='block';}if(box){box.scrollTop=0;}}
+var guard=setTimeout(reset,12000);
+fetch('https://formspree.io/f/maqzqejk',{method:'POST',body:new FormData(form),headers:{'Accept':'application/json'}}).then(function(r){clearTimeout(guard);if(r.ok){success();}else{reset();}}).catch(function(){clearTimeout(guard);reset();});return false;}
 </script>
 
 <script>
