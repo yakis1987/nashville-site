@@ -254,6 +254,23 @@ footer a{color:var(--gold);text-decoration:none;}
   .sticky-cta-desktop:hover{transform:translateY(-2px);box-shadow:0 12px 32px rgba(201,168,76,0.35);}
 }
 </style>
+<!-- GA4 Nashville -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FSYC7C1CT2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  function trackConversion(category,label){var eventNames={call:'phone_click',email:'email_click',book:'booking_start',form:'form_submit',collab:'collab_click'};var evt=eventNames[category]||'conversion_click';gtag('event',evt,{event_category:category,event_label:label});var adsLabels={call:'GFcOCNPhk9EcEPrO-4FE',email:'GFcOCNPhk9EcEPrO-4FE',book:'bv3BCNbhk9EcEPrO-4FE',form:'ScQ1CKzRvsQcEPrO-4FE'};if(adsLabels[category]&&typeof gtag!=='undefined'){gtag('event','conversion',{'send_to':'AW-18257733498/'+adsLabels[category]});}}
+  gtag('js', new Date());
+  gtag('config', 'G-FSYC7C1CT2');
+  gtag('config', 'AW-18257733498');
+</script>
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "x93umdg88y");
+</script>
 </head>
 <body>
 
@@ -518,7 +535,7 @@ function handleCtaSubmit(e){
       form.style.display = 'none';
       document.getElementById('ctaLeadSuccess').style.display = 'block';
       if (typeof gtag !== 'undefined') {
-        gtag('event', 'conversion_click', {event_category:'form', event_label:'wrist_removal_midarticle_cta_form'});
+        trackConversion('form','wrist_removal_midarticle_cta_form');
       }
     } else {
       btn.disabled = false;
@@ -529,43 +546,21 @@ function handleCtaSubmit(e){
     btn.textContent = 'Match Me With a Clinic';
   });
 }
-function handleContactSubmit(e){
-  e.preventDefault();
-  var form = document.getElementById('contactForm');
-  var btn = form.querySelector('.lead-submit');
-  btn.disabled = true;
-  btn.textContent = 'Sending...';
-  fetch('https://formspree.io/f/maqzqejk', {
-    method: 'POST',
-    body: new FormData(form),
-    headers: {'Accept': 'application/json'}
-  }).then(function(r){
-    if (r.ok) {
-      form.style.display = 'none';
-      document.getElementById('contactSuccess').style.display = 'block';
-      if (typeof gtag !== 'undefined') {
-        gtag('event', 'conversion_click', {event_category:'form', event_label:'wrist_removal_article_form'});
-      }
-    } else {
-      btn.disabled = false;
-      btn.textContent = 'Get My Free Recommendations';
-    }
-  }).catch(function(){
-    btn.disabled = false;
-    btn.textContent = 'Get My Free Recommendations';
-  });
+var contactSending=false;
+function handleContactSubmit(e){e.preventDefault();if(contactSending)return false;var form=document.getElementById('contactForm');var btn=form.querySelector('.lead-submit')||form.querySelector('button[type="submit"]');var orig=btn?btn.getAttribute('data-orig')||btn.textContent:'';if(btn&&!btn.getAttribute('data-orig')){btn.setAttribute('data-orig',orig);}var box=form.closest('.modal-box');var msg=document.getElementById('contactSuccess');contactSending=true;if(btn){btn.disabled=true;btn.textContent='Sending...';}var done=false;
+function reset(){if(done)return;done=true;contactSending=false;if(btn){btn.disabled=false;btn.textContent=orig;}}
+function success(){if(done)return;done=true;contactSending=false;
+try{trackConversion('form','wrist_removal_midarticle_cta_form');}catch(err){}
+form.setAttribute('style','display:none !important;');
+if(msg){msg.setAttribute('style','display:block;text-align:center;padding:20px 0;');}
+if(box){box.scrollTop=0;}
 }
+var guard=setTimeout(reset,12000);
+fetch('https://formspree.io/f/maqzqejk',{method:'POST',body:new FormData(form),headers:{'Accept':'application/json'}}).then(function(r){clearTimeout(guard);if(r.ok){success();}else{reset();}}).catch(function(){clearTimeout(guard);reset();});return false;}
 </script>
 
-<!-- GA4 Nashville -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-FSYC7C1CT2"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-FSYC7C1CT2');
-  gtag('config', 'AW-18257733498');
-</script>
+
+
 
 </body>
 </html>
