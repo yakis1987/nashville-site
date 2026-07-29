@@ -199,6 +199,23 @@ footer a{color:inherit;text-decoration:none;}
   .inline-newsletter{padding:22px 18px;}
 }
 </style>
+<!-- GA4 Nashville -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FSYC7C1CT2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  function trackConversion(category,label){var eventNames={call:'phone_click',email:'email_click',book:'booking_start',form:'form_submit',collab:'collab_click'};var evt=eventNames[category]||'conversion_click';gtag('event',evt,{event_category:category,event_label:label});var adsLabels={call:'GFcOCNPhk9EcEPrO-4FE',email:'GFcOCNPhk9EcEPrO-4FE',book:'bv3BCNbhk9EcEPrO-4FE',form:'ScQ1CKzRvsQcEPrO-4FE'};if(adsLabels[category]&&typeof gtag!=='undefined'){gtag('event','conversion',{'send_to':'AW-18257733498/'+adsLabels[category]});}}
+  gtag('js', new Date());
+  gtag('config', 'G-FSYC7C1CT2');
+  gtag('config', 'AW-18257733498');
+</script>
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "x93umdg88y");
+</script>
 </head><body>
 <header><a href="https://nashvillebesttattoo.com" class="logo"><svg viewBox="0 0 260 52" xmlns="http://www.w3.org/2000/svg" height="44" width="auto"><rect x="0" y="2" width="48" height="48" fill="#c9a84c" rx="3"/><text x="24" y="37" text-anchor="middle" font-family="'Bebas Neue', sans-serif" font-size="26" fill="#0a0a0a" letter-spacing="-0.5">NBT</text><text x="62" y="22" font-family="'Bebas Neue', sans-serif" font-size="18" fill="#f0ebe2" letter-spacing="3">NASHVILLE</text><line x1="62" y1="27" x2="258" y2="27" stroke="#c9a84c" stroke-width="0.5" opacity="0.4"/><text x="62" y="43" font-family="'Bebas Neue', sans-serif" font-size="18" fill="#f0ebe2" letter-spacing="3">BEST TATTOO</text></svg></a>
 <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu"><span></span><span></span><span></span></button></header>
@@ -328,7 +345,20 @@ function closeContactModal(){document.getElementById('contactModal').classList.r
 function toggleMenu(){document.getElementById('mobileMenu').classList.toggle('open');document.getElementById('hamburger').classList.toggle('open');}
 function closeMenu(){document.getElementById('mobileMenu').classList.remove('open');document.getElementById('hamburger').classList.remove('open');}
 document.getElementById('contactModal').addEventListener('click',function(e){if(e.target===this)closeContactModal();});
-function handleContactSubmit(e){e.preventDefault();var btn=document.querySelector('#contactForm .lead-submit');btn.disabled=true;btn.textContent='Sending...';fetch('https://formspree.io/f/maqzqejk',{method:'POST',body:new FormData(document.getElementById('contactForm')),headers:{'Accept':'application/json'}}).then(function(r){if(r.ok){document.getElementById('contactForm').style.display='none';document.getElementById('contactSuccess').style.display='block';}else{btn.disabled=false;btn.textContent='Send My Details';alert('Something went wrong. Please try again.');}}).catch(function(){btn.disabled=false;btn.textContent='Send My Details';alert('Something went wrong. Please try again.');});}
+var contactSending=false;
+function handleContactSubmit(e){e.preventDefault();if(contactSending)return false;var form=document.getElementById('contactForm');var btn=form.querySelector('.lead-submit')||form.querySelector('button[type="submit"]');var orig=btn?btn.getAttribute('data-orig')||btn.textContent:'';if(btn&&!btn.getAttribute('data-orig')){btn.setAttribute('data-orig',orig);}var box=form.closest('.modal-box');var msg=document.getElementById('contactSuccess');contactSending=true;if(btn){btn.disabled=true;btn.textContent='Sending...';}var done=false;
+function reset(){if(done)return;done=true;contactSending=false;if(btn){btn.disabled=false;btn.textContent=orig;}}
+function success(){if(done)return;done=true;contactSending=false;
+try{trackConversion('form','nashville_new_year_tattoo_form');}catch(err){}
+form.setAttribute('style','display:none !important;');
+if(msg){msg.setAttribute('style','display:block;text-align:center;padding:20px 0;');}
+if(box){box.scrollTop=0;}
+setTimeout(function(){closeContactModal();
+setTimeout(function(){form.setAttribute('style','');try{form.reset();}catch(err2){}
+if(msg){msg.setAttribute('style','display:none;text-align:center;padding:20px 0;');}
+if(btn){btn.disabled=false;btn.textContent=orig;}},450);},2200);}
+var guard=setTimeout(reset,12000);
+fetch('https://formspree.io/f/maqzqejk',{method:'POST',body:new FormData(form),headers:{'Accept':'application/json'}}).then(function(r){clearTimeout(guard);if(r.ok){success();}else{reset();}}).catch(function(){clearTimeout(guard);reset();});return false;}
 function handleInlineSubscribe(e){e.preventDefault();var btn=e.target.querySelector('.inline-newsletter-btn');btn.disabled=true;btn.textContent='...';fetch('https://assets.mailerlite.com/jsonp/2416847/forms/190252140787140303/subscribe',{method:'POST',body:new FormData(e.target),headers:{'Accept':'application/json'}}).then(function(){e.target.querySelector('.inline-newsletter-row').style.display='none';document.getElementById('inlineNewsSuccess').style.display='block';}).catch(function(){btn.disabled=false;btn.textContent='Subscribe Free';});}
 function handleNewsletterSubmit(e){e.preventDefault();var btn=e.target.querySelector('button.primary');btn.disabled=true;btn.textContent='Sending...';fetch('https://assets.mailerlite.com/jsonp/2416847/forms/190252140787140303/subscribe',{method:'POST',body:new FormData(e.target),headers:{'Accept':'application/json'}}).then(function(){document.querySelector('.ml-subscribe-form-42584477 .row-form').style.display='none';document.querySelector('.ml-subscribe-form-42584477 .row-success').style.display='block';}).catch(function(){btn.disabled=false;btn.textContent="Subscribe · It's Free";});}
 function ml_webform_success_42584477(){var $=ml_jQuery||jQuery;$('.ml-subscribe-form-42584477 .row-success').show();$('.ml-subscribe-form-42584477 .row-form').hide();}
