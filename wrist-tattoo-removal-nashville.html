@@ -396,7 +396,7 @@ footer a{color:var(--gold);text-decoration:none;}
       <option value="Wide bracelet-style band">Wide bracelet-style band</option>
     </select>
     <textarea name="message" placeholder="Anything else we should know? (optional)" rows="2"></textarea>
-    <label style="display:flex;align-items:flex-start;gap:10px;cursor:pointer;font-family:var(--mono);font-size:11px;color:var(--bone-dim);letter-spacing:0.05em;line-height:1.5;"><input type="checkbox" name="consent" value="yes" required style="accent-color:var(--gold);margin-top:2px;flex-shrink:0;">I agree to be matched with a removal clinic, who may contact me about my request. See our <a href="https://nashvillebesttattoo.com/privacy-policy-nashville.html" style="color:var(--gold);">Privacy Policy</a>.</label>
+    <label style="display:flex;align-items:flex-start;gap:10px;cursor:pointer;font-family:var(--mono);font-size:11px;color:var(--bone-dim);letter-spacing:0.05em;line-height:1.5;"><input type="checkbox" name="consent" value="yes" required style="accent-color:var(--gold);margin-top:2px;flex-shrink:0;">I agree to be matched with a tattoo removal provider, clinic, tattoo artist or studio, who may contact me by phone or text about my request. See our <a href="https://nashvillebesttattoo.com/privacy-policy-nashville.html" style="color:var(--gold);">Privacy Policy</a>.</label>
     <button type="submit" class="lead-submit">Match Me With a Clinic</button>
   </form>
   <div id="ctaLeadSuccess" style="display:none;color:var(--gold-light);font-family:var(--mono);font-size:13px;padding:12px;">Thanks! We will match you with the right clinic shortly.</div>
@@ -497,7 +497,7 @@ footer a{color:var(--gold);text-decoration:none;}
     <input type="text" name="name" placeholder="Your name" required>
     <input type="email" name="email" placeholder="Email" required>
     <textarea name="message" placeholder="Anything else we should know? (optional)" rows="2"></textarea>
-    <label style="display:flex;align-items:flex-start;gap:10px;cursor:pointer;font-family:var(--mono);font-size:11px;color:var(--bone-dim);letter-spacing:0.05em;line-height:1.5;"><input type="checkbox" name="consent" value="yes" required style="accent-color:var(--gold);margin-top:2px;flex-shrink:0;">I agree to be matched with a removal clinic, who may contact me about my request. See our <a href="https://nashvillebesttattoo.com/privacy-policy-nashville.html" style="color:var(--gold);">Privacy Policy</a>.</label>
+    <label style="display:flex;align-items:flex-start;gap:10px;cursor:pointer;font-family:var(--mono);font-size:11px;color:var(--bone-dim);letter-spacing:0.05em;line-height:1.5;"><input type="checkbox" name="consent" value="yes" required style="accent-color:var(--gold);margin-top:2px;flex-shrink:0;">I agree to be matched with a tattoo removal provider, clinic, tattoo artist or studio, who may contact me by phone or text about my request. See our <a href="https://nashvillebesttattoo.com/privacy-policy-nashville.html" style="color:var(--gold);">Privacy Policy</a>.</label>
   <button type="submit" class="lead-submit">Get My Free Recommendations</button>
   </form>
   <div id="contactSuccess">Thanks! We will be in touch shortly.</div>
@@ -512,40 +512,23 @@ footer a{color:var(--gold);text-decoration:none;}
 <footer><a href="https://nashvillebesttattoo.com">Back to Nashville Best Tattoo</a> &nbsp;&middot;&nbsp; &copy; 2026 Nashville Best Tattoo &nbsp;&middot;&nbsp; <a href="https://nashvillebesttattoo.com/nashville-tattoo-guide.html">Full Guide</a> &nbsp;&middot;&nbsp; Tattooing is for adults 18 and older. &nbsp;&middot;&nbsp; <a href="https://nashvillebesttattoo.com/privacy-policy-nashville.html">Privacy Policy</a></footer>
 
 <div class="sticky-cta">
-  <a href="#contact" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'});return false;">Get Matched With a Clinic &#8594;</a>
+  <a href="#midCta" onclick="document.getElementById('midCta').scrollIntoView({behavior:'smooth'});return false;">Get Matched With a Clinic &#8594;</a>
 </div>
 
-<a class="sticky-cta-desktop" href="#contact" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'});return false;">Get Matched With a Clinic &#8594;</a>
+<a class="sticky-cta-desktop" href="#midCta" onclick="document.getElementById('midCta').scrollIntoView({behavior:'smooth'});return false;">Get Matched With a Clinic &#8594;</a>
 
 <script>
 function toggleMenu(){document.getElementById('mobileMenu').classList.toggle('open');}
 function closeMenu(){document.getElementById('mobileMenu').classList.remove('open');}
-function handleCtaSubmit(e){
-  e.preventDefault();
-  var form = document.getElementById('ctaLeadForm');
-  var btn = form.querySelector('.lead-submit');
-  btn.disabled = true;
-  btn.textContent = 'Sending...';
-  fetch('https://formspree.io/f/maqzqejk', {
-    method: 'POST',
-    body: new FormData(form),
-    headers: {'Accept': 'application/json'}
-  }).then(function(r){
-    if (r.ok) {
-      form.style.display = 'none';
-      document.getElementById('ctaLeadSuccess').style.display = 'block';
-      if (typeof gtag !== 'undefined') {
-        trackConversion('form','wrist_removal_midarticle_cta_form');
-      }
-    } else {
-      btn.disabled = false;
-      btn.textContent = 'Match Me With a Clinic';
-    }
-  }).catch(function(){
-    btn.disabled = false;
-    btn.textContent = 'Match Me With a Clinic';
-  });
-}
+var ctaSending=false;
+function handleCtaSubmit(e){e.preventDefault();if(ctaSending)return false;var form=document.getElementById('ctaLeadForm');if(!form)return false;var btn=form.querySelector('.lead-submit')||form.querySelector('button[type="submit"]');var orig=btn?btn.textContent:'';var msg=document.getElementById('ctaLeadSuccess');ctaSending=true;if(btn){btn.disabled=true;btn.textContent='Sending...';}var done=false;
+function reset(){if(done)return;done=true;ctaSending=false;if(btn){btn.disabled=false;btn.textContent=orig;}}
+function success(){if(done)return;done=true;ctaSending=false;
+try{trackConversion('form','wrist_removal_midarticle_cta_form');}catch(err){}
+form.setAttribute('style','display:none !important;');
+if(msg){msg.setAttribute('style','display:block;');}}
+var guard=setTimeout(reset,12000);
+fetch('https://formspree.io/f/maqzqejk',{method:'POST',body:new FormData(form),headers:{'Accept':'application/json'}}).then(function(r){clearTimeout(guard);if(r.ok){success();}else{reset();}}).catch(function(){clearTimeout(guard);reset();});return false;}
 var contactSending=false;
 function handleContactSubmit(e){e.preventDefault();if(contactSending)return false;var form=document.getElementById('contactForm');var btn=form.querySelector('.lead-submit')||form.querySelector('button[type="submit"]');var orig=btn?btn.getAttribute('data-orig')||btn.textContent:'';if(btn&&!btn.getAttribute('data-orig')){btn.setAttribute('data-orig',orig);}var box=form.closest('.modal-box');var msg=document.getElementById('contactSuccess');contactSending=true;if(btn){btn.disabled=true;btn.textContent='Sending...';}var done=false;
 function reset(){if(done)return;done=true;contactSending=false;if(btn){btn.disabled=false;btn.textContent=orig;}}

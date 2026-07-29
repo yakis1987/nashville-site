@@ -301,6 +301,23 @@ footer{padding:40px 32px;text-align:center;border-top:1px solid rgba(240,235,226
   .section,.section-narrow{padding:72px 80px;max-width:1280px;}
 }
 </style>
+<!-- GA4 Nashville -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FSYC7C1CT2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  function trackConversion(category,label){var eventNames={call:'phone_click',email:'email_click',book:'booking_start',form:'form_submit',collab:'collab_click'};var evt=eventNames[category]||'conversion_click';gtag('event',evt,{event_category:category,event_label:label});var adsLabels={call:'GFcOCNPhk9EcEPrO-4FE',email:'GFcOCNPhk9EcEPrO-4FE',book:'bv3BCNbhk9EcEPrO-4FE',form:'ScQ1CKzRvsQcEPrO-4FE'};if(adsLabels[category]&&typeof gtag!=='undefined'){gtag('event','conversion',{'send_to':'AW-18257733498/'+adsLabels[category]});}}
+  gtag('js', new Date());
+  gtag('config', 'G-FSYC7C1CT2');
+  gtag('config', 'AW-18257733498');
+</script>
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "x93umdg88y");
+</script>
 </head>
 <body>
 
@@ -645,7 +662,7 @@ footer{padding:40px 32px;text-align:center;border-top:1px solid rgba(240,235,226
         <textarea class="lead-input" name="description" placeholder="Tell us about your tattoo..." rows="3" style="resize:vertical;"></textarea>
         <label style="display:flex;align-items:flex-start;gap:10px;cursor:pointer;font-family:var(--mono);font-size:11px;color:var(--bone-dim);letter-spacing:0.05em;line-height:1.5;">
           <input type="checkbox" name="consent" value="yes" required style="accent-color:var(--gold);margin-top:2px;flex-shrink:0;">
-          I agree to be matched with a removal clinic, who may contact me about my request. See our <a href="https://nashvillebesttattoo.com/privacy-policy-nashville.html" style="color:var(--gold);">Privacy Policy</a>.
+          I agree to be matched with a tattoo removal provider, clinic, tattoo artist or studio, who may contact me by phone or text about my request. See our <a href="https://nashvillebesttattoo.com/privacy-policy-nashville.html" style="color:var(--gold);">Privacy Policy</a>.
         </label>
         <button type="submit" class="lead-submit">Send My Details</button>
       </form>
@@ -669,29 +686,27 @@ function closeMenu(){
 function openContactModal(){document.getElementById('contactModal').classList.add('open');document.body.style.overflow='hidden';}
 function closeContactModal(){document.getElementById('contactModal').classList.remove('open');document.body.style.overflow='';}
 document.getElementById('contactModal').addEventListener('click',function(e){if(e.target===this)closeContactModal();});
-function handleSubmit(e,formId,successId){
-  e.preventDefault();
-  const form=document.getElementById(formId);
-  fetch('https://formspree.io/f/maqzqejk',{method:'POST',body:new FormData(form),headers:{'Accept':'application/json'}})
-  .then(r=>{if(r.ok){form.style.display='none';document.getElementById(successId).style.display='block';
-    if (typeof gtag !== 'undefined') { gtag('event', 'conversion_click', {event_category:'form', event_label:'removal_overview_hub_modal_form'}); }
-  }});
-}
+function handleSubmit(e,formId,successId){e.preventDefault();var form=document.getElementById(formId);if(!form||form.getAttribute('data-sending')==='1')return false;var btn=form.querySelector('.lead-submit')||form.querySelector('button[type="submit"]');var orig=btn?btn.textContent:'';var box=form.closest('.modal-box');var msg=document.getElementById(successId);form.setAttribute('data-sending','1');if(btn){btn.disabled=true;btn.textContent='Sending...';}var done=false;
+function reset(){if(done)return;done=true;form.setAttribute('data-sending','0');if(btn){btn.disabled=false;btn.textContent=orig;}}
+function success(){if(done)return;done=true;form.setAttribute('data-sending','0');
+try{trackConversion('form',formId+'_submit');}catch(err){}
+form.setAttribute('style','display:none !important;');
+if(msg){msg.setAttribute('style','display:block;text-align:center;padding:20px 0;');}
+if(box){box.scrollTop=0;}
+if(typeof closeContactModal==='function'){setTimeout(function(){closeContactModal();
+setTimeout(function(){form.setAttribute('style','');try{form.reset();}catch(e2){}
+if(msg){msg.setAttribute('style','display:none;text-align:center;padding:20px 0;');}
+if(btn){btn.disabled=false;btn.textContent=orig;}},450);},2200);}}
+var guard=setTimeout(reset,12000);
+fetch('https://formspree.io/f/maqzqejk',{method:'POST',body:new FormData(form),headers:{'Accept':'application/json'}}).then(function(r){clearTimeout(guard);if(r.ok){success();}else{reset();}}).catch(function(){clearTimeout(guard);reset();});return false;}
 function toggleFaq(el){
   const item=el.parentElement;
   item.classList.toggle('open');
 }
 </script>
 
-<!-- GA4 Nashville -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-FSYC7C1CT2"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-FSYC7C1CT2');
-  gtag('config', 'AW-18257733498');
-</script>
+
+
 
 </body>
 </html>
