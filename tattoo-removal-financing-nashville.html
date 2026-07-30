@@ -235,7 +235,7 @@ img{max-width:100%;display:block;}
 #contactSuccess{display:none;color:var(--gold-light);font-family:var(--mono);font-size:14px;padding:20px;}
 
 .final-cta{background:var(--ink-card);border-top:1px solid rgba(201,168,76,0.15);padding:56px 24px;text-align:center;}
-.final-cta h2{font-family:var(--display);font-size:34px;color:var(--white);margin-bottom:12px;}
+.final-cta h2,.final-cta .fc-head{font-family:var(--display);font-size:34px;color:var(--white);margin-bottom:12px;}
 .final-cta p{font-size:16px;color:var(--bone-dim);margin-bottom:24px;max-width:520px;margin-left:auto;margin-right:auto;}
 
 footer{border-top:1px solid rgba(240,235,226,0.06);padding:36px 32px 120px;text-align:center;font-family:var(--mono);font-size:10px;letter-spacing:0.1em;color:var(--bone-dim);opacity:0.35;}
@@ -336,7 +336,7 @@ a.il:hover{border-bottom-color:var(--gold);}
     <img src="removal/removal-session-in-progress.webp" alt="Laser tattoo removal treatment in progress at a licensed Nashville clinic" loading="lazy" width="1520" height="1520">
     <div class="article-img-caption">A multi-session plan is a real financial commitment worth planning for.</div>
   </div>
-  <p>Because <a href="https://nashvillebesttattoo.com/tattoo-removal-insurance-nashville.html" style="color:var(--gold);text-decoration:underline;">insurance rarely covers tattoo removal</a>, financing questions come up almost immediately once someone gets a real quote from a clinic. The problem is that "financing" now covers a genuinely wide range of products, from buy-now-pay-later apps you might already use for retail purchases to dedicated medical credit lines to a clinic's own in-house installment plan, and they are not built the same way or suited to the same situations.</p>
+  <p>Because <a href="https://nashvillebesttattoo.com/tattoo-removal-insurance-nashville.html" style="color:var(--gold);text-decoration:underline;">insurance rarely covers tattoo removal</a>, financing questions come up almost immediately once someone gets a real quote from a clinic. The problem is that "financing" now covers a wide range of products, from buy-now-pay-later apps you might already use for retail purchases to dedicated medical credit lines to a clinic's own in-house installment plan, and they are not built the same way or suited to the same situations.</p>
   <p>This guide breaks down how the major categories actually differ, so you can compare them on real terms rather than just picking whichever option happens to show up first at checkout during your consultation.</p>
 </div>
 
@@ -346,7 +346,7 @@ a.il:hover{border-bottom-color:var(--gold);}
 </div>
 
 <div class="cta-block" style="margin:16px auto 32px;padding:24px;">
-  <h2 class="cta-title" style="font-size:22px;margin-bottom:8px;">Get a Real Quote Before Comparing Financing</h2>
+  <div class="cta-title" style="font-size:22px;margin-bottom:8px;">Get a Real Quote Before Comparing Financing</div>
   <p class="cta-sub" style="margin-bottom:16px;">A Nashville clinic can walk you through exactly which financing partners they work with.</p>
   <a class="btn-primary" href="#midCta" onclick="document.getElementById('midCta').scrollIntoView({behavior:'smooth'});return false;">Get My Recommendations &#8594;</a>
 </div>
@@ -420,12 +420,14 @@ a.il:hover{border-bottom-color:var(--gold);}
 </div>
 
 <div class="cta-block" id="midCta">
-  <h2 class="cta-title">Want to Compare Your Actual Options?</h2>
+  <div class="cta-title">Want to Compare Your Actual Options?</div>
   <p class="cta-sub">Tell us about your tattoo, and we will point you to a Nashville clinic that can walk you through real financing terms.</p>
   <form class="lead-form" id="ctaLeadForm" action="https://formspree.io/f/maqzqejk" method="POST" onsubmit="handleCtaSubmit(event)" style="text-align:left;">
     <input type="hidden" name="source" value="removal-financing-midarticle-cta">
+    <input type="hidden" name="page_url" value="https://nashvillebesttattoo.com/tattoo-removal-financing-nashville.html">
     <input type="text" name="name" placeholder="Your name" required>
     <input type="email" name="email" placeholder="Email" required>
+    <input type="tel" name="phone" placeholder="Phone or mobile" required pattern="[0-9()+\-\s]{7,}">
     <select name="tattoo_size" required>
       <option value="" disabled selected>Tattoo size</option>
       <option value="Small (2-3 inches)">Small (2-3 inches)</option>
@@ -544,12 +546,14 @@ a.il:hover{border-bottom-color:var(--gold);}
 </div>
 
 <div class="newsletter-section" id="contact">
-  <h2 style="font-family:var(--display);font-size:28px;color:var(--white);margin-bottom:10px;">Get Matched With a Removal Clinic</h2>
+  <div style="font-family:var(--display);font-size:28px;color:var(--white);margin-bottom:10px;">Get Matched With a Removal Clinic</div>
   <p style="color:var(--bone-dim);font-size:17px;line-height:1.6;">Tell us about your tattoo and we will point you to the right clinic.</p>
   <form class="lead-form" id="contactForm" action="https://formspree.io/f/maqzqejk" method="POST" onsubmit="handleContactSubmit(event)">
     <input type="hidden" name="source" value="removal-financing-bottom-form">
+    <input type="hidden" name="page_url" value="https://nashvillebesttattoo.com/tattoo-removal-financing-nashville.html">
     <input type="text" name="name" placeholder="Your name" required>
     <input type="email" name="email" placeholder="Email" required>
+    <input type="tel" name="phone" placeholder="Phone or mobile" required pattern="[0-9()+\-\s]{7,}">
     <select name="tattoo_size" required>
       <option value="" disabled selected>Tattoo size</option>
       <option value="Small (2-3 inches)">Small (2-3 inches)</option>
@@ -565,7 +569,7 @@ a.il:hover{border-bottom-color:var(--gold);}
 </div>
 
 <div class="final-cta">
-  <h2>Ready to Compare Real Financing Terms?</h2>
+  <div class="fc-head">Ready to Compare Real Financing Terms?</div>
   <p>Get matched with a Nashville clinic that will walk you through exactly what your options actually cost.</p>
   <a class="btn-primary" href="#contact" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'});return false;">Find a Trusted Removal Clinic</a>
 </div>

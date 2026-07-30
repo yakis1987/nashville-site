@@ -208,7 +208,7 @@ img{max-width:100%;display:block;}
 .lead-submit{background:var(--gold);color:var(--ink);font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:0.1em;padding:14px;border-radius:10px;border:none;cursor:pointer;text-transform:uppercase;}
 #contactSuccess{display:none;color:var(--gold-light);font-family:var(--mono);font-size:14px;padding:20px;}
 .final-cta{background:var(--ink-card);border-top:1px solid rgba(201,168,76,0.15);padding:56px 24px;text-align:center;}
-.final-cta h2{font-family:var(--display);font-size:34px;color:var(--white);margin-bottom:12px;}
+.final-cta h2,.final-cta .fc-head{font-family:var(--display);font-size:34px;color:var(--white);margin-bottom:12px;}
 .final-cta p{font-size:16px;color:var(--bone-dim);margin-bottom:24px;max-width:520px;margin-left:auto;margin-right:auto;}
 footer{border-top:1px solid rgba(240,235,226,0.06);padding:36px 32px 120px;text-align:center;font-family:var(--mono);font-size:10px;letter-spacing:0.1em;color:var(--bone-dim);opacity:0.35;}
 footer a{color:inherit;text-decoration:none;}
@@ -306,7 +306,7 @@ a.il:hover{border-bottom-color:var(--gold);}
     <img src="removal/removal-session-in-progress.webp" alt="Laser tattoo removal treatment in progress at a licensed Nashville clinic" loading="lazy" width="1520" height="1520">
     <div class="article-img-caption">The provider behind the laser matters as much as the equipment itself.</div>
   </div>
-  <p>With laser tattoo removal now offered by dedicated removal studios, medspas, and dermatology practices across Nashville, quality genuinely varies more than people expect walking in. The equipment, the technician's training, and the honesty of the consultation all affect your actual results, not just the price on the sign out front.</p>
+  <p>With laser tattoo removal now offered by dedicated removal studios, medspas, and dermatology practices across Nashville, quality varies more than people expect walking in. The equipment, the technician's training, and the honesty of the consultation all affect your actual results, not just the price on the sign out front.</p>
   <p>This is a practical checklist for evaluating any clinic you are considering, built around the same criteria covered throughout this guide, from <a href="https://nashvillebesttattoo.com/cheap-tattoo-removal-nashville.html" class="inline-link">why cheap clinics sometimes cut real corners</a> to what a legitimate consultation should actually look like.</p>
 </div>
 
@@ -316,7 +316,7 @@ a.il:hover{border-bottom-color:var(--gold);}
 </div>
 
 <div class="cta-block" style="margin:16px auto 32px;padding:24px;">
-  <h2 class="cta-title" style="font-size:22px;margin-bottom:8px;">Skip the Guesswork</h2>
+  <div class="cta-title" style="font-size:22px;margin-bottom:8px;">Skip the Guesswork</div>
   <p class="cta-sub" style="margin-bottom:16px;">Get matched with a Nashville clinic that already meets this checklist.</p>
   <a class="btn-primary" href="#midCta" onclick="document.getElementById('midCta').scrollIntoView({behavior:'smooth'});return false;">Get My Recommendations &#8594;</a>
 </div>
@@ -377,7 +377,7 @@ a.il:hover{border-bottom-color:var(--gold);}
     <img src="removal/removal-before-after.webp" alt="Before and after comparison of a tattoo through a professional laser removal course" loading="lazy" width="1520" height="1139">
     <div class="article-img-caption">Real documented results are worth asking to see regardless of clinic type.</div>
   </div>
-  <p>Both dedicated removal studios and medspas offering removal as one of several services can do excellent work, and neither category guarantees quality on its own. What matters more is how much of that specific provider's practice is genuinely focused on removal day to day. It is entirely reasonable to ask directly: how many removal sessions do you perform in a typical week, and how much of your training was specific to laser tattoo removal versus other services you offer?</p>
+  <p>Both dedicated removal studios and medspas offering removal as one of several services can do excellent work, and neither category guarantees quality on its own. What matters more is how much of that specific provider's practice is focused on removal day to day. It is entirely reasonable to ask directly: how many removal sessions do you perform in a typical week, and how much of your training was specific to laser tattoo removal versus other services you offer?</p>
   <p>A clinic confident in its removal experience will generally answer this clearly and specifically, similar to how a good clinic answers questions about <a href="https://nashvillebesttattoo.com/tattoo-removal-cost-calculator-nashville.html" class="inline-link">what actually determines your removal price</a> without vague deflection.</p>
 </div>
 
@@ -388,7 +388,7 @@ a.il:hover{border-bottom-color:var(--gold);}
   </div>
   <div class="myth-card fact">
     <div class="myth-label">Fact</div>
-    <p>Equipment generation, technician experience, and treatment planning genuinely vary between providers, and these differences affect real outcomes.</p>
+    <p>Equipment generation, technician experience, and treatment planning vary between providers, and these differences affect real outcomes.</p>
   </div>
   <div class="myth-card myth">
     <div class="myth-label">Myth</div>
@@ -409,12 +409,14 @@ a.il:hover{border-bottom-color:var(--gold);}
 </div>
 
 <div class="cta-block" id="midCta">
-  <h2 class="cta-title">Want a Clinic That Already Clears This Checklist?</h2>
+  <div class="cta-title">Want a Clinic That Already Clears This Checklist?</div>
   <p class="cta-sub">Tell us about your tattoo, and we will match you with a Nashville clinic that meets these standards.</p>
   <form class="lead-form" id="ctaLeadForm" action="https://formspree.io/f/maqzqejk" method="POST" onsubmit="handleCtaSubmit(event)" style="text-align:left;">
     <input type="hidden" name="source" value="removal-choosing-clinic-midarticle-cta">
+    <input type="hidden" name="page_url" value="https://nashvillebesttattoo.com/what-to-look-for-removal-clinic-nashville.html">
     <input type="text" name="name" placeholder="Your name" required>
     <input type="email" name="email" placeholder="Email" required>
+    <input type="tel" name="phone" placeholder="Phone or mobile" required pattern="[0-9()+\-\s]{7,}">
     <select name="tattoo_size" required>
       <option value="" disabled selected>Tattoo size</option>
       <option value="Small (2-3 inches)">Small (2-3 inches)</option>
@@ -505,12 +507,14 @@ a.il:hover{border-bottom-color:var(--gold);}
 </div>
 
 <div class="newsletter-section" id="contact">
-  <h2 style="font-family:var(--display);font-size:28px;color:var(--white);margin-bottom:10px;">Get Matched With a Removal Clinic</h2>
+  <div style="font-family:var(--display);font-size:28px;color:var(--white);margin-bottom:10px;">Get Matched With a Removal Clinic</div>
   <p style="color:var(--bone-dim);font-size:17px;line-height:1.6;">Tell us about your tattoo and we will point you to the right clinic.</p>
   <form class="lead-form" id="contactForm" action="https://formspree.io/f/maqzqejk" method="POST" onsubmit="handleContactSubmit(event)">
     <input type="hidden" name="source" value="removal-choosing-clinic-bottom-form">
+    <input type="hidden" name="page_url" value="https://nashvillebesttattoo.com/what-to-look-for-removal-clinic-nashville.html">
     <input type="text" name="name" placeholder="Your name" required>
     <input type="email" name="email" placeholder="Email" required>
+    <input type="tel" name="phone" placeholder="Phone or mobile" required pattern="[0-9()+\-\s]{7,}">
     <select name="tattoo_size" required>
       <option value="" disabled selected>Tattoo size</option>
       <option value="Small (2-3 inches)">Small (2-3 inches)</option>
@@ -526,7 +530,7 @@ a.il:hover{border-bottom-color:var(--gold);}
 </div>
 
 <div class="final-cta">
-  <h2>Ready for a Clinic That Passes the Checklist?</h2>
+  <div class="fc-head">Ready for a Clinic That Passes the Checklist?</div>
   <p>Get matched with a Nashville clinic that meets every standard on this list.</p>
   <a class="btn-primary" href="#contact" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'});return false;">Find a Trusted Removal Clinic</a>
 </div>

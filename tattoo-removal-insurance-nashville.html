@@ -235,7 +235,7 @@ img{max-width:100%;display:block;}
 #contactSuccess{display:none;color:var(--gold-light);font-family:var(--mono);font-size:14px;padding:20px;}
 
 .final-cta{background:var(--ink-card);border-top:1px solid rgba(201,168,76,0.15);padding:56px 24px;text-align:center;}
-.final-cta h2{font-family:var(--display);font-size:34px;color:var(--white);margin-bottom:12px;}
+.final-cta h2,.final-cta .fc-head{font-family:var(--display);font-size:34px;color:var(--white);margin-bottom:12px;}
 .final-cta p{font-size:16px;color:var(--bone-dim);margin-bottom:24px;max-width:520px;margin-left:auto;margin-right:auto;}
 
 footer{border-top:1px solid rgba(240,235,226,0.06);padding:36px 32px 120px;text-align:center;font-family:var(--mono);font-size:10px;letter-spacing:0.1em;color:var(--bone-dim);opacity:0.35;}
@@ -346,7 +346,7 @@ a.il:hover{border-bottom-color:var(--gold);}
 </div>
 
 <div class="cta-block" style="margin:16px auto 32px;padding:24px;">
-  <h2 class="cta-title" style="font-size:22px;margin-bottom:8px;">Get a Real Price Before You Worry About Coverage</h2>
+  <div class="cta-title" style="font-size:22px;margin-bottom:8px;">Get a Real Price Before You Worry About Coverage</div>
   <p class="cta-sub" style="margin-bottom:16px;">A Nashville clinic can give you an honest quote and walk you through payment options during your consultation.</p>
   <a class="btn-primary" href="#midCta" onclick="document.getElementById('midCta').scrollIntoView({behavior:'smooth'});return false;">Get My Recommendations &#8594;</a>
 </div>
@@ -364,7 +364,7 @@ a.il:hover{border-bottom-color:var(--gold);}
     <div class="article-img-caption">Medical necessity cases are the exception, not the rule.</div>
   </div>
   <p>A small set of situations have a genuine, if not guaranteed, path to coverage. A persistent allergic reaction to tattoo ink, documented by a dermatologist, can sometimes qualify as medically necessary removal. A tattoo positioned over a mole or area of skin that needs regular monitoring, where the ink interferes with visual diagnosis, is another scenario insurers have been known to consider. Removal of radiation markers used during cancer treatment is a further case that some clinics and programs treat differently from standard cosmetic removal, sometimes offering it at reduced or no cost outside of insurance entirely.</p>
-  <p>In each of these situations, the path forward typically requires a Letter of Medical Necessity from your doctor, diagnosis codes, and often photos or additional documentation, sometimes with preauthorization required before treatment. It is a genuinely slower process than simply booking a session, and approval is never guaranteed even with strong documentation, which is part of why most people do not rely on this route as their primary plan.</p>
+  <p>In each of these situations, the path forward typically requires a Letter of Medical Necessity from your doctor, diagnosis codes, and often photos or additional documentation, sometimes with preauthorization required before treatment. It is a slower process than simply booking a session, and approval is never guaranteed even with strong documentation, which is part of why most people do not rely on this route as their primary plan.</p>
 </div>
 
 <div class="tips-grid">
@@ -393,7 +393,7 @@ a.il:hover{border-bottom-color:var(--gold);}
     <div class="article-img-caption">HSA and FSA funds often make this outcome more affordable than it looks.</div>
   </div>
   <p>For most people, the more practical path is not fighting for standard insurance coverage but checking whether a Health Savings Account or Flexible Spending Account can be used instead. Many HSA and FSA administrators do treat laser tattoo removal as a qualified medical expense, which lets you pay with pre-tax dollars even though your core health insurance plan will not reimburse the cost directly.</p>
-  <p>Eligibility genuinely varies by plan administrator, so this is worth a quick call before you assume either way. If your plan does qualify tattoo removal as an eligible expense, it can meaningfully reduce your effective cost simply by using funds that were not going to be taxed in the first place.</p>
+  <p>Eligibility varies by plan administrator, so this is worth a quick call before you assume either way. If your plan does qualify tattoo removal as an eligible expense, it can meaningfully reduce your effective cost simply by using funds that were not going to be taxed in the first place.</p>
 </div>
 
 <div class="myth-grid">
@@ -424,12 +424,14 @@ a.il:hover{border-bottom-color:var(--gold);}
 </div>
 
 <div class="cta-block" id="midCta">
-  <h2 class="cta-title">Talk Through Your Situation With a Real Clinic</h2>
+  <div class="cta-title">Talk Through Your Situation With a Real Clinic</div>
   <p class="cta-sub">Tell us about your tattoo, and we will point you to a Nashville clinic that can walk you through your actual payment options.</p>
   <form class="lead-form" id="ctaLeadForm" action="https://formspree.io/f/maqzqejk" method="POST" onsubmit="handleCtaSubmit(event)" style="text-align:left;">
     <input type="hidden" name="source" value="removal-insurance-midarticle-cta">
+    <input type="hidden" name="page_url" value="https://nashvillebesttattoo.com/tattoo-removal-insurance-nashville.html">
     <input type="text" name="name" placeholder="Your name" required>
     <input type="email" name="email" placeholder="Email" required>
+    <input type="tel" name="phone" placeholder="Phone or mobile" required pattern="[0-9()+\-\s]{7,}">
     <select name="tattoo_size" required>
       <option value="" disabled selected>Tattoo size</option>
       <option value="Small (2-3 inches)">Small (2-3 inches)</option>
@@ -460,7 +462,7 @@ a.il:hover{border-bottom-color:var(--gold);}
 
 <div class="section">
   <h2 class="section-title">Building a Realistic <em>Payment Plan</em></h2>
-  <p>Given how rarely standard insurance genuinely applies, the most productive use of your time is usually building a realistic payment plan rather than pursuing a long-shot claim. That typically means combining whatever HSA or FSA eligibility you have with a clinic's own <a href="https://nashvillebesttattoo.com/tattoo-removal-financing-nashville.html" style="color:var(--gold);text-decoration:underline;">financing options</a>, which most reputable Nashville clinics offer in some form, whether that is an in-house installment plan or a partnership with a third-party financing provider built for cosmetic and elective procedures.</p>
+  <p>Given how rarely standard insurance applies, the most productive use of your time is usually building a realistic payment plan rather than pursuing a long-shot claim. That typically means combining whatever HSA or FSA eligibility you have with a clinic's own <a href="https://nashvillebesttattoo.com/tattoo-removal-financing-nashville.html" style="color:var(--gold);text-decoration:underline;">financing options</a>, which most reputable Nashville clinics offer in some form, whether that is an in-house installment plan or a partnership with a third-party financing provider built for cosmetic and elective procedures.</p>
   <p>Getting a clear, written quote during your consultation, before committing to any financing option, gives you the full picture you need to compare the true cost of paying upfront against spreading payments out over your treatment course. Our <a href="https://nashvillebesttattoo.com/tattoo-removal-cost-nashville.html" style="color:var(--gold);text-decoration:underline;">cost guide</a> covers realistic totals by tattoo size to help you plan around either path.</p>
 </div>
 
@@ -533,12 +535,14 @@ a.il:hover{border-bottom-color:var(--gold);}
 </div>
 
 <div class="newsletter-section" id="contact">
-  <h2 style="font-family:var(--display);font-size:28px;color:var(--white);margin-bottom:10px;">Get Matched With a Removal Clinic</h2>
+  <div style="font-family:var(--display);font-size:28px;color:var(--white);margin-bottom:10px;">Get Matched With a Removal Clinic</div>
   <p style="color:var(--bone-dim);font-size:17px;line-height:1.6;">Tell us about your tattoo and we will point you to the right clinic.</p>
   <form class="lead-form" id="contactForm" action="https://formspree.io/f/maqzqejk" method="POST" onsubmit="handleContactSubmit(event)">
     <input type="hidden" name="source" value="removal-insurance-bottom-form">
+    <input type="hidden" name="page_url" value="https://nashvillebesttattoo.com/tattoo-removal-insurance-nashville.html">
     <input type="text" name="name" placeholder="Your name" required>
     <input type="email" name="email" placeholder="Email" required>
+    <input type="tel" name="phone" placeholder="Phone or mobile" required pattern="[0-9()+\-\s]{7,}">
     <select name="tattoo_size" required>
       <option value="" disabled selected>Tattoo size</option>
       <option value="Small (2-3 inches)">Small (2-3 inches)</option>
@@ -554,7 +558,7 @@ a.il:hover{border-bottom-color:var(--gold);}
 </div>
 
 <div class="final-cta">
-  <h2>Ready to Talk Through Real Payment Options?</h2>
+  <div class="fc-head">Ready to Talk Through Real Payment Options?</div>
   <p>Get matched with a Nashville clinic that will give you an honest quote and realistic ways to pay for it.</p>
   <a class="btn-primary" href="#contact" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'});return false;">Find a Trusted Removal Clinic</a>
 </div>

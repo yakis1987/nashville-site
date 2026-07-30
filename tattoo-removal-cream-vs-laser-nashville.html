@@ -211,7 +211,7 @@ a.il:hover{border-bottom-color:var(--gold);}
 .lead-submit{background:var(--gold);color:var(--ink);font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:0.1em;padding:14px;border-radius:10px;border:none;cursor:pointer;text-transform:uppercase;}
 #contactSuccess{display:none;color:var(--gold-light);font-family:var(--mono);font-size:14px;padding:20px;}
 .final-cta{background:var(--ink-card);border-top:1px solid rgba(201,168,76,0.15);padding:56px 24px;text-align:center;}
-.final-cta h2{font-family:var(--display);font-size:34px;color:var(--white);margin-bottom:12px;}
+.final-cta h2,.final-cta .fc-head{font-family:var(--display);font-size:34px;color:var(--white);margin-bottom:12px;}
 .final-cta p{font-size:16px;color:var(--bone-dim);margin-bottom:24px;max-width:520px;margin-left:auto;margin-right:auto;}
 footer{border-top:1px solid rgba(240,235,226,0.06);padding:36px 32px 120px;text-align:center;font-family:var(--mono);font-size:10px;letter-spacing:0.1em;color:var(--bone-dim);opacity:0.35;}
 footer a{color:inherit;text-decoration:none;}
@@ -304,7 +304,7 @@ footer a{color:inherit;text-decoration:none;}
 </div>
 
 <div class="cta-block" style="margin:16px auto 32px;padding:24px;">
-  <h2 class="cta-title" style="font-size:22px;margin-bottom:8px;">Get Our Recommended Nashville Clinics</h2>
+  <div class="cta-title" style="font-size:22px;margin-bottom:8px;">Get Our Recommended Nashville Clinics</div>
   <p class="cta-sub" style="margin-bottom:16px;">Submit your details and receive our trusted recommendations for tattoo removal in Nashville.</p>
   <a class="btn-primary" href="#midCta" onclick="document.getElementById('midCta').scrollIntoView({behavior:'smooth'});return false;">Get My Recommendations &#8594;</a>
 </div>
@@ -316,7 +316,7 @@ footer a{color:inherit;text-decoration:none;}
     <div class="article-img-caption">Ink sits in the dermis, well below the surface.</div>
   </div>
   <p>Tattoo ink is deposited in the dermis, the second layer of skin beneath the outer epidermis. This placement is intentional and is exactly what makes tattoos permanent in the first place. The epidermis, the layer creams can actually penetrate, constantly sheds and regenerates every few weeks, which is why a tattoo in that layer alone would fade away naturally within a month or two.</p>
-  <p>Topical creams, regardless of their active ingredients, are formulated to work at the skin's surface. Getting an ingredient to meaningfully penetrate deep enough to reach and break down dermal ink, without causing significant skin damage in the process, is a genuinely difficult problem that no over-the-counter cream has solved.</p>
+  <p>Topical creams, regardless of their active ingredients, are formulated to work at the skin's surface. Getting an ingredient to meaningfully penetrate deep enough to reach and break down dermal ink, without causing significant skin damage in the process, is a difficult problem that no over-the-counter cream has solved.</p>
   <p>This is not a marketing distinction or a matter of degree. It reflects a basic mismatch between where a problem exists and what a proposed solution is physically capable of reaching. Laser treatment works specifically because focused light energy can pass through the epidermis without significant absorption and reach ink particles in the dermis directly, delivering energy precisely where it is needed rather than relying on a substance to diffuse downward through skin tissue that is, by design, resistant to exactly that kind of penetration.</p>
 </div>
 
@@ -391,8 +391,8 @@ footer a{color:inherit;text-decoration:none;}
 <div class="section" id="sec-cost-concern">
   <h2 class="section-title">If Cost Is the Real Concern</h2>
   <p>The appeal of removal cream usually comes down to laser treatment's cost and time commitment, both very real concerns. But choosing a cream does not actually solve either problem, since spending months on a product that does not work is its own kind of wasted time and money, on top of whatever you eventually spend on laser treatment anyway.</p>
-  <p>If budget is the primary barrier, our <a href="https://nashvillebesttattoo.com/tattoo-removal-cost-nashville.html">cost guide</a> covers realistic financing options and package pricing that can make laser treatment more manageable than the sticker price suggests. If your real goal is a faster, less expensive path to a specific outcome, like preparing for a cover-up rather than full clearance, our <a href="https://nashvillebesttattoo.com/partial-tattoo-removal-nashville.html">partial removal guide</a> covers a genuinely effective way to reduce both cost and timeline.</p>
-  <p>It is worth running the actual numbers before assuming a cream is the more economical choice. A typical removal cream regimen, used consistently over several months as directed, often costs more in total than a package of several laser sessions at a Nashville clinic, without producing a comparable result. The apparent savings are usually an illusion created by the smaller size of each individual payment rather than a genuinely lower total cost.</p>
+  <p>If budget is the primary barrier, our <a href="https://nashvillebesttattoo.com/tattoo-removal-cost-nashville.html">cost guide</a> covers realistic financing options and package pricing that can make laser treatment more manageable than the sticker price suggests. If your real goal is a faster, less expensive path to a specific outcome, like preparing for a cover-up rather than full clearance, our <a href="https://nashvillebesttattoo.com/partial-tattoo-removal-nashville.html">partial removal guide</a> covers a effective way to reduce both cost and timeline.</p>
+  <p>It is worth running the actual numbers before assuming a cream is the more economical choice. A typical removal cream regimen, used consistently over several months as directed, often costs more in total than a package of several laser sessions at a Nashville clinic, without producing a comparable result. The apparent savings are usually an illusion created by the smaller size of each individual payment rather than a lower total cost.</p>
 </div>
 
 <div class="reviewed-by">
@@ -401,12 +401,14 @@ footer a{color:inherit;text-decoration:none;}
 </div>
 
 <div class="cta-block" id="midCta">
-  <h2 class="cta-title">Not Sure Which Nashville Clinic Is Worth Your Money?</h2>
+  <div class="cta-title">Not Sure Which Nashville Clinic Is Worth Your Money?</div>
   <p class="cta-sub">Skip the creams that don't work. Tell us about your tattoo and we will point you to a clinic that actually gets results.</p>
   <form class="lead-form" id="ctaLeadForm" action="https://formspree.io/f/maqzqejk" method="POST" onsubmit="handleCtaSubmit(event)" style="text-align:left;">
     <input type="hidden" name="source" value="removal-cream-midarticle-cta">
+    <input type="hidden" name="page_url" value="https://nashvillebesttattoo.com/tattoo-removal-cream-vs-laser-nashville.html">
     <input type="text" name="name" placeholder="Your name" required>
     <input type="email" name="email" placeholder="Email" required>
+    <input type="tel" name="phone" placeholder="Phone or mobile" required pattern="[0-9()+\-\s]{7,}">
     <select name="tattoo_size" required>
       <option value="" disabled selected>Tattoo size</option>
       <option value="Small (2-3 inches)">Small (2-3 inches)</option>
@@ -470,12 +472,14 @@ footer a{color:inherit;text-decoration:none;}
 </div>
 
 <div class="newsletter-section" id="contact">
-  <h2 style="font-family:var(--display);font-size:28px;color:var(--white);margin-bottom:10px;">Get Matched With a Removal Clinic</h2>
+  <div style="font-family:var(--display);font-size:28px;color:var(--white);margin-bottom:10px;">Get Matched With a Removal Clinic</div>
   <p style="color:var(--bone-dim);font-size:17px;line-height:1.6;">Tell us about your tattoo and we will point you to the right clinic.</p>
   <form class="lead-form" id="contactForm" action="https://formspree.io/f/maqzqejk" method="POST" onsubmit="handleContactSubmit(event)">
     <input type="hidden" name="source" value="removal-cream-bottom-form">
+    <input type="hidden" name="page_url" value="https://nashvillebesttattoo.com/tattoo-removal-cream-vs-laser-nashville.html">
     <input type="text" name="name" placeholder="Your name" required>
     <input type="email" name="email" placeholder="Email" required>
+    <input type="tel" name="phone" placeholder="Phone or mobile" required pattern="[0-9()+\-\s]{7,}">
     <select name="tattoo_size" required>
       <option value="" disabled selected>Tattoo size</option>
       <option value="Small (2-3 inches)">Small (2-3 inches)</option>
@@ -491,7 +495,7 @@ footer a{color:inherit;text-decoration:none;}
 </div>
 
 <div class="final-cta">
-  <h2>Ready for a Method That Actually Works?</h2>
+  <div class="fc-head">Ready for a Method That Actually Works?</div>
   <p>Get matched with a Nashville clinic offering proven laser removal, not a cream that cannot reach your ink.</p>
   <a class="btn-primary" href="#contact" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'});return false;">Find a Trusted Removal Clinic</a>
 </div>

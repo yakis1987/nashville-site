@@ -255,7 +255,7 @@ img{max-width:100%;display:block;}
 #contactSuccess{display:none;color:var(--gold-light);font-family:var(--mono);font-size:14px;padding:20px;}
 
 .final-cta{background:var(--ink-card);border-top:1px solid rgba(201,168,76,0.15);padding:56px 24px;text-align:center;}
-.final-cta h2{font-family:var(--display);font-size:34px;color:var(--white);margin-bottom:12px;}
+.final-cta h2,.final-cta .fc-head{font-family:var(--display);font-size:34px;color:var(--white);margin-bottom:12px;}
 .final-cta p{font-size:16px;color:var(--bone-dim);margin-bottom:24px;max-width:520px;margin-left:auto;margin-right:auto;}
 
 footer{padding:32px 24px;text-align:center;font-family:var(--mono);font-size:11px;color:var(--bone-dim);border-top:1px solid rgba(240,235,226,0.06);}
@@ -368,7 +368,7 @@ a.il:hover{border-bottom-color:var(--gold);}
 </div>
 
 <div class="cta-block" style="margin:16px auto 32px;padding:24px;">
-  <h2 class="cta-title" style="font-size:22px;margin-bottom:8px;">Get Our Recommended Nashville Clinics</h2>
+  <div class="cta-title" style="font-size:22px;margin-bottom:8px;">Get Our Recommended Nashville Clinics</div>
   <p class="cta-sub" style="margin-bottom:16px;">Not sure if you need full removal or just fading? Get matched with a clinic that can tell you honestly.</p>
   <a class="btn-primary" href="#midCta" onclick="document.getElementById('midCta').scrollIntoView({behavior:'smooth'});return false;">Get My Recommendations &#8594;</a>
 </div>
@@ -411,7 +411,7 @@ a.il:hover{border-bottom-color:var(--gold);}
 
 <div class="section" id="sec-combo">
   <h2 class="section-title">The Combo Most People <em>Don't</em> Know About</h2>
-  <p>The strongest option for a lot of clients is not choosing one path exclusively, it is doing a few rounds of <a href="https://nashvillebesttattoo.com/partial-tattoo-removal-nashville.html">partial removal</a> specifically to fade the old tattoo, then handing it off to a cover-up artist once it has faded enough. This gets you a genuinely fresh-feeling piece of art without the full removal timeline, and it typically costs less than either full removal or fighting a stubborn old tattoo through a cover-up with no fading at all.</p>
+  <p>The strongest option for a lot of clients is not choosing one path exclusively, it is doing a few rounds of <a href="https://nashvillebesttattoo.com/partial-tattoo-removal-nashville.html">partial removal</a> specifically to fade the old tattoo, then handing it off to a cover-up artist once it has faded enough. This gets you a fresh-feeling piece of art without the full removal timeline, and it typically costs less than either full removal or fighting a stubborn old tattoo through a cover-up with no fading at all.</p>
   <p>The tricky part is coordination. Not every removal clinic thinks in terms of "faded enough for a cover-up" rather than "fully cleared," and not every tattoo artist is comfortable estimating how much fading their design will need before they see the skin in person. The best results tend to come from clients who talk to both sides early, ideally bringing reference art to the removal consultation so the technician knows exactly what target they are fading toward.</p>
 </div>
 
@@ -471,12 +471,14 @@ a.il:hover{border-bottom-color:var(--gold);}
 </div>
 
 <div class="cta-block" id="midCta">
-  <h2 class="cta-title">Not Sure Which Nashville Clinic Is Worth Your Money?</h2>
+  <div class="cta-title">Not Sure Which Nashville Clinic Is Worth Your Money?</div>
   <p class="cta-sub">Tell us about your tattoo and your goals, and we will point you to clinics and artists who can help either way.</p>
   <form class="lead-form" id="ctaLeadForm" action="https://formspree.io/f/maqzqejk" method="POST" onsubmit="handleCtaSubmit(event)" style="text-align:left;">
     <input type="hidden" name="source" value="coverup-vs-removal-midarticle-cta">
+    <input type="hidden" name="page_url" value="https://nashvillebesttattoo.com/cover-up-vs-removal-nashville.html">
     <input type="text" name="name" placeholder="Your name" required>
     <input type="email" name="email" placeholder="Email" required>
+    <input type="tel" name="phone" placeholder="Phone or mobile" required pattern="[0-9()+\-\s]{7,}">
     <select name="goal" required>
       <option value="" disabled selected>What's your goal?</option>
       <option value="Full removal, no new tattoo">Full removal, no new tattoo</option>
@@ -562,12 +564,14 @@ a.il:hover{border-bottom-color:var(--gold);}
 </div>
 
 <div class="newsletter-section" id="contact">
-  <h2 style="font-family:var(--display);font-size:28px;color:var(--white);margin-bottom:10px;">Get Matched With a Removal Clinic</h2>
+  <div style="font-family:var(--display);font-size:28px;color:var(--white);margin-bottom:10px;">Get Matched With a Removal Clinic</div>
   <p style="color:var(--bone-dim);font-size:17px;line-height:1.6;">Tell us about your tattoo and we will point you to the right clinic or artist.</p>
   <form class="lead-form" id="contactForm" action="https://formspree.io/f/maqzqejk" method="POST" onsubmit="handleContactSubmit(event)">
     <input type="hidden" name="source" value="coverup-vs-removal-bottom-form">
+    <input type="hidden" name="page_url" value="https://nashvillebesttattoo.com/cover-up-vs-removal-nashville.html">
     <input type="text" name="name" placeholder="Your name" required>
     <input type="email" name="email" placeholder="Email" required>
+    <input type="tel" name="phone" placeholder="Phone or mobile" required pattern="[0-9()+\-\s]{7,}">
     <select name="goal" required>
       <option value="" disabled selected>What's your goal?</option>
       <option value="Full removal, no new tattoo">Full removal, no new tattoo</option>
@@ -585,7 +589,7 @@ a.il:hover{border-bottom-color:var(--gold);}
 </div>
 
 <div class="final-cta">
-  <h2>Ready to Figure Out the Right Path?</h2>
+  <div class="fc-head">Ready to Figure Out the Right Path?</div>
   <p>Get matched with a Nashville clinic or artist who can give you an honest recommendation.</p>
   <a class="btn-primary" href="#contact" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'});return false;">Find a Trusted Removal Clinic</a>
 </div>

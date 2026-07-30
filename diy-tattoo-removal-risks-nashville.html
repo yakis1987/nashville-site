@@ -248,7 +248,7 @@ img{max-width:100%;display:block;}
 #contactSuccess{display:none;color:var(--gold-light);font-family:var(--mono);font-size:14px;padding:20px;}
 
 .final-cta{background:var(--ink-card);border-top:1px solid rgba(201,168,76,0.15);padding:56px 24px;text-align:center;}
-.final-cta h2{font-family:var(--display);font-size:34px;color:var(--white);margin-bottom:12px;}
+.final-cta h2,.final-cta .fc-head{font-family:var(--display);font-size:34px;color:var(--white);margin-bottom:12px;}
 .final-cta p{font-size:16px;color:var(--bone-dim);margin-bottom:24px;max-width:520px;margin-left:auto;margin-right:auto;}
 
 footer{padding:32px 24px;text-align:center;font-family:var(--mono);font-size:11px;color:var(--bone-dim);border-top:1px solid rgba(240,235,226,0.06);}
@@ -361,7 +361,7 @@ a.il:hover{border-bottom-color:var(--gold);}
 </div>
 
 <div class="cta-block" style="margin:16px auto 32px;padding:24px;">
-  <h2 class="cta-title" style="font-size:22px;margin-bottom:8px;">Skip the Risk. Talk to a Real Clinic First</h2>
+  <div class="cta-title" style="font-size:22px;margin-bottom:8px;">Skip the Risk. Talk to a Real Clinic First</div>
   <p class="cta-sub" style="margin-bottom:16px;">Get matched with a Nashville clinic that offers an honest consultation before you try anything on your own.</p>
   <a class="btn-primary" href="#midCta" onclick="document.getElementById('midCta').scrollIntoView({behavior:'smooth'});return false;">Get My Recommendations &#8594;</a>
 </div>
@@ -442,12 +442,14 @@ a.il:hover{border-bottom-color:var(--gold);}
 </div>
 
 <div class="cta-block" id="midCta">
-  <h2 class="cta-title">Get a Real Consultation Before You Try Anything Yourself</h2>
+  <div class="cta-title">Get a Real Consultation Before You Try Anything Yourself</div>
   <p class="cta-sub">Tell us about your tattoo, and we will point you to a Nashville clinic that will give you an honest, safe assessment.</p>
   <form class="lead-form" id="ctaLeadForm" action="https://formspree.io/f/maqzqejk" method="POST" onsubmit="handleCtaSubmit(event)" style="text-align:left;">
     <input type="hidden" name="source" value="removal-diy-risks-midarticle-cta">
+    <input type="hidden" name="page_url" value="https://nashvillebesttattoo.com/diy-tattoo-removal-risks-nashville.html">
     <input type="text" name="name" placeholder="Your name" required>
     <input type="email" name="email" placeholder="Email" required>
+    <input type="tel" name="phone" placeholder="Phone or mobile" required pattern="[0-9()+\-\s]{7,}">
     <select name="tattoo_size" required>
       <option value="" disabled selected>Tattoo size</option>
       <option value="Small (2-3 inches)">Small (2-3 inches)</option>
@@ -544,12 +546,14 @@ a.il:hover{border-bottom-color:var(--gold);}
 </div>
 
 <div class="newsletter-section" id="contact">
-  <h2 style="font-family:var(--display);font-size:28px;color:var(--white);margin-bottom:10px;">Get Matched With a Removal Clinic</h2>
+  <div style="font-family:var(--display);font-size:28px;color:var(--white);margin-bottom:10px;">Get Matched With a Removal Clinic</div>
   <p style="color:var(--bone-dim);font-size:17px;line-height:1.6;">Tell us about your tattoo and we will point you to the right clinic.</p>
   <form class="lead-form" id="contactForm" action="https://formspree.io/f/maqzqejk" method="POST" onsubmit="handleContactSubmit(event)">
     <input type="hidden" name="source" value="removal-diy-risks-bottom-form">
+    <input type="hidden" name="page_url" value="https://nashvillebesttattoo.com/diy-tattoo-removal-risks-nashville.html">
     <input type="text" name="name" placeholder="Your name" required>
     <input type="email" name="email" placeholder="Email" required>
+    <input type="tel" name="phone" placeholder="Phone or mobile" required pattern="[0-9()+\-\s]{7,}">
     <select name="tattoo_size" required>
       <option value="" disabled selected>Tattoo size</option>
       <option value="Small (2-3 inches)">Small (2-3 inches)</option>
@@ -568,7 +572,7 @@ a.il:hover{border-bottom-color:var(--gold);}
 </div>
 
 <div class="final-cta">
-  <h2>Ready for a Safe, Real Removal Plan?</h2>
+  <div class="fc-head">Ready for a Safe, Real Removal Plan?</div>
   <p>Get matched with a Nashville clinic that offers an honest consultation instead of a risky shortcut.</p>
   <a class="btn-primary" href="#contact" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'});return false;">Find a Trusted Removal Clinic</a>
 </div>

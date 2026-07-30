@@ -235,7 +235,7 @@ img{max-width:100%;display:block;}
 #contactSuccess{display:none;color:var(--gold-light);font-family:var(--mono);font-size:14px;padding:20px;}
 
 .final-cta{background:var(--ink-card);border-top:1px solid rgba(201,168,76,0.15);padding:56px 24px;text-align:center;}
-.final-cta h2{font-family:var(--display);font-size:34px;color:var(--white);margin-bottom:12px;}
+.final-cta h2,.final-cta .fc-head{font-family:var(--display);font-size:34px;color:var(--white);margin-bottom:12px;}
 .final-cta p{font-size:16px;color:var(--bone-dim);margin-bottom:24px;max-width:520px;margin-left:auto;margin-right:auto;}
 
 footer{border-top:1px solid rgba(240,235,226,0.06);padding:36px 32px 120px;text-align:center;font-family:var(--mono);font-size:10px;letter-spacing:0.1em;color:var(--bone-dim);opacity:0.35;}
@@ -304,7 +304,7 @@ a.il:hover{border-bottom-color:var(--gold);}
 <div class="article-hero">
   <p class="article-label">Tattoo Removal Guide &middot; Nashville</p>
   <h1 class="article-title">Package Deals: <em>Worth It?</em></h1>
-  <p class="article-sub">Prepaying for a block of sessions can genuinely save money, but it isn't free of risk. Here is how to weigh the savings against what you're actually trading away.</p>
+  <p class="article-sub">Prepaying for a block of sessions can save money, but it isn't free of risk. Here is how to weigh the savings against what you're actually trading away.</p>
   <div class="article-meta">
     <span>10 min read</span>
     <span>&middot;</span>
@@ -334,10 +334,10 @@ a.il:hover{border-bottom-color:var(--gold);}
 <div class="section">
   <div class="article-img article-img-float">
     <img src="removal/removal-session-in-progress.webp" alt="Laser tattoo removal treatment in progress at a Nashville clinic" loading="lazy" width="1520" height="1520">
-    <div class="article-img-caption">A package can genuinely lower total cost, with a real trade-off attached.</div>
+    <div class="article-img-caption">A package can lower total cost, with a real trade-off attached.</div>
   </div>
   <p>Because removal always requires multiple sessions, clinics commonly offer some form of package pricing: a discounted block of prepaid sessions, or an unlimited-treatment package priced as a single upfront cost that covers however many sessions your tattoo actually needs. Both can save real money compared to paying session by session, which is why they get pitched so consistently during consultations across the industry.</p>
-  <p>The savings are real, but so is the trade-off involved. Understanding both sides helps you decide whether a package genuinely makes sense for your specific situation, rather than saying yes simply because a discount was offered during your consultation.</p>
+  <p>The savings are real, but so is the trade-off involved. Understanding both sides helps you decide whether a package makes sense for your specific situation, rather than saying yes simply because a discount was offered during your consultation.</p>
 </div>
 
 <div class="pull-quote">
@@ -346,7 +346,7 @@ a.il:hover{border-bottom-color:var(--gold);}
 </div>
 
 <div class="cta-block" style="margin:16px auto 32px;padding:24px;">
-  <h2 class="cta-title" style="font-size:22px;margin-bottom:8px;">Compare Package and Per-Session Pricing</h2>
+  <div class="cta-title" style="font-size:22px;margin-bottom:8px;">Compare Package and Per-Session Pricing</div>
   <p class="cta-sub" style="margin-bottom:16px;">A Nashville clinic can walk you through both options for your specific tattoo during a consultation.</p>
   <a class="btn-primary" href="#midCta" onclick="document.getElementById('midCta').scrollIntoView({behavior:'smooth'});return false;">Get My Recommendations &#8594;</a>
 </div>
@@ -442,12 +442,14 @@ a.il:hover{border-bottom-color:var(--gold);}
 </div>
 
 <div class="cta-block" id="midCta">
-  <h2 class="cta-title">Not Sure Which Payment Structure Fits You?</h2>
+  <div class="cta-title">Not Sure Which Payment Structure Fits You?</div>
   <p class="cta-sub">Tell us about your tattoo, and we will point you to a Nashville clinic that can walk you through package and per-session options.</p>
   <form class="lead-form" id="ctaLeadForm" action="https://formspree.io/f/maqzqejk" method="POST" onsubmit="handleCtaSubmit(event)" style="text-align:left;">
     <input type="hidden" name="source" value="removal-package-deals-midarticle-cta">
+    <input type="hidden" name="page_url" value="https://nashvillebesttattoo.com/tattoo-removal-package-deals-nashville.html">
     <input type="text" name="name" placeholder="Your name" required>
     <input type="email" name="email" placeholder="Email" required>
+    <input type="tel" name="phone" placeholder="Phone or mobile" required pattern="[0-9()+\-\s]{7,}">
     <select name="tattoo_size" required>
       <option value="" disabled selected>Tattoo size</option>
       <option value="Small (2-3 inches)">Small (2-3 inches)</option>
@@ -478,7 +480,7 @@ a.il:hover{border-bottom-color:var(--gold);}
 
 <div class="section" id="sec-pay-per-session">
   <h2 class="section-title">When Pay-Per-Session Makes <em>More</em> Sense</h2>
-  <p>A package is genuinely not automatically the right choice for everyone considering removal. If you are only planning partial fading before a cover-up, rather than full removal, you may need far fewer sessions than a package assumes, making pay-per-session the more cost-effective and genuinely flexible option in that particular specific situation. It also suits anyone who wants to reassess after each session, whether because of budget, a shifting sense of what result they actually want, or simply a preference for not committing a large sum upfront to a business relationship spanning many months and potentially years of treatment.</p>
+  <p>A package is not automatically the right choice for everyone considering removal. If you are only planning partial fading before a cover-up, rather than full removal, you may need far fewer sessions than a package assumes, making pay-per-session the more cost-effective and flexible option in that particular specific situation. It also suits anyone who wants to reassess after each session, whether because of budget, a shifting sense of what result they actually want, or simply a preference for not committing a large sum upfront to a business relationship spanning many months and potentially years of treatment.</p>
 </div>
 
 <div class="section">
@@ -547,12 +549,14 @@ a.il:hover{border-bottom-color:var(--gold);}
 </div>
 
 <div class="newsletter-section" id="contact">
-  <h2 style="font-family:var(--display);font-size:28px;color:var(--white);margin-bottom:10px;">Get Matched With a Removal Clinic</h2>
+  <div style="font-family:var(--display);font-size:28px;color:var(--white);margin-bottom:10px;">Get Matched With a Removal Clinic</div>
   <p style="color:var(--bone-dim);font-size:17px;line-height:1.6;">Tell us about your tattoo and we will point you to the right clinic.</p>
   <form class="lead-form" id="contactForm" action="https://formspree.io/f/maqzqejk" method="POST" onsubmit="handleContactSubmit(event)">
     <input type="hidden" name="source" value="removal-package-deals-bottom-form">
+    <input type="hidden" name="page_url" value="https://nashvillebesttattoo.com/tattoo-removal-package-deals-nashville.html">
     <input type="text" name="name" placeholder="Your name" required>
     <input type="email" name="email" placeholder="Email" required>
+    <input type="tel" name="phone" placeholder="Phone or mobile" required pattern="[0-9()+\-\s]{7,}">
     <select name="tattoo_size" required>
       <option value="" disabled selected>Tattoo size</option>
       <option value="Small (2-3 inches)">Small (2-3 inches)</option>
@@ -568,7 +572,7 @@ a.il:hover{border-bottom-color:var(--gold);}
 </div>
 
 <div class="final-cta">
-  <h2>Ready to Compare Real Payment Structures?</h2>
+  <div class="fc-head">Ready to Compare Real Payment Structures?</div>
   <p>Get matched with a Nashville clinic that will walk you through the honest trade-offs of each option.</p>
   <a class="btn-primary" href="#contact" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'});return false;">Find a Trusted Removal Clinic</a>
 </div>

@@ -242,7 +242,7 @@ img{max-width:100%;display:block;}
 #contactSuccess{display:none;color:var(--gold-light);font-family:var(--mono);font-size:14px;padding:20px;}
 
 .final-cta{background:var(--ink-card);border-top:1px solid rgba(201,168,76,0.15);padding:56px 24px;text-align:center;}
-.final-cta h2{font-family:var(--display);font-size:34px;color:var(--white);margin-bottom:12px;}
+.final-cta h2,.final-cta .fc-head{font-family:var(--display);font-size:34px;color:var(--white);margin-bottom:12px;}
 .final-cta p{font-size:16px;color:var(--bone-dim);margin-bottom:24px;max-width:520px;margin-left:auto;margin-right:auto;}
 
 footer{padding:32px 24px;text-align:center;font-family:var(--mono);font-size:11px;color:var(--bone-dim);border-top:1px solid rgba(240,235,226,0.06);}
@@ -344,7 +344,7 @@ a.il:hover{border-bottom-color:var(--gold);}
     <div class="article-img-caption">Comfort options make a real difference across a multi-session plan.</div>
   </div>
   <p>Pain management for removal is not a single choice but a stack of overlapping options, and different clinics offer different combinations as standard versus add-on. Understanding what each option actually does, rather than treating them as interchangeable, helps you make a more informed choice at your consultation.</p>
-  <p>None of these options make a session painless. What they do is bring an intense sensation down to something genuinely tolerable, which matters over a treatment course that can span many sessions.</p>
+  <p>None of these options make a session painless. What they do is bring an intense sensation down to something tolerable, which matters over a treatment course that can span many sessions.</p>
 </div>
 
 <div class="pull-quote">
@@ -353,7 +353,7 @@ a.il:hover{border-bottom-color:var(--gold);}
 </div>
 
 <div class="cta-block" style="margin:16px auto 32px;padding:24px;">
-  <h2 class="cta-title" style="font-size:22px;margin-bottom:8px;">Ask About Numbing Before You Book</h2>
+  <div class="cta-title" style="font-size:22px;margin-bottom:8px;">Ask About Numbing Before You Book</div>
   <p class="cta-sub" style="margin-bottom:16px;">A Nashville clinic can tell you exactly what's included and what costs extra.</p>
   <a class="btn-primary" href="#midCta" onclick="document.getElementById('midCta').scrollIntoView({behavior:'smooth'});return false;">Get My Recommendations &#8594;</a>
 </div>
@@ -382,7 +382,7 @@ a.il:hover{border-bottom-color:var(--gold);}
     <img src="removal/removal-before-after.webp" alt="Before and after comparison of a tattoo through a professional laser removal course" loading="lazy" width="1520" height="1139">
     <div class="article-img-caption">Comfort tools help you stay consistent across your full plan.</div>
   </div>
-  <p>Cold air machines are present in most higher-volume removal clinics, since they provide fast, continuous cooling that can be applied before, during, and after treatment. Ice packs are a simpler, lower-cost option many clinics use as well, particularly smaller practices, and they genuinely help with comfort even though the effect is more surface-level and shorter-lived than cold air or numbing cream.</p>
+  <p>Cold air machines are present in most higher-volume removal clinics, since they provide fast, continuous cooling that can be applied before, during, and after treatment. Ice packs are a simpler, lower-cost option many clinics use as well, particularly smaller practices, and they help with comfort even though the effect is more surface-level and shorter-lived than cold air or numbing cream.</p>
   <p>Ice alone provides only brief relief, often fading within minutes, and is generally considered less effective for sustained comfort during a longer session compared to continuous cold air. Icing after your session is also commonly recommended to help reduce blistering risk, separate from its role in numbing.</p>
 </div>
 
@@ -443,12 +443,14 @@ a.il:hover{border-bottom-color:var(--gold);}
 </div>
 
 <div class="cta-block" id="midCta">
-  <h2 class="cta-title">Want to Know Your Options Before Session One?</h2>
+  <div class="cta-title">Want to Know Your Options Before Session One?</div>
   <p class="cta-sub">Tell us about your tattoo, and we will point you to a Nashville clinic that will walk you through comfort options clearly.</p>
   <form class="lead-form" id="ctaLeadForm" action="https://formspree.io/f/maqzqejk" method="POST" onsubmit="handleCtaSubmit(event)" style="text-align:left;">
     <input type="hidden" name="source" value="removal-numbing-options-midarticle-cta">
+    <input type="hidden" name="page_url" value="https://nashvillebesttattoo.com/numbing-options-tattoo-removal-nashville.html">
     <input type="text" name="name" placeholder="Your name" required>
     <input type="email" name="email" placeholder="Email" required>
+    <input type="tel" name="phone" placeholder="Phone or mobile" required pattern="[0-9()+\-\s]{7,}">
     <select name="tattoo_size" required>
       <option value="" disabled selected>Tattoo size</option>
       <option value="Small (2-3 inches)">Small (2-3 inches)</option>
@@ -546,12 +548,14 @@ a.il:hover{border-bottom-color:var(--gold);}
 </div>
 
 <div class="newsletter-section" id="contact">
-  <h2 style="font-family:var(--display);font-size:28px;color:var(--white);margin-bottom:10px;">Get Matched With a Removal Clinic</h2>
+  <div style="font-family:var(--display);font-size:28px;color:var(--white);margin-bottom:10px;">Get Matched With a Removal Clinic</div>
   <p style="color:var(--bone-dim);font-size:17px;line-height:1.6;">Tell us about your tattoo and we will point you to the right clinic.</p>
   <form class="lead-form" id="contactForm" action="https://formspree.io/f/maqzqejk" method="POST" onsubmit="handleContactSubmit(event)">
     <input type="hidden" name="source" value="removal-numbing-options-bottom-form">
+    <input type="hidden" name="page_url" value="https://nashvillebesttattoo.com/numbing-options-tattoo-removal-nashville.html">
     <input type="text" name="name" placeholder="Your name" required>
     <input type="email" name="email" placeholder="Email" required>
+    <input type="tel" name="phone" placeholder="Phone or mobile" required pattern="[0-9()+\-\s]{7,}">
     <select name="tattoo_size" required>
       <option value="" disabled selected>Tattoo size</option>
       <option value="Small (2-3 inches)">Small (2-3 inches)</option>
@@ -570,7 +574,7 @@ a.il:hover{border-bottom-color:var(--gold);}
 </div>
 
 <div class="final-cta">
-  <h2>Ready for a Comfortable, Well-Planned Session?</h2>
+  <div class="fc-head">Ready for a Comfortable, Well-Planned Session?</div>
   <p>Get matched with a Nashville clinic that offers real comfort options and explains them clearly.</p>
   <a class="btn-primary" href="#contact" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'});return false;">Find a Trusted Removal Clinic</a>
 </div>

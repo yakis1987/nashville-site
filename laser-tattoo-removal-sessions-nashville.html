@@ -266,7 +266,7 @@ img{max-width:100%;display:block;}
 #contactSuccess{display:none;color:var(--gold-light);font-family:var(--mono);font-size:14px;padding:20px;}
 
 .final-cta{background:var(--ink-card);border-top:1px solid rgba(201,168,76,0.15);padding:56px 24px;text-align:center;}
-.final-cta h2{font-family:var(--display);font-size:34px;color:var(--white);margin-bottom:12px;}
+.final-cta h2,.final-cta .fc-head{font-family:var(--display);font-size:34px;color:var(--white);margin-bottom:12px;}
 .final-cta p{font-size:16px;color:var(--bone-dim);margin-bottom:24px;max-width:520px;margin-left:auto;margin-right:auto;}
 
 footer{padding:32px 24px;text-align:center;font-family:var(--mono);font-size:11px;color:var(--bone-dim);border-top:1px solid rgba(240,235,226,0.06);}
@@ -385,7 +385,7 @@ a.il:hover{border-bottom-color:var(--gold);}
 </div>
 
 <div class="cta-block" style="margin:16px auto 32px;padding:24px;">
-  <h2 class="cta-title" style="font-size:22px;margin-bottom:8px;">Get Our Recommended Nashville Clinics</h2>
+  <div class="cta-title" style="font-size:22px;margin-bottom:8px;">Get Our Recommended Nashville Clinics</div>
   <p class="cta-sub" style="margin-bottom:16px;">Submit your details and receive our trusted recommendations for tattoo removal in Nashville.</p>
   <a class="btn-primary" href="#midCta" onclick="document.getElementById('midCta').scrollIntoView({behavior:'smooth'});return false;">Get My Recommendations &#8594;</a>
 </div>
@@ -438,7 +438,7 @@ a.il:hover{border-bottom-color:var(--gold);}
 
 <div class="section" id="sec-timeline">
   
-  <p>Instead of a single number, think of removal as a range that depends heavily on the six factors above. A small, simple, black-only tattoo on a well-circulated area might genuinely be a 4 to 6 session job. A large, dense, multi-color piece with visible layering could reasonably take 10 to 15 sessions, sometimes more.</p>
+  <p>Instead of a single number, think of removal as a range that depends heavily on the six factors above. A small, simple, black-only tattoo on a well-circulated area might be a 4 to 6 session job. A large, dense, multi-color piece with visible layering could reasonably take 10 to 15 sessions, sometimes more.</p>
 </div>
 
 <div class="timeline">
@@ -541,12 +541,14 @@ a.il:hover{border-bottom-color:var(--gold);}
 </div>
 
 <div class="cta-block" id="midCta">
-  <h2 class="cta-title">Not Sure Which Nashville Clinic Is Worth Your Money?</h2>
+  <div class="cta-title">Not Sure Which Nashville Clinic Is Worth Your Money?</div>
   <p class="cta-sub">Tell us a bit about your tattoo and we will point you to trusted, experienced removal specialists in Nashville, no sales pressure.</p>
   <form class="lead-form" id="ctaLeadForm" action="https://formspree.io/f/maqzqejk" method="POST" onsubmit="handleCtaSubmit(event)" style="text-align:left;">
     <input type="hidden" name="source" value="laser-removal-midarticle-cta">
+    <input type="hidden" name="page_url" value="https://nashvillebesttattoo.com/laser-tattoo-removal-sessions-nashville.html">
     <input type="text" name="name" placeholder="Your name" required>
     <input type="email" name="email" placeholder="Email" required>
+    <input type="tel" name="phone" placeholder="Phone or mobile" required pattern="[0-9()+\-\s]{7,}">
     <select name="tattoo_size" required>
       <option value="" disabled selected>Tattoo size</option>
       <option value="Small (2-3 inches)">Small (2-3 inches)</option>
@@ -643,12 +645,14 @@ a.il:hover{border-bottom-color:var(--gold);}
 </div>
 
 <div class="newsletter-section" id="contact">
-  <h2 style="font-family:var(--display);font-size:28px;color:var(--white);margin-bottom:10px;">Get Matched With a Removal Specialist</h2>
+  <div style="font-family:var(--display);font-size:28px;color:var(--white);margin-bottom:10px;">Get Matched With a Removal Specialist</div>
   <p style="color:var(--bone-dim);font-size:15px;">Tell us about your tattoo and we will point you to the right clinic.</p>
   <form class="lead-form" id="contactForm" action="https://formspree.io/f/maqzqejk" method="POST" onsubmit="handleContactSubmit(event)">
     <input type="hidden" name="source" value="laser-removal-bottom-form">
+    <input type="hidden" name="page_url" value="https://nashvillebesttattoo.com/laser-tattoo-removal-sessions-nashville.html">
     <input type="text" name="name" placeholder="Your name" required>
     <input type="email" name="email" placeholder="Email" required>
+    <input type="tel" name="phone" placeholder="Phone or mobile" required pattern="[0-9()+\-\s]{7,}">
     <select name="tattoo_size" required>
       <option value="" disabled selected>Tattoo size</option>
       <option value="Small (2-3 inches)">Small (2-3 inches)</option>
@@ -673,7 +677,7 @@ a.il:hover{border-bottom-color:var(--gold);}
 </div>
 
 <div class="final-cta">
-  <h2>Ready to Talk to Someone Who Will Give You the Real Number?</h2>
+  <div class="fc-head">Ready to Talk to Someone Who Will Give You the Real Number?</div>
   <p>Skip the sales pitch. Get an honest assessment from a Nashville removal specialist.</p>
   <a class="btn-primary" href="#contact" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'});return false;">Find a Trusted Removal Clinic</a>
 </div>

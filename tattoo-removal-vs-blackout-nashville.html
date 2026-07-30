@@ -226,7 +226,7 @@ img{max-width:100%;display:block;}
 #contactSuccess{display:none;color:var(--gold-light);font-family:var(--mono);font-size:14px;padding:20px;}
 
 .final-cta{background:var(--ink-card);border-top:1px solid rgba(201,168,76,0.15);padding:56px 24px;text-align:center;}
-.final-cta h2{font-family:var(--display);font-size:34px;color:var(--white);margin-bottom:12px;}
+.final-cta h2,.final-cta .fc-head{font-family:var(--display);font-size:34px;color:var(--white);margin-bottom:12px;}
 .final-cta p{font-size:16px;color:var(--bone-dim);margin-bottom:24px;max-width:520px;margin-left:auto;margin-right:auto;}
 
 footer{border-top:1px solid rgba(240,235,226,0.06);padding:36px 32px 120px;text-align:center;font-family:var(--mono);font-size:10px;letter-spacing:0.1em;color:var(--bone-dim);opacity:0.35;}
@@ -326,7 +326,7 @@ a.il:hover{border-bottom-color:var(--gold);}
     <img src="removal/removal-session-in-progress.webp" alt="Laser tattoo removal treatment in progress at a licensed Nashville clinic" loading="lazy" width="1520" height="1520">
     <div class="article-img-caption">Removal keeps your future options open; blackout closes some of them.</div>
   </div>
-  <p>Blackout tattoos, solid black ink covering a large area, often to conceal older tattoos in one project rather than remove them individually, have become a genuinely popular alternative to laser removal in recent years. The appeal is straightforward: instead of a treatment plan spanning many months and many sessions, a blackout can be completed in a single sitting or a handful of tattooing sessions.</p>
+  <p>Blackout tattoos, solid black ink covering a large area, often to conceal older tattoos in one project rather than remove them individually, have become a popular alternative to laser removal in recent years. The appeal is straightforward: instead of a treatment plan spanning many months and many sessions, a blackout can be completed in a single sitting or a handful of tattooing sessions.</p>
   <p>That speed comes with real trade-offs worth understanding clearly before you commit, since a blackout tattoo is not a neutral, reversible choice in the way people sometimes assume.</p>
 </div>
 
@@ -336,7 +336,7 @@ a.il:hover{border-bottom-color:var(--gold);}
 </div>
 
 <div class="cta-block" style="margin:16px auto 32px;padding:24px;">
-  <h2 class="cta-title" style="font-size:22px;margin-bottom:8px;">Not Sure Which Path Fits You?</h2>
+  <div class="cta-title" style="font-size:22px;margin-bottom:8px;">Not Sure Which Path Fits You?</div>
   <p class="cta-sub" style="margin-bottom:16px;">A Nashville clinic can walk you through removal, fading, and cover-up options honestly.</p>
   <a class="btn-primary" href="#midCta" onclick="document.getElementById('midCta').scrollIntoView({behavior:'smooth'});return false;">Get My Recommendations &#8594;</a>
 </div>
@@ -363,7 +363,7 @@ a.il:hover{border-bottom-color:var(--gold);}
   <h2 class="section-title">Why Blackout Feels <em>Faster</em> and Cheaper</h2>
   <div class="article-img article-img-float article-img-float-left">
     <img src="removal/removal-before-after.webp" alt="Before and after comparison of a tattoo through a professional laser removal course" loading="lazy" width="1520" height="1139">
-    <div class="article-img-caption">Full removal is slower, but it keeps your skin genuinely open-ended.</div>
+    <div class="article-img-caption">Full removal is slower, but it keeps your skin open-ended.</div>
   </div>
   <p>The core appeal of blackout is timeline. A full removal plan for a large or dense tattoo commonly runs six to ten or more sessions spaced weeks apart, stretching the total process out over close to a year or longer. A blackout tattoo, by contrast, is completed using standard tattooing sessions, which can wrap up in a fraction of that calendar time, sometimes in a single extended sitting for smaller areas.</p>
   <p>The cost comparison often favors blackout upfront as well, since a tattooing project, even an extensive one, is frequently less expensive than a full multi-session laser removal course, particularly for larger areas where removal pricing scales up significantly with size and session count.</p>
@@ -380,7 +380,7 @@ a.il:hover{border-bottom-color:var(--gold);}
   </div>
   <div class="tip-card">
     <div class="tip-card-title">Removal: Flexibility</div>
-    <p>Keeps bare skin and future design options genuinely open once treatment is complete.</p>
+    <p>Keeps bare skin and future design options open once treatment is complete.</p>
   </div>
   <div class="tip-card">
     <div class="tip-card-title">Removal: Reversibility</div>
@@ -409,7 +409,7 @@ a.il:hover{border-bottom-color:var(--gold);}
   </div>
   <div class="myth-card fact">
     <div class="myth-label">Fact</div>
-    <p>It is a new, permanent, dense tattoo. Future design options in that area become genuinely limited compared to skin that was actually cleared through removal.</p>
+    <p>It is a new, permanent, dense tattoo. Future design options in that area become limited compared to skin that was actually cleared through removal.</p>
   </div>
   <div class="myth-card myth">
     <div class="myth-label">Myth</div>
@@ -417,17 +417,19 @@ a.il:hover{border-bottom-color:var(--gold);}
   </div>
   <div class="myth-card fact">
     <div class="myth-label">Fact</div>
-    <p>They solve different problems. Removal aims for genuinely open skin over time; blackout trades a faster timeline for a new permanent commitment to solid black ink.</p>
+    <p>They solve different problems. Removal aims for open skin over time; blackout trades a faster timeline for a new permanent commitment to solid black ink.</p>
   </div>
 </div>
 
 <div class="cta-block" id="midCta">
-  <h2 class="cta-title">Weigh Your Real Options With a Real Consultation</h2>
+  <div class="cta-title">Weigh Your Real Options With a Real Consultation</div>
   <p class="cta-sub">Tell us about your tattoo, and we will point you to a Nashville clinic that can walk you through removal, fading, and cover-up honestly.</p>
   <form class="lead-form" id="ctaLeadForm" action="https://formspree.io/f/maqzqejk" method="POST" onsubmit="handleCtaSubmit(event)" style="text-align:left;">
     <input type="hidden" name="source" value="removal-blackout-vs-removal-midarticle-cta">
+    <input type="hidden" name="page_url" value="https://nashvillebesttattoo.com/tattoo-removal-vs-blackout-nashville.html">
     <input type="text" name="name" placeholder="Your name" required>
     <input type="email" name="email" placeholder="Email" required>
+    <input type="tel" name="phone" placeholder="Phone or mobile" required pattern="[0-9()+\-\s]{7,}">
     <select name="tattoo_size" required>
       <option value="" disabled selected>Tattoo size</option>
       <option value="Small (2-3 inches)">Small (2-3 inches)</option>
@@ -454,19 +456,19 @@ a.il:hover{border-bottom-color:var(--gold);}
   <h2 class="section-title">Who Tends to Prefer <em>Each</em> Path</h2>
   <div class="article-img article-img-float">
     <img src="removal/removal-full-clear.webp" alt="Fully cleared skin after completing a full course of laser tattoo removal sessions" loading="lazy" width="1520" height="1520">
-    <div class="article-img-caption">Genuinely open skin is what full removal is working toward.</div>
+    <div class="article-img-caption">Fully clear skin is what full removal is working toward.</div>
   </div>
-  <p>Someone who is genuinely confident they want a bold, solid black aesthetic long-term, and is not concerned about limiting future design options in that specific area, may find blackout to be a satisfying, faster answer that fits their actual style preferences. It suits people drawn to the style itself as a genuine aesthetic choice, not only to the idea of covering something unwanted as quickly as possible.</p>
+  <p>Someone who is confident they want a bold, solid black aesthetic long-term, and is not concerned about limiting future design options in that specific area, may find blackout to be a satisfying, faster answer that fits their actual style preferences. It suits people drawn to the style itself as a genuine aesthetic choice, not only to the idea of covering something unwanted as quickly as possible.</p>
   <p>Someone who wants genuine flexibility, including the real option of bare skin down the line, or who is not fully certain what they want to do with that area of skin long-term, is generally better served by removal or fading, even though it takes longer and costs more upfront over the full treatment course. It keeps more doors open for the future, which matters considerably more to some people than others depending on their personal circumstances.</p>
 </div>
 
 <div class="section" id="sec-fade-first">
   <h2 class="section-title">A Middle Path: <em>Fade</em> First, Decide Later</h2>
-  <p>You do not necessarily have to choose between full removal and blackout at the very start of this process. Our <a href="https://nashvillebesttattoo.com/laser-fading-before-cover-up-nashville.html" style="color:var(--gold);text-decoration:underline;">laser fading guide</a> covers this in more depth: fading can lighten an old tattoo enough to give both a blackout artist and a colorful cover-up artist more room to work, without committing you to either direction before you are genuinely ready to decide. This staged approach lets you make a more informed decision about blackout versus a traditional cover-up once you can actually see how your skin responds to fading treatment.</p>
+  <p>You do not necessarily have to choose between full removal and blackout at the very start of this process. Our <a href="https://nashvillebesttattoo.com/laser-fading-before-cover-up-nashville.html" style="color:var(--gold);text-decoration:underline;">laser fading guide</a> covers this in more depth: fading can lighten an old tattoo enough to give both a blackout artist and a colorful cover-up artist more room to work, without committing you to either direction before you are ready to decide. This staged approach lets you make a more informed decision about blackout versus a traditional cover-up once you can actually see how your skin responds to fading treatment.</p>
 </div>
 
 <div class="section">
-  <p>Neither path is objectively correct. Blackout and full removal solve genuinely different problems for genuinely different people, and the right choice depends on how much you value speed and upfront cost against long-term flexibility. Being honest with yourself about which of those two things matters more in your specific situation is a better guide than simply picking whichever option sounds faster on the surface.</p>
+  <p>Neither path is objectively correct. Blackout and full removal solve different problems for different people, and the right choice depends on how much you value speed and upfront cost against long-term flexibility. Being honest with yourself about which of those two things matters more in your specific situation is a better guide than simply picking whichever option sounds faster on the surface.</p>
 </div>
 
 <div class="reviewed-by">
@@ -527,12 +529,14 @@ a.il:hover{border-bottom-color:var(--gold);}
 </div>
 
 <div class="newsletter-section" id="contact">
-  <h2 style="font-family:var(--display);font-size:28px;color:var(--white);margin-bottom:10px;">Get Matched With a Removal Clinic</h2>
+  <div style="font-family:var(--display);font-size:28px;color:var(--white);margin-bottom:10px;">Get Matched With a Removal Clinic</div>
   <p style="color:var(--bone-dim);font-size:17px;line-height:1.6;">Tell us about your tattoo and we will point you to the right clinic.</p>
   <form class="lead-form" id="contactForm" action="https://formspree.io/f/maqzqejk" method="POST" onsubmit="handleContactSubmit(event)">
     <input type="hidden" name="source" value="removal-blackout-vs-removal-bottom-form">
+    <input type="hidden" name="page_url" value="https://nashvillebesttattoo.com/tattoo-removal-vs-blackout-nashville.html">
     <input type="text" name="name" placeholder="Your name" required>
     <input type="email" name="email" placeholder="Email" required>
+    <input type="tel" name="phone" placeholder="Phone or mobile" required pattern="[0-9()+\-\s]{7,}">
     <select name="tattoo_size" required>
       <option value="" disabled selected>Tattoo size</option>
       <option value="Small (2-3 inches)">Small (2-3 inches)</option>
@@ -548,7 +552,7 @@ a.il:hover{border-bottom-color:var(--gold);}
 </div>
 
 <div class="final-cta">
-  <h2>Ready to Weigh Your Real Options?</h2>
+  <div class="fc-head">Ready to Weigh Your Real Options?</div>
   <p>Get matched with a Nashville clinic that will walk you through removal, fading, and cover-up honestly.</p>
   <a class="btn-primary" href="#contact" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'});return false;">Find a Trusted Removal Clinic</a>
 </div>

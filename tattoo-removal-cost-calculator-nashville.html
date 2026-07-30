@@ -93,7 +93,7 @@
       "name": "Why does my quote include a session range instead of one fixed number?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Because total sessions genuinely cannot be predicted with certainty in advance. A range reflects a technician's honest best estimate based on your tattoo's characteristics, with actual progress confirmed as sessions proceed."
+        "text": "Because total sessions cannot be predicted with certainty in advance. A range reflects a technician's honest best estimate based on your tattoo's characteristics, with actual progress confirmed as sessions proceed."
       }
     },
     {
@@ -227,7 +227,7 @@ img{max-width:100%;display:block;}
 #contactSuccess{display:none;color:var(--gold-light);font-family:var(--mono);font-size:14px;padding:20px;}
 
 .final-cta{background:var(--ink-card);border-top:1px solid rgba(201,168,76,0.15);padding:56px 24px;text-align:center;}
-.final-cta h2{font-family:var(--display);font-size:34px;color:var(--white);margin-bottom:12px;}
+.final-cta h2,.final-cta .fc-head{font-family:var(--display);font-size:34px;color:var(--white);margin-bottom:12px;}
 .final-cta p{font-size:16px;color:var(--bone-dim);margin-bottom:24px;max-width:520px;margin-left:auto;margin-right:auto;}
 
 footer{border-top:1px solid rgba(240,235,226,0.06);padding:36px 32px 120px;text-align:center;font-family:var(--mono);font-size:10px;letter-spacing:0.1em;color:var(--bone-dim);opacity:0.35;}
@@ -338,7 +338,7 @@ a.il:hover{border-bottom-color:var(--gold);}
 </div>
 
 <div class="cta-block" style="margin:16px auto 32px;padding:24px;">
-  <h2 class="cta-title" style="font-size:22px;margin-bottom:8px;">Get Your Actual Number, Not a Generic Range</h2>
+  <div class="cta-title" style="font-size:22px;margin-bottom:8px;">Get Your Actual Number, Not a Generic Range</div>
   <p class="cta-sub" style="margin-bottom:16px;">A Nashville clinic can assess your specific tattoo and give you a real, written quote.</p>
   <a class="btn-primary" href="#midCta" onclick="document.getElementById('midCta').scrollIntoView({behavior:'smooth'});return false;">Get My Recommendations &#8594;</a>
 </div>
@@ -399,7 +399,7 @@ a.il:hover{border-bottom-color:var(--gold);}
   </div>
   <div class="myth-card fact">
     <div class="myth-label">Fact</div>
-    <p>Ink density and color can make a huge difference even at identical sizes. A dense, dark tattoo and a light fine-line tattoo of the same dimensions are genuinely different removal projects.</p>
+    <p>Ink density and color can make a huge difference even at identical sizes. A dense, dark tattoo and a light fine-line tattoo of the same dimensions are different removal projects.</p>
   </div>
   <div class="myth-card myth">
     <div class="myth-label">Myth</div>
@@ -420,12 +420,14 @@ a.il:hover{border-bottom-color:var(--gold);}
 </div>
 
 <div class="cta-block" id="midCta">
-  <h2 class="cta-title">Get an Assessment Based on Your Actual Tattoo</h2>
+  <div class="cta-title">Get an Assessment Based on Your Actual Tattoo</div>
   <p class="cta-sub">Tell us about your tattoo, and we will point you to a Nashville clinic that can give you a real, written estimate.</p>
   <form class="lead-form" id="ctaLeadForm" action="https://formspree.io/f/maqzqejk" method="POST" onsubmit="handleCtaSubmit(event)" style="text-align:left;">
     <input type="hidden" name="source" value="removal-cost-calculator-midarticle-cta">
+    <input type="hidden" name="page_url" value="https://nashvillebesttattoo.com/tattoo-removal-cost-calculator-nashville.html">
     <input type="text" name="name" placeholder="Your name" required>
     <input type="email" name="email" placeholder="Email" required>
+    <input type="tel" name="phone" placeholder="Phone or mobile" required pattern="[0-9()+\-\s]{7,}">
     <select name="tattoo_size" required>
       <option value="" disabled selected>Tattoo size</option>
       <option value="Small (2-3 inches)">Small (2-3 inches)</option>
@@ -460,7 +462,7 @@ a.il:hover{border-bottom-color:var(--gold);}
 
 <div class="section" id="sec-consultation">
   <h2 class="section-title">Why a Real <em>Consultation</em> Beats Any Calculator</h2>
-  <p>Combining all of these factors into a single accurate number is genuinely difficult to do without looking at the actual tattoo and skin in question. This is why online calculators and generic price charts can only offer a rough range rather than a real number: they have no way to see your specific ink density, color mix, or skin, all of which meaningfully shift the estimate one way or another.</p>
+  <p>Combining all of these factors into a single accurate number is difficult to do without looking at the actual tattoo and skin in question. This is why online calculators and generic price charts can only offer a rough range rather than a real number: they have no way to see your specific ink density, color mix, or skin, all of which meaningfully shift the estimate one way or another.</p>
   <p>A real <a href="https://nashvillebesttattoo.com/tattoo-removal-consultation-nashville.html" style="color:var(--gold);text-decoration:underline;">consultation</a>, where a technician examines your tattoo directly, remains the only reliable way to combine these factors into an estimate you can actually plan a budget around, and it typically costs nothing to find out. Bringing photos of your tattoo in good lighting, if you can't make it in person right away, can also help a clinic give you a preliminary sense of the range before a full in-person assessment.</p>
 </div>
 
@@ -499,7 +501,7 @@ a.il:hover{border-bottom-color:var(--gold);}
 </div>
 <div class="faq-item">
   <div class="faq-q">Why does my quote include a session range instead of one fixed number?</div>
-  <div class="faq-a">Because total sessions genuinely cannot be predicted with certainty in advance. A range reflects a technician's honest best estimate based on your tattoo's characteristics, with actual progress confirmed as sessions proceed.</div>
+  <div class="faq-a">Because total sessions cannot be predicted with certainty in advance. A range reflects a technician's honest best estimate based on your tattoo's characteristics, with actual progress confirmed as sessions proceed.</div>
 </div>
 <div class="faq-item">
   <div class="faq-q">What single factor should I focus on if I want to estimate my own cost roughly?</div>
@@ -526,12 +528,14 @@ a.il:hover{border-bottom-color:var(--gold);}
 </div>
 
 <div class="newsletter-section" id="contact">
-  <h2 style="font-family:var(--display);font-size:28px;color:var(--white);margin-bottom:10px;">Get Matched With a Removal Clinic</h2>
+  <div style="font-family:var(--display);font-size:28px;color:var(--white);margin-bottom:10px;">Get Matched With a Removal Clinic</div>
   <p style="color:var(--bone-dim);font-size:17px;line-height:1.6;">Tell us about your tattoo and we will point you to the right clinic.</p>
   <form class="lead-form" id="contactForm" action="https://formspree.io/f/maqzqejk" method="POST" onsubmit="handleContactSubmit(event)">
     <input type="hidden" name="source" value="removal-cost-calculator-bottom-form">
+    <input type="hidden" name="page_url" value="https://nashvillebesttattoo.com/tattoo-removal-cost-calculator-nashville.html">
     <input type="text" name="name" placeholder="Your name" required>
     <input type="email" name="email" placeholder="Email" required>
+    <input type="tel" name="phone" placeholder="Phone or mobile" required pattern="[0-9()+\-\s]{7,}">
     <select name="tattoo_size" required>
       <option value="" disabled selected>Tattoo size</option>
       <option value="Small (2-3 inches)">Small (2-3 inches)</option>
@@ -547,7 +551,7 @@ a.il:hover{border-bottom-color:var(--gold);}
 </div>
 
 <div class="final-cta">
-  <h2>Ready for a Real Number Based on Your Tattoo?</h2>
+  <div class="fc-head">Ready for a Real Number Based on Your Tattoo?</div>
   <p>Get matched with a Nashville clinic that will assess your specific tattoo and give you an honest quote.</p>
   <a class="btn-primary" href="#contact" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'});return false;">Find a Trusted Removal Clinic</a>
 </div>

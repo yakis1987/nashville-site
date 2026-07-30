@@ -227,7 +227,7 @@ img{max-width:100%;display:block;}
 #contactSuccess{display:none;color:var(--gold-light);font-family:var(--mono);font-size:14px;padding:20px;}
 
 .final-cta{background:var(--ink-card);border-top:1px solid rgba(201,168,76,0.15);padding:56px 24px;text-align:center;}
-.final-cta h2{font-family:var(--display);font-size:34px;color:var(--white);margin-bottom:12px;}
+.final-cta h2,.final-cta .fc-head{font-family:var(--display);font-size:34px;color:var(--white);margin-bottom:12px;}
 .final-cta p{font-size:16px;color:var(--bone-dim);margin-bottom:24px;max-width:520px;margin-left:auto;margin-right:auto;}
 
 footer{border-top:1px solid rgba(240,235,226,0.06);padding:36px 32px 120px;text-align:center;font-family:var(--mono);font-size:10px;letter-spacing:0.1em;color:var(--bone-dim);opacity:0.35;}
@@ -338,7 +338,7 @@ a.il:hover{border-bottom-color:var(--gold);}
 </div>
 
 <div class="cta-block" style="margin:16px auto 32px;padding:24px;">
-  <h2 class="cta-title" style="font-size:22px;margin-bottom:8px;">Get a Real Quote for Your Specific Placement</h2>
+  <div class="cta-title" style="font-size:22px;margin-bottom:8px;">Get a Real Quote for Your Specific Placement</div>
   <p class="cta-sub" style="margin-bottom:16px;">A Nashville clinic can assess your tattoo's exact location and give you an accurate cost estimate.</p>
   <a class="btn-primary" href="#midCta" onclick="document.getElementById('midCta').scrollIntoView({behavior:'smooth'});return false;">Get My Recommendations &#8594;</a>
 </div>
@@ -363,7 +363,7 @@ a.il:hover{border-bottom-color:var(--gold);}
 
 <div class="section" id="sec-total-cost">
   <h2 class="section-title">What This Means for <em>Total Cost</em></h2>
-  <p>Because total cost is really a function of price per session multiplied by how many sessions you need, a slower-clearing location can end up costing more overall even when each individual session is priced lower than a larger area elsewhere on the body. A small finger tattoo priced at a fraction of what a forearm piece costs per session can still add up to a comparable total if it takes twice as many sessions to fully clear, which is a genuinely common outcome for extremity placements.</p>
+  <p>Because total cost is really a function of price per session multiplied by how many sessions you need, a slower-clearing location can end up costing more overall even when each individual session is priced lower than a larger area elsewhere on the body. A small finger tattoo priced at a fraction of what a forearm piece costs per session can still add up to a comparable total if it takes twice as many sessions to fully clear, which is a common outcome for extremity placements.</p>
   <p>This is one of the reasons a general price list rarely captures the real picture on its own. The more useful number to ask a clinic for during your consultation is not just the per-session price for your tattoo's size, but their honest estimate of total sessions given both your tattoo's characteristics and its specific location on your body, since that combined figure is what actually determines what you will pay by the end of a full treatment course.</p>
 </div>
 
@@ -374,7 +374,7 @@ a.il:hover{border-bottom-color:var(--gold);}
     <div class="article-img-caption">Areas with strong blood flow tend to clear ink faster.</div>
   </div>
   <p>Once a laser breaks tattoo ink into smaller particles, your body's lymphatic and immune systems are responsible for actually clearing those particles away over the following weeks. Areas with stronger blood flow, generally the torso, back, and upper arms, tend to complete that clearance process more efficiently than areas with less circulation, which is a biological factor rather than anything a clinic controls directly through pricing decisions.</p>
-  <p>Extremities like the hands, feet, fingers, and ankles have comparatively weaker circulation. Even though a finger tattoo might be small and inexpensive per session, it can require more total sessions to fully clear than a similarly sized tattoo on a fleshier, better-circulated part of the body, which changes the real total cost even if the per-session price looks lower at first glance. This gap is worth factoring in specifically if you are comparing a small extremity tattoo against a similarly sized piece somewhere else on your body, since the smaller upfront price per session can be genuinely misleading on its own without a total-sessions estimate attached to it.</p>
+  <p>Extremities like the hands, feet, fingers, and ankles have comparatively weaker circulation. Even though a finger tattoo might be small and inexpensive per session, it can require more total sessions to fully clear than a similarly sized tattoo on a fleshier, better-circulated part of the body, which changes the real total cost even if the per-session price looks lower at first glance. This gap is worth factoring in specifically if you are comparing a small extremity tattoo against a similarly sized piece somewhere else on your body, since the smaller upfront price per session can be misleading on its own without a total-sessions estimate attached to it.</p>
 </div>
 
 <div class="tips-grid">
@@ -435,12 +435,14 @@ a.il:hover{border-bottom-color:var(--gold);}
 </div>
 
 <div class="cta-block" id="midCta">
-  <h2 class="cta-title">Want a Placement-Specific Estimate?</h2>
+  <div class="cta-title">Want a Placement-Specific Estimate?</div>
   <p class="cta-sub">Tell us about your tattoo's size and location, and we will point you to a Nashville clinic that can give you an accurate quote.</p>
   <form class="lead-form" id="ctaLeadForm" action="https://formspree.io/f/maqzqejk" method="POST" onsubmit="handleCtaSubmit(event)" style="text-align:left;">
     <input type="hidden" name="source" value="removal-cost-body-part-midarticle-cta">
+    <input type="hidden" name="page_url" value="https://nashvillebesttattoo.com/tattoo-removal-cost-by-body-part-nashville.html">
     <input type="text" name="name" placeholder="Your name" required>
     <input type="email" name="email" placeholder="Email" required>
+    <input type="tel" name="phone" placeholder="Phone or mobile" required pattern="[0-9()+\-\s]{7,}">
     <select name="tattoo_size" required>
       <option value="" disabled selected>Tattoo size</option>
       <option value="Small (2-3 inches)">Small (2-3 inches)</option>
@@ -536,12 +538,14 @@ a.il:hover{border-bottom-color:var(--gold);}
 </div>
 
 <div class="newsletter-section" id="contact">
-  <h2 style="font-family:var(--display);font-size:28px;color:var(--white);margin-bottom:10px;">Get Matched With a Removal Clinic</h2>
+  <div style="font-family:var(--display);font-size:28px;color:var(--white);margin-bottom:10px;">Get Matched With a Removal Clinic</div>
   <p style="color:var(--bone-dim);font-size:17px;line-height:1.6;">Tell us about your tattoo and we will point you to the right clinic.</p>
   <form class="lead-form" id="contactForm" action="https://formspree.io/f/maqzqejk" method="POST" onsubmit="handleContactSubmit(event)">
     <input type="hidden" name="source" value="removal-cost-body-part-bottom-form">
+    <input type="hidden" name="page_url" value="https://nashvillebesttattoo.com/tattoo-removal-cost-by-body-part-nashville.html">
     <input type="text" name="name" placeholder="Your name" required>
     <input type="email" name="email" placeholder="Email" required>
+    <input type="tel" name="phone" placeholder="Phone or mobile" required pattern="[0-9()+\-\s]{7,}">
     <select name="tattoo_size" required>
       <option value="" disabled selected>Tattoo size</option>
       <option value="Small (2-3 inches)">Small (2-3 inches)</option>
@@ -557,7 +561,7 @@ a.il:hover{border-bottom-color:var(--gold);}
 </div>
 
 <div class="final-cta">
-  <h2>Ready for an Accurate, Placement-Specific Quote?</h2>
+  <div class="fc-head">Ready for an Accurate, Placement-Specific Quote?</div>
   <p>Get matched with a Nashville clinic that will assess your tattoo's exact location and give you a real cost estimate.</p>
   <a class="btn-primary" href="#contact" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'});return false;">Find a Trusted Removal Clinic</a>
 </div>

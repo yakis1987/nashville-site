@@ -235,7 +235,7 @@ img{max-width:100%;display:block;}
 #contactSuccess{display:none;color:var(--gold-light);font-family:var(--mono);font-size:14px;padding:20px;}
 
 .final-cta{background:var(--ink-card);border-top:1px solid rgba(201,168,76,0.15);padding:56px 24px;text-align:center;}
-.final-cta h2{font-family:var(--display);font-size:34px;color:var(--white);margin-bottom:12px;}
+.final-cta h2,.final-cta .fc-head{font-family:var(--display);font-size:34px;color:var(--white);margin-bottom:12px;}
 .final-cta p{font-size:16px;color:var(--bone-dim);margin-bottom:24px;max-width:520px;margin-left:auto;margin-right:auto;}
 
 footer{border-top:1px solid rgba(240,235,226,0.06);padding:36px 32px 120px;text-align:center;font-family:var(--mono);font-size:10px;letter-spacing:0.1em;color:var(--bone-dim);opacity:0.35;}
@@ -336,8 +336,8 @@ a.il:hover{border-bottom-color:var(--gold);}
     <img src="removal/removal-session-in-progress.webp" alt="Laser tattoo removal treatment in progress, technician's gloved hands operating the laser device on a shoulder tattoo" loading="lazy" width="1520" height="1520">
     <div class="article-img-caption">The sensation is real, but manageable for most people.</div>
   </div>
-  <p>Every removal clinic website describes the pain the same way: a rubber band snapping against your skin. It is a reasonable comparison for a single laser pulse, and it is genuinely the most common description clients give afterward. What it does not capture is the difference between a single pulse and an entire session, which is really hundreds of those snaps in rapid succession across the treatment area, or how much that sensation shifts depending on where on your body you are being treated.</p>
-  <p>The honest answer is that removal is uncomfortable for almost everyone and genuinely painful for some, depending on your personal pain tolerance, the treatment area, and how many sessions you have already been through. This guide breaks down what actually drives that experience, so you can walk into your first session with realistic expectations instead of a marketing line.</p>
+  <p>Every removal clinic website describes the pain the same way: a rubber band snapping against your skin. It is a reasonable comparison for a single laser pulse, and it is the most common description clients give afterward. What it does not capture is the difference between a single pulse and an entire session, which is really hundreds of those snaps in rapid succession across the treatment area, or how much that sensation shifts depending on where on your body you are being treated.</p>
+  <p>The honest answer is that removal is uncomfortable for almost everyone and painful for some, depending on your personal pain tolerance, the treatment area, and how many sessions you have already been through. This guide breaks down what actually drives that experience, so you can walk into your first session with realistic expectations instead of a marketing line.</p>
   <p>None of this is meant to talk you out of removal if you have decided it is right for you. Discomfort that lasts a few minutes per session is, for the overwhelming majority of clients, a manageable trade-off for the outcome they are working toward. The goal here is simply to replace the vague rubber band comparison with a clearer picture of what actually varies, so nothing catches you off guard the way it did our musician client.</p>
 </div>
 
@@ -347,7 +347,7 @@ a.il:hover{border-bottom-color:var(--gold);}
 </div>
 
 <div class="cta-block" style="margin:16px auto 32px;padding:24px;">
-  <h2 class="cta-title" style="font-size:22px;margin-bottom:8px;">Get Our Recommended Nashville Clinics</h2>
+  <div class="cta-title" style="font-size:22px;margin-bottom:8px;">Get Our Recommended Nashville Clinics</div>
   <p class="cta-sub" style="margin-bottom:16px;">Get matched with a clinic that offers real numbing options and explains what to expect honestly.</p>
   <a class="btn-primary" href="#midCta" onclick="document.getElementById('midCta').scrollIntoView({behavior:'smooth'});return false;">Get My Recommendations &#8594;</a>
 </div>
@@ -383,7 +383,7 @@ a.il:hover{border-bottom-color:var(--gold);}
   </div>
   <div class="tip-card">
     <div class="tip-card-title">Individual Tolerance</div>
-    <p>Pain tolerance genuinely varies person to person, and there is no shame in needing more numbing support than someone else.</p>
+    <p>Pain tolerance varies person to person, and there is no shame in needing more numbing support than someone else.</p>
   </div>
   <div class="tip-card">
     <div class="tip-card-title">Cooling Technology</div>
@@ -397,7 +397,7 @@ a.il:hover{border-bottom-color:var(--gold);}
 
 <div class="section" id="sec-numbing-options">
   <h2 class="section-title">Numbing Options <em>Worth</em> Asking About</h2>
-  <p>Most Nashville clinics offer some form of numbing support, though the options and included cost vary. A topical numbing cream, applied 30 to 60 minutes before your session and covered with plastic wrap to help it absorb, is the most common baseline option and is genuinely effective for a lot of clients, especially on less sensitive areas.</p>
+  <p>Most Nashville clinics offer some form of numbing support, though the options and included cost vary. A topical numbing cream, applied 30 to 60 minutes before your session and covered with plastic wrap to help it absorb, is the most common baseline option and is effective for a lot of clients, especially on less sensitive areas.</p>
   <p>For larger pieces or more sensitive locations, some clinics offer a numbing injection, similar to what a dentist uses, which provides more complete numbing but adds a small needle pinch and some cost to your visit. Cooling devices used during the actual treatment, whether a built-in chiller on the laser itself or a separate cold air machine, also meaningfully reduce discomfort in real time and are worth specifically asking whether your clinic uses.</p>
   <p>It is reasonable to ask about all of these options during your initial consultation, before you have committed to a clinic, rather than discovering after your first uncomfortable session that better numbing was available the whole time. A clinic that proactively explains its numbing options without you having to ask is generally a good sign of how seriously they take client comfort overall, not just as an afterthought.</p>
 </div>
@@ -474,12 +474,14 @@ a.il:hover{border-bottom-color:var(--gold);}
 </div>
 
 <div class="cta-block" id="midCta">
-  <h2 class="cta-title">Not Sure Which Nashville Clinic Is Worth Your Money?</h2>
+  <div class="cta-title">Not Sure Which Nashville Clinic Is Worth Your Money?</div>
   <p class="cta-sub">Tell us about your tattoo, and we will point you to clinics that take comfort seriously.</p>
   <form class="lead-form" id="ctaLeadForm" action="https://formspree.io/f/maqzqejk" method="POST" onsubmit="handleCtaSubmit(event)" style="text-align:left;">
     <input type="hidden" name="source" value="removal-pain-midarticle-cta">
+    <input type="hidden" name="page_url" value="https://nashvillebesttattoo.com/tattoo-removal-pain-nashville.html">
     <input type="text" name="name" placeholder="Your name" required>
     <input type="email" name="email" placeholder="Email" required>
+    <input type="tel" name="phone" placeholder="Phone or mobile" required pattern="[0-9()+\-\s]{7,}">
     <select name="tattoo_size" required>
       <option value="" disabled selected>Tattoo size</option>
       <option value="Small (2-3 inches)">Small (2-3 inches)</option>
@@ -565,12 +567,14 @@ a.il:hover{border-bottom-color:var(--gold);}
 </div>
 
 <div class="newsletter-section" id="contact">
-  <h2 style="font-family:var(--display);font-size:28px;color:var(--white);margin-bottom:10px;">Get Matched With a Removal Clinic</h2>
+  <div style="font-family:var(--display);font-size:28px;color:var(--white);margin-bottom:10px;">Get Matched With a Removal Clinic</div>
   <p style="color:var(--bone-dim);font-size:17px;line-height:1.6;">Tell us about your tattoo and we will point you to the right clinic.</p>
   <form class="lead-form" id="contactForm" action="https://formspree.io/f/maqzqejk" method="POST" onsubmit="handleContactSubmit(event)">
     <input type="hidden" name="source" value="removal-pain-bottom-form">
+    <input type="hidden" name="page_url" value="https://nashvillebesttattoo.com/tattoo-removal-pain-nashville.html">
     <input type="text" name="name" placeholder="Your name" required>
     <input type="email" name="email" placeholder="Email" required>
+    <input type="tel" name="phone" placeholder="Phone or mobile" required pattern="[0-9()+\-\s]{7,}">
     <select name="tattoo_size" required>
       <option value="" disabled selected>Tattoo size</option>
       <option value="Small (2-3 inches)">Small (2-3 inches)</option>
@@ -586,7 +590,7 @@ a.il:hover{border-bottom-color:var(--gold);}
 </div>
 
 <div class="final-cta">
-  <h2>Ready for a Clinic That Takes Comfort Seriously?</h2>
+  <div class="fc-head">Ready for a Clinic That Takes Comfort Seriously?</div>
   <p>Get matched with a Nashville clinic that offers real numbing options and honest expectations.</p>
   <a class="btn-primary" href="#contact" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'});return false;">Find a Trusted Removal Clinic</a>
 </div>
