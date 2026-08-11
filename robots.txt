@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://nashvillebesttattoo.com/sitemap.xml
+Sitemap: https://feequity.com/sitemap.xml
